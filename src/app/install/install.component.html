@@ -1,0 +1,42 @@
+<div style="margin: 22px">
+  <h1>COMMAND LINE JAR</h1>
+  <p style="font-size: 120%">DOWNLOAD: <a href="https://d3axxy9bcycpv7.cloudfront.net/bin/sokrates-1.0.jar">sokrates-1.0.jar</a> (43 MB)</p>
+  <p>Usage: </p>
+  <pre>
+  java -jar sokrates-1.0.jar init [options]
+       -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;srcRoot>/_sokrates/config.json")
+       -srcRoot &lt;arg>    the path to source code root folder
+
+  java -jar sokrates.jar generateReports [options]
+         -confFile &lt;arg>               [OPTIONAL] the path to configuration file (default is "&lt;srcRoot>/_sokrates/config.json")
+         -outputFolder &lt;arg>           the folder where reports will be stored (default is "&lt;srcRoot>/_sokrates/reports/")
+         -reportAll                    generate all reports
+         -reportControls               generate only the controls report (stored in &lt;outputFolder>/Controls.html)
+
+         -reportOverview               generate only the report describing the overview of files in scope
+         -reportDuplication            generate only the duplication report (stored in &lt;outputFolder>/Duplication.html)
+         -reportLogicalDecomposition   generate only the components logical decomposition report (stored in
+                                       &lt;outputFolder>/LogicalDecomposition.html)
+         -reportFileSize               generate only the file size report (stored in &lt;outputFolder>/FileSize.html)
+         -reportUnitSize               generate only the unit size report (stored in &lt;outputFolder>/UnitSize.html)
+         -reportCyclomaticComplexity   generate only the cyclomatic complexity report (stored in
+                                       &lt;outputFolder>/CyclomaticComplexity.html)
+         -reportCrossCuttingConcerns   generate only the cross cutting concerns report (stored in
+                                       &lt;outputFolder>/CrossCuttingConcerns.html)
+         -reportMetrics                generate only the metrics overview report (stored in &lt;outputFolder>/Metrics.html)
+         -reportJson                   save only report data in JSON format
+         -reportText                   save only textual summary
+</pre>
+  <h1>VISUAL EXPLORER</h1>
+  <p style="font-size: 120%">DOWNLOAD: <a href="https://d3axxy9bcycpv7.cloudfront.net/bin/sokrates-explorer-1.0.jar">sokrates-explorer-1.0.jar</a> (44 MB)</p>
+  <p><b>NOTE: require JavaFX, current binary works only with Java 8.</b></p>
+  <p>Usage: </p>
+  <pre>
+  java -jar sokrates-explorer-1.0.jar
+  </pre>
+  <h1>SOURCE CODE</h1>
+  <ul style="font-size: 120%">
+    <li><p><a href="https://github.com/zeljkoobrenovic/sokrates" target="_blank">github.com/zeljkoobrenovic/sokrates</a>
+    </p></li>
+  </ul>
+</div>
