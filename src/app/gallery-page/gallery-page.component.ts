@@ -15,6 +15,7 @@ export class GalleryPageComponent implements OnInit {
       projects: [
         {
           'id': 'sokrates',
+          size: '17 KLOC',
           'name': 'Sokrates',
           'description': 'A pragmatic source code analyzer.',
           'logoLink': 'https://sokrat.org/assets/logo.png'
@@ -195,6 +196,7 @@ export class GalleryPageComponent implements OnInit {
         {
           'id': 'activemq',
           'name': 'ActiveMQ',
+          size: '216 KLOC',
           'description': 'A high performance Apache 2.0 licensed Message Broker and JMS 1.1 implementation.',
           'logoLink': 'https://github.com/apache/activemq/raw/master/docs/img/logo-1024.png',
           'links': [
@@ -206,6 +208,7 @@ export class GalleryPageComponent implements OnInit {
         },
         {
           'id': 'pig',
+          size: '156 KLOC',
           'name': 'Apache Pig',
           'description': 'A dataflow programming environment for processing very large files.',
           'logoLink': 'https://github.com/apache/pig/blob/trunk/src/docs/src/documentation/resources/images/pig-on-elephant.png?raw=true'
