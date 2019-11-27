@@ -17,7 +17,7 @@ export class GalleryPageComponent implements OnInit {
           'id': 'sokrates',
           size: '17 KLOC',
           'name': 'Sokrates',
-          'description': 'A pragmatic source code analyzer.',
+          'description': 'A pragmatic software architecture documentation and analysis tool.',
           'logoLink': 'https://sokrat.org/assets/logo.png'
         },
         {
@@ -70,6 +70,20 @@ export class GalleryPageComponent implements OnInit {
           'logoLink': 'https://i2.wp.com/www.thecuriousdev.org/wp-content/uploads/2017/12/spring-boot-logo.png?w=200&ssl=1'
         },
         {
+          id: 'istio',
+          'name': 'Istio',
+          size: '145 KLOC',
+          'description': 'An open platform to connect, manage, and secure microservices.',
+          'logoLink': 'https://istio.io/img/istio-whitelogo-bluebackground-framed.svg'
+        },
+        {
+          'id': 'thorntail',
+          'name': 'Thorntail',
+          size: '45 KLOC',
+          'description': 'Thorntail provides a mechanism for building applications as uber jars, with just enough of the WildFly application server wrapped around it to support each application\'s use-case.',
+          'logoLink': 'https://developers.redhat.com/blog/wp-content/uploads/2019/05/Thorntail-logo-300x238.png'
+        },
+        {
           id: 'bitcoin',
           'name': 'Bitcoin',
           size: '123 KLOC',
@@ -89,20 +103,6 @@ export class GalleryPageComponent implements OnInit {
           'name': 'Kubernetes',
           'description': 'An open source system for managing containerized applications across multiple hosts. It provides basic mechanisms for deployment, maintenance, and scaling of applications.',
           'logoLink': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1920px-Kubernetes_logo_without_workmark.svg.png'
-        },
-        {
-          id: 'istio',
-          'name': 'Istio',
-          size: '145 KLOC',
-          'description': 'An open platform to connect, manage, and secure microservices.',
-          'logoLink': 'https://istio.io/img/istio-whitelogo-bluebackground-framed.svg'
-        },
-        {
-          'id': 'thorntail',
-          'name': 'Thorntail',
-          size: '45 KLOC',
-          'description': 'Thorntail provides a mechanism for building applications as uber jars, with just enough of the WildFly application server wrapped around it to support each application\'s use-case.',
-          'logoLink': 'https://developers.redhat.com/blog/wp-content/uploads/2019/05/Thorntail-logo-300x238.png'
         }
       ]
     },
@@ -175,14 +175,6 @@ export class GalleryPageComponent implements OnInit {
       title: 'Uber OSS Projects',
       folder: 'ubeross',
       projects: [
-        {
-          name: 'All Uber OSS Projects',
-          size: '836 KLOC',
-          description: '',
-          logoLink: 'https://uber.github.io/img/uber_os_logo.png',
-          links: [],
-          id: 'ALL'
-        },
         {
           name: 'M3',
           size: '198 KLOC',

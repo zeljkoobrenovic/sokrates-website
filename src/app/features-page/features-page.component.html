@@ -1,6 +1,6 @@
 <div style="margin:20px">
   <div class="card">
-    <h2 class="title">Source Code Overview Report</h2>
+    <h2 class="title">Source Code Overview</h2>
     <ul>
       <li>For analysis purposes Sokrates separate files in scope into several categories: main, test, generated,
         deployment
@@ -28,8 +28,20 @@
       </li>
     </ul>
   </div>
+  <div class='card'>
+    <h2 class="title">Duplication</h2>
+    <ul>
+      <li>For duplication, Sokrates look at places in code where there are six or more lines of code that are exactly
+        the
+        same.
+      </li>
+      <li>Before duplication is calculated, the code is cleaned to remove empty lines, comments, and frequently
+        duplicated constructs such as imports.
+      </li>
+    </ul>
+  </div>
   <div class="card">
-    <h2 class="title">Logical Decomposition</h2>
+    <h2 class="title">Logical Decomposition: Components and Dependencies</h2>
     <p><b>Logical decomposition</b> is a representation of the organization of the <b>main</b> source code, where every
       and each file is put in exactly one <b>logical component</b>.</p>
     <ul>
@@ -49,24 +61,12 @@
     </ul>
   </div>
   <div class='card'>
-    <h2 class="title">Cross-Cutting Concerns Report</h2>
+    <h2 class="title">Cross-Cutting Concerns</h2>
     <ul>
       <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the
         system.
       </li>
       <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
-    </ul>
-  </div>
-  <div class='card'>
-    <h2 class="title">Duplication</h2>
-    <ul>
-      <li>For duplication, Sokrates look at places in code where there are six or more lines of code that are exactly
-        the
-        same.
-      </li>
-      <li>Before duplication is calculated, the code is cleaned to remove empty lines, comments, and frequently
-        duplicated constructs such as imports.
-      </li>
     </ul>
   </div>
   <div class='card'>
@@ -100,7 +100,7 @@
     </ul>
   </div>
   <div class='card'>
-    <h2 class="title">Metrics Report</h2>
+    <h2 class="title">Detailed Metrics</h2>
     <ul>
       <li>A list of all measurements.</li>
     </ul>
