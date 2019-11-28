@@ -1,10 +1,9 @@
-<div style="margin:20px">
+<div style="margin:20px; font-size: 120%">
   <div class="card">
     <h2 class="title">Source Code Overview</h2>
     <ul>
       <li>For analysis purposes Sokrates separate files in scope into several categories: main, test, generated,
-        deployment
-        and build, and other.
+        deployment and build, and other.
       </li>
       <li>The <b>main</b> category contains all <b>manually</b> created source code files that are being used in the <b>production</b>.
       </li>
@@ -27,6 +26,13 @@
         The exception are third-party libraries that have been changed by developers.
       </li>
     </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/SourceCodeOverview.html" target="_blank">
+         See an example of a Sokrates Source Code Overview report ⤇
+        </a>
+      </li>
+    </ul>
   </div>
   <div class='card'>
     <h2 class="title">Duplication</h2>
@@ -37,6 +43,13 @@
       </li>
       <li>Before duplication is calculated, the code is cleaned to remove empty lines, comments, and frequently
         duplicated constructs such as imports.
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/Duplication.html" target="_blank">
+         See an example of a Sokrates Duplication report ⤇
+        </a>
       </li>
     </ul>
   </div>
@@ -59,6 +72,13 @@
       </li>
       <li>Files not assigned to any component are put into a special "<b>Unclassified</b>" component.</li>
     </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/Components.html" target="_blank">
+         See an example of a Sokrates Components and Dependencies report ⤇
+        </a>
+      </li>
+    </ul>
   </div>
   <div class='card'>
     <h2 class="title">Cross-Cutting Concerns</h2>
@@ -67,6 +87,13 @@
         system.
       </li>
       <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/CrossCuttingConcerns.html" target="_blank">
+         See an example of a Sokrates Cross-Cutting Concerns report ⤇
+        </a>
+      </li>
     </ul>
   </div>
   <div class='card'>
@@ -77,6 +104,13 @@
         (medium size files), 501-1000 (long files), 1001+ (very long files).
       </li>
     </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/FileSize.html" target="_blank">
+         See an example of a Sokrates File Size report ⤇
+        </a>
+      </li>
+    </ul>
   </div>
   <div class='card'>
     <h2 class="title">Unit Size</h2>
@@ -84,6 +118,13 @@
       <li>Unit size measurements show the distribution of size of units of code (methods, functions...).</li>
       <li>Units are classified in four categories based on their size (lines of code): 1-20 (small units), 20-50 (medium
         size units), 51-100 (long units), 101+ (very long units).
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/UnitSize.html" target="_blank">
+         See an example of a Sokrates Unit Size report ⤇
+        </a>
       </li>
     </ul>
   </div>
@@ -98,17 +139,51 @@
         complex units), 11-25 (complex units), 26+ (very complex units).
       </li>
     </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/CyclomaticComplexity.html" target="_blank">
+         See an example of a Sokrates Cyclomatic Complexity report ⤇
+        </a>
+      </li>
+    </ul>
   </div>
   <div class='card'>
     <h2 class="title">Detailed Metrics</h2>
     <ul>
       <li>A list of all measurements.</li>
     </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/Metrics.html" target="_blank">
+          See an example of a Sokrates Metrics report ⤇
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class='card'>
+    <h2 class="title">Trend</h2>
+    <ul>
+      <li>Trend report shows difference in metric between the latest measurements and previous reference measurements.</li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/Trend.html" target="_blank">
+          See an example of a Sokrates Trend report ⤇
+        </a>
+      </li>
+    </ul>
   </div>
   <div class='card'>
     <h2 class="title">Controls</h2>
     <ul>
       <li>A semaphore-like controls, to get warnings based on the range or metric values.</li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/Controls.html" target="_blank">
+          See an example of a Sokrates Controls report ⤇
+        </a>
+      </li>
     </ul>
   </div>
 </div>

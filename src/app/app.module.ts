@@ -11,6 +11,7 @@ import { GalleryPageComponent } from './gallery-page/gallery-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FeaturesPageComponent } from './features-page/features-page.component';
 import { InstallComponent } from './install/install.component';
+import { ConfigurationPageComponent } from './configuration-page/configuration-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InstallComponent } from './install/install.component';
     GalleryPageComponent,
     HeaderComponent,
     FeaturesPageComponent,
-    InstallComponent
+    InstallComponent,
+    ConfigurationPageComponent
   ],
   imports: [
     BrowserModule,
