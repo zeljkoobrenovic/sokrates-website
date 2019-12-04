@@ -120,6 +120,7 @@ export class GalleryPageComponent implements OnInit {
           'name': 'Tomcat',
           'description': 'An open source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies.',
           'logoLink': 'https://tomcat.apache.org/res/images/tomcat.png',
+          size: '248 KLOC',
           id: 'tomcat'
         }, {
           id: 'httpd',
