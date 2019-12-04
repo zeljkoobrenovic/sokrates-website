@@ -10,15 +10,15 @@ export class GalleryPageComponent implements OnInit {
   displayedColumns: string[] = ['name', 'reports'];
   projects = [
     {
-      title: 'General',
+      title: 'General Projects',
       folder: 'general',
       projects: [
         {
           'id': 'sokrates',
-          size: '17 KLOC',
+          size: '20 KLOC',
           'name': 'Sokrates',
           'description': 'A pragmatic software architecture documentation and analysis tool.',
-          'logoLink': 'https://sokrat.org/assets/logo.png'
+          'logoLink': 'https://sokrat.org/assets/logo.png',
         },
         {
           id: 'jenkins',
@@ -89,7 +89,13 @@ export class GalleryPageComponent implements OnInit {
           size: '123 KLOC',
           'description': 'A cryptocurrency, a decentralized digital currency without a central bank or single administrator that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries.',
           'logoLink': 'https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png'
-        },
+        }
+      ]
+    },
+    {
+      title: 'Big Projects',
+      folder: 'general',
+      projects: [
         {
           id: 'linux',
           size: '18 MLOC',
@@ -107,47 +113,34 @@ export class GalleryPageComponent implements OnInit {
       ]
     },
     {
-      title: 'Apache',
+      title: 'Apache Projects',
       folder: 'apache',
       projects: [
         {
+          'name': 'Tomcat',
+          'description': 'An open source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies.',
+          'logoLink': 'https://tomcat.apache.org/res/images/tomcat.png',
+          id: 'tomcat'
+        }, {
           id: 'httpd',
           'name': 'Http Server (httpd)',
           size: '218 KLOC',
           'description': 'A secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.',
-          'logoLink': 'data:image/jpeg;base64,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',
-          'links': [
-            {
-              'label': 'Homepage',
-              'href': 'https://httpd.apache.org/'
-            }
-          ]
+          'logoLink': 'data:image/jpeg;base64,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'
         },
         {
           id: 'commons-lang',
           'name': 'Commons Lang',
           size: '28 KLOC',
           'description': 'The standard Java libraries fail to provide enough methods for manipulation of its core classes. Apache Commons Lang provides these extra methods.',
-          'logoLink': 'https://commons.apache.org/proper/commons-lang/images/commons-logo.png',
-          'links': [
-            {
-              'label': 'Homepage',
-              'href': 'https://commons.apache.org/proper/commons-lang/'
-            }
-          ]
+          'logoLink': 'https://commons.apache.org/proper/commons-lang/images/commons-logo.png'
         },
         {
           id: 'kafka',
           'name': 'Kafka',
           size: '189 KLOC',
           'description': 'A unified, high-throughput, low-latency platform for handling real-time data feeds.',
-          'logoLink': 'data:image/png;base64,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',
-          'links': [
-            {
-              'label': 'Homepage',
-              'href': 'https://kafka.apache.org/'
-            }
-          ]
+          'logoLink': 'data:image/png;base64,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'
         },
         {
           'id': 'activemq',
@@ -155,12 +148,6 @@ export class GalleryPageComponent implements OnInit {
           size: '216 KLOC',
           'description': 'A high performance Apache 2.0 licensed Message Broker and JMS 1.1 implementation.',
           'logoLink': 'https://github.com/apache/activemq/raw/master/docs/img/logo-1024.png',
-          'links': [
-            {
-              'label': 'ActiveMQ',
-              'href': 'https://github.com/apache/activemq'
-            }
-          ]
         },
         {
           'id': 'pig',
@@ -180,12 +167,6 @@ export class GalleryPageComponent implements OnInit {
           size: '198 KLOC',
           description: 'The open source metrics platform built on M3DB, a distributed timeseries database.',
           logoLink: 'https://uber.github.io/img/m3-logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/m3db'
-            }
-          ],
           id: 'm3'
         },
         {
@@ -193,12 +174,6 @@ export class GalleryPageComponent implements OnInit {
           size: '114 KLOC',
           description: 'Unified Resource Scheduler to co-schedule mixed types of workloads for better resource utilization.',
           logoLink: 'https://uber.github.io/img/peloton_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/peloton'
-            }
-          ],
           id: 'peloton'
         },
         {
@@ -206,12 +181,6 @@ export class GalleryPageComponent implements OnInit {
           size: '104 KLOC',
           description: 'Orchestration engine used to develop applications which perform multiple actions over long periods of time.',
           logoLink: 'https://uber.github.io/img/cadence.svg',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/cadence'
-            }
-          ],
           id: 'cadence'
         },
         {
@@ -219,12 +188,6 @@ export class GalleryPageComponent implements OnInit {
           size: '89 KLOC',
           description: 'Base Web is a foundation for initiating, evolving, and unifying web products through a React component library.',
           logoLink: 'https://uber.github.io/img/base_web_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber-web/baseui/'
-            }
-          ],
           id: 'baseui'
         },
         {
@@ -232,12 +195,6 @@ export class GalleryPageComponent implements OnInit {
           size: '54 KLOC',
           description: 'AresDB is an efficient, GPU-powered real-time analytics storage and query engine.',
           logoLink: 'https://uber.github.io/img/aresdb_simple_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/aresdb'
-            }
-          ],
           id: 'aresdb'
         },
         {
@@ -245,12 +202,6 @@ export class GalleryPageComponent implements OnInit {
           size: '44 KLOC',
           description: 'Jaeger, inspired by Dapper and OpenZipkin, is a distributed tracing system released by Uber.',
           logoLink: 'https://uber.github.io/img/jaeger_logo.svg',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/horovod/horovod'
-            }
-          ],
           id: 'jaeger'
         },
         {
@@ -258,12 +209,6 @@ export class GalleryPageComponent implements OnInit {
           size: '35 KLOC',
           description: 'kepler.gl is a data-agnostic, high-perf. web application for visual exploration of large-scale geolocation data sets.',
           logoLink: 'https://uber.github.io/img/kepler_gl_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/kepler.gl'
-            }
-          ],
           id: 'kepler.gl'
         },
         {
@@ -271,12 +216,6 @@ export class GalleryPageComponent implements OnInit {
           size: '34 KLOC',
           description: 'Pyro is a flexible, scalable deep probabilistic programming library built on PyTorch.',
           logoLink: 'https://uber.github.io/img/pyro_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/pyro/'
-            }
-          ],
           id: 'pyro'
         },
         {
@@ -284,12 +223,6 @@ export class GalleryPageComponent implements OnInit {
           size: '37 KLOC',
           description: 'deck.gl is a WebGL-powered frame-work designed for exploring and visualizing data sets on-the-fly.',
           logoLink: 'https://uber.github.io/img/deck_gl_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/deck.gl'
-            }
-          ],
           id: 'deck.gl'
         },
         {
@@ -297,12 +230,6 @@ export class GalleryPageComponent implements OnInit {
           size: '19 KLOC',
           description: 'Fusion.js is a modern framework for fast, powerful React apps, which provides a rich set of tools.',
           logoLink: 'https://uber.github.io/img/fusionjs_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/fusionjs'
-            }
-          ],
           id: 'fusionjs'
         },
         {
@@ -310,12 +237,6 @@ export class GalleryPageComponent implements OnInit {
           size: '10 KLOC',
           description: 'A hexagonal hierarchical geospatial indexing system.',
           logoLink: 'https://uber.github.io/img/h3Logo-color.svg',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/h3'
-            }
-          ],
           id: 'h3'
         },
         {
@@ -323,12 +244,6 @@ export class GalleryPageComponent implements OnInit {
           size: '18 KLOC',
           description: 'Horovod is a distributed training framework for TensorFlow, Keras, PyTorch, and MXNet.',
           logoLink: 'https://uber.github.io/img/horovod_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/horovod/horovod'
-            }
-          ],
           id: 'horovod'
         },
         {
@@ -336,12 +251,6 @@ export class GalleryPageComponent implements OnInit {
           size: '33 KLOC',
           description: 'Hudi (Hadoop Upserts anD Incremen-tals) is a spark library that is used to manage storage of large dataset.',
           logoLink: 'https://uber.github.io/img/hudi_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/hudi'
-            }
-          ],
           id: 'incubator-hudi'
         },
 
@@ -350,12 +259,6 @@ export class GalleryPageComponent implements OnInit {
           size: '24 KLOC',
           description: 'P2P Docker registry capable of distributing TBs of data in seconds.',
           logoLink: 'https://uber.github.io/img/kraken.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/kraken'
-            }
-          ],
           id: 'kraken'
         },
         {
@@ -363,12 +266,6 @@ export class GalleryPageComponent implements OnInit {
           size: '20 KLOC',
           description: 'A toolbox built on top of TensorFlow that allows to train and test deep learning models without writing code.',
           logoLink: 'https://uber.github.io/img/ludwig_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/ludwig'
-            }
-          ],
           id: 'ludwig'
         },
         {
@@ -376,12 +273,6 @@ export class GalleryPageComponent implements OnInit {
           size: '10 KLOC',
           description: 'Fast and flexible Docker image building tool, works in unprivileged containerized environments.',
           logoLink: 'https://uber.github.io/img/makisu.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/makisu'
-            }
-          ],
           id: 'makisu'
         },
         {
@@ -389,12 +280,6 @@ export class GalleryPageComponent implements OnInit {
           size: '13 KLOC',
           description: 'Distributed any-source to any-sink data ingestion & dispersal framework used to ingest data in a Hadoop.',
           logoLink: 'https://uber.github.io/img/marmaray_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/marmaray'
-            }
-          ],
           id: 'marmaray'
         },
         {
@@ -402,12 +287,6 @@ export class GalleryPageComponent implements OnInit {
           size: '9 KLOC',
           description: 'A tool to help eliminate NullPointerExceptions in your Java code with low build-time overhead.',
           logoLink: 'https://uber.github.io/img/uber_os_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/NullAway'
-            }
-          ],
           id: 'NullAway'
         },
 
@@ -416,12 +295,6 @@ export class GalleryPageComponent implements OnInit {
           size: '4 KLOC',
           description: 'Data access library that enables single machine or distr. training and eval of DL models directly from datasets.',
           logoLink: 'https://uber.github.io/img/petastorm.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/petastorm'
-            }
-          ],
           id: 'petastorm'
         },
 
@@ -430,12 +303,6 @@ export class GalleryPageComponent implements OnInit {
           size: '20 KLOC',
           description: 'RIBs is the cross-platform architecture framework behind many mobile apps at Uber.',
           logoLink: 'https://uber.github.io/img/rib_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/RIBs'
-            }
-          ],
           id: 'RIBs'
         },
         {
@@ -443,12 +310,6 @@ export class GalleryPageComponent implements OnInit {
           size: '28 KLOC',
           description: 'Autonomous Visualization System (AVS) is a fast, powerful, web-based 3D visualization toolkit.',
           logoLink: 'https://uber.github.io/img/uber_os_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/streetscape.gl'
-            }
-          ],
           id: 'streetscape.gl'
         },
         {
@@ -456,12 +317,6 @@ export class GalleryPageComponent implements OnInit {
           size: '3 KLOC',
           description: 'AutoDispose is an RxJava 2 tool for automatically binding the execution of RxJava 2 streams to a provided scope.',
           logoLink: 'https://uber.github.io/img/uber_os_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/autodispose'
-            }
-          ],
           id: 'AutoDispose'
         },
 
@@ -470,24 +325,12 @@ export class GalleryPageComponent implements OnInit {
           size: '3 KLOC',
           description: 'A Python Package for Uplift Modeling and Causal Inference with Machine Learning Algorithms.',
           logoLink: 'https://uber.github.io/img/causalml_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/causalml'
-            }
-          ],
           id: 'causalml'
         }, {
           name: 'Uber Poet',
           size: '1 KLOC',
           description: 'A mock swift project generator & build runner to help benchmark various module dependency graphs.',
           logoLink: 'https://uber.github.io/img/uber_os_logo.png',
-          links: [
-            {
-              label: 'GitHub Repo',
-              href: 'https://github.com/uber/uber-poet'
-            }
-          ],
           id: 'uber-poet'
         }
       ]
