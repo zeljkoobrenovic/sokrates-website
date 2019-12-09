@@ -93,26 +93,6 @@ export class GalleryPageComponent implements OnInit {
       ]
     },
     {
-      title: 'Big Projects',
-      folder: 'general',
-      projects: [
-        {
-          id: 'linux',
-          size: '18 MLOC',
-          'name': 'Linux',
-          'description': 'a free and open-source, monolithic, Unix-like operating system kernel.',
-          'logoLink': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/300px-Tux.svg.png'
-        },
-        {
-          'id': 'kubernetes',
-          size: '1.5 MLOC',
-          'name': 'Kubernetes',
-          'description': 'An open source system for managing containerized applications across multiple hosts. It provides basic mechanisms for deployment, maintenance, and scaling of applications.',
-          'logoLink': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1920px-Kubernetes_logo_without_workmark.svg.png'
-        }
-      ]
-    },
-    {
       title: 'Apache Projects',
       folder: 'apache',
       projects: [
@@ -333,6 +313,26 @@ export class GalleryPageComponent implements OnInit {
           description: 'A mock swift project generator & build runner to help benchmark various module dependency graphs.',
           logoLink: 'https://uber.github.io/img/uber_os_logo.png',
           id: 'uber-poet'
+        }
+      ]
+    },
+    {
+      title: 'Big Projects',
+      folder: 'general',
+      projects: [
+        {
+          id: 'linux',
+          size: '18 MLOC',
+          'name': 'Linux',
+          'description': 'a free and open-source, monolithic, Unix-like operating system kernel.',
+          'logoLink': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/300px-Tux.svg.png'
+        },
+        {
+          'id': 'kubernetes',
+          size: '1.5 MLOC',
+          'name': 'Kubernetes',
+          'description': 'An open source system for managing containerized applications across multiple hosts. It provides basic mechanisms for deployment, maintenance, and scaling of applications.',
+          'logoLink': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1920px-Kubernetes_logo_without_workmark.svg.png'
         }
       ]
     }
