@@ -88,39 +88,6 @@
 </div>
 
 <div class="card">
-  <h2 class="title">Logical decompositions: components and dependencies</h2>
-  <p><b>Logical decomposition</b> is a representation of the organization of the <b>main</b> source code, where every
-    and each file is put in exactly one <b>logical component</b>.</p>
-  <ul>
-    <li>A software system can have <b>one</b> or <b>more</b> logical decompositions.</li>
-    <li>A logical decomposition can be defined in two ways.</li>
-    <li>First approach is based on the <b>folders structure</b>. Components are mapped to folders at defined <b>folder
-      depth</b> relative to the source code root.
-    </li>
-    <li>Second approach is based on <b>explicit</b> definition of each component. In such explicit definitions,
-      components are explicitly <b>named</b> and their files are selected based on explicitly defined path and content
-      <b>filters</b>.
-    </li>
-    <li>A logical decomposition is considered <b>invalid</b> if a file is selected into <b>two or more components</b>.This
-      constraint is introduced in order to facilitate measuring of <b>dependencies</b> among components.
-    </li>
-    <li>Files not assigned to any component are put into a special "<b>Unclassified</b>" component.</li>
-  </ul>
-  <pre><code [highlight]="getLogicalDecompositionFragment()"></code></pre>
-</div>
-
-<div class="card">
-  <h2 class="title">Cross-Cutting Concerns</h2>
-  <ul>
-    <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the
-      system.
-    </li>
-    <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
-  </ul>
-  <pre><code [highlight]="getCrossCuttingConcernFragment()"></code></pre>
-</div>
-
-<div class="card">
   <h2 class="title">Goals & Controls</h2>
   <ul>
     <li>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and tolerance.</li>
@@ -142,4 +109,39 @@
     <li>Optional few bullets to summarize the systems.</li>
   </ul>
   <pre><code [highlight]="getSummaryFindingsFragment()"></code></pre>
+</div>
+
+<div class="card">
+  <h2 class="title">Logical decompositions: components and dependencies</h2>
+  <p><b>Logical decomposition</b> is a representation of the organization of the <b>main</b> source code, where every
+    and each file is put in exactly one <b>logical component</b>.</p>
+  <ul>
+    <li>A software system can have <b>one</b> or <b>more</b> logical decompositions.</li>
+    <li>A logical decomposition can be defined in two ways.</li>
+    <li>First approach is based on the <b>folders structure</b>. Components are mapped to folders at defined <b>folder
+      depth</b> relative to the source code root.
+    </li>
+    <li>Second approach is based on <b>explicit</b> definition of each component. In such explicit definitions,
+      components are explicitly <b>named</b> and their files are selected based on explicitly defined path and content
+      <b>filters</b>.
+    </li>
+    <li>A logical decomposition is considered <b>invalid</b> if a file is selected into <b>two or more components</b>.This
+      constraint is introduced in order to facilitate measuring of <b>dependencies</b> among components.
+    </li>
+    <li>Files not assigned to any component are put into a special "<b>Unclassified</b>" component.</li>
+  </ul>
+  <pre><code [highlight]="getLogicalDecompositionFragment()"></code></pre>
+
+  <pre><code [highlight]="getLogicalDecompositionMetaDependenciesFragment()"></code></pre>
+</div>
+
+<div class="card">
+  <h2 class="title">Cross-Cutting Concerns</h2>
+  <ul>
+    <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the
+      system.
+    </li>
+    <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
+  </ul>
+  <pre><code [highlight]="getCrossCuttingConcernFragment()"></code></pre>
 </div>

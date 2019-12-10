@@ -89,6 +89,12 @@ export class GalleryPageComponent implements OnInit {
           size: '123 KLOC',
           'description': 'A cryptocurrency, a decentralized digital currency without a central bank or single administrator that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries.',
           'logoLink': 'https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png'
+        },
+        {
+          "id": "vscode",
+          'name': 'Visual Studio Code',
+          'description': 'Visual Studio Code https://code.visualstudio.com',
+          'logoLink': 'https://code.visualstudio.com/assets/updates/1_35/logo-stable.png'
         }
       ]
     },

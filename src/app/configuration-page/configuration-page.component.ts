@@ -93,35 +93,81 @@ export class ConfigurationPageComponent implements OnInit {
     return '  "logicalDecompositions" : [ {\n' +
       '    "name" : "primary",\n' +
       '    "scope" : "main",\n' +
-      '    "componentsFolderDepth" : 1,\n' +
       '    "filters" : [ {\n' +
       '      "pathPattern" : "",\n' +
       '      "contentPattern" : "",\n' +
       '      "include" : true,\n' +
       '      "note" : ""\n' +
       '    } ],\n' +
-      '    "includeRemainingFiles" : true,\n' +
+      '    "componentsFolderDepth" : 1,\n' +
       '    "components" : [ ],\n' +
-      '    "renderingOrientation" : "TB",\n' +
+      '    "metaComponents" : [ ],\n' +
+      '    "includeRemainingFiles" : true,\n' +
       '    "dependenciesFinder" : {\n' +
       '      "useBuiltInDependencyFinders" : true,\n' +
       '      "rules" : [ ],\n' +
       '      "metaRules" : [ ]\n' +
+      '    } "renderingOptions" : {\n' +
+      '      "orientation" : "TB"\n' +
       '    }\n' +
       '  }, {\n' +
       '    "name" : "package level",\n' +
       '    "scope" : "main",\n' +
-      '    "componentsFolderDepth" : 19,\n' +
       '    "filters" : [ ],\n' +
-      '    "includeRemainingFiles" : false,\n' +
+      '    "componentsFolderDepth" : 19,\n' +
       '    "components" : [ ],\n' +
-      '    "renderingOrientation" : "LR",\n' +
+      '    "metaComponents" : [ ],\n' +
+      '    "includeRemainingFiles" : false,\n' +
       '    "dependenciesFinder" : {\n' +
       '      "useBuiltInDependencyFinders" : true,\n' +
       '      "rules" : [ ],\n' +
       '      "metaRules" : [ ]\n' +
+      '    } "renderingOptions" : {\n' +
+      '      "orientation" : "TB"\n' +
       '    }\n' +
       '  } ],';
+  }
+
+  getLogicalDecompositionMetaDependenciesFragment() {
+    return '        {\n' +
+      '            "name": "src/editor",\n' +
+      '            "scope": "main",\n' +
+      '            "filters": [\n' +
+      '                {\n' +
+      '                    "pathPattern": ".*/src/vs/editor/.*",\n' +
+      '                    "contentPattern": "",\n' +
+      '                    "include": true,\n' +
+      '                    "note": ""\n' +
+      '                }\n' +
+      '            ],\n' +
+      '            "componentsFolderDepth": 4,\n' +
+      '            "components": [],\n' +
+      '            "metaComponents": [],\n' +
+      '            "includeRemainingFiles": false,\n' +
+      '            "dependenciesFinder": {\n' +
+      '                "useBuiltInDependencyFinders": false,\n' +
+      '                "rules": [],\n' +
+      '                "metaRules": [\n' +
+      '                    {\n' +
+      '                        "pathPattern": ".*[.]ts",\n' +
+      '                        "contentPattern": "import .*from \'vs/editor.*",\n' +
+      '                        "use": "content",\n' +
+      '                        "ignoreComments": false,\n' +
+      '                        "nameOperations": [\n' +
+      '                            {\n' +
+      '                                "op": "extract",\n' +
+      '                                "params": [\n' +
+      '                                    "editor(/[a-zA-Z0-9_]+|)"\n' +
+      '                                ]\n' +
+      '                            }\n' +
+      '                        ]\n' +
+      '                    }\n' +
+      '                ]\n' +
+      '            },\n' +
+      '            "renderingOptions": {\n' +
+      '                "orientation": "TB"\n' +
+      '            }\n' +
+      '        },\n';
   }
 
   getCrossCuttingConcernFragment() {
