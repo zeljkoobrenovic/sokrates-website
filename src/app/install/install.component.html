@@ -4,29 +4,25 @@
     (43 MB)</p>
   <p>Usage: </p>
   <pre>
-  java -jar sokrates-0.9.jar init [options]
-       -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;srcRoot>/_sokrates/config.json")
+  java -jar sokrates-0.9.jar init -srcRoot &lt;arg> [-confFile &lt;arg>]
        -srcRoot &lt;arg>    the path to source code root folder
+       -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;srcRoot>/_sokrates/config.json")
 
-  java -jar sokrates.jar generateReports [options]
-         -confFile &lt;arg>               [OPTIONAL] the path to configuration file (default is "&lt;srcRoot>/_sokrates/config.json")
-         -outputFolder &lt;arg>           the folder where reports will be stored (default is "&lt;srcRoot>/_sokrates/reports/")
-         -reportAll                    generate all reports
-         -reportControls               generate only the controls report (stored in &lt;outputFolder>/Controls.html)
-
-         -reportOverview               generate only the report describing the overview of files in scope
-         -reportDuplication            generate only the duplication report (stored in &lt;outputFolder>/Duplication.html)
-         -reportLogicalDecomposition   generate only the components logical decomposition report (stored in
-                                       &lt;outputFolder>/LogicalDecomposition.html)
-         -reportFileSize               generate only the file size report (stored in &lt;outputFolder>/FileSize.html)
-         -reportUnitSize               generate only the unit size report (stored in &lt;outputFolder>/UnitSize.html)
-         -reportConditionalComplexity  generate only the conditional complexity report (stored in
-                                       &lt;outputFolder>/CyclomaticComplexity.html)
-         -reportCrossCuttingConcerns   generate only the cross cutting concerns report (stored in
-                                       &lt;outputFolder>/CrossCuttingConcerns.html)
-         -reportMetrics                generate only the metrics overview report (stored in &lt;outputFolder>/Metrics.html)
-         -reportJson                   save only report data in JSON format
-         -reportText                   save only textual summary
+  java -jar sokrates-0.9.jar generateReports [options]
+         -confFile &lt;arg>               [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
+         -outputFolder &lt;arg>           [OPTIONAL] the folder where reports will be stored (default is "&lt;currentFolder>/_sokrates/reports/")
+         -reportAll                    [DEFAULT] generate all reports
+         -reportData                   save only data in JSON and text formats (stored in &lt;outputFolder>/data)
+         -reportOverview               generate only the report describing the overview of files in scope (stored in &lt;outputFolder>/html/SourceCodeOverview.html)
+         -reportDuplication            generate only the duplication report (stored in &lt;outputFolder>/html/Duplication.html)
+         -reportLogicalDecomposition   generate only the components logical decomposition report (stored in &lt;outputFolder>/LogicalDecomposition.html)
+         -reportFileSize               generate only the file size report (stored in &lt;outputFolder>/html/FileSize.html)
+         -reportUnitSize               generate only the unit size report (stored in &lt;outputFolder>/html/UnitSize.html)
+         -reportConditionalComplexity  generate only the conditional complexity report (stored in &lt;outputFolder>/html/ConditionalComplexity.html)
+         -reportCrossCuttingConcerns   generate only the cross cutting concerns report (stored in &lt;outputFolder>/html/CrossCuttingConcerns.html)
+         -reportMetrics                generate only the metrics overview report (stored in &lt;outputFolder>/html/Metrics.html)
+         -reportControls               generate only the controls report (stored in &lt;outputFolder>/html/Controls.html)
+         -reportFindings               generate only the findings report (stored in &lt;outputFolder>/html/Findings.html)
 </pre>
   <h1>VISUAL EXPLORER</h1>
   <p style="font-size: 120%">DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">sokrates-explorer-0.9.jar</a>
