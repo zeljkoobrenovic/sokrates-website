@@ -4,9 +4,9 @@
     (43 MB)</p>
   <p>Usage: </p>
   <pre>
-  java -jar sokrates-0.9.jar init -srcRoot &lt;arg> [-confFile &lt;arg>]
-       -srcRoot &lt;arg>    the path to source code root folder
-       -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;srcRoot>/_sokrates/config.json")
+  java -jar sokrates-0.9.jar init [options]
+       -srcRoot &lt;arg>    [OPTIONAL] the path to source code root folder (default is &lt;currentFolder>)
+       -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
 
   java -jar sokrates-0.9.jar generateReports [options]
          -confFile &lt;arg>               [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
