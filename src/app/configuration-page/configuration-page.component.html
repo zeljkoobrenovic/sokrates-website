@@ -52,7 +52,7 @@
     <li>To kick-off analysis, Sokrates needs three parameters:</li>
     <ul>
       <li>A (relative) path to the source code root (<span class="inline-code">srcRoot</span>)</li>
-      <li>List of extensions to be analyzed  (<span class="inline-code">extensions</span>)</li>
+      <li>List of extensions to be analyzed (<span class="inline-code">extensions</span>)</li>
       <li>List of ignore conditions used to exclude files from analyses (<span class="inline-code">ignore</span>)</li>
     </ul>
   </ul>
@@ -84,13 +84,16 @@
     <li>Files containing binaries, documentation, or third-party libraries, for instance, are excluded from analysis.
       The exception are third-party libraries that have been changed by developers.
     </li>
-  </ul>  <pre><code [highlight]="getScopeFragments()"></code></pre>
+  </ul>
+  <pre><code [highlight]="getScopeFragments()"></code></pre>
 </div>
 
 <div class="card">
   <h2 class="title">Goals & Controls</h2>
   <ul>
-    <li>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and tolerance.</li>
+    <li>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and
+      tolerance.
+    </li>
   </ul>
   <pre><code [highlight]="getGoalsAndControlsFragment()"></code></pre>
 </div>
@@ -98,7 +101,9 @@
 <div class="card">
   <h2 class="title">Reference Point for Comparison and Trend Analysis</h2>
   <ul>
-    <li>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and tolerance.</li>
+    <li>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and
+      tolerance.
+    </li>
   </ul>
   <pre><code [highlight]="getCompareResultsWithFragment()"></code></pre>
 </div>
@@ -131,8 +136,6 @@
     <li>Files not assigned to any component are put into a special "<b>Unclassified</b>" component.</li>
   </ul>
   <pre><code [highlight]="getLogicalDecompositionFragment()"></code></pre>
-
-  <pre><code [highlight]="getLogicalDecompositionMetaDependenciesFragment()"></code></pre>
 </div>
 
 <div class="card">
@@ -144,4 +147,32 @@
     <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
   </ul>
   <pre><code [highlight]="getCrossCuttingConcernFragment()"></code></pre>
+</div>
+
+<div class="card">
+  <h2 class="title">Advanced Configuration: Meta Rukles for Components, Concerns and Dependencies</h2>
+  <ul>
+    <li>One of the most powerful features of Sokrates is the possibility to define meta rules for defining components,
+      concerns and dependencies.
+    </li>
+    <li>A meta rule is a search pattern combined with the string operations to process found string to get the name that
+      will be used to define compoent, concern or a dependency to a component.
+    </li>
+    <li>Meta rules can be used in logical decompositions (the <span class="inline-code">metaComponents</span> field), dependency finders (the <span class="inline-code">metaRules</span> field), and in cross-cutting concerns (the <span class="inline-code">metaConcerns</span> field)</li>
+    <li>The Following operations are supported:</li>
+    <ul>
+      <li>extract (regex1, regex2,...)</li>
+      <li>replace (regex, replaceString)</li>
+      <li>append (text)</li>
+      <li>prepend (text)</li>
+      <li>trim</li>
+      <li>tolowercase</li>
+      <li>touppercase</li>
+    </ul>
+  </ul>
+
+  <h3>Example (components and dependencies finder with meta rules):</h3>
+  <pre><code [highlight]="getLogicalDecompositionMetaDependenciesFragment()"></code></pre>
+  <h3>Example (cross-cutting concerns with meta rules):</h3>
+  <pre><code [highlight]="getMetaConcernsFragment()"></code></pre>
 </div>

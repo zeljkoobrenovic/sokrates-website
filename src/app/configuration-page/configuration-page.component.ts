@@ -129,45 +129,71 @@ export class ConfigurationPageComponent implements OnInit {
   }
 
   getLogicalDecompositionMetaDependenciesFragment() {
-    return '        {\n' +
-      '            "name": "src/editor",\n' +
-      '            "scope": "main",\n' +
-      '            "filters": [\n' +
-      '                {\n' +
-      '                    "pathPattern": ".*/src/vs/editor/.*",\n' +
-      '                    "contentPattern": "",\n' +
-      '                    "include": true,\n' +
-      '                    "note": ""\n' +
-      '                }\n' +
-      '            ],\n' +
-      '            "componentsFolderDepth": 4,\n' +
-      '            "components": [],\n' +
-      '            "metaComponents": [],\n' +
-      '            "includeRemainingFiles": false,\n' +
-      '            "dependenciesFinder": {\n' +
-      '                "useBuiltInDependencyFinders": false,\n' +
-      '                "rules": [],\n' +
-      '                "metaRules": [\n' +
-      '                    {\n' +
-      '                        "pathPattern": ".*[.]ts",\n' +
-      '                        "contentPattern": "import .*from \'vs/editor.*",\n' +
-      '                        "use": "content",\n' +
-      '                        "ignoreComments": false,\n' +
-      '                        "nameOperations": [\n' +
-      '                            {\n' +
-      '                                "op": "extract",\n' +
-      '                                "params": [\n' +
-      '                                    "editor(/[a-zA-Z0-9_]+|)"\n' +
-      '                                ]\n' +
-      '                            }\n' +
-      '                        ]\n' +
-      '                    }\n' +
-      '                ]\n' +
-      '            },\n' +
-      '            "renderingOptions": {\n' +
-      '                "orientation": "TB"\n' +
-      '            }\n' +
-      '        },\n';
+    return `
+    "logicalDecompositions": [
+        {
+            "name": "package level",
+            "scope": "main",
+            "filters": [],
+            "componentsFolderDepth": 0,
+            "components": [],
+            "metaComponents": [
+                {
+                    "pathPattern": ".*[.]java",
+                    "contentPattern": "package nl[.]obren[.]sokrates[.].*",
+                    "use": "content",
+                    "ignoreComments": true,
+                    "nameOperations": [
+                        {
+                            "op": "extract",
+                            "params": [
+                                "nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+"
+                            ]
+                        },
+                        {
+                            "op": "replace",
+                            "params": [
+                                "nl[.]obren[.]sokrates[.]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "includeRemainingFiles": false,
+            "dependenciesFinder": {
+                "useBuiltInDependencyFinders": false,
+                "rules": [],
+                "metaRules": [
+                    {
+                        "pathPattern": ".*[.]java",
+                        "contentPattern": "import nl[.]obren[.]sokrates[.].*",
+                        "use": "content",
+                        "ignoreComments": true,
+                        "nameOperations": [
+                            {
+                                "op": "extract",
+                                "params": [
+                                    "nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+"
+                                ]
+                            },
+                            {
+                                "op": "replace",
+                                "params": [
+                                    "nl[.]obren[.]sokrates[.]",
+                                    ""
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "renderingOptions": {
+                "orientation": "TB"
+            }
+        }
+    ],
+    `;
   }
 
   getCrossCuttingConcernFragment() {
@@ -235,5 +261,32 @@ export class ConfigurationPageComponent implements OnInit {
 
   getSummaryFindingsFragment() {
     return '"summaryFindings": ["note 1", "note 2"]';
+  }
+
+  getMetaConcernsFragment() {
+    return `
+    "crossCuttingConcerns": [
+        {
+            "name": "java technology",
+            "concerns": [ ],
+            "metaConcerns": [
+                {
+                    "pathPattern": "",
+                    "contentPattern": "import[ ]+java[.].*",
+                    "use": "content",
+                    "ignoreComments": false,
+                    "nameOperations": [
+                        {
+                            "op": "extract",
+                            "params": [
+                                "java[.][a-zA-Z0-9_]+"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+    `;
   }
 }
