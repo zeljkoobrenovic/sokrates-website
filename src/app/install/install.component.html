@@ -12,12 +12,16 @@
 
     open _sokrates/reports/html/index.html
   </pre>
-  <p>Usage: </p>
+  <h3>Usage: </h3>
+  <p><b>init</b>, generate a Sokrates configuration file for the codebase:</p>
   <pre>
   java -jar sokrates-0.9.jar init [options]
        -srcRoot &lt;arg>    [OPTIONAL] the path to source code root folder (default is &lt;currentFolder>)
        -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
+  </pre>
 
+  <p><b>generateReports</b>, generates Sokrates reports based on the configuration:</p>
+  <pre>
   java -jar sokrates-0.9.jar generateReports [options]
          -confFile &lt;arg>               [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
          -outputFolder &lt;arg>           [OPTIONAL] the folder where reports will be stored (default is "&lt;currentFolder>/_sokrates/reports/")
@@ -33,7 +37,14 @@
          -reportMetrics                generate only the metrics overview report (stored in &lt;outputFolder>/html/Metrics.html)
          -reportControls               generate only the controls report (stored in &lt;outputFolder>/html/Controls.html)
          -reportFindings               generate only the findings report (stored in &lt;outputFolder>/html/Findings.html)
-</pre>
+  </pre>
+
+  <p><b>configComplete</b>, completes missing fields in the configuration file:</p>
+  <pre>
+  java -jar sokrates.jar configComplete [options]
+         -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
+  </pre>
+
   <h1>VISUAL EXPLORER</h1>
   <p style="font-size: 120%">DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">sokrates-explorer-0.9.jar</a>
     (44 MB)</p>
