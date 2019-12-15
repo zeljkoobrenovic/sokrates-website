@@ -48,8 +48,11 @@
   <h1>VISUAL EXPLORER</h1>
   <p style="font-size: 120%">DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">sokrates-explorer-0.9.jar</a>
     (44 MB)</p>
-  <p><b>NOTE: require JavaFX, current binary works only with Java 8.</b></p>
-  <p>Usage: </p>
+  <p><b>NOTE: require JavaFX (download it and install it from <a ref="https://openjfx.io/">openjfx.io</a>)</b></p>
+  <pre>
+   java --module-path $JAVAFX_HOME/lib --add-modules=javafx.controls,javafx.web -jar sokrates-explorer-0.9.jar
+  </pre>
+  <p>Java 8 includes JavaFX, you can run the explorer</p>
   <pre>
   java -jar sokrates-explorer-0.9.jar
   </pre>
