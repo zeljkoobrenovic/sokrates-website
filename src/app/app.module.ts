@@ -13,6 +13,7 @@ import {FeaturesPageComponent} from './features-page/features-page.component';
 import {InstallComponent} from './install/install.component';
 import {ConfigurationPageComponent} from './configuration-page/configuration-page.component';
 import {HIGHLIGHT_OPTIONS, HighlightModule} from 'ngx-highlightjs';
+import {HttpClientModule} from '@angular/common/http';
 
 const languages = () => {
   return {
@@ -37,7 +38,8 @@ const languages = () => {
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [
     {
