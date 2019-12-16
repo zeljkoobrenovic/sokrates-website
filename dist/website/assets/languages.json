@@ -312,5 +312,19 @@
       "Advanced conditional complexity analysis",
       "Basic heuristic dependency analysis (based on imports and require statements)"
     ]
+  },
+  {
+    "extensions": [
+      "kt",
+      "kts"
+    ],
+    "name": "KotlinAnalyzer",
+    "featuresDescription": [
+      "All basic standard analyses supported (source code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls)",
+      "Advanced code cleaning (empty lines and comments removed for LOC calculations, additional cleaning for duplication calculations)",
+      "Advanced unit size analysis",
+      "Advanced conditional complexity analysis",
+      "Basic heuristic dependency analysis (based on imports and package statements)"
+    ]
   }
 ]

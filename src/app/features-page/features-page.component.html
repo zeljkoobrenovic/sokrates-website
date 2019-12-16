@@ -206,7 +206,7 @@
         <td style="text-align: center">{{getUnits(lang)}}</td>
         <td style="text-align: center">{{getDependencies(lang)}}</td>
         <td>
-          <button (click)="toggleDisplay(lang)">Show details...</button>
+          <a href="javascript:void(0)" (click)="toggleDisplay(lang)">Details...</a>
           <div *ngIf="lang.show">
             <ul>
               <li *ngFor="let feature of lang.featuresDescription">{{ feature }}</li>
