@@ -43,4 +43,8 @@ export class FeaturesPageComponent implements OnInit {
     });
     return text;
   }
+
+  isSpecificFeature(feature: any) {
+    return !(feature.toLowerCase().includes('all basic standard analyses supported'));
+  }
 }

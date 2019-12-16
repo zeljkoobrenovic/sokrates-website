@@ -194,6 +194,9 @@
   </div>
   <div class="card">
     <h2 class="title">Supported Languages</h2>
+    <p>Any textual file can be analyzed in Sokrates with standard analyses (empty lines cleaning, source
+      code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls).</p>
+    <p>For several popular languages Sokrates provides more in-depth analyses:</p>
     <table>
       <th style="text-align: left">Language</th>
       <th style="text-align: left">Extensions</th>
@@ -201,16 +204,18 @@
       <th style="text-align: left">Dependencies</th>
       <th style="text-align: left">Details</th>
       <tr *ngFor="let lang of languages">
-        <td style="padding-right: 36px">{{lang.name.replace("Analyzer", "")}}</td>
-        <td>.{{lang.extensions.join("  .")}}</td>
-        <td style="text-align: center">{{getUnits(lang)}}</td>
-        <td style="text-align: center">{{getDependencies(lang)}}</td>
+        <td style="padding-right: 36px; vertical-align: top">{{lang.name.replace("Analyzer", "")}}</td>
+        <td style="vertical-align: top">.{{lang.extensions.join("  .")}}</td>
+        <td style="text-align: center; vertical-align: top">{{getUnits(lang)}}</td>
+        <td style="text-align: center; vertical-align: top">{{getDependencies(lang)}}</td>
         <td>
           <a href="javascript:void(0)" (click)="toggleDisplay(lang)">Details...</a>
           <div *ngIf="lang.show">
-            <ul>
-              <li *ngFor="let feature of lang.featuresDescription">{{ feature }}</li>
-            </ul>
+              <span *ngFor="let feature of lang.featuresDescription">
+                <div *ngIf="isSpecificFeature(feature)">
+                  - {{ feature }}
+                </div>
+              </span>
           </div>
         </td>
       </tr>
