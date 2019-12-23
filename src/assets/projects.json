@@ -397,6 +397,36 @@
     ]
   },
   {
+    "title": "perl",
+    "folder": "perl",
+    "projects": [
+      {
+        "name": "OpenKore",
+        "description": "A custom client & intelligent automated assistant for Ragnarok Online.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/open-kore.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/sullo/nikto"
+          }
+        ],
+        "id": "openkore"
+      },
+      {
+        "name": "Nikto",
+        "description": "Nikto web server scanner - https://cirt.net/Nikto2.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/perl.svg",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/sullo/nikto"
+          }
+        ],
+        "id": "nikto"
+      }
+    ]
+  },
+  {
     "title": "kotlin",
     "folder": "kotlin",
     "projects": [
