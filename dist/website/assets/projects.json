@@ -457,6 +457,36 @@
     ]
   },
   {
+    "title": "kotlin",
+    "folder": "kotlin",
+    "projects": [
+      {
+        "name": "shadowsocks-android",
+        "description": "A shadowsocks client for Android.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/shadowsocks.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/shadowsocks/shadowsocks-android"
+          }
+        ],
+        "id": "shadowsocks-android"
+      },
+      {
+        "name": "Ktor",
+        "description": "A framework for quickly creating web applications in Kotlin with minimal effort.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/ktor.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/ktorio/ktor"
+          }
+        ],
+        "id": "ktor"
+      }
+    ]
+  },
+  {
     "title": "swift",
     "folder": "swift",
     "projects": [
@@ -513,36 +543,6 @@
           }
         ],
         "id": "apache-livy"
-      }
-    ]
-  },
-  {
-    "title": "ruby",
-    "folder": "ruby",
-    "projects": [
-      {
-        "name": "Jekyll",
-        "description": "A blog-aware static site generator in Ruby https://jekyllrb.com",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/jekyll.png",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/jekyll/jekyll"
-          }
-        ],
-        "id": "jekyll"
-      },
-      {
-        "name": "dev.to",
-        "description": "Where programmers share ideas and help each other grow https://dev.to",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/devto.jpg",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/thepracticaldev/dev.to"
-          }
-        ],
-        "id": "dev.to"
       }
     ]
   },
@@ -611,6 +611,36 @@
     ]
   },
   {
+    "title": "ruby",
+    "folder": "ruby",
+    "projects": [
+      {
+        "name": "Jekyll",
+        "description": "A blog-aware static site generator in Ruby https://jekyllrb.com",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/jekyll.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/jekyll/jekyll"
+          }
+        ],
+        "id": "jekyll"
+      },
+      {
+        "name": "dev.to",
+        "description": "Where programmers share ideas and help each other grow https://dev.to",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/devto.jpg",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/thepracticaldev/dev.to"
+          }
+        ],
+        "id": "dev.to"
+      }
+    ]
+  },
+  {
     "title": "csharp",
     "folder": "csharp",
     "projects": [
@@ -641,36 +671,6 @@
     ]
   },
   {
-    "title": "kotlin",
-    "folder": "kotlin",
-    "projects": [
-      {
-        "name": "shadowsocks-android",
-        "description": "A shadowsocks client for Android.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/shadowsocks.png",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/shadowsocks/shadowsocks-android"
-          }
-        ],
-        "id": "shadowsocks-android"
-      },
-      {
-        "name": "Ktor",
-        "description": "A framework for quickly creating web applications in Kotlin with minimal effort.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/ktor.png",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/ktorio/ktor"
-          }
-        ],
-        "id": "ktor"
-      }
-    ]
-  },
-  {
     "title": "css",
     "folder": "css",
     "projects": [
@@ -685,6 +685,24 @@
           }
         ],
         "id": "bootstrap"
+      }
+    ]
+  },
+  {
+    "title": "clojure",
+    "folder": "clojure",
+    "projects": [
+      {
+        "name": "clj-kondo",
+        "description": "A linter for Clojure code that sparks joy.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/clojure.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/borkdude/clj-kondo"
+          }
+        ],
+        "id": "clj-kondo"
       }
     ]
   }
