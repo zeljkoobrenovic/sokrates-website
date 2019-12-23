@@ -397,6 +397,66 @@
     ]
   },
   {
+    "title": "php",
+    "folder": "php",
+    "projects": [
+      {
+        "name": "Monica",
+        "description": "Personal CRM. Remember everything about your friends and family. https://www.monicahq.com",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/monica.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/monicahq/monica"
+          }
+        ],
+        "id": "monica"
+      },
+      {
+        "name": "Laravel Framework",
+        "description": "A PHP web application framework with expressive, elegant syntax.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/laravel.png",
+        "links": [
+          {
+            "label": "Github repo",
+            "href": "https://github.com/laravel/framework.git"
+          }
+        ],
+        "id": "laravel"
+      }
+    ]
+  },
+  {
+    "title": "scala",
+    "folder": "scala",
+    "projects": [
+      {
+        "name": "Polynote",
+        "description": "An experimental polyglot notebook environment. Currently, it supports Scala and Python (with or without Spark), SQL, and Vega.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/polynote.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/polynote/polynote"
+          }
+        ],
+        "id": "polynote"
+      },
+      {
+        "name": "Apache Livy",
+        "description": "An open source REST interface for interacting with Apache Spark from anywhere.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/livy.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/apache/incubator-livy"
+          }
+        ],
+        "id": "apache-livy"
+      }
+    ]
+  },
+  {
     "title": "groovy",
     "folder": "groovy",
     "projects": [
@@ -517,24 +577,6 @@
           }
         ],
         "id": "apollo-client"
-      }
-    ]
-  },
-  {
-    "title": "php",
-    "folder": "php",
-    "projects": [
-      {
-        "name": "Laravel Framework",
-        "description": "A PHP web application framework with expressive, elegant syntax.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/laravel.png",
-        "links": [
-          {
-            "label": "Github repo",
-            "href": "https://github.com/laravel/framework.git"
-          }
-        ],
-        "id": "laravel"
       }
     ]
   },
