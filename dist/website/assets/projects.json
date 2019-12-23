@@ -367,6 +367,36 @@
     ]
   },
   {
+    "title": "ts",
+    "folder": "ts",
+    "projects": [
+      {
+        "name": "Visual Studio Code",
+        "description": "Visual Studio Code https://code.visualstudio.com",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/vs-code.png",
+        "links": [
+          {
+            "label": "Github repo",
+            "href": "https://github.com/microsoft/vscode"
+          }
+        ],
+        "id": "vscode"
+      },
+      {
+        "name": "Apollo Client",
+        "description": "A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/apollo.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/apollographql/apollo-client"
+          }
+        ],
+        "id": "apollo-client"
+      }
+    ]
+  },
+  {
     "title": "php",
     "folder": "php",
     "projects": [
@@ -407,7 +437,7 @@
         "links": [
           {
             "label": "Github Repo",
-            "href": "https://github.com/sullo/nikto"
+            "href": "https://github.com/OpenKore/openkore"
           }
         ],
         "id": "openkore"
@@ -423,36 +453,6 @@
           }
         ],
         "id": "nikto"
-      }
-    ]
-  },
-  {
-    "title": "kotlin",
-    "folder": "kotlin",
-    "projects": [
-      {
-        "name": "shadowsocks-android",
-        "description": "A shadowsocks client for Android.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/shadowsocks.png",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/shadowsocks/shadowsocks-android"
-          }
-        ],
-        "id": "shadowsocks-android"
-      },
-      {
-        "name": "Ktor",
-        "description": "A framework for quickly creating web applications in Kotlin with minimal effort.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/ktor.png",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/ktorio/ktor"
-          }
-        ],
-        "id": "ktor"
       }
     ]
   },
@@ -513,6 +513,36 @@
           }
         ],
         "id": "apache-livy"
+      }
+    ]
+  },
+  {
+    "title": "ruby",
+    "folder": "ruby",
+    "projects": [
+      {
+        "name": "Jekyll",
+        "description": "A blog-aware static site generator in Ruby https://jekyllrb.com",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/jekyll.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/jekyll/jekyll"
+          }
+        ],
+        "id": "jekyll"
+      },
+      {
+        "name": "dev.to",
+        "description": "Where programmers share ideas and help each other grow https://dev.to",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/devto.jpg",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/thepracticaldev/dev.to"
+          }
+        ],
+        "id": "dev.to"
       }
     ]
   },
@@ -611,32 +641,32 @@
     ]
   },
   {
-    "title": "ts",
-    "folder": "ts",
+    "title": "kotlin",
+    "folder": "kotlin",
     "projects": [
       {
-        "name": "Visual Studio Code",
-        "description": "Visual Studio Code https://code.visualstudio.com",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/vs-code.png",
-        "links": [
-          {
-            "label": "Github repo",
-            "href": "https://github.com/microsoft/vscode"
-          }
-        ],
-        "id": "vscode"
-      },
-      {
-        "name": "Apollo Client",
-        "description": "A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/apollo.png",
+        "name": "shadowsocks-android",
+        "description": "A shadowsocks client for Android.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/shadowsocks.png",
         "links": [
           {
             "label": "Github Repo",
-            "href": "https://github.com/apollographql/apollo-client"
+            "href": "https://github.com/shadowsocks/shadowsocks-android"
           }
         ],
-        "id": "apollo-client"
+        "id": "shadowsocks-android"
+      },
+      {
+        "name": "Ktor",
+        "description": "A framework for quickly creating web applications in Kotlin with minimal effort.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/ktor.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/ktorio/ktor"
+          }
+        ],
+        "id": "ktor"
       }
     ]
   },
