@@ -367,6 +367,36 @@
     ]
   },
   {
+    "title": "php",
+    "folder": "php",
+    "projects": [
+      {
+        "name": "Monica",
+        "description": "Personal CRM. Remember everything about your friends and family. https://www.monicahq.com",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/monica.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/monicahq/monica"
+          }
+        ],
+        "id": "monica"
+      },
+      {
+        "name": "Laravel Framework",
+        "description": "A PHP web application framework with expressive, elegant syntax.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/laravel.png",
+        "links": [
+          {
+            "label": "Github repo",
+            "href": "https://github.com/laravel/framework.git"
+          }
+        ],
+        "id": "laravel"
+      }
+    ]
+  },
+  {
     "title": "kotlin",
     "folder": "kotlin",
     "projects": [
@@ -397,32 +427,32 @@
     ]
   },
   {
-    "title": "php",
-    "folder": "php",
+    "title": "swift",
+    "folder": "swift",
     "projects": [
       {
-        "name": "Monica",
-        "description": "Personal CRM. Remember everything about your friends and family. https://www.monicahq.com",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/monica.png",
+        "name": "Vapor",
+        "description": "A server-side Swift web framework. https://vapor.codes.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/vapor.png",
         "links": [
           {
             "label": "Github Repo",
-            "href": "https://github.com/monicahq/monica"
+            "href": "https://github.com/vapor/vapor"
           }
         ],
-        "id": "monica"
+        "id": "vapor"
       },
       {
-        "name": "Laravel Framework",
-        "description": "A PHP web application framework with expressive, elegant syntax.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/laravel.png",
+        "name": "Loop",
+        "description": "An automated insulin delivery app template for iOS, built on LoopKit https://loopdocs.org.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/loop.png",
         "links": [
           {
-            "label": "Github repo",
-            "href": "https://github.com/laravel/framework.git"
+            "label": "GitHub Repo",
+            "href": "https://github.com/LoopKit/Loop"
           }
         ],
-        "id": "laravel"
+        "id": "Loop"
       }
     ]
   },
