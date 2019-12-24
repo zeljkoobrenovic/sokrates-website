@@ -367,6 +367,48 @@
     ]
   },
   {
+    "title": "csharp",
+    "folder": "csharp",
+    "projects": [
+      {
+        "name": "SimplCommerce",
+        "description": "A simple, cross platform, modularized ecommerce system built on .NET Core.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/simpl-commerce.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/simplcommerce/SimplCommerce"
+          }
+        ],
+        "id": "SimplCommerce"
+      },
+      {
+        "name": "ScpToolkit",
+        "description": "Windows Driver and XInput Wrapper for Sony DualShock 3/4 Controllers",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/pcsx2.jpg",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/nefarius/ScpToolkit"
+          }
+        ],
+        "id": "ScpToolkit"
+      },
+      {
+        "name": "OrchardCore",
+        "description": "A redevelopment of Orchard CMS on ASP.NET Core.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/orchard.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/OrchardCMS/OrchardCore/tree/dev/src"
+          }
+        ],
+        "id": "OrchardCore"
+      }
+    ]
+  },
+  {
     "title": "kotlin",
     "folder": "kotlin",
     "projects": [
@@ -427,36 +469,6 @@
     ]
   },
   {
-    "title": "perl",
-    "folder": "perl",
-    "projects": [
-      {
-        "name": "OpenKore",
-        "description": "A custom client & intelligent automated assistant for Ragnarok Online.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/open-kore.png",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/OpenKore/openkore"
-          }
-        ],
-        "id": "openkore"
-      },
-      {
-        "name": "Nikto",
-        "description": "Nikto web server scanner - https://cirt.net/Nikto2.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/perl.svg",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/sullo/nikto"
-          }
-        ],
-        "id": "nikto"
-      }
-    ]
-  },
-  {
     "title": "swift",
     "folder": "swift",
     "projects": [
@@ -483,6 +495,36 @@
           }
         ],
         "id": "Loop"
+      }
+    ]
+  },
+  {
+    "title": "ts",
+    "folder": "ts",
+    "projects": [
+      {
+        "name": "Visual Studio Code",
+        "description": "Visual Studio Code https://code.visualstudio.com",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/vs-code.png",
+        "links": [
+          {
+            "label": "Github repo",
+            "href": "https://github.com/microsoft/vscode"
+          }
+        ],
+        "id": "vscode"
+      },
+      {
+        "name": "Apollo Client",
+        "description": "A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/apollo.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/apollographql/apollo-client"
+          }
+        ],
+        "id": "apollo-client"
       }
     ]
   },
@@ -611,62 +653,62 @@
     ]
   },
   {
-    "title": "csharp",
-    "folder": "csharp",
+    "title": "r",
+    "folder": "r",
     "projects": [
       {
-        "name": "SimplCommerce",
-        "description": "A simple, cross platform, modularized ecommerce system built on .NET Core.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/simpl-commerce.png",
+        "name": "rmarkdown",
+        "description": "Dynamic Documents for R https://rmarkdown.rstudio.com",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/R.png",
         "links": [
           {
             "label": "Github Repo",
-            "href": "https://github.com/simplcommerce/SimplCommerce"
+            "href": "https://github.com/rstudio/rmarkdown"
           }
         ],
-        "id": "SimplCommerce"
+        "id": "rmarkdown"
       },
       {
-        "name": "OrchardCore",
-        "description": "A redevelopment of Orchard CMS on ASP.NET Core.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/orchard.png",
+        "name": "datadolphyn",
+        "description": "The datadolph.in team is sharing all of the R codebase that it developed to analyze large quantities of data.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/R.png",
         "links": [
           {
             "label": "Github Repo",
-            "href": "https://github.com/OrchardCMS/OrchardCore/tree/dev/src"
+            "href": "https://github.com/datadolphyn/R"
           }
         ],
-        "id": "OrchardCore"
+        "id": "datadolphyn"
       }
     ]
   },
   {
-    "title": "ts",
-    "folder": "ts",
+    "title": "perl",
+    "folder": "perl",
     "projects": [
       {
-        "name": "Visual Studio Code",
-        "description": "Visual Studio Code https://code.visualstudio.com",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/vs-code.png",
-        "links": [
-          {
-            "label": "Github repo",
-            "href": "https://github.com/microsoft/vscode"
-          }
-        ],
-        "id": "vscode"
-      },
-      {
-        "name": "Apollo Client",
-        "description": "A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/apollo.png",
+        "name": "OpenKore",
+        "description": "A custom client & intelligent automated assistant for Ragnarok Online.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/open-kore.png",
         "links": [
           {
             "label": "Github Repo",
-            "href": "https://github.com/apollographql/apollo-client"
+            "href": "https://github.com/OpenKore/openkore"
           }
         ],
-        "id": "apollo-client"
+        "id": "openkore"
+      },
+      {
+        "name": "Nikto",
+        "description": "Nikto web server scanner - https://cirt.net/Nikto2.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/perl.svg",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/sullo/nikto"
+          }
+        ],
+        "id": "nikto"
       }
     ]
   },
