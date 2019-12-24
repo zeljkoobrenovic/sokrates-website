@@ -276,6 +276,22 @@
   },
   {
     "extensions": [
+      "rds",
+      "rdata",
+      "rda",
+      "r"
+    ],
+    "name": "RAnalyzer",
+    "featuresDescription": [
+      "All basic standard analyses supported (source code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls)",
+      "Advanced code cleaning (empty lines and comments removed for LOC calculations, additional cleaning for duplication calculations)",
+      "Unit size analysis",
+      "Conditional complexity analysis",
+      "No dependency analysis"
+    ]
+  },
+  {
+    "extensions": [
       "json"
     ],
     "name": "JsonAnalyzer",
@@ -289,7 +305,9 @@
   },
   {
     "extensions": [
-      "xml"
+      "xml",
+      "csproj",
+      "xaml"
     ],
     "name": "XmlAnalyzer",
     "featuresDescription": [
