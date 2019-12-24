@@ -137,6 +137,20 @@
   },
   {
     "extensions": [
+      "yaml",
+      "yml"
+    ],
+    "name": "YamlAnalyzer",
+    "featuresDescription": [
+      "All basic standard analyses supported (source code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls)",
+      "Advanced code cleaning (empty lines and comments removed for LOC calculations, additional cleaning for duplication calculations)",
+      "No unit size analysis",
+      "No conditional complexity analysis",
+      "No dependency analysis"
+    ]
+  },
+  {
+    "extensions": [
       "aspx",
       "html",
       "htm",
@@ -220,10 +234,10 @@
   },
   {
     "extensions": [
-      "cljc",
-      "cljs",
       "clj",
-      "edn"
+      "edn",
+      "cljc",
+      "cljs"
     ],
     "name": "ClojureLangAnalyzer",
     "featuresDescription": [
@@ -288,8 +302,8 @@
   },
   {
     "extensions": [
-      "kt",
-      "kts"
+      "kts",
+      "kt"
     ],
     "name": "KotlinAnalyzer",
     "featuresDescription": [
@@ -343,8 +357,8 @@
   },
   {
     "extensions": [
-      "cc",
       "cpp",
+      "cc",
       "hpp",
       "m"
     ],
