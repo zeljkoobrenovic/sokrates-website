@@ -10,8 +10,8 @@
     "featuresDescription": [
       "All basic standard analyses supported (source code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls)",
       "Advanced code cleaning (empty lines and comments removed for LOC calculations, additional cleaning for duplication calculations)",
-      "No unit size analysis",
-      "No conditional complexity analysis",
+      "Unit size analysis",
+      "Conditional complexity analysis",
       "No dependency analysis"
     ]
   },
@@ -86,6 +86,21 @@
       "sql"
     ],
     "name": "SqlAnalyzer",
+    "featuresDescription": [
+      "All basic standard analyses supported (source code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls)",
+      "Advanced code cleaning (empty lines and comments removed for LOC calculations, additional cleaning for duplication calculations)",
+      "No unit size analysis",
+      "No conditional complexity analysis",
+      "No dependency analysis"
+    ]
+  },
+  {
+    "extensions": [
+      "zsh",
+      "sh",
+      "bash"
+    ],
+    "name": "ShellAnalyzer",
     "featuresDescription": [
       "All basic standard analyses supported (source code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls)",
       "Advanced code cleaning (empty lines and comments removed for LOC calculations, additional cleaning for duplication calculations)",
