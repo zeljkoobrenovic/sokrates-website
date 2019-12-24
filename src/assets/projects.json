@@ -112,7 +112,7 @@
         "id": "jenkins"
       },
       {
-        "name": "Apache Commons Lang",
+        "name": "Commons Lang",
         "description": "The standard Java libraries fail to provide enough methods for manipulation of its core classes. Apache Commons Lang provides these extra methods.",
         "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/apache-commons.png",
         "links": [

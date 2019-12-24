@@ -1,20 +1,24 @@
-<app-header></app-header>
+<div style="margin: 10px">
+  <app-header></app-header>
 
-<mat-tab-group style="margin: 20px">
-  <mat-tab label="HOME">
-    <app-home-page></app-home-page>
-    <app-gallery-page></app-gallery-page>
-  </mat-tab>
-  <mat-tab label="FEATURES">
-    <app-features-page></app-features-page>
-  </mat-tab>
-  <mat-tab label="CONFIGURATION">
-    <app-configuration-page></app-configuration-page>
-  </mat-tab>
-  <mat-tab label="DOWNLOAD">
-    <!--app-license-page></app-license-page-->
-    <app-install></app-install>
-  </mat-tab>
-</mat-tab-group>
+  <mat-tab-group style="margin: 10px;">
+    <mat-tab label="HOME">
+      <app-home-page></app-home-page>
+    </mat-tab>
+    <mat-tab label="GALLERY">
+      <app-gallery-page></app-gallery-page>
+    </mat-tab>
+    <mat-tab label="FEATURES">
+      <app-features-page></app-features-page>
+    </mat-tab>
+    <mat-tab label="CONFIGURATION">
+      <app-configuration-page></app-configuration-page>
+    </mat-tab>
+    <mat-tab label="DOWNLOAD">
+      <!--app-license-page></app-license-page-->
+      <app-install></app-install>
+    </mat-tab>
+  </mat-tab-group>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</div>

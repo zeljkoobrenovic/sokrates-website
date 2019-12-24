@@ -1,9 +1,10 @@
 <div style="margin: 22px">
-  <h1>COMMAND LINE JAR</h1>
-  <p style="font-size: 120%">DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar">sokrates-0.9.jar</a>
-    (38 MB)</p>
-  <p>Simple usage example (to analyze Junit4): </p>
-  <pre>
+  <div class="card">
+    <h1>COMMAND LINE JAR</h1>
+    <p style="font-size: 120%">DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar">sokrates-0.9.jar</a>
+      (38 MB)</p>
+    <p>Simple usage example (to analyze Junit4): </p>
+    <pre>
     git clone https://github.com/junit-team/junit4
     cd junit4
 
@@ -13,22 +14,16 @@
     open _sokrates/reports/html/index.html
   </pre>
 
-  <p>See a 5 minutes video on using Sokrates CLI to analyze source code of Sokrates:</p>
-  <div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZybfJQ8Ob7g" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <h3>Usage: </h3>
-  <p><b>init</b>, generate a Sokrates configuration file for the codebase:</p>
-  <pre>
+    <h3>Usage: </h3>
+    <p><b>init</b>, generate a Sokrates configuration file for the codebase:</p>
+    <pre>
   java -jar sokrates-0.9.jar init [options]
        -srcRoot &lt;arg>    [OPTIONAL] the path to source code root folder (default is &lt;currentFolder>)
        -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
   </pre>
 
-  <p><b>generateReports</b>, generates Sokrates reports based on the configuration:</p>
-  <pre>
+    <p><b>generateReports</b>, generates Sokrates reports based on the configuration:</p>
+    <pre>
   java -jar sokrates-0.9.jar generateReports [options]
          -confFile &lt;arg>               [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
          -outputFolder &lt;arg>           [OPTIONAL] the folder where reports will be stored (default is "&lt;currentFolder>/_sokrates/reports/")
@@ -46,28 +41,29 @@
          -reportFindings               generate only the findings report (stored in &lt;outputFolder>/html/Findings.html)
   </pre>
 
-  <p><b>configComplete</b>, completes missing fields in the configuration file:</p>
-  <pre>
+    <p><b>configComplete</b>, completes missing fields in the configuration file:</p>
+    <pre>
   java -jar sokrates.jar configComplete [options]
          -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
   </pre>
-
-  <h1>VISUAL EXPLORER</h1>
-  <p style="font-size: 120%">DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">sokrates-explorer-0.9.jar</a>
-    (78 MB)</p>
-  <p><b>NOTE: require JavaFX (download it and install it from <a ref="https://openjfx.io/">openjfx.io</a>)</b></p>
-  <pre>
+  </div>
+  <div class="card">
+    <h1>VISUAL EXPLORER</h1>
+    <p style="font-size: 120%">DOWNLOAD: <a
+      href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">sokrates-explorer-0.9.jar</a>
+      (78 MB)</p>
+    <p><b>NOTE: require JavaFX (download it and install it from <a ref="https://openjfx.io/">openjfx.io</a>)</b></p>
+    <pre>
    java --module-path $JAVAFX_HOME/lib --add-modules=javafx.controls,javafx.web -jar sokrates-explorer-0.9.jar
   </pre>
-  <img src="/assets/explorer.png" style="width: 100%">
-  <p>See a 5 minutes video on using Sokrates Explorer to analyze source code of JUnit4:</p>
-  <div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/kdLcUEqGXl0" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="/assets/explorer.png" style="width: 100%">
   </div>
-  <h1>SOURCE CODE</h1>
-  <ul style="font-size: 120%">
-    <li><p><a href="https://github.com/zeljkoobrenovic/sokrates" target="_blank">github.com/zeljkoobrenovic/sokrates</a>
-    </p></li>
-  </ul>
+  <div class="card">
+    <h1>SOURCE CODE</h1>
+    <ul style="font-size: 120%">
+      <li><p><a href="https://github.com/zeljkoobrenovic/sokrates"
+                target="_blank">github.com/zeljkoobrenovic/sokrates</a>
+      </p></li>
+    </ul>
+  </div>
 </div>
