@@ -112,7 +112,7 @@
         "id": "jenkins"
       },
       {
-        "name": "Commons Lang",
+        "name": "Apache Commons Lang",
         "description": "The standard Java libraries fail to provide enough methods for manipulation of its core classes. Apache Commons Lang provides these extra methods.",
         "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/apache-commons.png",
         "links": [
@@ -469,6 +469,36 @@
     ]
   },
   {
+    "title": "perl",
+    "folder": "perl",
+    "projects": [
+      {
+        "name": "OpenKore",
+        "description": "A custom client & intelligent automated assistant for Ragnarok Online.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/open-kore.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/OpenKore/openkore"
+          }
+        ],
+        "id": "openkore"
+      },
+      {
+        "name": "Nikto",
+        "description": "Nikto web server scanner - https://cirt.net/Nikto2.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/perl.svg",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/sullo/nikto"
+          }
+        ],
+        "id": "nikto"
+      }
+    ]
+  },
+  {
     "title": "swift",
     "folder": "swift",
     "projects": [
@@ -683,50 +713,56 @@
     ]
   },
   {
-    "title": "perl",
-    "folder": "perl",
+    "title": "julia",
+    "folder": "julia",
     "projects": [
       {
-        "name": "OpenKore",
-        "description": "A custom client & intelligent automated assistant for Ragnarok Online.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/open-kore.png",
+        "name": "Zygote.jl",
+        "description": "Zygote is a working prototype for source-to-source automatic differentiation (AD) in Julia, and the next-gen AD system for the Flux differentiable programming framework.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/zygote.png",
         "links": [
           {
             "label": "Github Repo",
-            "href": "https://github.com/OpenKore/openkore"
+            "href": "https://github.com/FluxML/Zygote.jl"
           }
         ],
-        "id": "openkore"
-      },
-      {
-        "name": "Nikto",
-        "description": "Nikto web server scanner - https://cirt.net/Nikto2.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/perl.svg",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/sullo/nikto"
-          }
-        ],
-        "id": "nikto"
+        "id": "Zygote.jl"
       }
     ]
   },
   {
-    "title": "visualbasic",
-    "folder": "visualbasic",
+    "title": "dart",
+    "folder": "dart",
     "projects": [
       {
-        "name": "narekye/VB.NET",
-        "description": "Useful examples of Visual Basic.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/vbnet.png",
+        "name": "FlutterFire",
+        "description": "Firebase plugins for Flutter apps https://firebaseopensource.com/projects/firebaseextended/flutterfire/",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/flutterfire.jpg",
+        "links": [
+          {
+            "label": "GitHub Repo",
+            "href": "https://github.com/FirebaseExtended/flutterfire"
+          }
+        ],
+        "id": "flutterfire"
+      }
+    ]
+  },
+  {
+    "title": "d",
+    "folder": "d",
+    "projects": [
+      {
+        "name": "Derelict3",
+        "description": "A collection of dynamic D bindings to C libraries, useful for multimedia and game development.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/d.png",
         "links": [
           {
             "label": "Github Repo",
-            "href": "https://github.com/narekye/VB.NET"
+            "href": "https://github.com/mdparker/Derelict3"
           }
         ],
-        "id": "narekye"
+        "id": "Derelict3"
       }
     ]
   },
@@ -745,6 +781,42 @@
           }
         ],
         "id": "bootstrap"
+      }
+    ]
+  },
+  {
+    "title": "rust",
+    "folder": "rust",
+    "projects": [
+      {
+        "name": "librespot",
+        "description": "Open Source Spotify client library.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/librespot.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/librespot-org/librespot"
+          }
+        ],
+        "id": "librespot"
+      }
+    ]
+  },
+  {
+    "title": "visualbasic",
+    "folder": "visualbasic",
+    "projects": [
+      {
+        "name": "narekye/VB.NET",
+        "description": "Useful examples of Visual Basic.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/vbnet.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/narekye/VB.NET"
+          }
+        ],
+        "id": "narekye"
       }
     ]
   },
