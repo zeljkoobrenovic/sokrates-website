@@ -713,6 +713,42 @@
     ]
   },
   {
+    "title": "pascal",
+    "folder": "pascal",
+    "projects": [
+      {
+        "name": "castle-engine",
+        "description": "Cross-platform (desktop, mobile, console) 3D and 2D game engine supporting many asset formats (X3D, glTF, Spine...) and using modern Object Pascal https://castle-engine.io/",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/castle_engine.png",
+        "links": [
+          {
+            "label": "GitHub Repo",
+            "href": "https://github.com/castle-engine/castle-engine"
+          }
+        ],
+        "id": "castle-engine"
+      }
+    ]
+  },
+  {
+    "title": "lua",
+    "folder": "lua",
+    "projects": [
+      {
+        "name": "LuCI",
+        "description": "OpenWrt Configuration Interface",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/openwrt.png",
+        "links": [
+          {
+            "label": "GitHub Repo",
+            "href": "https://github.com/openwrt/luci"
+          }
+        ],
+        "id": "luci"
+      }
+    ]
+  },
+  {
     "title": "rust",
     "folder": "rust",
     "projects": [
@@ -727,24 +763,6 @@
           }
         ],
         "id": "librespot"
-      }
-    ]
-  },
-  {
-    "title": "julia",
-    "folder": "julia",
-    "projects": [
-      {
-        "name": "Zygote.jl",
-        "description": "Zygote is a working prototype for source-to-source automatic differentiation (AD) in Julia, and the next-gen AD system for the Flux differentiable programming framework.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/zygote.png",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/FluxML/Zygote.jl"
-          }
-        ],
-        "id": "Zygote.jl"
       }
     ]
   },
@@ -803,6 +821,24 @@
     ]
   },
   {
+    "title": "julia",
+    "folder": "julia",
+    "projects": [
+      {
+        "name": "Zygote.jl",
+        "description": "Zygote is a working prototype for source-to-source automatic differentiation (AD) in Julia, and the next-gen AD system for the Flux differentiable programming framework.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/zygote.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/FluxML/Zygote.jl"
+          }
+        ],
+        "id": "Zygote.jl"
+      }
+    ]
+  },
+  {
     "title": "visualbasic",
     "folder": "visualbasic",
     "projects": [
@@ -817,24 +853,6 @@
           }
         ],
         "id": "narekye"
-      }
-    ]
-  },
-  {
-    "title": "lua",
-    "folder": "lua",
-    "projects": [
-      {
-        "name": "LuCI",
-        "description": "OpenWrt Configuration Interface",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/openwrt.png",
-        "links": [
-          {
-            "label": "GitHub Repo",
-            "href": "https://github.com/openwrt/luci"
-          }
-        ],
-        "id": "luci"
       }
     ]
   },
