@@ -469,36 +469,6 @@
     ]
   },
   {
-    "title": "perl",
-    "folder": "perl",
-    "projects": [
-      {
-        "name": "OpenKore",
-        "description": "A custom client & intelligent automated assistant for Ragnarok Online.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/open-kore.png",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/OpenKore/openkore"
-          }
-        ],
-        "id": "openkore"
-      },
-      {
-        "name": "Nikto",
-        "description": "Nikto web server scanner - https://cirt.net/Nikto2.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/perl.svg",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/sullo/nikto"
-          }
-        ],
-        "id": "nikto"
-      }
-    ]
-  },
-  {
     "title": "swift",
     "folder": "swift",
     "projects": [
@@ -713,6 +683,54 @@
     ]
   },
   {
+    "title": "perl",
+    "folder": "perl",
+    "projects": [
+      {
+        "name": "OpenKore",
+        "description": "A custom client & intelligent automated assistant for Ragnarok Online.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/open-kore.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/OpenKore/openkore"
+          }
+        ],
+        "id": "openkore"
+      },
+      {
+        "name": "Nikto",
+        "description": "Nikto web server scanner - https://cirt.net/Nikto2.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/perl.svg",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/sullo/nikto"
+          }
+        ],
+        "id": "nikto"
+      }
+    ]
+  },
+  {
+    "title": "rust",
+    "folder": "rust",
+    "projects": [
+      {
+        "name": "librespot",
+        "description": "Open Source Spotify client library.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/librespot.png",
+        "links": [
+          {
+            "label": "Github Repo",
+            "href": "https://github.com/librespot-org/librespot"
+          }
+        ],
+        "id": "librespot"
+      }
+    ]
+  },
+  {
     "title": "julia",
     "folder": "julia",
     "projects": [
@@ -785,24 +803,6 @@
     ]
   },
   {
-    "title": "rust",
-    "folder": "rust",
-    "projects": [
-      {
-        "name": "librespot",
-        "description": "Open Source Spotify client library.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/librespot.png",
-        "links": [
-          {
-            "label": "Github Repo",
-            "href": "https://github.com/librespot-org/librespot"
-          }
-        ],
-        "id": "librespot"
-      }
-    ]
-  },
-  {
     "title": "visualbasic",
     "folder": "visualbasic",
     "projects": [
@@ -817,6 +817,24 @@
           }
         ],
         "id": "narekye"
+      }
+    ]
+  },
+  {
+    "title": "lua",
+    "folder": "lua",
+    "projects": [
+      {
+        "name": "LuCI",
+        "description": "OpenWrt Configuration Interface",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/openwrt.png",
+        "links": [
+          {
+            "label": "GitHub Repo",
+            "href": "https://github.com/openwrt/luci"
+          }
+        ],
+        "id": "luci"
       }
     ]
   },
