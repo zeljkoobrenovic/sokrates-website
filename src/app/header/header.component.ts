@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-header',
@@ -6,16 +7,13 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
-  mobile = false;
+  isSmallScreen = false;
 
-  constructor() {
+  constructor(private breakpointObserver: BreakpointObserver) {
+    breakpointObserver.observe([Breakpoints.Small, Breakpoints.Medium, Breakpoints.Large])
+      .subscribe(result => this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)'));
   }
 
   ngOnInit() {
   }
-
-  onResize(event) {
-    this.mobile = event.target.innerWidth < 600;
-  }
-
 }

@@ -1,5 +1,5 @@
-<div style="margin: -10px; padding: 20px;" (window:resize)="onResize($event)">
-  <div *ngIf="!mobile">
+<div style="margin: -10px; padding: 20px;">
+  <div *ngIf="!isSmallScreen">
     <img src="assets/logo.png" style="height: 150px; margin-right: 14px; margin-top: 4px">
     <div style="display: inline-block; vertical-align: top; width: calc(100% - 180px)">
       <h1 style="font-size: 50px; font-weight: bold; margin-top: 18px">SOKRATES</h1>
@@ -9,7 +9,7 @@
         maintaining!"</i></p>
     </div>
   </div>
-  <div *ngIf="mobile" style="text-align: center">
+  <div *ngIf="isSmallScreen" style="text-align: center">
     <img src="assets/logo.png" style="height: 100px; margin-right: 14px; margin-top: 4px">
     <div style="">
       <h1 style="font-size: 40px; font-weight: bold; margin-top: 18px">SOKRATES</h1>
