@@ -59,6 +59,8 @@ THE SOFTWARE.
 
 @angular/material/card
 
+@angular/material/icon
+
 @angular/material/tabs
 
 @angular/platform-browser

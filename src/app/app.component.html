@@ -2,19 +2,39 @@
   <app-header></app-header>
 
   <mat-tab-group style="margin: 10px;">
-    <mat-tab label="HOME">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon style="margin-right: 8px">home</mat-icon>
+        HOME
+      </ng-template>
       <app-home-page></app-home-page>
     </mat-tab>
-    <mat-tab label="GALLERY">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon style="margin-right: 8px">account_balance</mat-icon>
+        GALLERY
+      </ng-template>
       <app-gallery-page></app-gallery-page>
     </mat-tab>
-    <mat-tab label="FEATURES">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon style="margin-right: 8px">accessibility</mat-icon>
+        FEATURES
+      </ng-template>
       <app-features-page></app-features-page>
     </mat-tab>
-    <mat-tab label="CONFIGURATION">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon style="margin-right: 8px">settings_applications</mat-icon>
+        CONFIGURATION
+      </ng-template>
       <app-configuration-page></app-configuration-page>
     </mat-tab>
-    <mat-tab label="DOWNLOAD">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon style="margin-right: 8px">cloud_download</mat-icon>
+        DOWNLOAD
+      </ng-template>
       <!--app-license-page></app-license-page-->
       <app-install></app-install>
     </mat-tab>

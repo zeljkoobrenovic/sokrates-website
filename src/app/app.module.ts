@@ -4,7 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {MatCardModule, MatTabsModule} from '@angular/material';
+import {MatCardModule, MatIconModule, MatTabsModule} from '@angular/material';
 import {LicensePageComponent} from './license-page/license-page.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {GalleryPageComponent} from './gallery-page/gallery-page.component';
@@ -39,6 +39,7 @@ const languages = () => {
     BrowserAnimationsModule,
     MatTabsModule,
     MatCardModule,
+    MatIconModule,
     HttpClientModule
   ],
   providers: [
