@@ -1,6 +1,10 @@
 <mat-card>
-  <div *ngFor="let group of projects"  style="text-align: center">
-    <h2 style="margin-top: 32px">{{ group.title }}</h2>
+  <p style="margin: 20px; text-align: center">Sokrates' analyses for <b>{{ projectsCount() }}</b> open-source projects in <b>{{ projects.length}}</b> programming languages.</p>
+  <div *ngFor="let group of projects"  style="text-align: center; margin-bottom: 60px">
+    <h2 style="margin-top: 32px">
+      <img [src]="'https://d3axxy9bcycpv7.cloudfront.net/assets/logos/' + group.title.toLowerCase() + '.png'" style="height: 50px; vertical-align: middle">
+      <br/>{{ group.title }}
+    </h2>
     <div>
       <div *ngFor="let project of group.projects" class="card" >
         <img [src]="project.logoLink" style="width: 48px; height: 48px; object-fit: contain">

@@ -20,6 +20,12 @@ export class GalleryPageComponent implements OnInit {
     });
   }
 
+  projectsCount() {
+    let count = 0;
+    this.projects.forEach(group => count += group.projects.length);
+    return count;
+  }
+
   reportsLink(folder, projectId) {
     return 'https://d3axxy9bcycpv7.cloudfront.net/'
       + folder + '/' + projectId + '/reports/html/index.html';

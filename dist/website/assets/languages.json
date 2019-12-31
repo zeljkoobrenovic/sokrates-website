@@ -235,21 +235,6 @@
   },
   {
     "extensions": [
-      "pp",
-      "pas",
-      "p"
-    ],
-    "name": "PascalAnalyzer",
-    "featuresDescription": [
-      "All basic standard analyses supported (source code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls)",
-      "Advanced code cleaning (empty lines and comments removed for LOC calculations, additional cleaning for duplication calculations)",
-      "No unit size analysis",
-      "No conditional complexity analysis",
-      "No dependency analysis"
-    ]
-  },
-  {
-    "extensions": [
       "cs"
     ],
     "name": "CSharpAnalyzer",
@@ -287,6 +272,21 @@
       "Advanced code cleaning (empty lines and comments removed for LOC calculations, additional cleaning for duplication calculations)",
       "No unit size analysis",
       "No conditional complexity analysis",
+      "No dependency analysis"
+    ]
+  },
+  {
+    "extensions": [
+      "pp",
+      "pas",
+      "p"
+    ],
+    "name": "ObjectPascalAnalyzer",
+    "featuresDescription": [
+      "All basic standard analyses supported (source code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls)",
+      "Advanced code cleaning (empty lines and comments removed for LOC calculations, additional cleaning for duplication calculations)",
+      "Unit size analysis",
+      "Conditional complexity analysis",
       "No dependency analysis"
     ]
   },

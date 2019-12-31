@@ -138,8 +138,8 @@
     ]
   },
   {
-    "title": "pyhton",
-    "folder": "pyhton",
+    "title": "python",
+    "folder": "python",
     "projects": [
       {
         "name": "Uber Poet",
@@ -659,7 +659,7 @@
       {
         "name": "rmarkdown",
         "description": "Dynamic Documents for R https://rmarkdown.rstudio.com",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/R.png",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/r.png",
         "links": [
           {
             "label": "Github Repo",
@@ -671,7 +671,7 @@
       {
         "name": "datadolphyn",
         "description": "The datadolph.in team is sharing all of the R codebase that it developed to analyze large quantities of data.",
-        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/R.png",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/r.png",
         "links": [
           {
             "label": "Github Repo",
@@ -713,8 +713,8 @@
     ]
   },
   {
-    "title": "pascal",
-    "folder": "pascal",
+    "title": "objectpascal",
+    "folder": "objectpascal",
     "projects": [
       {
         "name": "castle-engine",
