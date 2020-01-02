@@ -1,32 +1,34 @@
-<div style="margin:20px;">
+<div :style="isSmallScreen ? 'margin: 20px;' : 'margin: 0'">
   <div class="card">
     <h2 class="title">Supported Languages</h2>
     <p>Any textual file can be analyzed in Sokrates with standard analyses (empty lines cleaning, source
       code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls).</p>
     <p>For several popular languages Sokrates provides more in-depth analyses:</p>
-    <table>
-      <th style="text-align: left">Language</th>
-      <th style="text-align: left">Extensions</th>
-      <th style="text-align: left">Units Analysis</th>
-      <th style="text-align: left">Dependencies</th>
-      <th style="text-align: left">Details</th>
-      <tr *ngFor="let lang of languages">
-        <td style="padding-right: 36px; vertical-align: top">{{lang.name.replace("Analyzer", "")}}</td>
-        <td style="vertical-align: top">.{{lang.extensions.join("  .")}}</td>
-        <td style="text-align: center; vertical-align: top">{{getUnits(lang)}}</td>
-        <td style="text-align: center; vertical-align: top">{{getDependencies(lang)}}</td>
-        <td>
-          <a href="javascript:void(0)" (click)="toggleDisplay(lang)">Details...</a>
-          <div *ngIf="lang.show">
+    <div style="width: 100%; overflow-x: auto">
+      <table>
+        <th style="text-align: left">Language</th>
+        <th style="text-align: left">Extensions</th>
+        <th style="text-align: left">Units Analysis</th>
+        <th style="text-align: left">Dependencies</th>
+        <th style="text-align: left">Details</th>
+        <tr *ngFor="let lang of languages">
+          <td style="padding-right: 36px; vertical-align: top">{{lang.name.replace("Analyzer", "")}}</td>
+          <td style="vertical-align: top">.{{lang.extensions.join("  .")}}</td>
+          <td style="text-align: center; vertical-align: top">{{getUnits(lang)}}</td>
+          <td style="text-align: center; vertical-align: top">{{getDependencies(lang)}}</td>
+          <td>
+            <a href="javascript:void(0)" (click)="toggleDisplay(lang)">Details...</a>
+            <div *ngIf="lang.show">
               <span *ngFor="let feature of lang.featuresDescription">
                 <div *ngIf="isSpecificFeature(feature)">
                   - {{ feature }}
                 </div>
               </span>
-          </div>
-        </td>
-      </tr>
-    </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
   <div class="card">
     <h2 class="title">

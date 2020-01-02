@@ -4,6 +4,7 @@
     <p style="font-size: 120%">DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar">sokrates-0.9.jar</a>
       (38 MB)</p>
     <p>Simple usage example (to analyze Junit4): </p>
+    <div style="width: 100%; overflow-x: auto">
     <pre>
     git clone https://github.com/junit-team/junit4
     cd junit4
@@ -13,16 +14,20 @@
 
     open _sokrates/reports/html/index.html
   </pre>
+    </div>
 
     <h3>Usage: </h3>
     <p><b>init</b>, generate a Sokrates configuration file for the codebase:</p>
+    <div style="width: 100%; overflow-x: auto">
     <pre>
   java -jar sokrates-0.9.jar init [options]
        -srcRoot &lt;arg>    [OPTIONAL] the path to source code root folder (default is &lt;currentFolder>)
        -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
   </pre>
+    </div>
 
     <p><b>generateReports</b>, generates Sokrates reports based on the configuration:</p>
+    <div style="width: 100%; overflow-x: auto">
     <pre>
   java -jar sokrates-0.9.jar generateReports [options]
          -confFile &lt;arg>               [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
@@ -40,12 +45,15 @@
          -reportControls               generate only the controls report (stored in &lt;outputFolder>/html/Controls.html)
          -reportFindings               generate only the findings report (stored in &lt;outputFolder>/html/Findings.html)
   </pre>
+    </div>
 
     <p><b>configComplete</b>, completes missing fields in the configuration file:</p>
+    <div style="width: 100%; overflow-x: auto">
     <pre>
   java -jar sokrates.jar configComplete [options]
          -confFile &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
   </pre>
+    </div>
   </div>
   <div class="card">
     <h1>VISUAL EXPLORER</h1>
@@ -53,10 +61,13 @@
       href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">sokrates-explorer-0.9.jar</a>
       (78 MB)</p>
     <p><b>NOTE: require JavaFX (download it and install it from <a ref="https://openjfx.io/">openjfx.io</a>)</b></p>
+    <div style="width: 100%; overflow-x: auto">
     <pre>
    java --module-path $JAVAFX_HOME/lib --add-modules=javafx.controls,javafx.web -jar sokrates-explorer-0.9.jar
   </pre>
-    <img src="/assets/explorer.png" style="width: 100%">
+    </div>
+    <br/>
+    <img src="/assets/explorer.png" style="width: 100%; max-width: 1024px">
   </div>
   <div class="card">
     <h1>SOURCE CODE</h1>

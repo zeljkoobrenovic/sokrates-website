@@ -1,38 +1,38 @@
-<div style="margin: 10px">
+<div :style="isSmallScreen ? 'margin: 1px' : 'margin: 10px'">
   <app-header></app-header>
 
   <mat-tab-group style="margin: 10px;">
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 8px">home</mat-icon>
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">home</mat-icon>
         HOME
       </ng-template>
       <app-home-page></app-home-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 8px">account_balance</mat-icon>
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">account_balance</mat-icon>
         GALLERY
       </ng-template>
       <app-gallery-page></app-gallery-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 8px">accessibility</mat-icon>
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">accessibility</mat-icon>
         FEATURES
       </ng-template>
       <app-features-page></app-features-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 8px">settings_applications</mat-icon>
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">settings_applications</mat-icon>
         CONFIGURATION
       </ng-template>
       <app-configuration-page></app-configuration-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 8px">cloud_download</mat-icon>
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">cloud_download</mat-icon>
         DOWNLOAD
       </ng-template>
       <!--app-license-page></app-license-page-->
