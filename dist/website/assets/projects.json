@@ -232,27 +232,21 @@
     "folder": "js",
     "projects": [
       {
+        "id": "ace",
+        "name": "Clou9 Ace Editor",
+        "description": "Ace (Ajax.org Cloud9 Editor) https://ace.c9.io",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/cloud9.png"
+      },
+      {
         "name": "AVS",
         "description": "Autonomous Visualization System (AVS) is a fast, powerful, web-based 3D visualization toolkit.",
         "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/uber-oss.png",
-        "links": [
-          {
-            "label": "GitHub Repo",
-            "href": "https://github.com/uber/streetscape.gl"
-          }
-        ],
         "id": "streetscape.gl"
       },
       {
         "name": "Node.js",
         "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
         "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/nodejs.svg",
-        "links": [
-          {
-            "label": "GitHub Repo",
-            "href": "https://github.com/nodejs/node"
-          }
-        ],
         "id": "node"
       },
       {
