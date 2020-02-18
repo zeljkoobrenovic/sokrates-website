@@ -304,6 +304,12 @@
     "folder": "cpp",
     "projects": [
       {
+        "id": "linux",
+        "name": "Linux",
+        "description": "Linux kernel source tree.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/linux.png"
+      },
+      {
         "name": "PHP Interpreter",
         "description": "The PHP Interpreter https://www.php.net",
         "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/php.svg",
@@ -357,6 +363,12 @@
         "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/bitcoin.png",
         "links": [],
         "id": "bitcoin"
+      },
+      {
+        "id": "smile-compiler",
+        "name": "Smile Compiler",
+        "description": "A school project that compiles code written in Smile language (the language is documented in this project).",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/smile.png"
       }
     ]
   },
