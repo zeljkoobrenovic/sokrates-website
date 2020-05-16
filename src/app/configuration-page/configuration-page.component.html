@@ -1,181 +1,286 @@
-<div style="margin: 20px;">
-  <h2 class="title">Configuration File</h2>
-  <ul>
-    <li>Sokrates configuration is defined in a JSON file.</li>
-    <li>You can use init comand to generate default file for your project (see Download tab for details).</li>
-    <li>The default location of the configuration file is
-      <span class="inline-code">&nbsp;&lt;your-project&gt;/_sokrates/config.json&nbsp;</span>
-    </li>
+<div class="card">
+  <div style="margin: 10px 10px 10px 10px;">
+    <h2 class="title">Configuration File for Individual Projects</h2>
     <ul>
-      <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/config.json" target="_blank">
-          See an example of a Sokrates configuration file ⤇
-        </a>
+      <li>Sokrates configuration is defined in a JSON file.</li>
+      <li>You can use init command to generate default file for your project (see Download tab for details).</li>
+      <li>The default location of the configuration file is
+        <span class="inline-code">&nbsp;&lt;your-project&gt;/_sokrates/config.json&nbsp;</span>
       </li>
-    </ul>
-    <li>Based on this configuration Skrates will generate a number of reports.
-      The default reports folders is
-      <span class="inline-code">&nbsp;&lt;your-project&gt;/_sokrates/reports/&nbsp;</span>
-    </li>
-    <ul>
-      <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/index.html" target="_blank">
-          See an example of a Sokrates report ⤇
-        </a>
+      <ul>
+        <li>
+          <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/config.json" target="_blank">
+            See an example of a Sokrates configuration file ⤇
+          </a>
+        </li>
+      </ul>
+      <li>Based on this configuration Sokrates will generate a number of reports.
+        The default reports folders is
+        <span class="inline-code">&nbsp;&lt;your-project&gt;/_sokrates/reports/&nbsp;</span>
       </li>
+      <ul>
+        <li>
+          <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/index.html" target="_blank">
+            See an example of a Sokrates report ⤇
+          </a>
+        </li>
+      </ul>
     </ul>
-    <li>In the scope file you can define the following things:</li>
-    <ul>
-      <li><b>Provide basic description of the project</b> (name, logo, descritpion, external links)</li>
-      <li><b>Source code scope</b> (what is main code, test code, generated code, build & deployment code, 3rd party
-        code...)
-      </li>
-      <li><b>Logical decompositions</b> (one or more ways to looks at components in the system)</li>
-      <li><b>Cross-Cutting Concerns</b> (define things that are not specific for one compnets, such as logging or
-        security)
-      </li>
-      <li><b>Goals and Controls</b> (define measurmens and alarms to keep your system within the desired values)</li>
-      <li><b>Reference measurments for trend analysis</b></li>
-      <li><b>Add free form notes and findings</b></li>
-    </ul>
-  </ul>
-</div>
-<div class="card">
-  <h2 class="title">Provide basic description of the project</h2>
-  <ul>
-  </ul>
-  <pre><code [highlight]="getMetadataFragment()"></code></pre>
-</div>
-<div class="card">
-  <h2 class="title">Source code scope</h2>
-  <ul>
-    <li>To kick-off analysis, Sokrates needs three parameters:</li>
-    <ul>
-      <li>A (relative) path to the source code root (<span class="inline-code">srcRoot</span>)</li>
-      <li>List of extensions to be analyzed (<span class="inline-code">extensions</span>)</li>
-      <li>List of ignore conditions used to exclude files from analyses (<span class="inline-code">ignore</span>)</li>
-    </ul>
-  </ul>
-  <pre><code [highlight]="getExternsionsAndIgnoreFragment()"></code></pre>
-</div>
-<div class="card">
-  <h2 class="title">Scopes: main, test, generated, build & deployment, other</h2>
-  <ul>
-    <li>For analysis purposes Sokrates separate files in scope into several categories: main, test, generated,
-      deployment and build, and other.
-    </li>
-    <li>The <b>main</b> category contains all <b>manually</b> created source code files that are being used in the <b>production</b>.
-    </li>
-    <li>Files in the <b>main</b> category are used as input for other analyses: logical decomposition, cross-cutting
-      concerns, duplication, file size, unit size, and conditional complexity.
-    </li>
-    <li><b>Test</b> source code files are used only for testing of the product. These files are normally not deployed
-      to production.
-    </li>
-    <li><b>Build and deployment</b> source code files are used to configure or support build and deployment process.
-    </li>
-    <li><b>Generated</b> source code files are automatically generated files that have not been manually changed after
-      generation.
-    </li>
-    <li>While a source code folder may contain a number of files, Sokrates is primarily interested in the source code
-      files
-      that are being written and maintained by developers.
-    </li>
-    <li>Files containing binaries, documentation, or third-party libraries, for instance, are excluded from analysis.
-      The exception are third-party libraries that have been changed by developers.
-    </li>
-  </ul>
-  <pre><code [highlight]="getScopeFragments()"></code></pre>
-</div>
+  </div>
+  <div style="margin-left: 45px">
+    <p>In the scope file you can define the following things:</p>
+    <mat-accordion style="margin-left: 70px">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Describe the project</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            name, logo, descritpion, external links
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="card">
+          <h2 class="title">Description of the project</h2>
+          <ul>
+          </ul>
+          <pre><code [highlight]="getMetadataFragment()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Define included and ignored files</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            which extensions and files to analyze, and which to ignore
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="card">
+          <h2 class="title">Source code scope</h2>
+          <ul>
+            <li>To kick-off analysis, Sokrates needs three parameters:</li>
+            <ul>
+              <li>A (relative) path to the source code root (<span class="inline-code">srcRoot</span>)</li>
+              <li>List of extensions to be analyzed (<span class="inline-code">extensions</span>)</li>
+              <li>List of ignore conditions used to exclude files from analyses (<span class="inline-code">ignore</span>)
+              </li>
+            </ul>
+          </ul>
+          <pre><code [highlight]="getExternsionsAndIgnoreFragment()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Define analysis scopes</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            what is main code, test code, generated code, build & deployment code, 3rd party code...
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="card">
+          <h2 class="title">Scopes: main, test, generated, build & deployment, other</h2>
+          <ul>
+            <li>For analysis purposes Sokrates separate files in scope into several categories: main, test, generated,
+              deployment and build, and other.
+            </li>
+            <li>The <b>main</b> category contains all <b>manually</b> created source code files that are being used in
+              the
+              <b>production</b>.
+            </li>
+            <li>Files in the <b>main</b> category are used as input for other analyses: logical decomposition,
+              cross-cutting
+              concerns, duplication, file size, unit size, and conditional complexity.
+            </li>
+            <li><b>Test</b> source code files are used only for testing of the product. These files are normally not
+              deployed
+              to production.
+            </li>
+            <li><b>Build and deployment</b> source code files are used to configure or support build and deployment
+              process.
+            </li>
+            <li><b>Generated</b> source code files are automatically generated files that have not been manually changed
+              after
+              generation.
+            </li>
+            <li>While a source code folder may contain a number of files, Sokrates is primarily interested in the source
+              code
+              files
+              that are being written and maintained by developers.
+            </li>
+            <li>Files containing binaries, documentation, or third-party libraries, for instance, are excluded from
+              analysis.
+              The exception are third-party libraries that have been changed by developers.
+            </li>
+          </ul>
+          <pre><code [highlight]="getScopeFragments()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Define logical decompositions</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            one or more ways to looks at components in the system
+          </mat-panel-description>
+        </mat-expansion-panel-header>
 
-<div class="card">
-  <h2 class="title">Goals & Controls</h2>
-  <ul>
-    <li>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and
-      tolerance.
-    </li>
-  </ul>
-  <pre><code [highlight]="getGoalsAndControlsFragment()"></code></pre>
-</div>
+        <div class="card">
+          <h2 class="title">Logical decompositions: components and dependencies</h2>
+          <p><b>Logical decomposition</b> is a representation of the organization of the <b>main</b> source code, where
+            every
+            and each file is put in exactly one <b>logical component</b>.</p>
+          <ul>
+            <li>A software system can have <b>one</b> or <b>more</b> logical decompositions.</li>
+            <li>A logical decomposition can be defined in two ways.</li>
+            <li>First approach is based on the <b>folders structure</b>. Components are mapped to folders at defined <b>folder
+              depth</b> relative to the source code root.
+            </li>
+            <li>Second approach is based on <b>explicit</b> definition of each component. In such explicit definitions,
+              components are explicitly <b>named</b> and their files are selected based on explicitly defined path and
+              content
+              <b>filters</b>.
+            </li>
+            <li>A logical decomposition is considered <b>invalid</b> if a file is selected into <b>two or more
+              components</b>.This
+              constraint is introduced in order to facilitate measuring of <b>dependencies</b> among components.
+            </li>
+            <li>Files not assigned to any component are put into a special "<b>Unclassified</b>" component.</li>
+          </ul>
+          <pre><code [highlight]="getLogicalDecompositionFragment()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Define cross-cutting concerns</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            aspects of a software system that cannot be cleanly decomposed from the rest of
+            the system
+          </mat-panel-description>
+        </mat-expansion-panel-header>
 
-<div class="card">
-  <h2 class="title">Reference Point for Comparison and Trend Analysis</h2>
-  <ul>
-    <li>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and
-      tolerance.
-    </li>
-  </ul>
-  <pre><code [highlight]="getCompareResultsWithFragment()"></code></pre>
-</div>
+        <div class="card">
+          <h2 class="title">Cross-Cutting Concerns</h2>
+          <ul>
+            <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest
+              of
+              the system.
+            </li>
+            <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.
+            </li>
+          </ul>
+          <pre><code [highlight]="getCrossCuttingConcernFragment()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Set goals and controls</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            define measurements and alarms to keep your system within the desired values
+          </mat-panel-description>
+        </mat-expansion-panel-header>
 
-<div class="card">
-  <h2 class="title">Summary Findings</h2>
-  <ul>
-    <li>Optional few bullets to summarize the systems.</li>
-  </ul>
-  <pre><code [highlight]="getSummaryFindingsFragment()"></code></pre>
-</div>
+        <div class="card">
+          <h2 class="title">Goals & Controls</h2>
+          <ul>
+            <li>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired
+              range
+              and
+              tolerance.
+            </li>
+          </ul>
+          <pre><code [highlight]="getGoalsAndControlsFragment()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Provide analysis reference points</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            for comparison and trend analysis
+          </mat-panel-description>
+        </mat-expansion-panel-header>
 
-<div class="card">
-  <h2 class="title">Logical decompositions: components and dependencies</h2>
-  <p><b>Logical decomposition</b> is a representation of the organization of the <b>main</b> source code, where every
-    and each file is put in exactly one <b>logical component</b>.</p>
-  <ul>
-    <li>A software system can have <b>one</b> or <b>more</b> logical decompositions.</li>
-    <li>A logical decomposition can be defined in two ways.</li>
-    <li>First approach is based on the <b>folders structure</b>. Components are mapped to folders at defined <b>folder
-      depth</b> relative to the source code root.
-    </li>
-    <li>Second approach is based on <b>explicit</b> definition of each component. In such explicit definitions,
-      components are explicitly <b>named</b> and their files are selected based on explicitly defined path and content
-      <b>filters</b>.
-    </li>
-    <li>A logical decomposition is considered <b>invalid</b> if a file is selected into <b>two or more components</b>.This
-      constraint is introduced in order to facilitate measuring of <b>dependencies</b> among components.
-    </li>
-    <li>Files not assigned to any component are put into a special "<b>Unclassified</b>" component.</li>
-  </ul>
-  <pre><code [highlight]="getLogicalDecompositionFragment()"></code></pre>
-</div>
+        <div class="card">
+          <h2 class="title">Reference Point for Comparison and Trend Analysis</h2>
+          <ul>
+            <li>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired
+              range
+              and
+              tolerance.
+            </li>
+          </ul>
+          <pre><code [highlight]="getCompareResultsWithFragment()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Add summary findings</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            manually added on-line insights and notes
+          </mat-panel-description>
+        </mat-expansion-panel-header>
 
-<div class="card">
-  <h2 class="title">Cross-Cutting Concerns</h2>
-  <ul>
-    <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the
-      system.
-    </li>
-    <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
-  </ul>
-  <pre><code [highlight]="getCrossCuttingConcernFragment()"></code></pre>
-</div>
+        <div class="card">
+          <h2 class="title">Summary Findings</h2>
+          <ul>
+            <li>Optional few bullets to summarize the systems.</li>
+          </ul>
+          <pre><code [highlight]="getSummaryFindingsFragment()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Perform advanced configuration</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            meta-rules for components, concerns and dependencies
+          </mat-panel-description>
+        </mat-expansion-panel-header>
 
-<div class="card">
-  <h2 class="title">Advanced Configuration: Meta Rules for Components, Concerns and Dependencies</h2>
-  <ul>
-    <li>One of the most powerful features of Sokrates is the possibility to use meta rules to define components,
-      concerns and dependencies.
-    </li>
-    <li>A meta rule is a search pattern (content and/or path) combined with the string operations to process found
-      string to get the name that to define a component, concern or a dependency to a component.
-    </li>
-    <li>Meta rules can be used in logical decompositions (the <span class="inline-code">metaComponents</span> field),
-      dependency finders (the <span class="inline-code">metaRules</span> field), and in cross-cutting concerns (the
-      <span class="inline-code">metaConcerns</span> field)
-    </li>
-    <li>The Following operations are supported:</li>
-    <ul>
-      <li>extract (regex1, regex2,...)</li>
-      <li>replace (regex, replaceString)</li>
-      <li>append (text)</li>
-      <li>prepend (text)</li>
-      <li>trim</li>
-      <li>tolowercase</li>
-      <li>touppercase</li>
-    </ul>
-  </ul>
+        <div class="card">
+          <h2 class="title">Advanced Configuration: Meta Rules for Components, Concerns and Dependencies</h2>
+          <ul>
+            <li>One of the most powerful features of Sokrates is the possibility to use meta rules to define components,
+              concerns and dependencies.
+            </li>
+            <li>A meta rule is a search pattern (content and/or path) combined with the string operations to process
+              found
+              string to get the name that to define a component, concern or a dependency to a component.
+            </li>
+            <li>Meta rules can be used in logical decompositions (the <span class="inline-code">metaComponents</span>
+              field),
+              dependency finders (the <span class="inline-code">metaRules</span> field), and in cross-cutting concerns
+              (the
+              <span class="inline-code">metaConcerns</span> field)
+            </li>
+            <li>The Following operations are supported:</li>
+            <ul>
+              <li>extract (regex1, regex2,...)</li>
+              <li>replace (regex, replaceString)</li>
+              <li>append (text)</li>
+              <li>prepend (text)</li>
+              <li>trim</li>
+              <li>tolowercase</li>
+              <li>touppercase</li>
+            </ul>
+          </ul>
 
-  <h3>Example (components and dependencies finder with meta rules):</h3>
-  <pre><code [highlight]="getLogicalDecompositionMetaDependenciesFragment()"></code></pre>
-  <h3>Example (cross-cutting concerns with meta rules):</h3>
-  <pre><code [highlight]="getMetaConcernsFragment()"></code></pre>
+          <h3>Example (components and dependencies finder with meta rules):</h3>
+          <pre><code [highlight]="getLogicalDecompositionMetaDependenciesFragment()"></code></pre>
+          <h3>Example (cross-cutting concerns with meta rules):</h3>
+          <pre><code [highlight]="getMetaConcernsFragment()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 </div>

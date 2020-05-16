@@ -4,7 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {MatCardModule, MatIconModule, MatTabsModule} from '@angular/material';
+import {MatCardModule, MatExpansionModule, MatIconModule, MatTabsModule} from '@angular/material';
 import {LicensePageComponent} from './license-page/license-page.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {GalleryPageComponent} from './gallery-page/gallery-page.component';
@@ -14,6 +14,8 @@ import {InstallComponent} from './install/install.component';
 import {ConfigurationPageComponent} from './configuration-page/configuration-page.component';
 import {HIGHLIGHT_OPTIONS, HighlightModule} from 'ngx-highlightjs';
 import {HttpClientModule} from '@angular/common/http';
+import { HowtoComponent } from './howto/howto.component';
+import { ConfigLandscapeComponent } from './config-landscape/config-landscape.component';
 
 const languages = () => {
   return {
@@ -30,18 +32,21 @@ const languages = () => {
     HeaderComponent,
     FeaturesPageComponent,
     InstallComponent,
-    ConfigurationPageComponent
+    ConfigurationPageComponent,
+    HowtoComponent,
+    ConfigLandscapeComponent
   ],
-  imports: [
-    HighlightModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatTabsModule,
-    MatCardModule,
-    MatIconModule,
-    HttpClientModule
-  ],
+    imports: [
+        HighlightModule,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatTabsModule,
+        MatCardModule,
+        MatIconModule,
+        HttpClientModule,
+        MatExpansionModule
+    ],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,

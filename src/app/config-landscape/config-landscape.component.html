@@ -1,0 +1,50 @@
+<div class="card">
+  <div style="margin: 10px 10px 10px 10px;">
+    <h2 class="title">Configuration File for a Landscape Analysis</h2>
+    <ul>
+      <li>Sokrates landscape analysis configuration is defined in a JSON file.</li>
+      <li>You can use initLandscape command to generate default file (see Download &amp; Usage tab for details).</li>
+      <li>The default location of the configuration file is
+        <span class="inline-code">&nbsp;&lt;your-project&gt;/_sokrates_landscape/config.json&nbsp;</span>
+      </li>
+      <ul>
+        <li>
+          <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/config.json" target="_blank">
+            See an example of a Sokrates landscape configuration file ⤇
+          </a>
+        </li>
+      </ul>
+      <li>Based on this configuration Sokrates will generate a number the landscape reports.
+        The default reports folders is
+        <span class="inline-code">&nbsp;&lt;your-project&gt;/_sokrates_landscape/reports/&nbsp;</span>
+      </li>
+      <ul>
+        <li>
+          <a href="https://d3axxy9bcycpv7.cloudfront.net/general/sokrates/reports/html/index.html" target="_blank">
+            See an example of a Sokrates landscape report ⤇
+          </a>
+        </li>
+      </ul>
+    </ul>
+  </div>
+  <div style="margin-left: 25px">
+    <mat-accordion style="margin-left: 70px">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title style="width: 300px; max-width: 300px">
+            <b class="sectionTag">Landscape Configuration File Details</b>
+          </mat-panel-title>
+          <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
+            ...
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="card">
+          <ul>
+          </ul>
+          <pre><code [highlight]="getConfiguration()"></code></pre>
+        </div>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+  </div>
+</div>
