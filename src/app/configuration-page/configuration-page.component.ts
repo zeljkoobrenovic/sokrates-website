@@ -7,7 +7,7 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
   styleUrls: ['./configuration-page.component.less']
 })
 export class ConfigurationPageComponent implements OnInit {
-  private isSmallScreen = false;
+  isSmallScreen = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([Breakpoints.Small, Breakpoints.Medium, Breakpoints.Large])
