@@ -8,7 +8,7 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 })
 export class ConfigLandscapeComponent implements OnInit {
 
-  private isSmallScreen = false;
+  isSmallScreen = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([Breakpoints.Small, Breakpoints.Medium, Breakpoints.Large])
