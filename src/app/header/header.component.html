@@ -1,17 +1,20 @@
-<div style="margin: -10px; padding: 20px;">
-  <div *ngIf="!isSmallScreen">
-    <img src="assets/logo.png" style="height: 150px; margin-right: 14px; margin-top: 4px">
-    <div style="display: inline-block; vertical-align: top; width: calc(100% - 180px)">
-      <h1 style="font-size: 50px; font-weight: bold; margin-top: 18px">SOKRATES</h1>
-      <p style="font-size: 180%; margin-top: 24px; color: grey">A lightweight (yet powerful) software documentation and analysis tool</p>
-      <p style="font-size: 120%; margin-top: 24px;"><i>"Know your code! The unexamined code is not worth
-        maintaining!"</i></p>
+<header class="header">
+  <div *ngIf="!isSmallScreen" class="header__large">
+    <img class="header__logo" src="assets/logo.png" width="150" height="150">
+    <div class="header__text">
+      <h1 class="header__text__title">SOKRATES</h1>
+      <p class="header__text__subtitle">
+        A lightweight (yet powerful) software documentation and analysis tool
+      </p>
+      <p class="header__text__quote">
+        "Know your code! The unexamined code is not worth maintaining!"
+      </p>
     </div>
   </div>
-  <div *ngIf="isSmallScreen" style="text-align: center">
-    <img src="assets/logo.png" style="height: 100px; margin-right: 14px; margin-top: 4px">
-    <div style="">
-      <h1 style="font-size: 40px; font-weight: bold; margin-top: 18px">SOKRATES</h1>
+  <div *ngIf="isSmallScreen" class="header__small">
+    <img class="header__logo" src="assets/logo.png" width="100" height="100">
+    <div class="header__text">
+      <h1 class="header__text__title">SOKRATES</h1>
     </div>
   </div>
-</div>
+</header>

@@ -1,31 +1,31 @@
-<div :style="isSmallScreen ? 'margin: 1px' : 'margin: 10px'; width: calc(100% - 20px)">
+<div class="app__component">
   <app-header></app-header>
 
-  <mat-tab-group style="margin: 10px; overflow: hidden">
+  <mat-tab-group>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">home</mat-icon>
+        <mat-icon *ngIf="!isSmallScreen">home</mat-icon>
         Home
       </ng-template>
       <app-home-page></app-home-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">account_balance</mat-icon>
+        <mat-icon *ngIf="!isSmallScreen">account_balance</mat-icon>
         Gallery
       </ng-template>
       <app-gallery-page></app-gallery-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">accessibility</mat-icon>
+        <mat-icon *ngIf="!isSmallScreen">accessibility</mat-icon>
         Features
       </ng-template>
       <app-features-page></app-features-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">settings_applications</mat-icon>
+        <mat-icon *ngIf="!isSmallScreen">settings_applications</mat-icon>
         Config
       </ng-template>
       <app-configuration-page></app-configuration-page>
@@ -33,7 +33,7 @@
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">cloud_download</mat-icon>
+        <mat-icon *ngIf="!isSmallScreen">cloud_download</mat-icon>
         Install & Use
       </ng-template>
       <!--app-license-page></app-license-page-->
@@ -41,7 +41,7 @@
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">contact_support</mat-icon>
+        <mat-icon *ngIf="!isSmallScreen">contact_support</mat-icon>
         How-To
       </ng-template>
       <app-howto></app-howto>
