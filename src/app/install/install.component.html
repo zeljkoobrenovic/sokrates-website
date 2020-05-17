@@ -128,26 +128,6 @@
           </div>
         </div>
       </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-                  <mat-panel-title style="width: 210px; max-width: 210px">
-            <b class="commandTag">generateLandscapeReport</b>
-          </mat-panel-title>
-          <mat-panel-description *ngIf="!isSmallScreen">
-            generates the Sokrates Landscape report
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-
-        <div>
-          <div style="width: 100%; overflow-x: auto">
-    <pre>
-  java -jar sokrates.jar generateLandscapeReport [options]
-         -confFile     &lt;arg&gt;   the path to landscape configuration file (default is "&lt;currentFolder>/_sokrates_landscape/config.json"
-         -outputFolder &lt;arg&gt;   [OPTIONAL] the folder where landscape reports will be stored (default is "&lt;currentFolder>/_sokrates_landscape/reports/")
-  </pre>
-          </div>
-        </div>
-      </mat-expansion-panel>
     </mat-accordion>
   </div>
   <div class="card">
