@@ -1,7 +1,7 @@
-<div :style="isSmallScreen ? 'margin: 1px' : 'margin: 10px'; width: calc(100% - 20px)">
+<div :style="isSmallScreen ? 'margin: 0' : 'margin: 0'; width: 100%; max-width: 100%;">
   <app-header></app-header>
 
-  <mat-tab-group style="margin: 10px; overflow: hidden">
+  <mat-tab-group style="margin: 0; overflow: hidden">
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">home</mat-icon>
