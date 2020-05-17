@@ -1,19 +1,38 @@
 <mat-card>
-  <p style="margin: 20px; text-align: center">Sokrates' analyses for <b>{{ projectsCount() }}</b> open-source projects in <b>{{ projects.length}}</b> programming languages.</p>
-  <div *ngFor="let group of projects"  style="text-align: center; margin-bottom: 60px">
-    <h2 style="margin-top: 32px">
-      <img [src]="'https://d3axxy9bcycpv7.cloudfront.net/assets/logos/' + group.title.toLowerCase() + '.png'" style="height: 50px; vertical-align: middle">
+  <p class="gallery_introduction_text">
+    Sokrates' analyses for
+    <b>{{ projectsCount() }}</b>
+    open-source projects in
+    <b>{{ projects.length}}</b>
+    programming languages.
+  </p>
+  <div *ngFor="let group of projects" class="gallery__group">
+    <h2 class="gallery__group__title">
+      <img
+        class="gallery__group__title__logo"
+        [src]="'https://d3axxy9bcycpv7.cloudfront.net/assets/logos/' + group.title.toLowerCase() + '.png'"
+      >
       <br/>{{ group.title }}
     </h2>
-    <div>
-      <div *ngFor="let project of group.projects" class="card" >
-        <img [src]="project.logoLink" style="width: 48px; height: 48px; object-fit: contain">
-        <div style="display: inline-block; vertical-align: top; margin-top: 0px; margin-left: 10px">
-          <div style="font-size: 120%; font-weight: bold">{{ project.name }}</div>
-          <div *ngIf="project.size" style="color: grey">{{ project.size }}</div>
+    <div class="gallery__group__projects">
+      <div *ngFor="let project of group.projects" class="card gallery__project">
+        <img [src]="project.logoLink" class="gallery__project__logo">
+        <div class="gallery__project__details">
+          <div class="gallery__project__name">
+            {{ project.name }}
+          </div>
+          <div class="gallery__project__size" *ngIf="project.size">
+            {{ project.size }}
+          </div>
         </div>
         <div>
-          <a [href]="reportsLink(group.folder, project.id)" target="_blank">View Sokrates documentation</a> ⤇
+          <a
+            [href]="reportsLink(group.folder, project.id)"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Sokrates documentation
+          </a> ⤇
         </div>
       </div>
     </div>
