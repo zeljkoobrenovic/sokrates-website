@@ -23,7 +23,7 @@
                   <mat-panel-title style="width: 210px; max-width: 210px">
             <b class="commandTag">init</b>
           </mat-panel-title>
-          <mat-panel-description>
+          <mat-panel-description *ngIf="!isSmallScreen">
             generate a Sokrates configuration file for the codebase
           </mat-panel-description>
         </mat-expansion-panel-header>
@@ -42,7 +42,7 @@
                   <mat-panel-title style="width: 210px; max-width: 210px">
             <b class="commandTag">generateReports</b>
           </mat-panel-title>
-          <mat-panel-description>
+          <mat-panel-description *ngIf="!isSmallScreen">
             generates Sokrates reports based on the configuration
           </mat-panel-description>
         </mat-expansion-panel-header>
@@ -73,7 +73,7 @@
                   <mat-panel-title style="width: 210px; max-width: 210px">
             <b class="commandTag">configComplete</b>
           </mat-panel-title>
-          <mat-panel-description>
+          <mat-panel-description *ngIf="!isSmallScreen">
             completes missing fields in the configuration file
           </mat-panel-description>
         </mat-expansion-panel-header>
@@ -92,7 +92,7 @@
                   <mat-panel-title style="width: 210px; max-width: 210px">
             <p><b class="commandTag">initLandscape</b>
           </mat-panel-title>
-          <mat-panel-description>
+          <mat-panel-description *ngIf="!isSmallScreen">
             create the configuration file for Sokrates landscape analysis
             (aggregated report of multiple Sokrates analysis results)
           </mat-panel-description>
@@ -113,7 +113,7 @@
                   <mat-panel-title style="width: 210px; max-width: 210px">
             <b class="commandTag">updateLandscape</b>
           </mat-panel-title>
-          <mat-panel-description>
+          <mat-panel-description *ngIf="!isSmallScreen">
             updates the configuration file for Sokrates Landscape analysis
           </mat-panel-description>
         </mat-expansion-panel-header>
@@ -133,7 +133,7 @@
                   <mat-panel-title style="width: 210px; max-width: 210px">
             <b class="commandTag">generateLandscapeReport</b>
           </mat-panel-title>
-          <mat-panel-description>
+          <mat-panel-description *ngIf="!isSmallScreen">
             generates the Sokrates Landscape report
           </mat-panel-description>
         </mat-expansion-panel-header>

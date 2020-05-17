@@ -6,11 +6,11 @@
         Sokrates is a tool built by <b><a href="https://zeljkoobrenovic.com">Željko Obrenović</a></b>.
         It implements his vision on how to document and analyze software architectures of complex systems.
       </li>
-      <li style="margin-top: 12px">Sokrates is based on the following premises (<a
+      <li style="margin-top: 12px" *ngIf="!isSmallScreen">Sokrates is based on the following premises (<a
         href="https://twitter.com/Grady_Booch/status/1198374117692411905">borrowing
         last two from Grady Booch</a>):
       </li>
-      <ul>
+      <ul *ngIf="!isSmallScreen">
         <li>Any software architecture documentation that is not connected to the source code is doomed to become
           outdated and useless.
         </li>
@@ -20,21 +20,21 @@
           communicating about that system.
         </li>
       </ul>
-      <li style="margin-top: 12px">Sokrates solves the problem of software architecture documentation by providing a
+      <li style="margin-top: 12px" *ngIf="!isSmallScreen">Sokrates solves the problem of software architecture documentation by providing a
         pragmatic way to describe
         key elements of software architectures and connect them explicitelly to the source code.
       </li>
-      <li>Based on a formal description of different software architecure aspects, sokrates generates a number of
+      <li *ngIf="!isSmallScreen">Based on a formal description of different software architecure aspects, sokrates generates a number of
         reports
         and visualization that can help you to reason about, understand, and communicate about the software system.
       </li>
-      <li style="margin-top: 12px">Sokrates borrows ideas from <b><a
+      <li style="margin-top: 12px" *ngIf="!isSmallScreen">Sokrates borrows ideas from <b><a
         href="https://queue.acm.org/detail.cfm?id=945136">code spelunking</a></b> tool,
         in particular <a href="https://en.wikipedia.org/wiki/Grep">grep</a>, adding structure on top of regex source
         code
         searches.
       </li>
-      <li>Sokrates comes with both command line interface and interactive GUI code explorer.</li>
+      <li *ngIf="!isSmallScreen">Sokrates comes with both command line interface and interactive GUI code explorer.</li>
     </ul>
   </div>
   <br/>
