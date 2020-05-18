@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http';
 export class GalleryPageComponent implements OnInit {
   title = 'website';
   projects: any[];
+  filter = '';
 
   constructor(private httpClient: HttpClient) {
   }
@@ -20,9 +21,13 @@ export class GalleryPageComponent implements OnInit {
     });
   }
 
+  projectsList() {
+    return this.projects;
+  }
+
   projectsCount() {
     let count = 0;
-    this.projects.forEach(group => count += group.projects.length);
+    this.projectsList().forEach(group => count += group.projects.length);
     return count;
   }
 
