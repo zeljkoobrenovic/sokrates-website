@@ -14,8 +14,10 @@ import {InstallComponent} from './install/install.component';
 import {ConfigurationPageComponent} from './configuration-page/configuration-page.component';
 import {HIGHLIGHT_OPTIONS, HighlightModule} from 'ngx-highlightjs';
 import {HttpClientModule} from '@angular/common/http';
-import { HowtoComponent } from './howto/howto.component';
-import { ConfigLandscapeComponent } from './config-landscape/config-landscape.component';
+import {HowtoComponent} from './howto/howto.component';
+import {ConfigLandscapeComponent} from './config-landscape/config-landscape.component';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
 
 const languages = () => {
   return {
@@ -36,17 +38,19 @@ const languages = () => {
     HowtoComponent,
     ConfigLandscapeComponent
   ],
-    imports: [
-        HighlightModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatTabsModule,
-        MatCardModule,
-        MatIconModule,
-        HttpClientModule,
-        MatExpansionModule
-    ],
+  imports: [
+    HighlightModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatCardModule,
+    MatIconModule,
+    HttpClientModule,
+    MatExpansionModule,
+    MatInputModule,
+    FormsModule
+  ],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,

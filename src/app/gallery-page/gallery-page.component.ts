@@ -16,13 +16,26 @@ export class GalleryPageComponent implements OnInit {
 
   ngOnInit() {
     this.httpClient.get('assets/projects.json').subscribe((data: any[]) => {
-      console.log(data);
       this.projects = data;
     });
   }
 
   projectsList() {
-    return this.projects;
+    const searchTerm = this.filter.toLowerCase();
+    const filteredProjectGroups = [];
+
+    this.projects.forEach(group => {
+      const filteredGroup = {
+        title: group.title,
+        folder: group.folder,
+        projects: group.projects.filter(p => !searchTerm || p.name.toLowerCase().includes(searchTerm))
+      };
+      if (filteredGroup.projects.length > 0) {
+        filteredProjectGroups.push(filteredGroup);
+      }
+    });
+
+    return filteredProjectGroups;
   }
 
   projectsCount() {
