@@ -4,47 +4,40 @@
   <mat-tab-group style="margin: 10px; overflow: hidden">
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">home</mat-icon>
-        Home
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">home</mat-icon>
+        <b style="color: black">HOME</b>
       </ng-template>
       <app-home-page></app-home-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">cloud_download</mat-icon>
-        Install & Use
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">cloud_download</mat-icon>
+        <b style="color: black">INSTALL & USE</b>
       </ng-template>
       <!--app-license-page></app-license-page-->
       <app-install></app-install>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">account_balance</mat-icon>
-        Gallery
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">account_balance</mat-icon>
+        <b style="color: black">GALLERY</b>
       </ng-template>
       <app-gallery-page></app-gallery-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">accessibility</mat-icon>
-        Features
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">accessibility</mat-icon>
+        <b style="color: black">FEATURES</b>
       </ng-template>
       <app-features-page></app-features-page>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">settings_applications</mat-icon>
-        Config
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">settings_applications</mat-icon>
+        <b style="color: black">CONFIG</b>
       </ng-template>
       <app-configuration-page></app-configuration-page>
       <app-config-landscape></app-config-landscape>
-    </mat-tab>
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 2px" *ngIf="!isSmallScreen">contact_support</mat-icon>
-        How-To
-      </ng-template>
-      <app-howto></app-howto>
     </mat-tab>
   </mat-tab-group>
 

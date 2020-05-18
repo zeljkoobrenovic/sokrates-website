@@ -26,26 +26,16 @@ export class ConfigLandscapeComponent implements OnInit {
       '    "logoLink": "",\n' +
       '    "links": []\n' +
       '  },\n' +
-      '  "analysisRoot": "",\n' +
-      '  "groups": [\n' +
+      '  "analysisRoot": "...",\n' +
+      '  "projectReportsUrlPrefix": "../../../",\n' +
+      '  "projects": [\n' +
       '    {\n' +
-      '      "metadata": {\n' +
-      '        "name": "",\n' +
-      '        "description": "",\n' +
-      '        "logoLink": "",\n' +
-      '        "links": []\n' +
-      '      },\n' +
-      '      "projects": [\n' +
-      '        {\n' +
-      '          "analysisResultsPath": "<...>/reports/data/analysisResults.json",\n' +
-      '          "htmlReportsIndexPath": "<...>/reports/html/index.html",\n' +
-      '          "note": ""\n' +
-      '        }\n' +
-      '      ],\n' +
-      '      "subGroups": []\n' +
+      '      "analysisResultsPath": ".../reports/data/analysisResults.json",\n' +
+      '      "htmlReportsRoot": ".../reports/html",\n' +
+      '      "note": ""\n' +
       '    }\n' +
       '  ]\n' +
-      '}\n';
+      '}';
   }
 
 }
