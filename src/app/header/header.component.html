@@ -1,19 +1,16 @@
-<div style="padding: 4px; width: calc(100vw - 10px)">
+<div class="headerContainer">
   <div *ngIf="!isSmallScreen">
-    <img src="assets/logo.png" style="height: 120px; margin-right: 14px; margin-top: 4px; border: 1px solid #dedede; border-radius: 50%">
-    <div style="display: inline-block; vertical-align: top; width: calc(100% - 180px)">
-      <h1 style="font-size: 50px; font-weight: bold; margin-top: 25px">SOKRATES</h1>
-      <p style="font-size: 26px; margin-top: 18px; color: grey; white-space: nowrap; overflow: hidden">Software
-        documentation &amp; analysis tool</p>
+    <img src="assets/logo.png" class="logo">
+    <div class="textContainer">
+      <h1 class="title">SOKRATES</h1>
+      <p class="motto">Software documentation &amp; analysis tool</p>
     </div>
   </div>
   <div *ngIf="isSmallScreen">
-    <img src="assets/logo.png" style="height: 80px; margin: 8px; border: 1px solid #dedede; border-radius: 50%">
-    <div style="display: inline-block; vertical-align: top; width: calc(100% - 180px)">
-      <h1 style="font-size: 40px; font-weight: bold; margin-top: 12px">SOKRATES</h1>
-      <p style="font-size: 16px; margin-top: 16px; color: grey; white-space: nowrap; overflow: hidden">
-        Software documentation & analysis tool
-      </p>
+    <img src="assets/logo.png" class="logoSmall">
+    <div class="textContainerSmall">
+      <h1 class="titleSmall">SOKRATES</h1>
+      <p class="mottoSmall">Software examination tool</p>
     </div>
   </div>
 </div>
