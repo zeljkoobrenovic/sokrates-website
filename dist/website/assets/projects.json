@@ -16,6 +16,12 @@
         "id": "tomcat"
       },
       {
+        "id": "sonarqube",
+        "name": "SonarQube",
+        "description": "An automatic code review tool to detect bugs, vulnerabilities and code smells in your code.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/sonarqube.png"
+      },
+      {
         "name": "Thorntail",
         "description": "Thorntail provides a mechanism for building applications as uber jars, with just enough of the WildFly application server wrapped around it to support each application's use-case.",
         "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/thorntail.png",
