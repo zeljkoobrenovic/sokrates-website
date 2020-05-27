@@ -13,7 +13,7 @@ Jeff Atwood, the co-founder of StackOverflow.com, is a big fan of regular expres
 >
 > Once you delve into the world of regular expressions, you may become drunk with the amazing power and potential they have, which results in things like Perl. Remember, absolute power corrupts absolutely. But it also rocks absolutely.
 
-Thus spoke Jeff Atwood. Regular expressions have corrupted me, and in Sokrates, I am exploiting their power them shamelessly.
+Thus spoke Jeff Atwood. Regular expressions have corrupted me, and in Sokrates, I am exploiting their power  shamelessly.
 
 Sokrates is all about regular expressions. Sokrates is inspired by [**grep**](https://en.wikipedia.org/wiki/Grep), a command-line tool for searching text data sets for lines that match a regular expression. Its name comes from the ed command g/re/p (globally search for a regular expression and print matching lines). grep was originally developed for the Unix operating system, but later available for all Unix-like systems and some others.
 
