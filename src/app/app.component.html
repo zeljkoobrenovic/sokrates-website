@@ -15,7 +15,20 @@
         <b style="color: black">INSTALL & USE</b>
       </ng-template>
       <!--app-license-page></app-license-page-->
-      <app-install></app-install>
+
+      <div class="card" style="background-color: #ededed">
+        <h1>INSTALL</h1>
+        <app-install></app-install>
+      </div>
+      <div class="card" style="background-color: #ededed">
+        <h1>CONFIGURATION</h1>
+        <app-configuration-page></app-configuration-page>
+        <app-config-landscape></app-config-landscape>
+      </div>
+      <div class="card" style="background-color: #ededed">
+        <h1>HOW-TOs</h1>
+        <app-howto></app-howto>
+      </div>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
@@ -33,11 +46,9 @@
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">settings_applications</mat-icon>
-        <b style="color: black">CONFIG</b>
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">square_foot</mat-icon>
+        <b style="color: black">CONCEPTS</b>
       </ng-template>
-      <app-configuration-page></app-configuration-page>
-      <app-config-landscape></app-config-landscape>
     </mat-tab>
   </mat-tab-group>
 

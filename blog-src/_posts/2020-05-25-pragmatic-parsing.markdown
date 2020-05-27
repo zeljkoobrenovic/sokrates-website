@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Pragmatic of Source Code Analysis"
+date:   2020-05-25 19:12:01 +0100
+author: by Željko Obrenović (zeljkoobrenovic.com)
+permalink: pragmatic-parsing
+excerpt:
+---
+
+Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.
+
+### The Challenge
+
+The first thing I have learned pretty fast when building Sokrates is that it is extremely tough to build a proper fully-featured parser for any programming language.  Any software analysis tool needs a handful of such parsers. Contemporary software projects frequently include a dozen or more of different programming languages and dialects.
+
+So how have I solved this problem? By not building fully-featured parsers.
+
+ I've also learned when building Sokrates that you can go a long way with using a few simple, heuristic parsing techniques. You may lose details in the process, but if you focus on the essence, such simple heuristic techniques can offer you incredible value for money. In many instances, you may get the same details as more complex and expensive tools. And performance-wise, simple heuristic techniques often work order or magnitude faster.
+
+In the rest of this chapter, we outline a few of these techniques. The following is useful for those who want to contribute or use Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.
+
+### Know What You Want. And Why.
+
+### Cleaning of the Code
+
+### Limit the Search to Prevent Accidental DoS
+
+### Extracting Unit Based on Balanced Brackets
+
+### Extracting Unit Based on Assumption of Proper Formatting
