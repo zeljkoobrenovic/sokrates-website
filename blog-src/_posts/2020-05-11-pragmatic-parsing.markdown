@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pragmatic of Source Code Analysis"
+title:  "Analysis: Pragmatics of Source Code Analysis"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: pragmatic-parsing
@@ -20,6 +20,10 @@ So how have I solved this problem? By not building fully-featured parsers.
 In the rest of this chapter, we outline a few of these techniques. The following is useful for those who want to contribute or use Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.
 
 ### Know What You Want. And Why.
+
+### Use What is Already Available
+
+Counting files, folders, file sizes
 
 ### Cleaning of the Code
 

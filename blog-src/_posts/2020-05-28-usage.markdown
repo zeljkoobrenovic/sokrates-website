@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Intro: Using Sokrates"
+date:   2020-05-25 19:12:01 +0100
+author: by Željko Obrenović (zeljkoobrenovic.com)
+permalink: usage
+excerpt:
+---
+
+### Basic Understanding
+
+### Periodic Reporting
+
+### Exploration
+
+### Goal Setting and Feedback
+
+### Sokrates as an Art Form
+
