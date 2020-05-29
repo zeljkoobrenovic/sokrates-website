@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-05-28T22:27:52+02:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Sokrates Blog</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Intro: Sokrates Philosophy</title><link href="http://localhost:4000/blog/philosophy" rel="alternate" type="text/html" title="Intro: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/philosophy</id><content type="html" xml:base="http://localhost:4000/blog/philosophy">&lt;p&gt;Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.&lt;/p&gt;
+
+&lt;p&gt;Sokrates is for anyone interested in software architecture in practice. Sokrates follows several premises (borrowing last two from Grady Booch):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Any software architecture documentation disconnected from source code is doomed to become outdated and useless quickly.&lt;/li&gt;
+  &lt;li&gt;The best formal and unambiguous specification of a software-intensive system is its executable code.&lt;/li&gt;
+  &lt;li&gt;However, executable code as a specification is insufficient for visualizing, reasoning about, understanding, and communicating about that system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sokrates provides a pragmatic way to describe critical elements of software architectures and connect them explicitly to the source code. Based on a formal description of different software architecture aspects, Sokrates generates reports and visualization to help you reason, understand, and communicate about the software system.&lt;/p&gt;
+
+&lt;h3 id=&quot;know-the-basic-of-your-codebase&quot;&gt;Know the Basic of Your Codebase&lt;/h3&gt;
+
+&lt;p&gt;On the one hand, you can use Sokrates as a bottom-up, reverse engineering tool, deriving architectural views from existing source code. On the other hand, you can use Sokrates in a top-down fashion, as a control tool monitoring deviations of source code from defining architectural rules.&lt;/p&gt;
+
+&lt;p&gt;Sokrates primary about being able to get quick answers to basic, simple questions about your source code:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How much code do you here?&lt;/li&gt;
+  &lt;li&gt;How much of it you’ve written yourself?&lt;/li&gt;
+  &lt;li&gt;How much of it you maintain?&lt;/li&gt;
+  &lt;li&gt;Which programming languages do you use?&lt;/li&gt;
+  &lt;li&gt;What is your primary or main code, the one used to define the structure and logic of the system in production?&lt;/li&gt;
+  &lt;li&gt;What is your secondary code, the one needed to test and build your system, but itself is not running in production?&lt;/li&gt;
+  &lt;li&gt;Do you generate some part of your codebase? How?&lt;/li&gt;
+  &lt;li&gt;How duplicated is your codebase? Why?&lt;/li&gt;
+  &lt;li&gt;How big are your files?&lt;/li&gt;
+  &lt;li&gt;How many units do you have? How big are they? How complex?&lt;/li&gt;
+  &lt;li&gt;How files in your codebase depend on each other?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As a control tools, Sokrates can serve as an early warning system around these basic measurments:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Duplication above some threshold,&lt;/li&gt;
+  &lt;li&gt;System or a a component becoming too big&lt;/li&gt;
+  &lt;li&gt;Units becoming more complex&lt;/li&gt;
+  &lt;li&gt;Unwanted dependencies among components are introduced.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;who-should-use-sokrates&quot;&gt;Who Should Use Sokrates&lt;/h3&gt;
+
+&lt;p&gt;While the general answer to this questions is “anyone interested in software architecture in practice,” my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small is their project and what other tools they use.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-metrics-to-start-a-discussion-not-to-kill-it&quot;&gt;Use Metrics to Start a Discussion, Not to Kill It&lt;/h3&gt;
+
+&lt;h2 id=&quot;about-the-name&quot;&gt;About the Name&lt;/h2&gt;
+
+&lt;p&gt;Examined life&lt;/p&gt;
+
+&lt;p&gt;Exploration, dialog with the source code&lt;/p&gt;
+
+&lt;h3 id=&quot;what-sokrates-is-not&quot;&gt;What Sokrates Is (Not)?&lt;/h3&gt;
+
+&lt;p&gt;Sokrates is more of a text analysis tool. Sokrates borrows ideas from code spelunking tools, in particular, grep, adding structure on top of regex source code searches.&lt;/p&gt;
+
+&lt;p&gt;Sokrates comes with both command-line interface and interactive GUI code explorer.&lt;/p&gt;
+
+&lt;p&gt;In these aspects, Sokrates differs from many other powerful tools, such as SonarQube or SIG SAT. It is not a replacement for these tools.&lt;/p&gt;
+
+&lt;h3 id=&quot;intellectual-control&quot;&gt;Intellectual Control&lt;/h3&gt;
+
+&lt;p&gt;Sokrates is about intellectual control. Rather than running sophisticated statistical and machine learning tools to understand your code, Sokrates goes back to the basics. You are using simple explicit expressions to understand and explain your system. “Intellectual control through simplicity” could easily be the Sokrates’ main motto.&lt;/p&gt;
+
+&lt;p&gt;The focus on intellectual control also means that there is little “magic” in Sokrates. Everything related to Sokrates configuration and analysis ic clearly stated and explicitly described. For instance, when initializing the configuration, Sokrates uses a long list of standard configuration settings to scope the system automatically. But even though automated, Sokrates explicitly writes down the chosen configuration in the configuration file, and you can change them.&lt;/p&gt;
+
+&lt;h3 id=&quot;design-principles&quot;&gt;Design Principles&lt;/h3&gt;
+
+&lt;p&gt;Sokrates explores several areas, all centered around the idea of obtaining and maintaining intellectual control over your software projects.&lt;/p&gt;
+
+&lt;p&gt;Sokrates follows the following design principles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Transparency. Sokrates’ analyses contain no magic. Sokrates reports explicitly explain why some values are there and give you lists of files to double-check the results.&lt;/li&gt;
+  &lt;li&gt;Simplicity and directness.&lt;/li&gt;
+  &lt;li&gt;Do not replace thinking.&lt;/li&gt;
+  &lt;li&gt;Power of individuals. It should be possible for an individual to build a part of Sokrates’ analysis in their projects from scratch.&lt;/li&gt;
+  &lt;li&gt;Technology independence. Sokrates is technology independent, but offer helpers for configuration and analysis of standard technologies.&lt;/li&gt;
+  &lt;li&gt;Simple Portable Data Exports&lt;/li&gt;
+  &lt;li&gt;Playable / Art&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;why-art&quot;&gt;Why Art?&lt;/h3&gt;
+
+&lt;p&gt;I use the term art rather than science and engineering because I am fed up with misuse of these terms. I borrow a lot free Donald Knuth in his emphasis on aesthetics, the creation of programs that are beautiful.&lt;/p&gt;
+
+&lt;p&gt;John Stuart Mill: “Art in general consists of the truths of science, arranged in the most convenient order for
+    practice, instead of the order which is the most convenient for thought. “&lt;/p&gt;
+
+&lt;p&gt;Donald Knuth: “Computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty. A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better.”&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.</summary></entry><entry><title type="html">Usage: Sokrates Explorer</title><link href="http://localhost:4000/blog/exploration" rel="alternate" type="text/html" title="Usage: Sokrates Explorer" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/exploration</id><content type="html" xml:base="http://localhost:4000/blog/exploration">&lt;p&gt;Interactive Source Code Explorations&lt;/p&gt;
+
+&lt;p&gt;Auto Scroll&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Interactive Source Code Explorations</summary></entry><entry><title type="html">Usage: Command Line Interface</title><link href="http://localhost:4000/blog/cli" rel="alternate" type="text/html" title="Usage: Command Line Interface" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/cli</id><content type="html" xml:base="http://localhost:4000/blog/cli">&lt;p&gt;Interactive Source Code Explorations&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Interactive Source Code Explorations</summary></entry><entry><title type="html">Analysis: Trends</title><link href="http://localhost:4000/blog/trends" rel="alternate" type="text/html" title="Analysis: Trends" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/trend-analysis</id><content type="html" xml:base="http://localhost:4000/blog/trends"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Unit Analysis</title><link href="http://localhost:4000/blog/units" rel="alternate" type="text/html" title="Analysis: Unit Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/unit-analysis</id><content type="html" xml:base="http://localhost:4000/blog/units"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Duplication Analysis</title><link href="http://localhost:4000/blog/duplication" rel="alternate" type="text/html" title="Analysis: Duplication Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/duplication</id><content type="html" xml:base="http://localhost:4000/blog/duplication">&lt;h3 id=&quot;duplication-is-bad&quot;&gt;Duplication is Bad&lt;/h3&gt;
+
+&lt;p&gt;I always wanted to say something smart about duplication and why it is bad. But others have done it years ago, and much better. So I will satisfy my wish to talk about duplication by quoting few of the online resources:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/ieeeSoftware/repetition.pdf&quot;&gt;Avoid Repetition&lt;/a&gt;, MartinFlower.com (IEEE Software article)
+    &lt;ul&gt;
+      &lt;li&gt;“&lt;em&gt;Avoiding repetition is a simple principle that leads to good design.&lt;/em&gt;”&lt;/li&gt;
+      &lt;li&gt;“&lt;em&gt;I have an increasing sense that a pig-headed determination to remove all repetition can lead you a long way toward a good design and can help you apply and understand the patterns that are common in good designs.&lt;/em&gt;”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sourcemaking.com/refactoring/smells/duplicate-code&quot;&gt;Refactoring duplicated code&lt;/a&gt;, sourcemaking.com
+    &lt;ul&gt;
+      &lt;li&gt;“&lt;em&gt;Merging duplicate code simplifies the structure of your code and makes it shorter.&lt;/em&gt;”&lt;/li&gt;
+      &lt;li&gt;“&lt;em&gt;Simplification + shortness = code that is easier to simplify and cheaper to support.&lt;/em&gt;”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/bliki/BeckDesignRules.html&quot;&gt;Beck Design Rules&lt;/a&gt;, MartinFowler.com
+    &lt;ul&gt;
+      &lt;li&gt;“&lt;em&gt;[No duplication] is a notion expressed elsewhere as DRY [Don’t Repeat Yourself] or SPOT [Single Point Of Truth], Kent expressed it as saying everything should be said “Once and only Once.” Many programmers have observed that the exercise of eliminating duplication is a powerful way to drive out good designs.&lt;/em&gt;”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.codinghorror.com/code-smells/&quot;&gt;Code Smells / Duplicated Code&lt;/a&gt;, Jeff Atwood, codinghorror.com:
+    &lt;ul&gt;
+      &lt;li&gt;“&lt;em&gt;Duplicated code is the bane of software development. Stamp out duplication whenever possible. You should always be on the lookout for more subtle cases of near-duplication, too. Don’t Repeat Yourself!&lt;/em&gt;”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/javarevisited/code-duplication-1e1f759a7fe3&quot;&gt;Code Duplication&lt;/a&gt;, Donald Raab
+    &lt;ul&gt;
+      &lt;li&gt;“&lt;em&gt;So, duplication sucks. The more rabidly a person hates duplication, the more I trust their opinions on managing information. A programmer, upon noticing some redundancy, should be thrown into a panic, begin hyperventilating, and stammer something about “¡El diablo! !El diablo está en mi software!. — Ryan King&lt;/em&gt;”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sourcemaking.com/antipatterns/cut-and-paste-programming&quot;&gt;The Cut-and-Paste Programming Software Development Anti-Pattern&lt;/a&gt;, sourcemaking.com
+    &lt;ul&gt;
+      &lt;li&gt;“&lt;em&gt;Cut-and-Paste Programming is a very common, but degenerate form of software reuse which creates maintenance nightmares.&lt;/em&gt;”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;analyzing-duplication&quot;&gt;Analyzing Duplication&lt;/h3&gt;
+
+&lt;p&gt;For duplication, we look at places in code where there are six or more lines of code that are exactly the same. I reuse the treshold of siz lines as it is used in tools that measure duplication (e.g. see &lt;a href=&quot;https://www.harukizaemon.com/simian/features.html&quot;&gt;Simian&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;code ==&amp;gt; cleaned code ==&amp;gt; list of duplications ==&amp;gt; aggregation&lt;/p&gt;
+
+&lt;h3 id=&quot;cleaning-the-code&quot;&gt;Cleaning the Code&lt;/h3&gt;
+&lt;p&gt;Before duplication is calculated, the code is cleaned to remove empty lines, comments, and frequently duplicated constructs such as imports.&lt;/p&gt;
+
+&lt;p&gt;Here is an example of code cleaning:&lt;/p&gt;
+
+&lt;p&gt;Before the cleaning:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/*
+ * Copyright (c) 2019 Željko Obrenović. All rights reserved.
+ */&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;obren&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sokrates&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sourcecode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;operations&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;impl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nl.obren.sokrates.sourcecode.operations.StringOperation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LowerCaseOperation&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StringOperation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LowerCaseOperation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lowercase&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LowerCaseOperation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After cleaning (removal of comments, empty lines, import statemants, and leading and trailing whitespaces in each line):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LowerCaseOperation&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StringOperation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LowerCaseOperation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lowercase&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LowerCaseOperation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should aim at having as little as possible (&amp;lt;5%) of duplicated code as high-level of duplication can lead to maintenance difficulties, poor factoring, and logical contradictions.&lt;/p&gt;
+
+&lt;h3 id=&quot;aggregating-duplication-analysis-results&quot;&gt;Aggregating Duplication Analysis Results&lt;/h3&gt;
+
+&lt;p&gt;At the overall project’s level&lt;/p&gt;
+
+&lt;p&gt;At the extension’s level&lt;/p&gt;
+
+&lt;p&gt;At logical decompositions’ level&lt;/p&gt;
+
+&lt;h3 id=&quot;duplication-as-coupling&quot;&gt;Duplication as Coupling&lt;/h3&gt;
+
+&lt;p&gt;Socrates also uses duplicates to show similarities among components as dependencies. Here, I borrow the idea from &lt;a href=&quot;https://martinfowler.com&quot;&gt;Marting Folwer’s&lt;/a&gt; article &lt;a href=&quot;https://martinfowler.com/ieeeSoftware/coupling.pdf&quot;&gt;Reducing Coupling&lt;/a&gt;, MartinFlower.com (IEEE Software article):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;“&lt;em&gt;There are several ways to describe coupling, but it boils down to this: If changing one module in a program requires changing another module, then coupling exists. … Duplication always implies coupling, because changing one piece of duplicate code implies changing the other.&lt;/em&gt;”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sokrates, draws a dependency diagram with each dependency defined as a number of lines duplicated between the components. Here is an example fromSokrates analysis:&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Duplication is Bad</summary></entry><entry><title type="html">Analysis: Basic Analyses</title><link href="http://localhost:4000/blog/basic-analyses" rel="alternate" type="text/html" title="Analysis: Basic Analyses" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/basic-analyses</id><content type="html" xml:base="http://localhost:4000/blog/basic-analyses">&lt;p&gt;Counting files and lines in files&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Counting files and lines in files</summary></entry><entry><title type="html">Analysis: Pragmatics of Source Code Analysis</title><link href="http://localhost:4000/blog/pragmatic-parsing" rel="alternate" type="text/html" title="Analysis: Pragmatics of Source Code Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/pragmatic-parsing</id><content type="html" xml:base="http://localhost:4000/blog/pragmatic-parsing">&lt;p&gt;Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-challenge&quot;&gt;The Challenge&lt;/h3&gt;
+
+&lt;p&gt;The first thing I have learned pretty fast when building Sokrates is that it is extremely tough to build a proper fully-featured parser for any programming language.  Any software analysis tool needs a handful of such parsers. Contemporary software projects frequently include a dozen or more of different programming languages and dialects.&lt;/p&gt;
+
+&lt;p&gt;So how have I solved this problem? By not building fully-featured parsers.&lt;/p&gt;
+
+&lt;p&gt;I’ve also learned when building Sokrates that you can go a long way with using a few simple, heuristic parsing techniques. You may lose details in the process, but if you focus on the essence, such simple heuristic techniques can offer you incredible value for money. In many instances, you may get the same details as more complex and expensive tools. And performance-wise, simple heuristic techniques often work order or magnitude faster.&lt;/p&gt;
+
+&lt;p&gt;In the rest of this chapter, we outline a few of these techniques. The following is useful for those who want to contribute or use Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.&lt;/p&gt;
+
+&lt;h3 id=&quot;know-what-you-want-and-why&quot;&gt;Know What You Want. And Why.&lt;/h3&gt;
+
+&lt;h3 id=&quot;use-what-is-already-available&quot;&gt;Use What is Already Available&lt;/h3&gt;
+
+&lt;p&gt;Counting files, folders, file sizes&lt;/p&gt;
+
+&lt;h3 id=&quot;cleaning-of-the-code&quot;&gt;Cleaning of the Code&lt;/h3&gt;
+
+&lt;h3 id=&quot;limit-the-search-to-prevent-accidental-dos&quot;&gt;Limit the Search to Prevent Accidental DoS&lt;/h3&gt;
+
+&lt;h3 id=&quot;extracting-unit-based-on-balanced-brackets&quot;&gt;Extracting Unit Based on Balanced Brackets&lt;/h3&gt;
+
+&lt;h3 id=&quot;extracting-unit-based-on-assumption-of-proper-formatting&quot;&gt;Extracting Unit Based on Assumption of Proper Formatting&lt;/h3&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.</summary></entry><entry><title type="html">Analysis: Finding Dependencies</title><link href="http://localhost:4000/blog/dependencies" rel="alternate" type="text/html" title="Analysis: Finding Dependencies" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/dependencies</id><content type="html" xml:base="http://localhost:4000/blog/dependencies"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Foundations: Cross-Cutting Concerns</title><link href="http://localhost:4000/blog/cross-cutting-concerns" rel="alternate" type="text/html" title="Foundations: Cross-Cutting Concerns" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/cross-cutting-concerns</id><content type="html" xml:base="http://localhost:4000/blog/cross-cutting-concerns">&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.&lt;/li&gt;
+    &lt;li&gt;A single concern may be present in multiple files. One source code file may contain multiple concerns.&lt;/li&gt;
+    &lt;li&gt;A Sokrates enables defining multiple groups of cross-cutting concerns for each system.&lt;/li&gt;
+    &lt;li&gt;A cross-cutting concerns can be defined in two ways in Sokrates.&lt;/li&gt;
+    &lt;li&gt;The first approach is based on explicit definition of each concern. In such explicit definitions, concerns are explicitly named and their files are selected based on explicitly defined path and content filters.&lt;/li&gt;
+    &lt;li&gt;The second approach is based on dynamic definition of concerns and their names. In such dynamic definitions, concerns are not explicitly named, but their names are derived based on script with string transformations of file path or content.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;general&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;concerns&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;exception handling&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;sourceFileFilters&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.*[.]java&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.* try &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;{.*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;include&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;note&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;logging&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;sourceFileFilters&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;import .*logging[.]Log.*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;include&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;note&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file operations&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;sourceFileFilters&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;import .*java[.]io[.]File.*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;include&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;note&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system. A single concern may be present in multiple files. One source code file may contain multiple concerns. A Sokrates enables defining multiple groups of cross-cutting concerns for each system. A cross-cutting concerns can be defined in two ways in Sokrates. The first approach is based on explicit definition of each concern. In such explicit definitions, concerns are explicitly named and their files are selected based on explicitly defined path and content filters. The second approach is based on dynamic definition of concerns and their names. In such dynamic definitions, concerns are not explicitly named, but their names are derived based on script with string transformations of file path or content.</summary></entry></feed>
