@@ -8,15 +8,15 @@
 <meta property="og:title" content="Usage: Command Line Interface" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Interactive Source Code Explorations" />
-<meta property="og:description" content="Interactive Source Code Explorations" />
+<meta name="description" content="Installation" />
+<meta property="og:description" content="Installation" />
 <link rel="canonical" href="http://localhost:4000/blog/cli" />
 <meta property="og:url" content="http://localhost:4000/blog/cli" />
 <meta property="og:site_name" content="Sokrates Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Interactive Source Code Explorations","@type":"BlogPosting","url":"http://localhost:4000/blog/cli","headline":"Usage: Command Line Interface","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/cli"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Installation","@type":"BlogPosting","url":"http://localhost:4000/blog/cli","headline":"Usage: Command Line Interface","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/cli"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="Sokrates Blog" /></head>
 <body><header class="site-header" role="banner">
@@ -89,7 +89,76 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <p>Interactive Source Code Explorations</p>
+        <h3 id="installation">Installation</h3>
+
+<p>COMMAND LINE JAR
+DOWNLOAD: sokrates-0.9.jar (38 MB)</p>
+
+<p>Simple usage example (to analyze Junit4):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/junit-team/junit4
+<span class="nb">cd </span>junit4
+
+java <span class="nt">-jar</span> sokrates-0.9.jar init
+java <span class="nt">-jar</span> sokrates-0.9.jar generateReports
+
+open _sokrates/reports/html/index.html</code></pre></figure>
+
+<p>Illustrate previous example</p>
+
+<h3 id="init-command"><strong><em>init</em></strong> command</h3>
+
+<p>generate a Sokrates configuration file for the codebase.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">java <span class="nt">-jar</span> sokrates-0.9.jar init <span class="o">[</span>options]
+   <span class="nt">-srcRoot</span>  &lt;arg&gt;   <span class="o">[</span>OPTIONAL] the path to <span class="nb">source </span>code root folder <span class="o">(</span>default is &lt;currentFolder&gt;<span class="o">)</span>
+   <span class="nt">-confFile</span> &lt;arg&gt;   <span class="o">[</span>OPTIONAL] the path to configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates/config.json"</span><span class="o">)</span></code></pre></figure>
+
+<h3 id="generatereports-command"><strong><em>generateReports</em></strong> command</h3>
+
+<p>generates Sokrates reports based on the configuration</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  java <span class="nt">-jar</span> sokrates-0.9.jar generateReports <span class="o">[</span>options]
+         <span class="nt">-confFile</span>     &lt;arg&gt;           <span class="o">[</span>OPTIONAL] the path to configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates/config.json"</span><span class="o">)</span>
+         <span class="nt">-outputFolder</span> &lt;arg&gt;           <span class="o">[</span>OPTIONAL] the folder where reports will be stored <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates/reports/"</span><span class="o">)</span>
+         <span class="nt">-reportAll</span>                    <span class="o">[</span>DEFAULT] generate all reports
+         <span class="nt">-reportData</span>                   save only data <span class="k">in </span>JSON and text formats <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/data<span class="o">)</span>
+         <span class="nt">-reportOverview</span>               generate only the report describing the overview of files <span class="k">in </span>scope <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/html/SourceCodeOverview.html<span class="o">)</span>
+         <span class="nt">-reportDuplication</span>            generate only the duplication report <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/html/Duplication.html<span class="o">)</span>
+         <span class="nt">-reportLogicalDecomposition</span>   generate only the components logical decomposition report <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/LogicalDecomposition.html<span class="o">)</span>
+         <span class="nt">-reportFileSize</span>               generate only the file size report <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/html/FileSize.html<span class="o">)</span>
+         <span class="nt">-reportUnitSize</span>               generate only the unit size report <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/html/UnitSize.html<span class="o">)</span>
+         <span class="nt">-reportConditionalComplexity</span>  generate only the conditional complexity report <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/html/ConditionalComplexity.html<span class="o">)</span>
+         <span class="nt">-reportCrossCuttingConcerns</span>   generate only the cross cutting concerns report <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/html/CrossCuttingConcerns.html<span class="o">)</span>
+         <span class="nt">-reportMetrics</span>                generate only the metrics overview report <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/html/Metrics.html<span class="o">)</span>
+         <span class="nt">-reportControls</span>               generate only the controls report <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/html/Controls.html<span class="o">)</span>
+         <span class="nt">-reportFindings</span>               generate only the findings report <span class="o">(</span>stored <span class="k">in</span> &lt;outputFolder&gt;/html/Findings.html<span class="o">)</span>
+         <span class="nt">-internalGraphviz</span>             use internal Graphviz library <span class="o">(</span>by default external dot program is used, you may specify
+                                       the external dot path via the system variable GRAPHVIZ_DOT<span class="o">)</span></code></pre></figure>
+
+<h3 id="configcomplete-command"><strong><em>configComplete</em></strong> command</h3>
+
+<p>completes missing fields in the configuration file</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">java <span class="nt">-jar</span> sokrates.jar configComplete <span class="o">[</span>options]
+     <span class="nt">-confFile</span> &lt;arg&gt;       <span class="o">[</span>OPTIONAL] the path to configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates/config.json"</span></code></pre></figure>
+
+<h3 id="initlandscape-command"><strong><em>initLandscape</em></strong> command</h3>
+
+<p>create the configuration file for Sokrates landscape analysis (aggregated report of multiple Sokrates analysis results)</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">java <span class="nt">-jar</span> sokrates.jar initLandscape <span class="o">[</span>options]
+     <span class="nt">-analysisRoot</span> &lt;arg&gt;    the path to the root folder of multiple Sokrates projects, scans all subfolders <span class="k">for </span>Sokrates reports and configurations.  The folder where landscape reports will be stored <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates_landscape/reports/"</span><span class="nb">.</span>
+     <span class="nt">-confFile</span>     &lt;arg&gt;    <span class="o">[</span>OPTIONAL] the path to landscape configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates_landscape/config.json"</span></code></pre></figure>
+
+<h3 id="updatelandscape-command"><strong><em>updateLandscape</em></strong> command</h3>
+
+<p>updates the configuration file for Sokrates Landscape analysis</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">java <span class="nt">-jar</span> sokrates.jar updateLandscape <span class="o">[</span>options]
+     <span class="nt">-analysisRoot</span> &lt;arg&gt;   the path to the root folder of multiple Sokrates projects, scans all subfolders <span class="k">for </span>Sokrates reports and configurations. The folder where landscape reports will be stored <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates_landscape/reports/"</span><span class="nb">.</span>
+     <span class="nt">-confFile</span>     &lt;arg&gt;   <span class="o">[</span>OPTIONAL] the path to landscape configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates_landscape/config.json"</span></code></pre></figure>
+
 
     </div><a class="u-url" href="/blog/cli" hidden></a>
 </article>

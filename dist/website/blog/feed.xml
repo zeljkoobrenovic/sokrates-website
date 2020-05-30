@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-05-28T22:27:52+02:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Sokrates Blog</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Intro: Sokrates Philosophy</title><link href="http://localhost:4000/blog/philosophy" rel="alternate" type="text/html" title="Intro: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/philosophy</id><content type="html" xml:base="http://localhost:4000/blog/philosophy">&lt;p&gt;Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-05-30T09:31:51+02:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Sokrates Blog</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Intro: Sokrates Philosophy</title><link href="http://localhost:4000/blog/philosophy" rel="alternate" type="text/html" title="Intro: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/philosophy</id><content type="html" xml:base="http://localhost:4000/blog/philosophy">&lt;p&gt;Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.&lt;/p&gt;
 
 &lt;p&gt;Sokrates is for anyone interested in software architecture in practice. Sokrates follows several premises (borrowing last two from Grady Booch):&lt;/p&gt;
 
@@ -46,9 +46,13 @@
 
 &lt;h2 id=&quot;about-the-name&quot;&gt;About the Name&lt;/h2&gt;
 
-&lt;p&gt;Examined life&lt;/p&gt;
+&lt;p&gt;“&lt;a href=&quot;https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living&quot;&gt;The unexamined life is not worth living&lt;/a&gt;”&lt;/p&gt;
 
 &lt;p&gt;Exploration, dialog with the source code&lt;/p&gt;
+
+&lt;p&gt;“Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life, but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.”&lt;/p&gt;
+
+&lt;p&gt;As software is eating the world, examining life nowads inevitabelly means examing software. And our life, at least mine, is huge part dedicated maintaining the software. So unexamined life is not worth living for many of us means unexamined software is not worth maintaining.&lt;/p&gt;
 
 &lt;h3 id=&quot;what-sokrates-is-not&quot;&gt;What Sokrates Is (Not)?&lt;/h3&gt;
 
@@ -87,9 +91,116 @@
 &lt;p&gt;John Stuart Mill: “Art in general consists of the truths of science, arranged in the most convenient order for
     practice, instead of the order which is the most convenient for thought. “&lt;/p&gt;
 
-&lt;p&gt;Donald Knuth: “Computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty. A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better.”&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.</summary></entry><entry><title type="html">Usage: Sokrates Explorer</title><link href="http://localhost:4000/blog/exploration" rel="alternate" type="text/html" title="Usage: Sokrates Explorer" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/exploration</id><content type="html" xml:base="http://localhost:4000/blog/exploration">&lt;p&gt;Interactive Source Code Explorations&lt;/p&gt;
+&lt;p&gt;Donald Knuth: “Computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty. A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better.”&lt;/p&gt;
 
-&lt;p&gt;Auto Scroll&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Interactive Source Code Explorations</summary></entry><entry><title type="html">Usage: Command Line Interface</title><link href="http://localhost:4000/blog/cli" rel="alternate" type="text/html" title="Usage: Command Line Interface" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/cli</id><content type="html" xml:base="http://localhost:4000/blog/cli">&lt;p&gt;Interactive Source Code Explorations&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Interactive Source Code Explorations</summary></entry><entry><title type="html">Analysis: Trends</title><link href="http://localhost:4000/blog/trends" rel="alternate" type="text/html" title="Analysis: Trends" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/trend-analysis</id><content type="html" xml:base="http://localhost:4000/blog/trends"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Unit Analysis</title><link href="http://localhost:4000/blog/units" rel="alternate" type="text/html" title="Analysis: Unit Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/unit-analysis</id><content type="html" xml:base="http://localhost:4000/blog/units"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Duplication Analysis</title><link href="http://localhost:4000/blog/duplication" rel="alternate" type="text/html" title="Analysis: Duplication Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/duplication</id><content type="html" xml:base="http://localhost:4000/blog/duplication">&lt;h3 id=&quot;duplication-is-bad&quot;&gt;Duplication is Bad&lt;/h3&gt;
+&lt;h3 id=&quot;basic-understanding&quot;&gt;Basic Understanding&lt;/h3&gt;
+
+&lt;h3 id=&quot;periodic-reporting&quot;&gt;Periodic Reporting&lt;/h3&gt;
+
+&lt;h3 id=&quot;exploration&quot;&gt;Exploration&lt;/h3&gt;
+
+&lt;h3 id=&quot;goal-setting-and-feedback&quot;&gt;Goal Setting and Feedback&lt;/h3&gt;
+
+&lt;h3 id=&quot;sokrates-as-an-art-form&quot;&gt;Sokrates as an Art Form&lt;/h3&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.</summary></entry><entry><title type="html">Usage: Sokrates Explorer</title><link href="http://localhost:4000/blog/exploration" rel="alternate" type="text/html" title="Usage: Sokrates Explorer" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/exploration</id><content type="html" xml:base="http://localhost:4000/blog/exploration">&lt;h3 id=&quot;interactive-source-code-explorations&quot;&gt;Interactive Source Code Explorations&lt;/h3&gt;
+
+&lt;h3 id=&quot;interactive-configuration-with-instant-preview-of-results&quot;&gt;Interactive Configuration with Instant Preview of Results&lt;/h3&gt;
+
+&lt;p&gt;Sorted by size by default&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/explorer.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;…
+&lt;img src=&quot;assets/images/sokrates/explorer_config_editor.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;…
+&lt;img src=&quot;assets/images/sokrates/explorer_browsing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;…
+&lt;img src=&quot;assets/images/sokrates/explorer_browsing_scopes.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;text-search&quot;&gt;Text Search&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/explorer_search.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/explorer_search_stats.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/explorer_search_dependencies.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/explorer_search_dependencies_cleaning.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;auto-scroll&quot;&gt;Auto Scroll&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“I drink a lot of coffee before I go to sleep so I can dream faster. I can dream like when they put &lt;a href=&quot;https://youtu.be/ATrmW5s2PiU&quot;&gt;a camera on the Indy 500 … when they put a camera in the car&lt;/a&gt;, and it’s just whipping by like that. Dream after dream after dream after dream. People ask me the next day, “What did you dream about?” I say, “I don’t have time. I don’t have time to tell you this.”” — &lt;a href=&quot;https://youtu.be/pBa-2nXCc7g?t=68&quot;&gt;Coffee and Cigarettes (2003)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Interactive Source Code Explorations</summary></entry><entry><title type="html">Usage: Command Line Interface</title><link href="http://localhost:4000/blog/cli" rel="alternate" type="text/html" title="Usage: Command Line Interface" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/cli</id><content type="html" xml:base="http://localhost:4000/blog/cli">&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+
+&lt;p&gt;COMMAND LINE JAR
+DOWNLOAD: sokrates-0.9.jar (38 MB)&lt;/p&gt;
+
+&lt;p&gt;Simple usage example (to analyze Junit4):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/junit-team/junit4
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;junit4
+
+java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar init
+java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar generateReports
+
+open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Illustrate previous example&lt;/p&gt;
+
+&lt;h3 id=&quot;init-command&quot;&gt;&lt;strong&gt;&lt;em&gt;init&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+
+&lt;p&gt;generate a Sokrates configuration file for the codebase.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar init &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+   &lt;span class=&quot;nt&quot;&gt;-srcRoot&lt;/span&gt;  &amp;lt;arg&amp;gt;   &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;code root folder &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &amp;lt;currentFolder&amp;gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt; &amp;lt;arg&amp;gt;   &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/config.json&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;generatereports-command&quot;&gt;&lt;strong&gt;&lt;em&gt;generateReports&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+
+&lt;p&gt;generates Sokrates reports based on the configuration&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar generateReports &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+         &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt;     &amp;lt;arg&amp;gt;           &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/config.json&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-outputFolder&lt;/span&gt; &amp;lt;arg&amp;gt;           &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the folder where reports will be stored &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/reports/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportAll&lt;/span&gt;                    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;DEFAULT] generate all reports
+         &lt;span class=&quot;nt&quot;&gt;-reportData&lt;/span&gt;                   save only data &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;JSON and text formats &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/data&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportOverview&lt;/span&gt;               generate only the report describing the overview of files &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;scope &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/SourceCodeOverview.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportDuplication&lt;/span&gt;            generate only the duplication report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/Duplication.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportLogicalDecomposition&lt;/span&gt;   generate only the components logical decomposition report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/LogicalDecomposition.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportFileSize&lt;/span&gt;               generate only the file size report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/FileSize.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportUnitSize&lt;/span&gt;               generate only the unit size report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/UnitSize.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportConditionalComplexity&lt;/span&gt;  generate only the conditional complexity report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/ConditionalComplexity.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportCrossCuttingConcerns&lt;/span&gt;   generate only the cross cutting concerns report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/CrossCuttingConcerns.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportMetrics&lt;/span&gt;                generate only the metrics overview report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/Metrics.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportControls&lt;/span&gt;               generate only the controls report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/Controls.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportFindings&lt;/span&gt;               generate only the findings report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/Findings.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-internalGraphviz&lt;/span&gt;             use internal Graphviz library &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;by default external dot program is used, you may specify
+                                       the external dot path via the system variable GRAPHVIZ_DOT&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;configcomplete-command&quot;&gt;&lt;strong&gt;&lt;em&gt;configComplete&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+
+&lt;p&gt;completes missing fields in the configuration file&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates.jar configComplete &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+     &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt; &amp;lt;arg&amp;gt;       &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/config.json&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;initlandscape-command&quot;&gt;&lt;strong&gt;&lt;em&gt;initLandscape&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+
+&lt;p&gt;create the configuration file for Sokrates landscape analysis (aggregated report of multiple Sokrates analysis results)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates.jar initLandscape &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+     &lt;span class=&quot;nt&quot;&gt;-analysisRoot&lt;/span&gt; &amp;lt;arg&amp;gt;    the path to the root folder of multiple Sokrates projects, scans all subfolders &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;Sokrates reports and configurations.  The folder where landscape reports will be stored &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates_landscape/reports/&quot;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt;     &amp;lt;arg&amp;gt;    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to landscape configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates_landscape/config.json&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;updatelandscape-command&quot;&gt;&lt;strong&gt;&lt;em&gt;updateLandscape&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+
+&lt;p&gt;updates the configuration file for Sokrates Landscape analysis&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates.jar updateLandscape &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+     &lt;span class=&quot;nt&quot;&gt;-analysisRoot&lt;/span&gt; &amp;lt;arg&amp;gt;   the path to the root folder of multiple Sokrates projects, scans all subfolders &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;Sokrates reports and configurations. The folder where landscape reports will be stored &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates_landscape/reports/&quot;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt;     &amp;lt;arg&amp;gt;   &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to landscape configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates_landscape/config.json&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Installation</summary></entry><entry><title type="html">Analysis: Landscape</title><link href="http://localhost:4000/blog/landscape" rel="alternate" type="text/html" title="Analysis: Landscape" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/landscape-analysis</id><content type="html" xml:base="http://localhost:4000/blog/landscape"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Trends</title><link href="http://localhost:4000/blog/trends" rel="alternate" type="text/html" title="Analysis: Trends" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/trend-analysis</id><content type="html" xml:base="http://localhost:4000/blog/trends"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Units</title><link href="http://localhost:4000/blog/units" rel="alternate" type="text/html" title="Analysis: Units" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/unit-analysis</id><content type="html" xml:base="http://localhost:4000/blog/units"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Duplication</title><link href="http://localhost:4000/blog/duplication" rel="alternate" type="text/html" title="Analysis: Duplication" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/duplication</id><content type="html" xml:base="http://localhost:4000/blog/duplication">&lt;h3 id=&quot;duplication-is-bad&quot;&gt;Duplication is Bad&lt;/h3&gt;
 
 &lt;p&gt;I always wanted to say something smart about duplication and why it is bad. But others have done it years ago, and much better. So I will satisfy my wish to talk about duplication by quoting few of the online resources:&lt;/p&gt;
 
@@ -196,7 +307,29 @@
   &lt;li&gt;“&lt;em&gt;There are several ways to describe coupling, but it boils down to this: If changing one module in a program requires changing another module, then coupling exists. … Duplication always implies coupling, because changing one piece of duplicate code implies changing the other.&lt;/em&gt;”&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Sokrates, draws a dependency diagram with each dependency defined as a number of lines duplicated between the components. Here is an example fromSokrates analysis:&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Duplication is Bad</summary></entry><entry><title type="html">Analysis: Basic Analyses</title><link href="http://localhost:4000/blog/basic-analyses" rel="alternate" type="text/html" title="Analysis: Basic Analyses" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/basic-analyses</id><content type="html" xml:base="http://localhost:4000/blog/basic-analyses">&lt;p&gt;Counting files and lines in files&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Counting files and lines in files</summary></entry><entry><title type="html">Analysis: Pragmatics of Source Code Analysis</title><link href="http://localhost:4000/blog/pragmatic-parsing" rel="alternate" type="text/html" title="Analysis: Pragmatics of Source Code Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/pragmatic-parsing</id><content type="html" xml:base="http://localhost:4000/blog/pragmatic-parsing">&lt;p&gt;Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.&lt;/p&gt;
+&lt;p&gt;Sokrates, draws a dependency diagram with each dependency defined as a number of lines duplicated between the components. Here is an example fromSokrates analysis:&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Duplication is Bad</summary></entry><entry><title type="html">Analysis: Basics</title><link href="http://localhost:4000/blog/basic-analyses" rel="alternate" type="text/html" title="Analysis: Basics" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/basic-analyses</id><content type="html" xml:base="http://localhost:4000/blog/basic-analyses">&lt;h3 id=&quot;counting&quot;&gt;Counting&lt;/h3&gt;
+
+&lt;p&gt;“Sir Francis Bacon told a story, perhaps apocryphal, that illustrated just how empiricism was lost during the Middle Ages. The story was that a meeting of monks was taking place and the monks were hotly debating the issue of how many teeth were in the mouth of a horse. The problem was that they could not find the answer anywhere in Aristotle’s work. Then, a young monk, perhaps at his first such meeting, timidly suggested that, because they had all come to the meeting on horseback, that one way to get the answer would be simply to go outside and count. Bacon went on to say that the young monk was expelled from the meeting!”&lt;/p&gt;
+
+&lt;p&gt;Counting files and lines in files&lt;/p&gt;
+
+&lt;h3 id=&quot;aggregating&quot;&gt;Aggregating&lt;/h3&gt;
+
+&lt;h3 id=&quot;connecting&quot;&gt;Connecting&lt;/h3&gt;
+
+&lt;h3 id=&quot;visualizing&quot;&gt;Visualizing&lt;/h3&gt;
+
+&lt;p&gt;Basic chart&lt;/p&gt;
+
+&lt;p&gt;SVG&lt;/p&gt;
+
+&lt;p&gt;Graphviz&lt;/p&gt;
+
+&lt;p&gt;3D&lt;/p&gt;
+
+&lt;h3 id=&quot;story-tell-the-facts-facts-do-not-tell-the-story&quot;&gt;Story Tell the Facts. Facts do not tell the Story&lt;/h3&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Counting</summary></entry><entry><title type="html">Analysis: Pragmatic Source Code Analysis</title><link href="http://localhost:4000/blog/pragmatic-parsing" rel="alternate" type="text/html" title="Analysis: Pragmatic Source Code Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/pragmatic-parsing</id><content type="html" xml:base="http://localhost:4000/blog/pragmatic-parsing">&lt;p&gt;“pragmatic: dealing with things sensibly and realistically in a way that is based on practical rather than theoretical considerations”&lt;/p&gt;
+
+&lt;p&gt;Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-challenge&quot;&gt;The Challenge&lt;/h3&gt;
 
@@ -210,6 +343,11 @@
 
 &lt;h3 id=&quot;know-what-you-want-and-why&quot;&gt;Know What You Want. And Why.&lt;/h3&gt;
 
+&lt;p&gt;E.g. dependencies between units, from which line a dependency has been made to which unit
+vs. dependencies between files and components. The second is much simpler, and for many architectural analyses sufficient (or even better as it reduced necessary details)&lt;/p&gt;
+
+&lt;p&gt;I’ve never needed such a level of detial in practice.&lt;/p&gt;
+
 &lt;h3 id=&quot;use-what-is-already-available&quot;&gt;Use What is Already Available&lt;/h3&gt;
 
 &lt;p&gt;Counting files, folders, file sizes&lt;/p&gt;
@@ -220,54 +358,4 @@
 
 &lt;h3 id=&quot;extracting-unit-based-on-balanced-brackets&quot;&gt;Extracting Unit Based on Balanced Brackets&lt;/h3&gt;
 
-&lt;h3 id=&quot;extracting-unit-based-on-assumption-of-proper-formatting&quot;&gt;Extracting Unit Based on Assumption of Proper Formatting&lt;/h3&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.</summary></entry><entry><title type="html">Analysis: Finding Dependencies</title><link href="http://localhost:4000/blog/dependencies" rel="alternate" type="text/html" title="Analysis: Finding Dependencies" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/dependencies</id><content type="html" xml:base="http://localhost:4000/blog/dependencies"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Foundations: Cross-Cutting Concerns</title><link href="http://localhost:4000/blog/cross-cutting-concerns" rel="alternate" type="text/html" title="Foundations: Cross-Cutting Concerns" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/cross-cutting-concerns</id><content type="html" xml:base="http://localhost:4000/blog/cross-cutting-concerns">&lt;blockquote&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.&lt;/li&gt;
-    &lt;li&gt;A single concern may be present in multiple files. One source code file may contain multiple concerns.&lt;/li&gt;
-    &lt;li&gt;A Sokrates enables defining multiple groups of cross-cutting concerns for each system.&lt;/li&gt;
-    &lt;li&gt;A cross-cutting concerns can be defined in two ways in Sokrates.&lt;/li&gt;
-    &lt;li&gt;The first approach is based on explicit definition of each concern. In such explicit definitions, concerns are explicitly named and their files are selected based on explicitly defined path and content filters.&lt;/li&gt;
-    &lt;li&gt;The second approach is based on dynamic definition of concerns and their names. In such dynamic definitions, concerns are not explicitly named, but their names are derived based on script with string transformations of file path or content.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;general&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;concerns&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;exception handling&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;sourceFileFilters&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.*[.]java&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.* try &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;{.*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;include&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;note&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;logging&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;sourceFileFilters&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;import .*logging[.]Log.*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;include&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;note&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file operations&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;sourceFileFilters&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;import .*java[.]io[.]File.*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;include&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;note&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system. A single concern may be present in multiple files. One source code file may contain multiple concerns. A Sokrates enables defining multiple groups of cross-cutting concerns for each system. A cross-cutting concerns can be defined in two ways in Sokrates. The first approach is based on explicit definition of each concern. In such explicit definitions, concerns are explicitly named and their files are selected based on explicitly defined path and content filters. The second approach is based on dynamic definition of concerns and their names. In such dynamic definitions, concerns are not explicitly named, but their names are derived based on script with string transformations of file path or content.</summary></entry></feed>
+&lt;h3 id=&quot;extracting-unit-based-on-assumption-of-proper-formatting&quot;&gt;Extracting Unit Based on Assumption of Proper Formatting&lt;/h3&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">“pragmatic: dealing with things sensibly and realistically in a way that is based on practical rather than theoretical considerations”</summary></entry><entry><title type="html">Analysis: Finding Dependencies</title><link href="http://localhost:4000/blog/dependencies" rel="alternate" type="text/html" title="Analysis: Finding Dependencies" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/dependencies</id><content type="html" xml:base="http://localhost:4000/blog/dependencies"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry></feed>
