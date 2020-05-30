@@ -50,9 +50,13 @@ While the general answer to this questions is "anyone interested in software arc
 
 ## About the Name
 
-Examined life
+"[The unexamined life is not worth living](https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living)"
 
 Exploration, dialog with the source code
+
+"Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. His 'examination' of life in this way spilled out into the lives of others, such that they began their own 'examination' of life, but he knew they would all die one day, as saying that a life without philosophy – an 'unexamined' life – was not worth living."
+
+As software is eating the world, examining life nowads inevitabelly means examing software. And our life, at least mine, is huge part dedicated maintaining the software. So unexamined life is not worth living for many of us means unexamined software is not worth maintaining.
 
 
 ### What Sokrates Is (Not)?
@@ -92,3 +96,13 @@ John Stuart Mill: "Art in general consists of the truths of science, arranged in
     practice, instead of the order which is the most convenient for thought. "
 
 Donald Knuth: "Computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty. A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better.”
+
+### Basic Understanding
+
+### Periodic Reporting
+
+### Exploration
+
+### Goal Setting and Feedback
+
+### Sokrates as an Art Form

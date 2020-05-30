@@ -7,5 +7,89 @@ permalink: cli
 excerpt:
 ---
 
+### Installation
 
-Interactive Source Code Explorations
+COMMAND LINE JAR
+DOWNLOAD: sokrates-0.9.jar (38 MB)
+
+Simple usage example (to analyze Junit4):
+
+{% highlight bash %}
+git clone https://github.com/junit-team/junit4
+cd junit4
+
+java -jar sokrates-0.9.jar init
+java -jar sokrates-0.9.jar generateReports
+
+open _sokrates/reports/html/index.html
+{% endhighlight %}
+
+Illustrate previous example
+
+
+### ***init*** command
+
+generate a Sokrates configuration file for the codebase.
+
+{% highlight bash %}
+java -jar sokrates-0.9.jar init [options]
+   -srcRoot  <arg>   [OPTIONAL] the path to source code root folder (default is <currentFolder>)
+   -confFile <arg>   [OPTIONAL] the path to configuration file (default is "<currentFolder>/_sokrates/config.json")
+{% endhighlight %}
+
+
+### ***generateReports*** command
+
+generates Sokrates reports based on the configuration
+
+{% highlight bash %}
+  java -jar sokrates-0.9.jar generateReports [options]
+         -confFile     <arg>           [OPTIONAL] the path to configuration file (default is "<currentFolder>/_sokrates/config.json")
+         -outputFolder <arg>           [OPTIONAL] the folder where reports will be stored (default is "<currentFolder>/_sokrates/reports/")
+         -reportAll                    [DEFAULT] generate all reports
+         -reportData                   save only data in JSON and text formats (stored in <outputFolder>/data)
+         -reportOverview               generate only the report describing the overview of files in scope (stored in <outputFolder>/html/SourceCodeOverview.html)
+         -reportDuplication            generate only the duplication report (stored in <outputFolder>/html/Duplication.html)
+         -reportLogicalDecomposition   generate only the components logical decomposition report (stored in <outputFolder>/LogicalDecomposition.html)
+         -reportFileSize               generate only the file size report (stored in <outputFolder>/html/FileSize.html)
+         -reportUnitSize               generate only the unit size report (stored in <outputFolder>/html/UnitSize.html)
+         -reportConditionalComplexity  generate only the conditional complexity report (stored in <outputFolder>/html/ConditionalComplexity.html)
+         -reportCrossCuttingConcerns   generate only the cross cutting concerns report (stored in <outputFolder>/html/CrossCuttingConcerns.html)
+         -reportMetrics                generate only the metrics overview report (stored in <outputFolder>/html/Metrics.html)
+         -reportControls               generate only the controls report (stored in <outputFolder>/html/Controls.html)
+         -reportFindings               generate only the findings report (stored in <outputFolder>/html/Findings.html)
+         -internalGraphviz             use internal Graphviz library (by default external dot program is used, you may specify
+                                       the external dot path via the system variable GRAPHVIZ_DOT)
+{% endhighlight %}
+
+
+### ***configComplete*** command
+
+completes missing fields in the configuration file
+
+{% highlight bash %}
+java -jar sokrates.jar configComplete [options]
+     -confFile <arg>       [OPTIONAL] the path to configuration file (default is "<currentFolder>/_sokrates/config.json"
+{% endhighlight %}
+
+
+### ***initLandscape*** command
+
+create the configuration file for Sokrates landscape analysis (aggregated report of multiple Sokrates analysis results)
+
+{% highlight bash %}
+java -jar sokrates.jar initLandscape [options]
+     -analysisRoot <arg>    the path to the root folder of multiple Sokrates projects, scans all subfolders for Sokrates reports and configurations.  The folder where landscape reports will be stored (default is "<currentFolder>/_sokrates_landscape/reports/".
+     -confFile     <arg>    [OPTIONAL] the path to landscape configuration file (default is "<currentFolder>/_sokrates_landscape/config.json"
+{% endhighlight %}
+
+
+### ***updateLandscape*** command
+
+updates the configuration file for Sokrates Landscape analysis
+
+{% highlight bash %}
+java -jar sokrates.jar updateLandscape [options]
+     -analysisRoot <arg>   the path to the root folder of multiple Sokrates projects, scans all subfolders for Sokrates reports and configurations. The folder where landscape reports will be stored (default is "<currentFolder>/_sokrates_landscape/reports/".
+     -confFile     <arg>   [OPTIONAL] the path to landscape configuration file (default is "<currentFolder>/_sokrates_landscape/config.json"
+{% endhighlight %}
