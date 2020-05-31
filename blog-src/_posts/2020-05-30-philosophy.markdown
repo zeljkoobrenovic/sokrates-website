@@ -7,6 +7,13 @@ permalink: philosophy
 excerpt:
 ---
 
+### What Is Sokrates?
+
+Sokrates is both a book and a software tool. The text and the software are the two sides of the same coin. As a book, Sokrates presents a summary of the lessons I have learned on how to understand source code. But without the software, such a text would be very abstract and boring. The similar also applies to the software side of Sokrates soon. It isn't easy to understand how to use Soknotes in a full power way without understanding its philosophy.
+
+The journey to this book was through building Soknotes software. As I was using Soknetes in my daily work, I was making notes for this book. And as I have started to write the book, I also started to change some parts of Sokrates based on what I have learned. What I also hope to achieve by uniting a text and software is that you could get more than a mere manual for yet another analysis tool. Sokrates comes with more generic and universal4 philosophy, which I hope is useful beyond the tool. I also hope the book and the too will help you to build your tools.
+
+
 Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.
 
 Sokrates is for anyone interested in software architecture in practice. Sokrates follows several premises (borrowing last two from Grady Booch):
@@ -17,36 +24,6 @@ Sokrates is for anyone interested in software architecture in practice. Sokrates
 
 Sokrates provides a pragmatic way to describe critical elements of software architectures and connect them explicitly to the source code. Based on a formal description of different software architecture aspects, Sokrates generates reports and visualization to help you reason, understand, and communicate about the software system.
 
-### Know the Basic of Your Codebase
-
-On the one hand, you can use Sokrates as a bottom-up, reverse engineering tool, deriving architectural views from existing source code. On the other hand, you can use Sokrates in a top-down fashion, as a control tool monitoring deviations of source code from defining architectural rules.
-
-Sokrates primary about being able to get quick answers to basic, simple questions about your source code:
-
-* How much code do you here?
-* How much of it you’ve written yourself?
-* How much of it you maintain?
-* Which programming languages do you use?
-* What is your primary or main code, the one used to define the structure and logic of the system in production?
-* What is your secondary code, the one needed to test and build your system, but itself is not running in production?
-* Do you generate some part of your codebase? How?
-* How duplicated is your codebase? Why?
-* How big are your files?
-* How many units do you have? How big are they? How complex?
-* How files in your codebase depend on each other?
-
-As a control tools, Sokrates can serve as an early warning system around these basic measurments:
-* Duplication above some threshold,
-* System or a a component becoming too big
-* Units becoming more complex
-* Unwanted dependencies among components are introduced.
-
-
-### Who Should Use Sokrates
-
-While the general answer to this questions is "anyone interested in software architecture in practice," my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small is their project and what other tools they use.
-
-### Use Metrics to Start a Discussion, Not to Kill It
 
 ## About the Name
 
@@ -56,7 +33,7 @@ Exploration, dialog with the source code
 
 "Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. His 'examination' of life in this way spilled out into the lives of others, such that they began their own 'examination' of life, but he knew they would all die one day, as saying that a life without philosophy – an 'unexamined' life – was not worth living."
 
-As software is eating the world, examining life nowads inevitabelly means examing software. And our life, at least mine, is huge part dedicated maintaining the software. So unexamined life is not worth living for many of us means unexamined software is not worth maintaining.
+As software is eating the world, examining life nowadays inevitably means examining software. And our life, at least mine, is huge part dedicated maintaining the software. So unexamined life is not worth living for many of us means unexamined software is not worth maintaining.
 
 
 ### What Sokrates Is (Not)?
@@ -66,6 +43,10 @@ Sokrates is more of a text analysis tool. Sokrates borrows ideas from code spelu
 Sokrates comes with both command-line interface and interactive GUI code explorer.
 
 In these aspects, Sokrates differs from many other powerful tools, such as SonarQube or SIG SAT. It is not a replacement for these tools.
+
+
+### Learn You How To Think And Build Tools
+
 
 ### Intellectual Control
 
@@ -97,12 +78,45 @@ John Stuart Mill: "Art in general consists of the truths of science, arranged in
 
 Donald Knuth: "Computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty. A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better.”
 
-### Basic Understanding
+### Maintainability
 
-### Periodic Reporting
+Sokrates looks on the source code from a perspective of maintenance, making visible the size, complexity and coupling of software.
+
+For more details see my O'Reilly Video Training (from my time at Software Improvement Group): Building Maintainable Software (4 hours), and O'Reilly Webcast: Building Maintainable Software (1 hour, together with Rob van der Leek).
+
+The fragment of my training video on building maintainable software is freely avaliable at Youtube:
+
+
+#### How to User Sokrates?
+
+### Basic Understanding
+On the one hand, you can use Sokrates as a bottom-up, reverse engineering tool, deriving architectural views from existing source code.
+
+Sokrates primary about being able to get quick answers to basic, simple questions about your source code:
+
+* How much code do you here?
+* How much of it you’ve written yourself?
+* How much of it you maintain?
+* Which programming languages do you use?
+* What is your primary or main code, the one used to define the structure and logic of the system in production?
+* What is your secondary code, the one needed to test and build your system, but itself is not running in production?
+* Do you generate some part of your codebase? How?
+* How duplicated is your codebase? Why?
+* How big are your files?
+* How many units do you have? How big are they? How complex?
+* How files in your codebase depend on each other?
 
 ### Exploration
 
-### Goal Setting and Feedback
+### Goal Setting, Monitoring Trends and Feedback
 
-### Sokrates as an Art Form
+On the other hand, you can use Sokrates in a top-down fashion, as a control tool monitoring deviations of source code from defining architectural rules. As a control tools, Sokrates can serve as an early warning system around these basic measurments:
+* Duplication above some threshold,
+* System or a a component becoming too big
+* Units becoming more complex
+* Unwanted dependencies among components are introduced.
+
+### Who Should Use Sokrates
+
+While the general answer to this questions is "anyone interested in software architecture in practice," my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small is their project and what other tools they use.
+

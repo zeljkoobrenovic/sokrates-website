@@ -7,29 +7,11 @@ permalink: cli
 excerpt:
 ---
 
-### Installation
-
-COMMAND LINE JAR
-DOWNLOAD: sokrates-0.9.jar (38 MB)
-
-Simple usage example (to analyze Junit4):
-
-{% highlight bash %}
-git clone https://github.com/junit-team/junit4
-cd junit4
-
-java -jar sokrates-0.9.jar init
-java -jar sokrates-0.9.jar generateReports
-
-open _sokrates/reports/html/index.html
-{% endhighlight %}
-
-Illustrate previous example
-
-
 ### ***init*** command
 
 generate a Sokrates configuration file for the codebase.
+
+![](assets/images/sokrates/cmd-init.png)
 
 {% highlight bash %}
 java -jar sokrates-0.9.jar init [options]
@@ -41,6 +23,8 @@ java -jar sokrates-0.9.jar init [options]
 ### ***generateReports*** command
 
 generates Sokrates reports based on the configuration
+
+![](assets/images/sokrates/cmd-generate-reports.png)
 
 {% highlight bash %}
   java -jar sokrates-0.9.jar generateReports [options]
@@ -67,6 +51,8 @@ generates Sokrates reports based on the configuration
 
 completes missing fields in the configuration file
 
+![](assets/images/sokrates/cmd-config-complete.png)
+
 {% highlight bash %}
 java -jar sokrates.jar configComplete [options]
      -confFile <arg>       [OPTIONAL] the path to configuration file (default is "<currentFolder>/_sokrates/config.json"
@@ -76,6 +62,8 @@ java -jar sokrates.jar configComplete [options]
 ### ***initLandscape*** command
 
 create the configuration file for Sokrates landscape analysis (aggregated report of multiple Sokrates analysis results)
+
+![](assets/images/sokrates/cmd-init-landscape.png)
 
 {% highlight bash %}
 java -jar sokrates.jar initLandscape [options]
@@ -88,8 +76,52 @@ java -jar sokrates.jar initLandscape [options]
 
 updates the configuration file for Sokrates Landscape analysis
 
+![](assets/images/sokrates/cmd-update-landscape.png)
+
 {% highlight bash %}
 java -jar sokrates.jar updateLandscape [options]
      -analysisRoot <arg>   the path to the root folder of multiple Sokrates projects, scans all subfolders for Sokrates reports and configurations. The folder where landscape reports will be stored (default is "<currentFolder>/_sokrates_landscape/reports/".
      -confFile     <arg>   [OPTIONAL] the path to landscape configuration file (default is "<currentFolder>/_sokrates_landscape/config.json"
 {% endhighlight %}
+
+
+
+### Running Sokrates as a Batch Process
+
+{% highlight bash %}
+# remove the temporary analysis folder
+rm -rf analysis
+
+# remove the reports folder
+rm -rf reports
+
+# create temporary analysis folder
+mkdir analysis
+mkdir analysis/_sokrates
+#create the reports folder
+mkdir reports
+
+# copy Sokrates cofiguration file to the temporary folder
+cp config.json analysis/_sokrates
+
+cd analysis
+
+# install latest version of Sokrates
+curl -O https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar
+
+# checkout the code
+git clone https://github.com/zeljkoobrenovic/sokrates.git
+mv temp-git-dir/* .
+rm -rf temp-git-dir
+
+# run analysis
+java -jar -Xmx10g sokrates-0.9.jar generateReports -reportAll
+
+# copy generated reports to the reports folder
+cp -r _sokrates/reports/* ../reports
+
+cd ..
+# remove the temporary analysis folder
+rm -rf analysis
+{% endhighlight %}
+

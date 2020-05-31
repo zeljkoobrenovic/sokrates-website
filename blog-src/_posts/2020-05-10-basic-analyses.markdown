@@ -28,3 +28,6 @@ Graphviz
 3D
 
 ### Story Tell the Facts. Facts do not tell the Story
+
+### Use Metrics to Start a Discussion, Not to Kill It
+
