@@ -8,15 +8,15 @@
 <meta property="og:title" content="Usage: Command Line Interface" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Installation" />
-<meta property="og:description" content="Installation" />
+<meta name="description" content="init command" />
+<meta property="og:description" content="init command" />
 <link rel="canonical" href="http://localhost:4000/blog/cli" />
 <meta property="og:url" content="http://localhost:4000/blog/cli" />
 <meta property="og:site_name" content="Sokrates Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Installation","@type":"BlogPosting","url":"http://localhost:4000/blog/cli","headline":"Usage: Command Line Interface","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/cli"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"init command","@type":"BlogPosting","headline":"Usage: Command Line Interface","url":"http://localhost:4000/blog/cli","datePublished":"2020-05-25T20:12:01+02:00","dateModified":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/cli"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="Sokrates Blog" /></head>
 <body><header class="site-header" role="banner">
@@ -89,26 +89,11 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <h3 id="installation">Installation</h3>
-
-<p>COMMAND LINE JAR
-DOWNLOAD: sokrates-0.9.jar (38 MB)</p>
-
-<p>Simple usage example (to analyze Junit4):</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/junit-team/junit4
-<span class="nb">cd </span>junit4
-
-java <span class="nt">-jar</span> sokrates-0.9.jar init
-java <span class="nt">-jar</span> sokrates-0.9.jar generateReports
-
-open _sokrates/reports/html/index.html</code></pre></figure>
-
-<p>Illustrate previous example</p>
-
-<h3 id="init-command"><strong><em>init</em></strong> command</h3>
+        <h3 id="init-command"><strong><em>init</em></strong> command</h3>
 
 <p>generate a Sokrates configuration file for the codebase.</p>
+
+<p><img src="assets/images/sokrates/cmd-init.png" alt="" /></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">java <span class="nt">-jar</span> sokrates-0.9.jar init <span class="o">[</span>options]
    <span class="nt">-srcRoot</span>  &lt;arg&gt;   <span class="o">[</span>OPTIONAL] the path to <span class="nb">source </span>code root folder <span class="o">(</span>default is &lt;currentFolder&gt;<span class="o">)</span>
@@ -117,6 +102,8 @@ open _sokrates/reports/html/index.html</code></pre></figure>
 <h3 id="generatereports-command"><strong><em>generateReports</em></strong> command</h3>
 
 <p>generates Sokrates reports based on the configuration</p>
+
+<p><img src="assets/images/sokrates/cmd-generate-reports.png" alt="" /></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  java <span class="nt">-jar</span> sokrates-0.9.jar generateReports <span class="o">[</span>options]
          <span class="nt">-confFile</span>     &lt;arg&gt;           <span class="o">[</span>OPTIONAL] the path to configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates/config.json"</span><span class="o">)</span>
@@ -140,12 +127,16 @@ open _sokrates/reports/html/index.html</code></pre></figure>
 
 <p>completes missing fields in the configuration file</p>
 
+<p><img src="assets/images/sokrates/cmd-config-complete.png" alt="" /></p>
+
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">java <span class="nt">-jar</span> sokrates.jar configComplete <span class="o">[</span>options]
      <span class="nt">-confFile</span> &lt;arg&gt;       <span class="o">[</span>OPTIONAL] the path to configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates/config.json"</span></code></pre></figure>
 
 <h3 id="initlandscape-command"><strong><em>initLandscape</em></strong> command</h3>
 
 <p>create the configuration file for Sokrates landscape analysis (aggregated report of multiple Sokrates analysis results)</p>
+
+<p><img src="assets/images/sokrates/cmd-init-landscape.png" alt="" /></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">java <span class="nt">-jar</span> sokrates.jar initLandscape <span class="o">[</span>options]
      <span class="nt">-analysisRoot</span> &lt;arg&gt;    the path to the root folder of multiple Sokrates projects, scans all subfolders <span class="k">for </span>Sokrates reports and configurations.  The folder where landscape reports will be stored <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates_landscape/reports/"</span><span class="nb">.</span>
@@ -155,9 +146,48 @@ open _sokrates/reports/html/index.html</code></pre></figure>
 
 <p>updates the configuration file for Sokrates Landscape analysis</p>
 
+<p><img src="assets/images/sokrates/cmd-update-landscape.png" alt="" /></p>
+
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">java <span class="nt">-jar</span> sokrates.jar updateLandscape <span class="o">[</span>options]
      <span class="nt">-analysisRoot</span> &lt;arg&gt;   the path to the root folder of multiple Sokrates projects, scans all subfolders <span class="k">for </span>Sokrates reports and configurations. The folder where landscape reports will be stored <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates_landscape/reports/"</span><span class="nb">.</span>
      <span class="nt">-confFile</span>     &lt;arg&gt;   <span class="o">[</span>OPTIONAL] the path to landscape configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates_landscape/config.json"</span></code></pre></figure>
+
+<h3 id="running-sokrates-as-a-batch-process">Running Sokrates as a Batch Process</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># remove the temporary analysis folder</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> analysis
+
+<span class="c"># remove the reports folder</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> reports
+
+<span class="c"># create temporary analysis folder</span>
+<span class="nb">mkdir </span>analysis
+<span class="nb">mkdir </span>analysis/_sokrates
+<span class="c">#create the reports folder</span>
+<span class="nb">mkdir </span>reports
+
+<span class="c"># copy Sokrates cofiguration file to the temporary folder</span>
+<span class="nb">cp </span>config.json analysis/_sokrates
+
+<span class="nb">cd </span>analysis
+
+<span class="c"># install latest version of Sokrates</span>
+curl <span class="nt">-O</span> https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar
+
+<span class="c"># checkout the code</span>
+git clone https://github.com/zeljkoobrenovic/sokrates.git
+<span class="nb">mv </span>temp-git-dir/<span class="k">*</span> <span class="nb">.</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> temp-git-dir
+
+<span class="c"># run analysis</span>
+java <span class="nt">-jar</span> <span class="nt">-Xmx10g</span> sokrates-0.9.jar generateReports <span class="nt">-reportAll</span>
+
+<span class="c"># copy generated reports to the reports folder</span>
+<span class="nb">cp</span> <span class="nt">-r</span> _sokrates/reports/<span class="k">*</span> ../reports
+
+<span class="nb">cd</span> ..
+<span class="c"># remove the temporary analysis folder</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> analysis</code></pre></figure>
 
 
     </div><a class="u-url" href="/blog/cli" hidden></a>

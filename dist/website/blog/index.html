@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://localhost:4000/blog/" />
 <meta property="og:site_name" content="Sokrates Blog" />
 <script type="application/ld+json">
-{"description":"A collection of articles on source code analysis with Sokrates.","@type":"WebSite","url":"http://localhost:4000/blog/","name":"Sokrates Blog","headline":"Sokrates Blog","@context":"https://schema.org"}</script>
+{"description":"A collection of articles on source code analysis with Sokrates.","@type":"WebSite","headline":"Sokrates Blog","url":"http://localhost:4000/blog/","name":"Sokrates Blog","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="Sokrates Blog" /></head>
 <body><header class="site-header" role="banner">
@@ -56,15 +56,8 @@
                     Intro: Sokrates Philosophy
                 </a>
             </h3>
-            <i><p>Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.</p>
+            <i><h3 id="what-is-sokrates">What Is Sokrates?</h3>
 </i>
-        </li><li><span class="post-meta">May 25, 2020</span>
-            <h3>
-                <a class="post-link" href="/blog/scoping">
-                    Foundations: Scoping
-                </a>
-            </h3>
-            <i>When analyzing source code, you need to be strict in what you want to analyze and reject the rest. Otherwise, you will also end up publishing big, complex, and useless reports. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions. While there are exceptions, another code and files are usually irrelevant for understanding the system's unique aspects. Sokrates performs the scoping in two steps. First, it conducts a broad relevance scoping, based on the source code file extensions and a set of configurable ignore patterns. Then it zooms in the filtered files and classifies it into main ones and secondary ones.</i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
                 <a class="post-link" href="/blog/regex">
@@ -81,6 +74,13 @@
             </h3>
             <i><p>The Sokrates String Transformation Language (SSTL) is a simple embedded programming language enabling you to transform a phrase extracted from a file path or file content into another string.</p>
 </i>
+        </li><li><span class="post-meta">May 25, 2020</span>
+            <h3>
+                <a class="post-link" href="/blog/scoping">
+                    Foundations: Scoping
+                </a>
+            </h3>
+            <i>When analyzing source code, you need to be strict in what you want to analyze and reject the rest. Otherwise, you will also end up publishing big, complex, and useless reports. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions. While there are exceptions, another code and files are usually irrelevant for understanding the system's unique aspects. Sokrates performs the scoping in two steps. First, it conducts a broad relevance scoping, based on the source code file extensions and a set of configurable ignore patterns. Then it zooms in the filtered files and classifies it into main ones and secondary ones.</i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
                 <a class="post-link" href="/blog/logical-decomposition">
@@ -119,6 +119,14 @@
 </i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
+                <a class="post-link" href="/blog/basic-analyses">
+                    Analysis: Basics
+                </a>
+            </h3>
+            <i><h3 id="counting">Counting</h3>
+</i>
+        </li><li><span class="post-meta">May 25, 2020</span>
+            <h3>
                 <a class="post-link" href="/blog/dependencies">
                     Analysis: Finding Dependencies
                 </a>
@@ -128,18 +136,10 @@
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
                 <a class="post-link" href="/blog/pragmatic-parsing">
-                    Analysis: Pragmatic Source Code Analysis
+                    Analysis: Pragmatic Source Code Parsing
                 </a>
             </h3>
             <i><p>“pragmatic: dealing with things sensibly and realistically in a way that is based on practical rather than theoretical considerations”</p>
-</i>
-        </li><li><span class="post-meta">May 25, 2020</span>
-            <h3>
-                <a class="post-link" href="/blog/basic-analyses">
-                    Analysis: Basics
-                </a>
-            </h3>
-            <i><h3 id="counting">Counting</h3>
 </i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
@@ -159,6 +159,16 @@
 </i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
+                <a class="post-link" href="/blog/history">
+                    Analysis: File Change History
+                </a>
+            </h3>
+            <i><p>File change analysis takes as an input the list of dates on
+ which source code files changes, and analyses
+ these dates to understand how frequently developers have changed the files, how old are the files they, and how recently developers have updated them.</p>
+</i>
+        </li><li><span class="post-meta">May 25, 2020</span>
+            <h3>
                 <a class="post-link" href="/blog/trends">
                     Analysis: Trends
                 </a>
@@ -175,15 +185,31 @@
 </i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
-                <a class="post-link" href="/blog/cli">
-                    Usage: Command Line Interface
+                <a class="post-link" href="/blog/usage">
+                    Usage: Installation
                 </a>
             </h3>
             <i><h3 id="installation">Installation</h3>
 </i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
-                <a class="post-link" href="/blog/exploration">
+                <a class="post-link" href="/blog/configuration">
+                    Usage: Configuration File
+                </a>
+            </h3>
+            <i>
+</i>
+        </li><li><span class="post-meta">May 25, 2020</span>
+            <h3>
+                <a class="post-link" href="/blog/cli">
+                    Usage: Command Line Interface
+                </a>
+            </h3>
+            <i><h3 id="init-command"><strong><em>init</em></strong> command</h3>
+</i>
+        </li><li><span class="post-meta">May 25, 2020</span>
+            <h3>
+                <a class="post-link" href="/blog/explorer">
                     Usage: Sokrates Explorer
                 </a>
             </h3>

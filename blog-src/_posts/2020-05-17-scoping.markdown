@@ -77,7 +77,7 @@ Sokrates is a type of instrument for inspecting source code, a sort of "codoscop
 For analysis purposes, Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other. The main scope is primary. It is analyzed in detail. Other scopes are secondary, included in the overview reports context, but not analyzed in depth.
 
 ![](assets/images/sokrates/scoping-classification.png)
-*For analysis purposes, Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other. The main scope is primary. Other scopes are secondary."*
+***Figure #:** For analysis purposes, Sokrates separate files in scope into several categories: primary or main code and secondary code (test, generated, deployment and build, and other)."*
 
 The main category contains all manually created source code files that define the logic and structure of the system running in production. Sokrates uses the main files as input for other analyses: logical decomposition, cross-cutting concerns, duplication, file size, unit size, and cyclomatic complexity.
 

@@ -33,6 +33,7 @@ For duplication, we look at places in code where there are six or more lines of 
 
 code ==> cleaned code ==> list of duplications ==> aggregation
 
+![](assets/images/sokrates/duplication-processing.png)
 
 ### Cleaning the Code
 Before duplication is calculated, the code is cleaned to remove empty lines, comments, and frequently duplicated constructs such as imports.
@@ -62,6 +63,26 @@ public class LowerCaseOperation extends StringOperation {
         this.setParams(params);
     }
 
+    @Override
+    public String exec(String input) {
+        return input.toLowerCase();
+    }
+}
+{% endhighlight %}
+
+
+{% highlight java %}
+package nl.obren.sokrates.sourcecode.operations.impl;
+import nl.obren.sokrates.sourcecode.operations.StringOperation;
+import java.util.List;
+public class LowerCaseOperation extends StringOperation {
+    public LowerCaseOperation() {
+        super("lowercase");
+    }
+    public LowerCaseOperation(List<String> params) {
+        this();
+        this.setParams(params);
+    }
     @Override
     public String exec(String input) {
         return input.toLowerCase();

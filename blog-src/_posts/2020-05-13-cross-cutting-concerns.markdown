@@ -13,6 +13,11 @@ excerpt:
 * The first approach is based on explicit definition of each concern. In such explicit definitions, concerns are explicitly named and their files are selected based on explicitly defined path and content filters.
 * The second approach is based on dynamic definition of concerns and their names. In such dynamic definitions, concerns are not explicitly named, but their names are derived based on script with string transformations of file path or content.
 
+![](assets/images/sokrates/cross-cutting-concerns-static.png)
+
+![](assets/images/sokrates/cross-cutting-concerns-dynamic-1.png)
+
+![](assets/images/sokrates/cross-cutting-concerns-dynamic-2.png)
 
 ### Examples
 

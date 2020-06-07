@@ -11,10 +11,20 @@ excerpt:
 
 Sokrates is both a book and a software tool. The text and the software are the two sides of the same coin. As a book, Sokrates presents a summary of the lessons I have learned on how to understand source code. But without the software, such a text would be very abstract and boring. The similar also applies to the software side of Sokrates soon. It isn't easy to understand how to use Soknotes in a full power way without understanding its philosophy.
 
-The journey to this book was through building Soknotes software. As I was using Soknetes in my daily work, I was making notes for this book. And as I have started to write the book, I also started to change some parts of Sokrates based on what I have learned. What I also hope to achieve by uniting a text and software is that you could get more than a mere manual for yet another analysis tool. Sokrates comes with more generic and universal4 philosophy, which I hope is useful beyond the tool. I also hope the book and the too will help you to build your tools.
+The journey to this book was through building Soknotes software. As I was using Soknetes in my daily work, I was making notes for this book. And as I have started to write the book, I also started to change some parts of Sokrates based on what I have learned. What I also hope to achieve by uniting a text and software is that you could get more than a mere manual for yet another analysis tool. Sokrates comes with more generic and universal philosophy, which I hope is useful beyond the tool. I also hope the book and the too will help you to build your tools.
 
+![](assets/images/sokrates/intro-book-vs-software.png)
+***Figure 1**: Sokrates book and Sokrates software tool are the two sides of the same coin. Developing software enabled me to implement ideas and tests them in practice, and to build a useful, proven tools. Writing a book helped me to organizes ideas, and obtain new insights, and share the lessons learned.*
 
 Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.
+
+The result of my adventure is dual. First, I think I have managed to build a pretty useful and elegant tool. And learned a lot so to share it and hopefully influence new generations of practical and straightforward software analysis tools.
+
+Sokrates is a simple tool, but because it follows a philosophy of one designer, it hopefully has conceptual integrity at a higher level than any other powerful enterprise tools. This book describes what I have learned during my work and building Sokrates. It is, in many aspects, subjective, presenting my view, experiences, and ideas. Nevertheless, I do think that you can learn something from it. I would also like to invite others to share their experiences. If many of us do this knowledge sharing, we will create a solid base of expertise and knowledge, validated in practice, that someone could use to create a mere generic and universal overview. I also believe this, while subjective, my experiences are relevant as I have built and analyzed software systems and worked mostly in practice, but with a strong research background. Most importantly, all that I will describe is implemented in the Sokrates tool and validated or at least used in practice in complex, messy reality. While no one has conducted a formal study to prove my ideas, successful usage in daily work gives me the confidence that what I am saying is useful.
+
+
+
+### Sokrates as a Documentaiton Tool
 
 Sokrates is for anyone interested in software architecture in practice. Sokrates follows several premises (borrowing last two from Grady Booch):
 
@@ -35,6 +45,8 @@ Exploration, dialog with the source code
 
 As software is eating the world, examining life nowadays inevitably means examining software. And our life, at least mine, is huge part dedicated maintaining the software. So unexamined life is not worth living for many of us means unexamined software is not worth maintaining.
 
+"Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. His 'examination' of life in this way spilled out into the lives of others, such that they began their own 'examination' of life,"
+
 
 ### What Sokrates Is (Not)?
 
@@ -47,6 +59,7 @@ In these aspects, Sokrates differs from many other powerful tools, such as Sonar
 
 ### Learn You How To Think And Build Tools
 
+Fish
 
 ### Intellectual Control
 
@@ -119,4 +132,6 @@ On the other hand, you can use Sokrates in a top-down fashion, as a control tool
 ### Who Should Use Sokrates
 
 While the general answer to this questions is "anyone interested in software architecture in practice," my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small is their project and what other tools they use.
+
+### Interesting to Know, Rather Than a Goal
 

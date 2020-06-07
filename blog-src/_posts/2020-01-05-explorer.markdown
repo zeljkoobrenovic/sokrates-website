@@ -26,6 +26,8 @@ Sorted by size by default
 ...
 ![](assets/images/sokrates/explorer-browsing-scopes.png)
 
+![](assets/images/sokrates/explorer-new-project.png)
+
 ### Text Search
 
 ![](assets/images/sokrates/explorer-search.png)
@@ -34,8 +36,26 @@ Sorted by size by default
 
 ![](assets/images/sokrates/explorer-search-dependencies.png)
 
+### Duplication Exploration
+
+![](assets/images/sokrates/explorer-duplication.png)
+
+### Units Exploration
+
+![](assets/images/sokrates/explorer-units.png)
+
+### Adding Manual Findings
+
+![](assets/images/sokrates/explorer-add-finding.png)
 
 ### Auto Scroll
 
 > "I drink a lot of coffee before I go to sleep so I can dream faster. I can dream like when they put [a camera on the Indy 500 … when they put a camera in the car](https://youtu.be/ATrmW5s2PiU), and it’s just whipping by like that. Dream after dream after dream after dream. People ask me the next day, “What did you dream about?” I say, “I don’t have time. I don’t have time to tell you this.”" — [Coffee and Cigarettes (2003)](https://youtu.be/pBa-2nXCc7g?t=68)
 
+![](assets/images/sokrates/explorer-auto-scroll.png)
+
+### Other Features
+
+Easy to export data
+
+![](assets/images/sokrates/explorer-export-table-data.png)

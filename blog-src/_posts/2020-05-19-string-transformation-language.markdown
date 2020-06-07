@@ -53,6 +53,9 @@ SSTL supports the following commands:
 }
 {% endhighlight %}
 
+
+![](assets/images/sokrates/sstl-example-1.png)
+
 {% highlight json %}
 {
     "pathPattern": ".*[.]java",

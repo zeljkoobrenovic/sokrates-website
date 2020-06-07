@@ -7,4 +7,3 @@ permalink: trends
 excerpt:
 ---
 
-

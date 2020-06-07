@@ -27,15 +27,23 @@ The first approach to define logical decompositions works in projects where phys
 
 To define a logical decomposition based on the file structure, all you need to do is to specify the folder depth you want to use.
 
+![](assets/images/sokrates/logical-decomposition-folder-depth.png)
+
 ### Static Components
 
 Defining logical decomposition with regular expressions is a more complex but much more flexible and powerful approach.
 
 In its simplest form, you can use regular expressions to classify files into pre-defined components. For each such component, you need to specify a name and a list of regular expressions for including the files. This approach is straightforward, but its main drawback is the need to explicitly define and name each component.
 
+![](assets/images/sokrates/logical-decomposition-static.png)
+
 ### Dynamic Components
 
 An even more flexible approach is to name components dynamically based on the string transformations of file paths or content. For instance, in one of the projects I worked on, we defined each component with a "lib-" prefix. Instead of listing all components manually, we can define a simple rule that will add components dynamically. This rule will work perfectly as long as we use the "lib-" convention in naming components.
+
+![](assets/images/sokrates/logical-decomposition-dynamic-1.png)
+
+![](assets/images/sokrates/logical-decomposition-dynamic-2.png)
 
 
 ### Examples
