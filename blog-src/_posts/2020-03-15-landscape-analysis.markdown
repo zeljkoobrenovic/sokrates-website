@@ -8,3 +8,9 @@ excerpt:
 ---
 
 
+![](assets/images/sokrates/cmd-init-landscape.png)
+
+![](assets/images/sokrates/reports-landscape.png)
+
+
+

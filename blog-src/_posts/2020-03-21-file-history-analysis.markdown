@@ -72,7 +72,7 @@ Each line in the file represents one change of one file. The first 26 characters
 
  ![](assets/images/sokrates/history-report-example-3.png)
 
- Once you have an overview of files in their age, freshness, or update frequency categories, it may be interesting to compare the quality of code in these categories. Soknotes facilitates this process, creating the configuration files that you can use to automatically analyze source code so that each of the discussed categories is visible as a logical component. You can see if there are differences in code quality between files that are more or less frequently charged, older and new code, and so on. Sokrates creates three such configuration files in the **_sokrates/reports/data/extra_analysis** folder:
+ Once you have an overview of files in their age, freshness, or update frequency categories, it may be interesting to compare the quality of code in these categories. Sokrates facilitates this process, creating the configuration files that you can use to automatically analyze source code so that each of the discussed categories is visible as a logical component. You can see if there are differences in code quality between files that are more or less frequently charged, older and new code, and so on. Sokrates creates three such configuration files in the **_sokrates/reports/data/extra_analysis** folder:
 
  * **config_by_file_change_frequency.json**, configuring analysis so that componentization follows the frequency of file updates,
  * **config_by_file_age.json**, configuring analysis so that componentization follows the age of files, and

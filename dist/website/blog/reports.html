@@ -8,15 +8,15 @@
 <meta property="og:title" content="Usage: Sokrates’ Reports" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A collection of articles on source code analysis with Sokrates." />
-<meta property="og:description" content="A collection of articles on source code analysis with Sokrates." />
+<meta name="description" content="Overview" />
+<meta property="og:description" content="Overview" />
 <link rel="canonical" href="http://localhost:4000/blog/reports" />
 <meta property="og:url" content="http://localhost:4000/blog/reports" />
 <meta property="og:site_name" content="Sokrates Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"A collection of articles on source code analysis with Sokrates.","@type":"BlogPosting","headline":"Usage: Sokrates’ Reports","url":"http://localhost:4000/blog/reports","datePublished":"2020-05-25T20:12:01+02:00","dateModified":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/reports"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Overview","@type":"BlogPosting","url":"http://localhost:4000/blog/reports","headline":"Usage: Sokrates’ Reports","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/reports"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="Sokrates Blog" /></head>
 <body><header class="site-header" role="banner">
@@ -89,7 +89,141 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        
+        <h2 id="overview">Overview</h2>
+
+<p>Image of report generation process</p>
+
+<h2 id="html-reports">HTML Reports</h2>
+
+<p><img src="assets/images/sokrates/reports-index.png" alt="" /></p>
+
+<h3 id="source-code-overview-report">Source Code Overview Report</h3>
+
+<p><img src="assets/images/icons/overview.svg" alt="" /></p>
+
+<p>For analysis purposes Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other.</p>
+
+<p>The main category contains all manually created source code files that are being used in the production.</p>
+
+<p>Files in the main category are used as input for other analyses: logical decomposition, cross-cutting concerns, duplication, file size, unit size, and cyclomatic complexity.</p>
+
+<p>Test source code files are used only for testing of the product. These files are normally not deployed to production.</p>
+
+<p>Build and deployment source code files are used to configure or support build and deployment process.</p>
+
+<p>Generated source code files are automatically generated files that have not been manually changed after generation.</p>
+
+<p>While a source code folder may contain a number of files, Sokrates is primarily interested in the source code files that are being written and maintained by developers.</p>
+
+<p>Files containing binaries, documentation, or third-party libraries, for instance, are excluded from analysis. The exception are third-party libraries that have been changed by developers.</p>
+
+<p>See an example of a Sokrates Source Code Overview report.</p>
+
+<h3 id="duplication">Duplication</h3>
+
+<p><img src="assets/images/icons/duplication.svg" alt="" /></p>
+
+<p>For duplication, Sokrates look at places in code where there are six or more lines of code that are exactly the same.</p>
+
+<p>Before duplication is calculated, the code is cleaned to remove empty lines, comments, and frequently duplicated constructs such as imports.</p>
+
+<p>See an example of a Sokrates Duplication report ⤇</p>
+
+<h3 id="logical-decomposition-components-and-dependencies">Logical Decomposition: Components and Dependencies</h3>
+
+<p><img src="assets/images/icons/code_organization.svg" alt="" /></p>
+
+<p>Logical decomposition is a representation of the organization of the main source code, where every and each file is put in exactly one logical component.</p>
+
+<p>A software system can have one or more logical decompositions.</p>
+
+<p>A logical decomposition can be defined in two ways.</p>
+
+<p>First approach is based on the folders structure. Components are mapped to folders at defined folder depth relative to the source code root.</p>
+
+<p>Second approach is based on explicit definition of each component. In such explicit definitions, components are explicitly named and their files are selected based on explicitly defined path and content filters.</p>
+
+<p>A logical decomposition is considered invalid if a file is selected into two or more components.This constraint is introduced in order to facilitate measuring of dependencies among components.</p>
+
+<p>Files not assigned to any component are put into a special “Unclassified” component.</p>
+
+<p>See an example of a Sokrates Components and Dependencies report ⤇</p>
+
+<h3 id="cross-cutting-concerns">Cross-Cutting Concerns</h3>
+
+<p><img src="assets/images/icons/concerns.svg" alt="" /></p>
+
+<p>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.</p>
+
+<p>A single concern may be present in multiple files. One source code file may contain multiple concerns.</p>
+
+<p>See an example of a Sokrates Cross-Cutting Concerns report ⤇</p>
+
+<h3 id="file-size">File Size</h3>
+
+<p><img src="assets/images/icons/file_size.svg" alt="" /></p>
+
+<p>File size measurements show the distribution of size of files.</p>
+
+<p>Files are classified in four categories based on their size (lines of code): 1-200 (small files), 200-500 (medium size files), 501-1000 (long files), 1001+ (very long files).</p>
+
+<p>See an example of a Sokrates File Size report ⤇</p>
+
+<h3 id="file-history">File History</h3>
+
+<p><img src="assets/images/icons/file_history.svg" alt="" /></p>
+
+<p>See an example of a Sokrates File History report ⤇</p>
+
+<h3 id="unit-size">Unit Size</h3>
+
+<p><img src="assets/images/icons/units.svg" alt="" /></p>
+
+<p>Unit size measurements show the distribution of size of units of code (methods, functions…).</p>
+
+<p>Units are classified in four categories based on their size (lines of code): 1-20 (small units), 20-50 (medium size units), 51-100 (long units), 101+ (very long units).</p>
+
+<p>See an example of a Sokrates Unit Size report ⤇</p>
+
+<h3 id="conditional-complexity">Conditional Complexity</h3>
+
+<p><img src="assets/images/icons/conditional.svg" alt="" /></p>
+
+<p>Conditional complexity (also known as cyclomatic complexity) is a software metric (measurement), used to indicate the complexity of a program. It is a quantitative measure of the number of linearly independent paths through a program’s source code.</p>
+
+<p>Conditional complexity is measured at the unit level (methods, functions…).</p>
+
+<p>Units are classified in four categories based on the measured McCabe index: 1-5 (simple units), 6-10 (medium complex units), 11-25 (complex units), 26+ (very complex units).</p>
+
+<p>See an example of a Sokrates Conditional Complexity report ⤇</p>
+
+<h3 id="detailed-metrics">Detailed Metrics</h3>
+
+<p><img src="assets/images/icons/metrics.svg" alt="" /></p>
+
+<p>A list of all measurements.</p>
+
+<p>See an example of a Sokrates Metrics report ⤇</p>
+
+<h3 id="trend">Trend</h3>
+
+<p><img src="assets/images/icons/trend.svg" alt="" /></p>
+
+<p>Trend report shows difference in metric between the latest measurements and previous reference measurements.</p>
+
+<p>See an example of a Sokrates Trend report ⤇</p>
+
+<h3 id="goals--controls">Goals &amp; Controls</h3>
+
+<p><img src="assets/images/icons/goal.svg" alt="" /></p>
+
+<p>A semaphore-like controls, to get warnings based on the range or metric values.</p>
+
+<p>See an example of a Sokrates Controls report ⤇</p>
+
+<h2 id="landscape-report">Landscape Report</h2>
+
+<p><img src="assets/images/sokrates/reports-landscape.png" alt="" /></p>
 
     </div><a class="u-url" href="/blog/reports" hidden></a>
 </article>

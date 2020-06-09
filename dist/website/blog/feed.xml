@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-06-07T11:53:10+02:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Sokrates Blog</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Intro: Sokrates Philosophy</title><link href="http://localhost:4000/blog/philosophy" rel="alternate" type="text/html" title="Intro: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/philosophy</id><content type="html" xml:base="http://localhost:4000/blog/philosophy">&lt;h3 id=&quot;what-is-sokrates&quot;&gt;What Is Sokrates?&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-06-09T21:16:55+02:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Sokrates Blog</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Intro: Sokrates Philosophy</title><link href="http://localhost:4000/blog/philosophy" rel="alternate" type="text/html" title="Intro: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/philosophy</id><content type="html" xml:base="http://localhost:4000/blog/philosophy">&lt;h3 id=&quot;what-is-sokrates&quot;&gt;What Is Sokrates?&lt;/h3&gt;
 
 &lt;p&gt;Sokrates is both a book and a software tool. The text and the software are the two sides of the same coin. As a book, Sokrates presents a summary of the lessons I have learned on how to understand source code. But without the software, such a text would be very abstract and boring. The similar also applies to the software side of Sokrates soon. It isn’t easy to understand how to use Soknotes in a full power way without understanding its philosophy.&lt;/p&gt;
 
@@ -274,7 +274,84 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 
 &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
 &lt;span class=&quot;c&quot;&gt;# remove the temporary analysis folder&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; analysis&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">init command</summary></entry><entry><title type="html">Usage: Configuration File</title><link href="http://localhost:4000/blog/configuration" rel="alternate" type="text/html" title="Usage: Configuration File" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/configuration</id><content type="html" xml:base="http://localhost:4000/blog/configuration"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Usage: Installation</title><link href="http://localhost:4000/blog/usage" rel="alternate" type="text/html" title="Usage: Installation" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/usage</id><content type="html" xml:base="http://localhost:4000/blog/usage">&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; analysis&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">init command</summary></entry><entry><title type="html">Usage: Configuration File</title><link href="http://localhost:4000/blog/configuration" rel="alternate" type="text/html" title="Usage: Configuration File" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/configuration</id><content type="html" xml:base="http://localhost:4000/blog/configuration">&lt;h3 id=&quot;configuration-file-for-individual-projects&quot;&gt;Configuration File for Individual Projects&lt;/h3&gt;
+
+&lt;p&gt;Sokrates configuration is defined in a JSON file.&lt;/p&gt;
+
+&lt;p&gt;You can use init command to generate default file for your project (see Download tab for details).&lt;/p&gt;
+
+&lt;p&gt;The default location of the configuration file is  &lt;your-project&gt;/_sokrates/config.json&lt;/your-project&gt;&lt;/p&gt;
+
+&lt;p&gt;See an example of a Sokrates configuration file ⤇&lt;/p&gt;
+
+&lt;p&gt;Based on this configuration Sokrates will generate a number of reports. The default reports folders is  &lt;your-project&gt;/_sokrates/reports/&lt;/your-project&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/config-overview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;See an example of a Sokrates report ⤇&lt;/p&gt;
+
+&lt;h3 id=&quot;description-of-the-project&quot;&gt;Description of the project&lt;/h3&gt;
+
+&lt;p&gt;name, logo, descritpion, external links&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;nl&quot;&gt;&quot;metadata&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Sokrates&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;A pragmatic source code analyzer.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;logoLink&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://sokrat.org/assets/logo.png&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;links&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sokrat.org&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;href&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://sokrat.org/&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;define-the-scope-source-code-root-included-and-ignored-files&quot;&gt;Define the scope: source code root, included and ignored files&lt;/h3&gt;
+
+&lt;p&gt;which extensions and files to analyze, and which to ignore&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;srcRoot&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;..&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;extensions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;java&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;html&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;xml&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;md&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;txt&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;ignore&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.*/node_modules/.*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;include&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;note&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.*/target/.*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;include&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;note&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Compiled files&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Configuration File for Individual Projects</summary></entry><entry><title type="html">Usage: Installation</title><link href="http://localhost:4000/blog/usage" rel="alternate" type="text/html" title="Usage: Installation" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/usage</id><content type="html" xml:base="http://localhost:4000/blog/usage">&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
 
 &lt;h4 id=&quot;command-line-interface&quot;&gt;Command Line Interface&lt;/h4&gt;
 
@@ -321,7 +398,9 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;ul&gt;
   &lt;li&gt;the command line interface in the cli/target folder&lt;/li&gt;
   &lt;li&gt;the interactive explorer in the codeexplorer/target folder&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Installation</summary></entry><entry><title type="html">Analysis: Landscape</title><link href="http://localhost:4000/blog/landscape" rel="alternate" type="text/html" title="Analysis: Landscape" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/landscape-analysis</id><content type="html" xml:base="http://localhost:4000/blog/landscape"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Trends</title><link href="http://localhost:4000/blog/trends" rel="alternate" type="text/html" title="Analysis: Trends" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/trend-analysis</id><content type="html" xml:base="http://localhost:4000/blog/trends"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: File Change History</title><link href="http://localhost:4000/blog/history" rel="alternate" type="text/html" title="Analysis: File Change History" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/file-history-analysis</id><content type="html" xml:base="http://localhost:4000/blog/history">&lt;p&gt;File change analysis takes as an input the list of dates on
+&lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Installation</summary></entry><entry><title type="html">Analysis: Landscape</title><link href="http://localhost:4000/blog/landscape" rel="alternate" type="text/html" title="Analysis: Landscape" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/landscape-analysis</id><content type="html" xml:base="http://localhost:4000/blog/landscape">&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-init-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/reports-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Trends</title><link href="http://localhost:4000/blog/trends" rel="alternate" type="text/html" title="Analysis: Trends" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/trend-analysis</id><content type="html" xml:base="http://localhost:4000/blog/trends"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: File Change History</title><link href="http://localhost:4000/blog/history" rel="alternate" type="text/html" title="Analysis: File Change History" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/file-history-analysis</id><content type="html" xml:base="http://localhost:4000/blog/history">&lt;p&gt;File change analysis takes as an input the list of dates on
  which source code files changes, and analyses
  these dates to understand how frequently developers have changed the files, how old are the files they, and how recently developers have updated them.&lt;/p&gt;
 
@@ -384,7 +463,7 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/history-report-example-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Once you have an overview of files in their age, freshness, or update frequency categories, it may be interesting to compare the quality of code in these categories. Soknotes facilitates this process, creating the configuration files that you can use to automatically analyze source code so that each of the discussed categories is visible as a logical component. You can see if there are differences in code quality between files that are more or less frequently charged, older and new code, and so on. Sokrates creates three such configuration files in the &lt;strong&gt;_sokrates/reports/data/extra_analysis&lt;/strong&gt; folder:&lt;/p&gt;
+&lt;p&gt;Once you have an overview of files in their age, freshness, or update frequency categories, it may be interesting to compare the quality of code in these categories. Sokrates facilitates this process, creating the configuration files that you can use to automatically analyze source code so that each of the discussed categories is visible as a logical component. You can see if there are differences in code quality between files that are more or less frequently charged, older and new code, and so on. Sokrates creates three such configuration files in the &lt;strong&gt;_sokrates/reports/data/extra_analysis&lt;/strong&gt; folder:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;config_by_file_change_frequency.json&lt;/strong&gt;, configuring analysis so that componentization follows the frequency of file updates,&lt;/li&gt;

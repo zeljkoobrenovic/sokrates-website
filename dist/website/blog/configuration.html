@@ -8,15 +8,15 @@
 <meta property="og:title" content="Usage: Configuration File" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A collection of articles on source code analysis with Sokrates." />
-<meta property="og:description" content="A collection of articles on source code analysis with Sokrates." />
+<meta name="description" content="Configuration File for Individual Projects" />
+<meta property="og:description" content="Configuration File for Individual Projects" />
 <link rel="canonical" href="http://localhost:4000/blog/configuration" />
 <meta property="og:url" content="http://localhost:4000/blog/configuration" />
 <meta property="og:site_name" content="Sokrates Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"A collection of articles on source code analysis with Sokrates.","@type":"BlogPosting","headline":"Usage: Configuration File","url":"http://localhost:4000/blog/configuration","datePublished":"2020-05-25T20:12:01+02:00","dateModified":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/configuration"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Configuration File for Individual Projects","@type":"BlogPosting","url":"http://localhost:4000/blog/configuration","headline":"Usage: Configuration File","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/configuration"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="Sokrates Blog" /></head>
 <body><header class="site-header" role="banner">
@@ -89,7 +89,85 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        
+        <h3 id="configuration-file-for-individual-projects">Configuration File for Individual Projects</h3>
+
+<p>Sokrates configuration is defined in a JSON file.</p>
+
+<p>You can use init command to generate default file for your project (see Download tab for details).</p>
+
+<p>The default location of the configuration file is  <your-project>/_sokrates/config.json</your-project></p>
+
+<p>See an example of a Sokrates configuration file ⤇</p>
+
+<p>Based on this configuration Sokrates will generate a number of reports. The default reports folders is  <your-project>/_sokrates/reports/</your-project></p>
+
+<p><img src="assets/images/sokrates/config-overview.png" alt="" /></p>
+
+<p>See an example of a Sokrates report ⤇</p>
+
+<h3 id="description-of-the-project">Description of the project</h3>
+
+<p>name, logo, descritpion, external links</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="nl">"metadata"</span><span class="p">:{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"Sokrates"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"A pragmatic source code analyzer."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"logoLink"</span><span class="p">:</span><span class="s2">"https://sokrat.org/assets/logo.png"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"links"</span><span class="p">:[</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"label"</span><span class="p">:</span><span class="s2">"sokrat.org"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"href"</span><span class="p">:</span><span class="s2">"https://sokrat.org/"</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="define-the-scope-source-code-root-included-and-ignored-files">Define the scope: source code root, included and ignored files</h3>
+
+<p>which extensions and files to analyze, and which to ignore</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+</span><span class="nl">"srcRoot"</span><span class="p">:</span><span class="s2">".."</span><span class="p">,</span><span class="w">
+</span><span class="nl">"extensions"</span><span class="p">:[</span><span class="w">
+  </span><span class="s2">"java"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"html"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"xml"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"md"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"txt"</span><span class="w">
+</span><span class="p">],</span><span class="w">
+</span><span class="nl">"ignore"</span><span class="p">:[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="s2">".*/node_modules/.*"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"include"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="s2">".*/target/.*"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"include"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">"Compiled files"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>###</p>
+
+<p>###</p>
+
+<p>###</p>
+
+<p>###</p>
+
+<p>###</p>
+
+<p>###</p>
+
+<p>###</p>
+
+<p>###</p>
+
+<p>###</p>
+
 
     </div><a class="u-url" href="/blog/configuration" hidden></a>
 </article>
