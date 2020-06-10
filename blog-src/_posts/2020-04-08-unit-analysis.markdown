@@ -7,4 +7,11 @@ permalink: units
 excerpt:
 ---
 
+A smallest reusable piece of code
+
+Size
+
+Conditional complexity
+
+![](assets/images/sokrates/units-processing.png)
 

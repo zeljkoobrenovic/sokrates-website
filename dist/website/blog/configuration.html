@@ -8,15 +8,15 @@
 <meta property="og:title" content="Usage: Configuration File" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Configuration File for Individual Projects" />
-<meta property="og:description" content="Configuration File for Individual Projects" />
+<meta name="description" content="Configuration as a Software Architecture Documentation" />
+<meta property="og:description" content="Configuration as a Software Architecture Documentation" />
 <link rel="canonical" href="http://localhost:4000/blog/configuration" />
 <meta property="og:url" content="http://localhost:4000/blog/configuration" />
 <meta property="og:site_name" content="Sokrates Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Configuration File for Individual Projects","@type":"BlogPosting","url":"http://localhost:4000/blog/configuration","headline":"Usage: Configuration File","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/configuration"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Configuration as a Software Architecture Documentation","@type":"BlogPosting","url":"http://localhost:4000/blog/configuration","headline":"Usage: Configuration File","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/configuration"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="Sokrates Blog" /></head>
 <body><header class="site-header" role="banner">
@@ -89,7 +89,9 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <h3 id="configuration-file-for-individual-projects">Configuration File for Individual Projects</h3>
+        <h3 id="configuration-as-a-software-architecture-documentation">Configuration as a Software Architecture Documentation</h3>
+
+<h3 id="configuration-file-for-individual-projects">Configuration File for Individual Projects</h3>
 
 <p>Sokrates configuration is defined in a JSON file.</p>
 
@@ -150,23 +152,383 @@
 </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p>###</p>
+<h3 id="files-classification-what-is-main-code-test-code-generated-code-build--deployment-code-3rd-party-code">Files classification: What is main code, test code, generated code, build &amp; deployment code, 3rd party code…</h3>
 
-<p>###</p>
+<ul>
+  <li>For analysis purposes Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other.</li>
+  <li>The main category contains all manually created source code files that are being used in the production.</li>
+  <li>Files in the main category are used as input for other analyses: logical decomposition, cross-cutting concerns, duplication, file size, unit size, and conditional complexity.</li>
+  <li>Test source code files are used only for testing of the product. These files are normally not deployed to production.</li>
+  <li>Build and deployment source code files are used to configure or support build and deployment process.</li>
+  <li>Generated source code files are automatically generated files that have not been manually changed after generation.</li>
+  <li>While a source code folder may contain a number of files, Sokrates is primarily interested in the source code files that are being written and maintained by developers.</li>
+  <li>Files containing binaries, documentation, or third-party libraries, for instance, are excluded from analysis. The exception are third-party libraries that have been changed by developers.</li>
+</ul>
 
-<p>###</p>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sourceFileFilters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">".*"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"exception"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sourceFileFilters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">".*/[Tt]est/.*"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"exception"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test files"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"generated"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generated"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sourceFileFilters"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"buildAndDeployment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"build and deployment"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sourceFileFilters"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"other"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"other"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sourceFileFilters"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
-<p>###</p>
+<h3 id="define-logical-decompositions-one-or-more-ways-to-looks-at-components-in-the-system">Define logical decompositions: one or more ways to looks at components in the system</h3>
 
-<p>###</p>
+<ul>
+  <li>
+    <p>Logical decomposition is a representation of the organization of the main source code, where every and each file is put in exactly one logical component.</p>
+  </li>
+  <li>A software system can have one or more logical decompositions.</li>
+  <li>A logical decomposition can be defined in two ways.</li>
+  <li>First approach is based on the folders structure. Components are mapped to folders at defined folder depth relative to the source code root.</li>
+  <li>Second approach is based on explicit definition of each component. In such explicit definitions, components are explicitly named and their files are selected based on explicitly defined path and content filters.</li>
+  <li>A logical decomposition is considered invalid if a file is selected into two or more components.This constraint is introduced in order to facilitate measuring of dependencies among components.</li>
+  <li>Files not assigned to any component are put into a special “Unclassified” component.</li>
+</ul>
 
-<p>###</p>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+   </span><span class="nl">"logicalDecompositions"</span><span class="p">:[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"primary"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"scope"</span><span class="p">:</span><span class="s2">"main"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"filters"</span><span class="p">:[</span><span class="w">
 
-<p>###</p>
+         </span><span class="p">],</span><span class="w">
+         </span><span class="nl">"componentsFolderDepth"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"components"</span><span class="p">:[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"Logging"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"sourceFileFilters"</span><span class="p">:[</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="s2">".*/LoggingService/.*"</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"exception"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="s2">".*/LogQueueProbe/.*"</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"exception"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="s2">".*/Logging/.*"</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"exception"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+                  </span><span class="p">}</span><span class="w">
+               </span><span class="p">],</span><span class="w">
+               </span><span class="nl">"files"</span><span class="p">:[</span><span class="w">
 
-<p>###</p>
+               </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">],</span><span class="w">
+         </span><span class="nl">"metaComponents"</span><span class="p">:[</span><span class="w">
 
-<p>###</p>
+         </span><span class="p">],</span><span class="w">
+         </span><span class="nl">"includeRemainingFiles"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"dependenciesFinder"</span><span class="p">:{</span><span class="w">
+            </span><span class="nl">"useBuiltInDependencyFinders"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rules"</span><span class="p">:[</span><span class="w">
+
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"metaRules"</span><span class="p">:[</span><span class="w">
+
+            </span><span class="p">]</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nl">"renderingOptions"</span><span class="p">:{</span><span class="w">
+            </span><span class="nl">"orientation"</span><span class="p">:</span><span class="s2">"TB"</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nl">"includeExternalComponents"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"duplicationLinkThreshold"</span><span class="p">:</span><span class="mi">50</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="define-cross-cutting-concerns-aspects-of-a-software-system-that-cannot-be-cleanly-decomposed-from-the-rest-of-the-system">Define cross-cutting concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system</h3>
+
+<ul>
+  <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.</li>
+  <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+   </span><span class="nl">"crossCuttingConcerns"</span><span class="p">:[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"general"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"concerns"</span><span class="p">:[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"exception handling"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"sourceFileFilters"</span><span class="p">:[</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="s2">".*[.]java"</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="s2">".* try </span><span class="se">\\</span><span class="s2">{.*"</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"include"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+                  </span><span class="p">}</span><span class="w">
+               </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"logging"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"sourceFileFilters"</span><span class="p">:[</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="s2">"import .*logging[.]Log.*"</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"include"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+                  </span><span class="p">}</span><span class="w">
+               </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"file operations"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"sourceFileFilters"</span><span class="p">:[</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="s2">"import .*java[.]io[.]File.*"</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"include"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+                  </span><span class="p">}</span><span class="w">
+               </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"javafx"</span><span class="p">,</span><span class="w">
+               </span><span class="nl">"sourceFileFilters"</span><span class="p">:[</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="s2">"import javafx.*"</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"include"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+                     </span><span class="nl">"note"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+                  </span><span class="p">}</span><span class="w">
+               </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="set-goals-and-controls-define-measurements-and-alarms-to-keep-your-system-within-the-desired-values">Set goals and controls: define measurements and alarms to keep your system within the desired values</h3>
+
+<p>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and tolerance.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nl">"goalsAndControls"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"goal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Keep the system simple and easy to change"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aim at keeping the system size modest (less than 200,000 LOC is good), duplication low (less than 5% is good), files small (no files longer than 1000 LOC is good), and units simple (no units with more than 25 decision points is good)."</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"controls"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"metric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LINES_OF_CODE_MAIN"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total number of lines of main code"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"desiredRange"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"min"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"max"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200000"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"tolerance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20000"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"metric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DUPLICATION_PERCENTAGE"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"System duplication"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"desiredRange"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"min"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"max"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"tolerance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"metric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NUMBER_OF_FILES_1001_PLUS"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The number of very large files"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"desiredRange"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"min"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"max"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"tolerance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"metric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONDITIONAL_COMPLEXITY_DISTRIBUTION_26_PLUS_COUNT"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number of very complex units"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"desiredRange"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"min"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"max"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"tolerance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="provide-analysis-reference-points-for-comparison-and-trend-analysis">Provide analysis reference points: for comparison and trend analysis</h3>
+
+<p>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and tolerance.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+   </span><span class="nl">"compareResultsWith"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reference"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"analysisResultsPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"history/start/analysisResults.json"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="add-summary-findings-manually-added-on-line-insights-and-notes">Add summary findings: manually added on-line insights and notes</h3>
+
+<p>Optional few bullets to summarize the systems.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nl">"summaryFindings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"note 1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"note 2"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="perform-advanced-configuration-meta-rules-for-components-concerns-and-dependencies">Perform advanced configuration: meta-rules for components, concerns and dependencies</h3>
+
+<ul>
+  <li>One of the most powerful features of Sokrates is the possibility to use meta rules to define components, concerns and dependencies.</li>
+  <li>A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.</li>
+  <li>Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)</li>
+  <li>The Following operations are supported:
+    <ul>
+      <li>extract (regex1, regex2,…)</li>
+      <li>replace (regex, replaceString)</li>
+      <li>append (text)</li>
+      <li>prepend (text)</li>
+      <li>trim</li>
+      <li>tolowercase</li>
+      <li>touppercase</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example (components and dependencies finder with meta rules):</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nl">"logicalDecompositions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"package level"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"componentsFolderDepth"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"components"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"metaComponents"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">".*[.]java"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"package nl[.]obren[.]sokrates[.].*"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"ignoreComments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"nameOperations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"extract"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="s2">"nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+"</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="s2">"nl[.]obren[.]sokrates[.]"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">""</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"includeRemainingFiles"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dependenciesFinder"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"useBuiltInDependencyFinders"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="nl">"metaRules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">".*[.]java"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"import nl[.]obren[.]sokrates[.].*"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"ignoreComments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"nameOperations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"extract"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                    </span><span class="s2">"nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+"</span><span class="w">
+                                </span><span class="p">]</span><span class="w">
+                            </span><span class="p">},</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                    </span><span class="s2">"nl[.]obren[.]sokrates[.]"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">""</span><span class="w">
+                                </span><span class="p">]</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"renderingOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"orientation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TB"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>Example (cross-cutting concerns with meta rules):</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nl">"crossCuttingConcerns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java technology"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"concerns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"metaConcerns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"import[ ]+java[.].*"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"ignoreComments"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"nameOperations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"extract"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="s2">"java[.][a-zA-Z0-9_]+"</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 
     </div><a class="u-url" href="/blog/configuration" hidden></a>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Analysis: Basics"
+title:  "Philosophy: Basics"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: basic-analyses

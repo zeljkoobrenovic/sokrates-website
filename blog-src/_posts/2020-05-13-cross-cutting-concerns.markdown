@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Foundations: Cross-Cutting Concerns"
+title:  "Foundations: Scoping / Cross-Cutting Concerns"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: cross-cutting-concerns

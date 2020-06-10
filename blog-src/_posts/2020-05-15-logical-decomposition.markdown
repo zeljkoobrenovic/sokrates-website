@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Foundations: Logical Decomposition"
+title:  "Foundations: Scoping / Logical Decomposition"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: logical-decomposition

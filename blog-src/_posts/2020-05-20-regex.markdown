@@ -42,3 +42,37 @@ As a file filtering mechanism, Sokrates uses a lot of regular expressions. Such 
 Regular expressions are patterns. Or, more precisely, the way to define patterns. And software architecture is closely related to defining and identifying patterns in code.
 
 Regular expressions are cross-platform, working at any text representation. This cross-platform aspect is also what makes them useful for software architecture. Software architecture patterns are not limited to any technology.
+
+### Resources for Learning Regular Expressions
+
+#### Online resources:
+
+* [Regex One](https://regexone.com/)
+
+* [Regex Crossword](https://regexcrossword.com/)
+
+* [TryRegEX](http://tryregex.com/)
+
+* [Regexr](https://regexr.com/)
+
+* [Regex 101](https://regex101.com/)
+
+* [Python Cource on Regular Expressions](https://www.python-course.eu/re.php)
+
+
+#### Books:
+
+<a href="https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/" target="_blank">
+  <img src="assets/images/sokrates/book-regex-cookbook.png" width="300"
+       style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);"/>
+</a>
+
+<a href="https://www.oreilly.com/library/view/mastering-regular-expressions/0596528124/" target="_blank">
+  <img src="assets/images/sokrates/book-regex.png" width="300"
+       style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);"/>
+</a>
+
+<a href="https://www.oreilly.com/library/view/introducing-regular-expressions/9781449338879/" target="_blank">
+  <img src="assets/images/sokrates/book-regex-intro.png" width="300"
+       style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);"/>
+</a>

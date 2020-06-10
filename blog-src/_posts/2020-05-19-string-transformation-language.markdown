@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Foundations: Sokrates String Transformation Language (SSTL)"
+title:  "Foundations: Regex Extended: Sokrates String Transformation Language (SSTL)"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: sstl
