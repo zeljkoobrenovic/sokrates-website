@@ -3,25 +3,25 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Analysis: Finding Dependencies | Sokrates Blog</title>
+<title>Analysis: Finding Dependencies based on Text Patterns | Sokrates Book</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Analysis: Finding Dependencies" />
+<meta property="og:title" content="Analysis: Finding Dependencies based on Text Patterns" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Three ways to find dependencies:" />
-<meta property="og:description" content="Three ways to find dependencies:" />
-<link rel="canonical" href="http://localhost:4000/blog/dependencies" />
-<meta property="og:url" content="http://localhost:4000/blog/dependencies" />
-<meta property="og:site_name" content="Sokrates Blog" />
+<meta name="description" content="Looking anchors and targets" />
+<meta property="og:description" content="Looking anchors and targets" />
+<link rel="canonical" href="http://localhost:4000/book/dependencies" />
+<meta property="og:url" content="http://localhost:4000/book/dependencies" />
+<meta property="og:site_name" content="Sokrates Book" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Three ways to find dependencies:","@type":"BlogPosting","url":"http://localhost:4000/blog/dependencies","headline":"Analysis: Finding Dependencies","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/dependencies"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Looking anchors and targets","@type":"BlogPosting","url":"http://localhost:4000/book/dependencies","headline":"Analysis: Finding Dependencies based on Text Patterns","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/dependencies"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="Sokrates Blog" /></head>
+<link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Sokrates Book" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Sokrates Blog</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/book/">Sokrates Book</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -81,7 +81,7 @@
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
-        <h1 class="post-title p-name" itemprop="name headline">Analysis: Finding Dependencies</h1>
+        <h1 class="post-title p-name" itemprop="name headline">Analysis: Finding Dependencies based on Text Patterns</h1>
         <p class="post-meta">
             <time class="dt-published" datetime="2020-05-25T20:12:01+02:00" itemprop="datePublished">May 25, 2020
             </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
@@ -89,46 +89,100 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <p>Three ways to find dependencies:</p>
+        <p>Looking anchors and targets</p>
+
+<h3 id="file-to-component">File to Component</h3>
+
+<pre>
+src/
+  vs/
+    base/
+      browser/
+      common/
+      node/
+      parts/
+      worker/
+</pre>
+
+<p>Componentization based on the folder depth 3 (src/projects/*):</p>
+
+<p>Example of VS Code</p>
+
+<p><img src="assets/images/sokrates/dependecies-patterns-components.png" alt="" /></p>
 
 <ul>
-  <li>
-    <p>Pattern in file content, names and paths</p>
-  </li>
-  <li>
-    <p>Duplication</p>
-  </li>
-  <li>
-    <p>Temporal proximity (same day)</p>
+  <li>Analyzed system has 6 links (arrows) between components.</li>
+  <li>The number on the arrow represents the number of files from referring component that depend on files in referred component.</li>
+  <li>These 6 links contain 105 dependencies.</li>
+  <li>The following explicit meta-rules for finding dependencies are defined:
+    <ul>
+      <li>path like “.<em>[.]ts” AND content like “import .</em>from ‘vs/base.*”</li>
+      <li>extract “base(/[a-zA-Z0-9_]+|)”</li>
+      <li>replace “base(/)?”, “”</li>
+    </ul>
   </li>
 </ul>
 
-<p>Patterns search</p>
+<pre>
+from: browser
+to: common
+evidence:
+ - file: "src/vs/base/browser/browser.ts"
+   contains "import { Emitter, Event } from 'vs/base/common/event';"
 
-<p>Looking anchors and targets</p>
+from: browser
+to: common
+evidence:
+ - file: "src/vs/base/browser/canIUse.ts"
+   contains "import * as platform from 'vs/base/common/platform';"
+
+from: browser
+to: common
+evidence:
+ - file: "src/vs/base/browser/contextmenu.ts"
+   contains "import { IAction, IActionRunner } from 'vs/base/common/actions';"
+
+from: browser
+to: common
+evidence:
+ - file: "src/vs/base/browser/dnd.ts"
+   contains "import { Disposable } from 'vs/base/common/lifecycle';"
+
+from: browser
+to: common
+evidence:
+ - file: "src/vs/base/browser/dom.ts"
+   contains "import { TimeoutTimer } from 'vs/base/common/async';"
+
+...
+
+</pre>
+
+<p><img src="assets/images/sokrates/dependencies-patterns-path.png" alt="" /></p>
 
 <p>Patterns that are likely to be unique for files in a components (e.g. java package heuristic)</p>
 
 <p>File to component as a pragmatic technique</p>
 
-    </div><a class="u-url" href="/blog/dependencies" hidden></a>
+
+    </div><a class="u-url" href="/book/dependencies" hidden></a>
 </article>
 
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/blog/"></data>
+  <data class="u-url" href="/book/"></data>
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Sokrates Blog</h2>
+    <h2 class="footer-heading">Sokrates Book</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Sokrates Blog</li><li><a class="u-email" href="mailto:zeljko.obren@gmail.com">zeljko.obren@gmail.com</a></li></ul>
+          <li class="p-name">Sokrates Book</li><li><a class="u-email" href="mailto:zeljko.obren@gmail.com">zeljko.obren@gmail.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zeljkoobrenovic"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zeljkoobrenovic</span></a></li><li><a href="https://www.linkedin.com/in/zeljkoobrenovic"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">zeljkoobrenovic</span></a></li><li><a href="https://www.twitter.com/zeljko_obren"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">zeljko_obren</span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zeljkoobrenovic"><svg class="svg-icon"><use xlink:href="/book/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zeljkoobrenovic</span></a></li><li><a href="https://www.linkedin.com/in/zeljkoobrenovic"><svg class="svg-icon"><use xlink:href="/book/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">zeljkoobrenovic</span></a></li><li><a href="https://www.twitter.com/zeljko_obren"><svg class="svg-icon"><use xlink:href="/book/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">zeljko_obren</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">

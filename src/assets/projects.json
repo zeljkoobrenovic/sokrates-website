@@ -661,6 +661,12 @@
           }
         ],
         "id": "cadence"
+      },
+      {
+        "id": "temporal",
+        "name": "Temporal",
+        "description": "A fault-oblivious stateful programming model that obscures most of the complexities of building scalable distributed applications.",
+        "logoLink": "https://d3axxy9bcycpv7.cloudfront.net/assets/logos/temporal.svg"
       }
     ]
   },

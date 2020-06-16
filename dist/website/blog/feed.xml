@@ -1,21 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-06-10T15:59:07+02:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Sokrates Blog</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Intro: Sokrates Philosophy</title><link href="http://localhost:4000/blog/philosophy" rel="alternate" type="text/html" title="Intro: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/philosophy</id><content type="html" xml:base="http://localhost:4000/blog/philosophy">&lt;h3 id=&quot;what-is-sokrates&quot;&gt;What Is Sokrates?&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-06-16T15:35:54+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Sokrates Book</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Intro: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Intro: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;h3 id=&quot;what-is-sokrates&quot;&gt;What Is Sokrates?&lt;/h3&gt;
 
-&lt;p&gt;Sokrates is both a book and a software tool. The text and the software are the two sides of the same coin. As a book, Sokrates presents a summary of the lessons I have learned on how to understand source code. But without the software, such a text would be very abstract and boring. The similar also applies to the software side of Sokrates soon. It isn’t easy to understand how to use Soknotes in a full power way without understanding its philosophy.&lt;/p&gt;
+&lt;p&gt;Sokrates looks on the source code from a perspective of maintenance, making visible the size, complexity and coupling of software.&lt;/p&gt;
 
-&lt;p&gt;The journey to this book was through building Soknotes software. As I was using Soknetes in my daily work, I was making notes for this book. And as I have started to write the book, I also started to change some parts of Sokrates based on what I have learned. What I also hope to achieve by uniting a text and software is that you could get more than a mere manual for yet another analysis tool. Sokrates comes with more generic and universal philosophy, which I hope is useful beyond the tool. I also hope the book and the too will help you to build your tools.&lt;/p&gt;
+&lt;h4 id=&quot;obtaining-basic-understanding&quot;&gt;Obtaining Basic Understanding&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/intro-book-vs-software.png&quot; alt=&quot;&quot; /&gt;
-&lt;em&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;: Sokrates book and Sokrates software tool are the two sides of the same coin. Developing software enabled me to implement ideas and tests them in practice, and to build a useful, proven tools. Writing a book helped me to organizes ideas, and obtain new insights, and share the lessons learned.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;First, you can use Sokrates as a bottom-up, reverse engineering tool, deriving architectural views from existing source code. Sokrates is primary about being able to get quick answers to basic, simple questions about your source code:&lt;/p&gt;
 
-&lt;p&gt;Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;How much code do you here?&lt;/li&gt;
+  &lt;li&gt;How much of it you’ve written yourself?&lt;/li&gt;
+  &lt;li&gt;How much of it you maintain?&lt;/li&gt;
+  &lt;li&gt;Which programming languages do you use?&lt;/li&gt;
+  &lt;li&gt;What is your primary or main code, the one used to define the structure and logic of the system in production?&lt;/li&gt;
+  &lt;li&gt;What is your secondary code, the one needed to test and build your system, but itself is not running in production?&lt;/li&gt;
+  &lt;li&gt;Do you generate some part of your codebase? How?&lt;/li&gt;
+  &lt;li&gt;How duplicated is your codebase? Why?&lt;/li&gt;
+  &lt;li&gt;How big are your files?&lt;/li&gt;
+  &lt;li&gt;How many units do you have? How big are they? How complex?&lt;/li&gt;
+  &lt;li&gt;How files in your codebase depend on each other?&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;The result of my adventure is dual. First, I think I have managed to build a pretty useful and elegant tool. And learned a lot so to share it and hopefully influence new generations of practical and straightforward software analysis tools.&lt;/p&gt;
+&lt;h4 id=&quot;goal-setting-monitoring-trends-and-feedback&quot;&gt;Goal Setting, Monitoring Trends and Feedback&lt;/h4&gt;
 
-&lt;p&gt;Sokrates is a simple tool, but because it follows a philosophy of one designer, it hopefully has conceptual integrity at a higher level than any other powerful enterprise tools. This book describes what I have learned during my work and building Sokrates. It is, in many aspects, subjective, presenting my view, experiences, and ideas. Nevertheless, I do think that you can learn something from it. I would also like to invite others to share their experiences. If many of us do this knowledge sharing, we will create a solid base of expertise and knowledge, validated in practice, that someone could use to create a mere generic and universal overview. I also believe this, while subjective, my experiences are relevant as I have built and analyzed software systems and worked mostly in practice, but with a strong research background. Most importantly, all that I will describe is implemented in the Sokrates tool and validated or at least used in practice in complex, messy reality. While no one has conducted a formal study to prove my ideas, successful usage in daily work gives me the confidence that what I am saying is useful.&lt;/p&gt;
+&lt;p&gt;You can also use Sokrates in a top-down fashion, as a control tool monitoring deviations of source code from defining architectural rules. As a control tools, Sokrates can serve as an early warning system around these basic measurements:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Duplication above some threshold,&lt;/li&gt;
+  &lt;li&gt;System or a a component becoming too big&lt;/li&gt;
+  &lt;li&gt;Units becoming more complex&lt;/li&gt;
+  &lt;li&gt;Unwanted dependencies among components are introduced.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;sokrates-as-a-documentaiton-tool&quot;&gt;Sokrates as a Documentaiton Tool&lt;/h3&gt;
+&lt;h4 id=&quot;software-architecture-documentation-tool&quot;&gt;Software Architecture Documentation Tool&lt;/h4&gt;
 
-&lt;p&gt;Sokrates is for anyone interested in software architecture in practice. Sokrates follows several premises (borrowing last two from Grady Booch):&lt;/p&gt;
+&lt;p&gt;While the main power of Sokrates lies in pragmatic source code analyses, your can also use Sokrates as a software documentation tool. On the one hand you can look at the Sokrates configuration file as a mere input for analysis. On the other hand, this configuration file encodes the patterns used in source code to classifiy files, define components and cross-cutting concerns.&lt;/p&gt;
+
+&lt;p&gt;As a documentation tool, Sokrates follows several premises (borrowing last two from Grady Booch):&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Any software architecture documentation disconnected from source code is doomed to become outdated and useless quickly.&lt;/li&gt;
@@ -25,29 +44,30 @@
 
 &lt;p&gt;Sokrates provides a pragmatic way to describe critical elements of software architectures and connect them explicitly to the source code. Based on a formal description of different software architecture aspects, Sokrates generates reports and visualization to help you reason, understand, and communicate about the software system.&lt;/p&gt;
 
+&lt;h3 id=&quot;sokrates-practical-tools-vs-experiment&quot;&gt;Sokrates: Practical Tools vs. Experiment&lt;/h3&gt;
+
+&lt;p&gt;Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools. Sokrates implements my vision on how to document and analyze software architectures of complex and simple software systems.&lt;/p&gt;
+
+&lt;p&gt;The result of my adventure is dual. First, I think I have managed to build a pretty useful and elegant tool. And learned a lot so to share it and hopefully influence new generations of practical and straightforward software analysis tools.&lt;/p&gt;
+
+&lt;p&gt;Sokrates is a simple tool, but because it follows a philosophy of one designer, it hopefully has conceptual integrity at a higher level than any other powerful enterprise tools. This book describes what I have learned during my work and building Sokrates. It is, in many aspects, subjective, presenting my view, experiences, and ideas. Nevertheless, I do think that you can learn something from it. I would also like to invite others to share their experiences. If many of us do this knowledge sharing, we will create a solid base of expertise and knowledge, validated in practice, that someone could use to create a mere generic and universal overview. I also believe this, while subjective, my experiences are relevant as I have built and analyzed software systems and worked mostly in practice, but with a strong research background. Most importantly, all that I will describe is implemented in the Sokrates tool and validated or at least used in practice in complex, messy reality. While no one has conducted a formal study to prove my ideas, successful usage in daily work gives me the confidence that what I am saying is useful.&lt;/p&gt;
+
+&lt;p&gt;Sokrates is both a book and a software tool. The text and the software are the two sides of the same coin. As a book, Sokrates presents a summary of the lessons I have learned on how to understand source code. But without the software, such a text would be very abstract and boring. The similar also applies to the software side of Sokrates soon. It isn’t easy to understand how to use Soknotes in a full power way without understanding its philosophy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/intro-book-vs-software.png&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;: Sokrates book and Sokrates software tool are the two sides of the same coin. Developing software enabled me to implement ideas and tests them in practice, and to build a useful, proven tools. Writing a book helped me to organizes ideas, and obtain new insights, and share the lessons learned.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The journey to this book was through building Soknotes software. As I was using Soknetes in my daily work, I was making notes for this book. And as I have started to write the book, I also started to change some parts of Sokrates based on what I have learned. What I also hope to achieve by uniting a text and software is that you could get more than a mere manual for yet another analysis tool. Sokrates comes with more generic and universal philosophy, which I hope is useful beyond the tool. I also hope the book and the too will help you to build your tools.&lt;/p&gt;
+
 &lt;h2 id=&quot;about-the-name&quot;&gt;About the Name&lt;/h2&gt;
 
 &lt;p&gt;“&lt;a href=&quot;https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living&quot;&gt;The unexamined life is not worth living&lt;/a&gt;”&lt;/p&gt;
 
-&lt;p&gt;Exploration, dialog with the source code&lt;/p&gt;
-
-&lt;p&gt;“Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life, but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.”&lt;/p&gt;
-
 &lt;p&gt;As software is eating the world, examining life nowadays inevitably means examining software. And our life, at least mine, is huge part dedicated maintaining the software. So unexamined life is not worth living for many of us means unexamined software is not worth maintaining.&lt;/p&gt;
 
-&lt;p&gt;“Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,”&lt;/p&gt;
+&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
 
-&lt;h3 id=&quot;what-sokrates-is-not&quot;&gt;What Sokrates Is (Not)?&lt;/h3&gt;
-
-&lt;p&gt;Sokrates is more of a text analysis tool. Sokrates borrows ideas from code spelunking tools, in particular, grep, adding structure on top of regex source code searches.&lt;/p&gt;
-
-&lt;p&gt;Sokrates comes with both command-line interface and interactive GUI code explorer.&lt;/p&gt;
-
-&lt;p&gt;In these aspects, Sokrates differs from many other powerful tools, such as SonarQube or SIG SAT. It is not a replacement for these tools.&lt;/p&gt;
-
-&lt;h3 id=&quot;learn-you-how-to-think-and-build-tools&quot;&gt;Learn You How To Think And Build Tools&lt;/h3&gt;
-
-&lt;p&gt;Fish&lt;/p&gt;
+&lt;p&gt;Learn You How To Think And Build Tools&lt;/p&gt;
 
 &lt;h3 id=&quot;intellectual-control&quot;&gt;Intellectual Control&lt;/h3&gt;
 
@@ -80,52 +100,9 @@
 
 &lt;p&gt;Donald Knuth: “Computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty. A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better.”&lt;/p&gt;
 
-&lt;h3 id=&quot;maintainability&quot;&gt;Maintainability&lt;/h3&gt;
-
-&lt;p&gt;Sokrates looks on the source code from a perspective of maintenance, making visible the size, complexity and coupling of software.&lt;/p&gt;
-
-&lt;p&gt;For more details see my O’Reilly Video Training (from my time at Software Improvement Group): Building Maintainable Software (4 hours), and O’Reilly Webcast: Building Maintainable Software (1 hour, together with Rob van der Leek).&lt;/p&gt;
-
-&lt;p&gt;The fragment of my training video on building maintainable software is freely avaliable at Youtube:&lt;/p&gt;
-
-&lt;h4 id=&quot;how-to-user-sokrates&quot;&gt;How to User Sokrates?&lt;/h4&gt;
-
-&lt;h3 id=&quot;basic-understanding&quot;&gt;Basic Understanding&lt;/h3&gt;
-&lt;p&gt;On the one hand, you can use Sokrates as a bottom-up, reverse engineering tool, deriving architectural views from existing source code.&lt;/p&gt;
-
-&lt;p&gt;Sokrates primary about being able to get quick answers to basic, simple questions about your source code:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How much code do you here?&lt;/li&gt;
-  &lt;li&gt;How much of it you’ve written yourself?&lt;/li&gt;
-  &lt;li&gt;How much of it you maintain?&lt;/li&gt;
-  &lt;li&gt;Which programming languages do you use?&lt;/li&gt;
-  &lt;li&gt;What is your primary or main code, the one used to define the structure and logic of the system in production?&lt;/li&gt;
-  &lt;li&gt;What is your secondary code, the one needed to test and build your system, but itself is not running in production?&lt;/li&gt;
-  &lt;li&gt;Do you generate some part of your codebase? How?&lt;/li&gt;
-  &lt;li&gt;How duplicated is your codebase? Why?&lt;/li&gt;
-  &lt;li&gt;How big are your files?&lt;/li&gt;
-  &lt;li&gt;How many units do you have? How big are they? How complex?&lt;/li&gt;
-  &lt;li&gt;How files in your codebase depend on each other?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;exploration&quot;&gt;Exploration&lt;/h3&gt;
-
-&lt;h3 id=&quot;goal-setting-monitoring-trends-and-feedback&quot;&gt;Goal Setting, Monitoring Trends and Feedback&lt;/h3&gt;
-
-&lt;p&gt;On the other hand, you can use Sokrates in a top-down fashion, as a control tool monitoring deviations of source code from defining architectural rules. As a control tools, Sokrates can serve as an early warning system around these basic measurments:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Duplication above some threshold,&lt;/li&gt;
-  &lt;li&gt;System or a a component becoming too big&lt;/li&gt;
-  &lt;li&gt;Units becoming more complex&lt;/li&gt;
-  &lt;li&gt;Unwanted dependencies among components are introduced.&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h3 id=&quot;who-should-use-sokrates&quot;&gt;Who Should Use Sokrates&lt;/h3&gt;
 
-&lt;p&gt;While the general answer to this questions is “anyone interested in software architecture in practice,” my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small is their project and what other tools they use.&lt;/p&gt;
-
-&lt;h3 id=&quot;interesting-to-know-rather-than-a-goal&quot;&gt;Interesting to Know, Rather Than a Goal&lt;/h3&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">What Is Sokrates?</summary></entry><entry><title type="html">Usage: Sokrates Explorer</title><link href="http://localhost:4000/blog/explorer" rel="alternate" type="text/html" title="Usage: Sokrates Explorer" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/explorer</id><content type="html" xml:base="http://localhost:4000/blog/explorer">&lt;h3 id=&quot;interactive-source-code-explorations&quot;&gt;Interactive Source Code Explorations&lt;/h3&gt;
+&lt;p&gt;While the general answer to this questions is “anyone interested in software architecture in practice,” my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small is their project and what other tools they use.&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools.</summary></entry><entry><title type="html">Usage: Sokrates Explorer</title><link href="http://localhost:4000/book/explorer" rel="alternate" type="text/html" title="Usage: Sokrates Explorer" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/explorer</id><content type="html" xml:base="http://localhost:4000/book/explorer">&lt;h3 id=&quot;interactive-source-code-explorations&quot;&gt;Interactive Source Code Explorations&lt;/h3&gt;
 
 &lt;h3 id=&quot;interactive-configuration-with-instant-preview-of-results&quot;&gt;Interactive Configuration with Instant Preview of Results&lt;/h3&gt;
 
@@ -176,7 +153,7 @@
 
 &lt;p&gt;Easy to export data&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/explorer-export-table-data.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Interactive Source Code Explorations</summary></entry><entry><title type="html">Usage: Command Line Interface</title><link href="http://localhost:4000/blog/cli" rel="alternate" type="text/html" title="Usage: Command Line Interface" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/cli</id><content type="html" xml:base="http://localhost:4000/blog/cli">&lt;h3 id=&quot;init-command&quot;&gt;&lt;strong&gt;&lt;em&gt;init&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/explorer-export-table-data.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Interactive Source Code Explorations</summary></entry><entry><title type="html">Usage: Command Line Interface</title><link href="http://localhost:4000/book/cli" rel="alternate" type="text/html" title="Usage: Command Line Interface" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/cli</id><content type="html" xml:base="http://localhost:4000/book/cli">&lt;h3 id=&quot;init-command&quot;&gt;&lt;strong&gt;&lt;em&gt;init&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
 
 &lt;p&gt;generate a Sokrates configuration file for the codebase.&lt;/p&gt;
 
@@ -274,7 +251,7 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 
 &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
 &lt;span class=&quot;c&quot;&gt;# remove the temporary analysis folder&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; analysis&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">init command</summary></entry><entry><title type="html">Usage: Configuration File</title><link href="http://localhost:4000/blog/configuration" rel="alternate" type="text/html" title="Usage: Configuration File" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/configuration</id><content type="html" xml:base="http://localhost:4000/blog/configuration">&lt;h3 id=&quot;configuration-as-a-software-architecture-documentation&quot;&gt;Configuration as a Software Architecture Documentation&lt;/h3&gt;
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; analysis&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">init command</summary></entry><entry><title type="html">Usage: Configuration File</title><link href="http://localhost:4000/book/configuration" rel="alternate" type="text/html" title="Usage: Configuration File" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/configuration</id><content type="html" xml:base="http://localhost:4000/book/configuration">&lt;h3 id=&quot;configuration-as-a-software-architecture-documentation&quot;&gt;Configuration as a Software Architecture Documentation&lt;/h3&gt;
 
 &lt;h3 id=&quot;configuration-file-for-individual-projects&quot;&gt;Configuration File for Individual Projects&lt;/h3&gt;
 
@@ -713,7 +690,7 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Configuration as a Software Architecture Documentation</summary></entry><entry><title type="html">Usage: Installation</title><link href="http://localhost:4000/blog/usage" rel="alternate" type="text/html" title="Usage: Installation" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/usage</id><content type="html" xml:base="http://localhost:4000/blog/usage">&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Configuration as a Software Architecture Documentation</summary></entry><entry><title type="html">Usage: Installation</title><link href="http://localhost:4000/book/usage" rel="alternate" type="text/html" title="Usage: Installation" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/usage</id><content type="html" xml:base="http://localhost:4000/book/usage">&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
 
 &lt;h4 id=&quot;command-line-interface&quot;&gt;Command Line Interface&lt;/h4&gt;
 
@@ -760,9 +737,110 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;ul&gt;
   &lt;li&gt;the command line interface in the cli/target folder&lt;/li&gt;
   &lt;li&gt;the interactive explorer in the codeexplorer/target folder&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Installation</summary></entry><entry><title type="html">Analysis: Landscape</title><link href="http://localhost:4000/blog/landscape" rel="alternate" type="text/html" title="Analysis: Landscape" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/landscape-analysis</id><content type="html" xml:base="http://localhost:4000/blog/landscape">&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-init-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Installation</summary></entry><entry><title type="html">Analysis: Landscape</title><link href="http://localhost:4000/book/landscape" rel="alternate" type="text/html" title="Analysis: Landscape" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/landscape-analysis</id><content type="html" xml:base="http://localhost:4000/book/landscape">&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-init-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/reports-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Trends</title><link href="http://localhost:4000/blog/trends" rel="alternate" type="text/html" title="Analysis: Trends" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/trend-analysis</id><content type="html" xml:base="http://localhost:4000/blog/trends"></content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: File Change History</title><link href="http://localhost:4000/blog/history" rel="alternate" type="text/html" title="Analysis: File Change History" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/file-history-analysis</id><content type="html" xml:base="http://localhost:4000/blog/history">&lt;p&gt;File change analysis takes as an input the list of dates on
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/reports-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html"></summary></entry><entry><title type="html">Analysis: Trends</title><link href="http://localhost:4000/book/trends" rel="alternate" type="text/html" title="Analysis: Trends" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/trend-analysis</id><content type="html" xml:base="http://localhost:4000/book/trends">&lt;p&gt;Trend analysis shows the difference between values measured at different times, comparing the results of the current analysis with previous reports.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/trends-metrics.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Trend analysis gives the meaning to measurements through comparison. While it may be difficult to tell if some measured value is good or bad, it may still be possible to say if this value is becoming better or worse. For instance, you always have some level of duplication in code. You may not have the time and resources to refactor the system to remove all duplication. But you usually want to have a trend of reduced duplication. You can at least monitor the duplication level so that your new code does not increase overall code repetition.&lt;/p&gt;
+
+&lt;p&gt;For more insights into the value of trend analysis, Sokrates recommends reading the section “Favor tracking trends over absolute numbers” in the article An Appropriate Use of Metrics, (MartinFowler.com):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“Looking at trends provides more interesting information than whether or not a target is met. Working out if a goal is met is easy. The difficult work, and one that management must work with people with the skills to complete is looking at trends to see if they are moving in the desired direction and a fast enough rate. Trends provide leading indicators into the performance that emerges from organizational complexity. It is clearly pointless focusing on the gap in a number when a trend moves further and further away from a desired state.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;sokrates-snapshots&quot;&gt;Sokrates Snapshots&lt;/h3&gt;
+
+&lt;p&gt;Sokrates supports trend analysis by saving the snapshots of analysis results and comparing these snapshots with current values. Keeping of snapshots is optional, but if you enable these features, you can choose the saving frequency at three levels: daily, weekly, or monthly.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;trendAnalysis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;saveHistory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;frequency&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;weekly&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;maxReferencePointsForAnalysis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;historyFolder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;history&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Each snapshot is an archived file named &lt;strong&gt;analysisResults.zip&lt;/strong&gt;. It contains two JSON files: &lt;strong&gt;analysisResults.json&lt;/strong&gt;, with all measurements, and &lt;strong&gt;config.json&lt;/strong&gt;, with a copy of the Sokrates configuration at the time of the measurement.&lt;/p&gt;
+
+&lt;p&gt;Sokrates stores snapshots files in the &lt;strong&gt;_sokrates/history/snapshots&lt;/strong&gt; folder. Each snapshot file has its own subfolder folder with the following naming conventions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;…/history/snapshots/years-month-day&lt;/strong&gt;&lt;br /&gt;for daily
+snapshots (e.g., &lt;strong&gt;_sokrates/history/snapshots/2020-01-01&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;…/history/snapshots/years-weekInYear&lt;/strong&gt;&lt;br /&gt;for daily
+weekly (e.g., &lt;strong&gt;_sokrates/history/snapshots/2020-42&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;…/history/snapshots/years-month&lt;/strong&gt;&lt;br /&gt;for monthly
+snapshots (e.g. &lt;strong&gt;_sokrates/history/snapshots/2020-01&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/trend-code-change-overview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;analyzing-trends-retrospectivelly&quot;&gt;Analyzing Trends Retrospectivelly&lt;/h3&gt;
+
+&lt;p&gt;If you have just started using Sokrates, you can still get the trend analysis by checking out the code at different moments in the past and running the Sokrates analysis against them to get the snapshots of source code from the past. The following line is the Git command to get your source code as it was on January 1, 2020:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;git checkout &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;git rev-list &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;--first-parent&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2020-01-01 00:00&quot;&lt;/span&gt; master&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The following code fragment illustrates a more complex example, where you can get the analysis snapshot of any git repository at any date:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# prepare a temporary folder for Sokrates analysis&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; temp
+&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;temp
+&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; sokrates-config/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; temp
+
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;temp
+
+&lt;span class=&quot;c&quot;&gt;# clone the repository&lt;/span&gt;
+git clone &lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt; temp-git-download
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;temp-git-download
+&lt;span class=&quot;c&quot;&gt;# go back in time (the $3 parameter needs to be provided)&lt;/span&gt;
+git checkout &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;git rev-list &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;--first-parent&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; 00:00&quot;&lt;/span&gt; master&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+&lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;temp-git-download/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; temp-git-download
+
+
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+
+&lt;span class=&quot;c&quot;&gt;# run Sokrates analysis&lt;/span&gt;
+java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Xmx10g&lt;/span&gt; sokrates.jar generateReports &lt;span class=&quot;nt&quot;&gt;-reportData&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt; temp/_sokrates/config.json &lt;span class=&quot;nt&quot;&gt;-outputFolder&lt;/span&gt; temp/_sokrates/reports &lt;span class=&quot;nt&quot;&gt;-reportAll&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# make history folders with apprpriate date in name&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mkdir history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mkdir history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# copy analysisResults.json and config.json&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;temp/_sokrates/reports/data/analysisResults.json &lt;span class=&quot;nb&quot;&gt;history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;temp/_sokrates/reports/data/config.json &lt;span class=&quot;nb&quot;&gt;history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; temp
+
+&lt;span class=&quot;c&quot;&gt;# zip snapshot files&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;
+zip analysisResults.zip &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.json
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.json&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can then call this batch file as illustrated in the following example of JUnit4 repository:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;history
+
+mkdir history
+mkdir history&lt;/span&gt;/java
+
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2020-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2019-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2018-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2017-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2016-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2015-01-01'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Trend analysis shows the difference between values measured at different times, comparing the results of the current analysis with previous reports.</summary></entry><entry><title type="html">Analysis: File Change History</title><link href="http://localhost:4000/book/history" rel="alternate" type="text/html" title="Analysis: File Change History" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/file-history-analysis</id><content type="html" xml:base="http://localhost:4000/book/history">&lt;p&gt;File change analysis takes as an input the list of dates on
  which source code files changes, and analyses
  these dates to understand how frequently developers have changed the files, how old are the files they, and how recently developers have updated them.&lt;/p&gt;
 
@@ -831,13 +909,13 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
   &lt;li&gt;&lt;strong&gt;config_by_file_change_frequency.json&lt;/strong&gt;, configuring analysis so that componentization follows the frequency of file updates,&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;config_by_file_age.json&lt;/strong&gt;, configuring analysis so that componentization follows the age of files, and&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;config_by_file_freshness.json&lt;/strong&gt;, configuring analysis so that componentization follows the last modification date of files.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">File change analysis takes as an input the list of dates on which source code files changes, and analyses these dates to understand how frequently developers have changed the files, how old are the files they, and how recently developers have updated them.</summary></entry><entry><title type="html">Analysis: Units</title><link href="http://localhost:4000/blog/units" rel="alternate" type="text/html" title="Analysis: Units" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/unit-analysis</id><content type="html" xml:base="http://localhost:4000/blog/units">&lt;p&gt;A smallest reusable piece of code&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">File change analysis takes as an input the list of dates on which source code files changes, and analyses these dates to understand how frequently developers have changed the files, how old are the files they, and how recently developers have updated them.</summary></entry><entry><title type="html">Analysis: Units</title><link href="http://localhost:4000/book/units" rel="alternate" type="text/html" title="Analysis: Units" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/unit-analysis</id><content type="html" xml:base="http://localhost:4000/book/units">&lt;p&gt;A smallest reusable piece of code&lt;/p&gt;
 
 &lt;p&gt;Size&lt;/p&gt;
 
 &lt;p&gt;Conditional complexity&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/units-processing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">A smallest reusable piece of code</summary></entry><entry><title type="html">Analysis: Duplication</title><link href="http://localhost:4000/blog/duplication" rel="alternate" type="text/html" title="Analysis: Duplication" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/blog/duplication</id><content type="html" xml:base="http://localhost:4000/blog/duplication">&lt;h3 id=&quot;duplication-is-bad&quot;&gt;Duplication is Bad&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/units-processing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">A smallest reusable piece of code</summary></entry><entry><title type="html">Analysis: Duplication</title><link href="http://localhost:4000/book/duplication" rel="alternate" type="text/html" title="Analysis: Duplication" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/duplication</id><content type="html" xml:base="http://localhost:4000/book/duplication">&lt;h3 id=&quot;duplication-is-bad&quot;&gt;Duplication is Bad&lt;/h3&gt;
 
 &lt;p&gt;I always wanted to say something smart about duplication and why it is bad. But others have done it years ago, and much better. So I will satisfy my wish to talk about duplication by quoting few of the online resources:&lt;/p&gt;
 
