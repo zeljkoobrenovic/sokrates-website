@@ -9,9 +9,19 @@ excerpt:
 
 A smallest reusable piece of code
 
-Size
-
-Conditional complexity
+### Unit Processing
 
 ![](assets/images/sokrates/units-processing.png)
+
+### Heuristics Used to Extract Units
+
+Balanced Brackets
+
+Assumption of Proper Formatting
+
+
+### Unit Size
+
+### Conditional Complexity
+
 

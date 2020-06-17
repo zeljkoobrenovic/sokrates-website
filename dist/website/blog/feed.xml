@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-06-16T15:35:54+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Sokrates Book</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Intro: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Intro: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;h3 id=&quot;what-is-sokrates&quot;&gt;What Is Sokrates?&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-06-17T17:53:40+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Sokrates Book</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Intro: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Intro: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;h3 id=&quot;what-is-sokrates&quot;&gt;What Is Sokrates?&lt;/h3&gt;
 
 &lt;p&gt;Sokrates looks on the source code from a perspective of maintenance, making visible the size, complexity and coupling of software.&lt;/p&gt;
 
@@ -911,11 +911,19 @@ bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/
   &lt;li&gt;&lt;strong&gt;config_by_file_freshness.json&lt;/strong&gt;, configuring analysis so that componentization follows the last modification date of files.&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">File change analysis takes as an input the list of dates on which source code files changes, and analyses these dates to understand how frequently developers have changed the files, how old are the files they, and how recently developers have updated them.</summary></entry><entry><title type="html">Analysis: Units</title><link href="http://localhost:4000/book/units" rel="alternate" type="text/html" title="Analysis: Units" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/unit-analysis</id><content type="html" xml:base="http://localhost:4000/book/units">&lt;p&gt;A smallest reusable piece of code&lt;/p&gt;
 
-&lt;p&gt;Size&lt;/p&gt;
+&lt;h3 id=&quot;unit-processing&quot;&gt;Unit Processing&lt;/h3&gt;
 
-&lt;p&gt;Conditional complexity&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/units-processing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/units-processing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">A smallest reusable piece of code</summary></entry><entry><title type="html">Analysis: Duplication</title><link href="http://localhost:4000/book/duplication" rel="alternate" type="text/html" title="Analysis: Duplication" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/duplication</id><content type="html" xml:base="http://localhost:4000/book/duplication">&lt;h3 id=&quot;duplication-is-bad&quot;&gt;Duplication is Bad&lt;/h3&gt;
+&lt;h3 id=&quot;heuristics-used-to-extract-units&quot;&gt;Heuristics Used to Extract Units&lt;/h3&gt;
+
+&lt;p&gt;Balanced Brackets&lt;/p&gt;
+
+&lt;p&gt;Assumption of Proper Formatting&lt;/p&gt;
+
+&lt;h3 id=&quot;unit-size&quot;&gt;Unit Size&lt;/h3&gt;
+
+&lt;h3 id=&quot;conditional-complexity&quot;&gt;Conditional Complexity&lt;/h3&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">A smallest reusable piece of code</summary></entry><entry><title type="html">Analysis: Duplication</title><link href="http://localhost:4000/book/duplication" rel="alternate" type="text/html" title="Analysis: Duplication" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/duplication</id><content type="html" xml:base="http://localhost:4000/book/duplication">&lt;h3 id=&quot;duplication-is-bad&quot;&gt;Duplication is Bad&lt;/h3&gt;
 
 &lt;p&gt;I always wanted to say something smart about duplication and why it is bad. But others have done it years ago, and much better. So I will satisfy my wish to talk about duplication by quoting few of the online resources:&lt;/p&gt;
 
