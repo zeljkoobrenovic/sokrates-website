@@ -8,15 +8,15 @@
 <meta property="og:title" content="Analysis: Finding Dependencies based on Text Patterns" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Looking anchors and targets" />
-<meta property="og:description" content="Looking anchors and targets" />
+<meta name="description" content="“And a thing is not seen because it is visible, but conversely, visible because it is seen” ― Socrates" />
+<meta property="og:description" content="“And a thing is not seen because it is visible, but conversely, visible because it is seen” ― Socrates" />
 <link rel="canonical" href="http://localhost:4000/book/dependencies" />
 <meta property="og:url" content="http://localhost:4000/book/dependencies" />
 <meta property="og:site_name" content="Sokrates Book" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Looking anchors and targets","@type":"BlogPosting","url":"http://localhost:4000/book/dependencies","headline":"Analysis: Finding Dependencies based on Text Patterns","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/dependencies"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"“And a thing is not seen because it is visible, but conversely, visible because it is seen” ― Socrates","@type":"BlogPosting","url":"http://localhost:4000/book/dependencies","headline":"Analysis: Finding Dependencies based on Text Patterns","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/dependencies"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Sokrates Book" /></head>
 <body><header class="site-header" role="banner">
@@ -89,14 +89,60 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <p>Looking anchors and targets</p>
+        <p><em>“And a thing is not seen because it is visible, but conversely, visible because it is seen”</em> ― Socrates</p>
 
-<h3 id="focus-on-dependencies-between-components">Focus on Dependencies Between Components</h3>
+<p>Sokrates analyses dependencies through simple text patterns searches. Such dependency analyses are not as detailed as the ones provided by specialized software tools.</p>
 
-<p>The main dependency unit is a File to a Component
-File to component as a pragmatic technique</p>
+<p>Sokrates focuses on finding dependencies between components and is not concerned with more detailed insights. There are are two main reasons for this. First, dependencies among the components are, from an architectural standpoint, the most relevant ones. While it may be interesting to know all dependencies between individual files or between units, what I miss the most in practice is the big picture, and Sokrates focuses exclusively on the big picture. Moreover, once when you understand the big picture, you can reliably obtain more detailed dependency data from your IDEs and code editors. Second, by concentrating on finding only the dependencies among components, you can simplify analysis and use simple heuristics with high accuracy.</p>
+
+<p>Sokrates’ pattern-based dependency analysis requires the existence of easily identifiable textual patterns that both, uniquely connect files in a shared component, and are present in places where there is a link, a dependency, to another component. Consequently, if such patterns do not exist if they are not unique or are challenging to find, you may not be able to identify the dependencies reliably.</p>
+
+<p>While limited at the detail level, the pattern-based identification of the dependencies is an extremely flexible and powerful mechanism that I have been using daily for years and with great success. For most languages, such analysis can replicate the level of accuracy that a more advanced and sophisticated static-code analysis tools analysis offer. But, if used wisely and with care, it also has some additional features, going beyond static code analysis tools. Such features include the possibility to identify dependencies entities defined in text constants or comments, such as dependencies to websites, APIs, or database tables, that regular classical static code analysis tools do not cover.</p>
+
+<p>Sokrates uses pattern-based dependency analysis in two places. The first place is the internal built-in dependency finders. Sokrates has several built-in dependency finders for mainstream programming languages so that you can get a basic dependency analysis of these languages for them without any extra configuration. The second place is a manual configuration, where you can define your own dependency finders based on the Sokrates pattern-based mechanisms. If a programming language supports build-in dependency finders you can still use your own custom dependency finders, and switch off the built-in ones.</p>
+
+<h3 id="dependency-analysis-pragmatics-file-to-component-links">Dependency Analysis Pragmatics: File to Component Links</h3>
 
 <p>Much simpler, technology independent, and robust mechanisms.</p>
+
+<h3 id="build-in-dependency-finder-heuristics">Build-in Dependency Finder Heuristics</h3>
+
+<p>For several common languages, Sokrates includes the build in pattern based dependency finders. You can use this build-in finders alon, or switch tem off and use your own configured finders. Here, I’ll describe few heuristics used to define patter dependencies in Sokrates build-in dependency finders.</p>
+
+<p>Build-in dependency finders use two types of heuristics:</p>
+<ul>
+  <li>namespaces based dependency finders</li>
+  <li>path based includes</li>
+</ul>
+
+<p>The following heuristic is used in languages where files are organized in explicitly defined packages, modules or namespaces (e.g. Java, C#, Go, Scala, PHP, Groovy, Kotlin, Perl, Ruby, D):</p>
+
+<ul>
+  <li>Heuristic: the analysis assumes that the names of packages, modules or namespaces are present in source files, and are unique components (e.g. two components do not have files in the same package, module or namespace)</li>
+  <li>Limitation: not reliable if the same package, module or namespace is defined in two or more components</li>
+  <li>Logic:
+    <ul>
+      <li>Finding component patterns: looking for package, modules or namespaces definitions, normally at the beginning of the file. Extract full package, module or namespace.</li>
+      <li>Find dependencies:
+        <ul>
+          <li>look for import statement to packages, modules or namespaces</li>
+          <li>extract full package, module or namespace name from the import statement</li>
+          <li>if the full name in the import statement can be found in package statements on the other component, then add the dependency to that component</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Patterns that are likely to be unique for files in a components (e.g. java package heuristic)</p>
+
+<p><img src="assets/images/sokrates/dependencies-built-in-java-details.png" alt="" /></p>
+
+<p><img src="assets/images/sokrates/dependencies-built-in-aggregated.png" alt="" /></p>
+
+<h3 id="custom-dependency-finders-linking-path-based-componentization-to-path-based-include-statements">Custom Dependency Finders: Linking Path Based Componentization to Path-Based Include Statements</h3>
+
+<p>With the Sokrates configuration file, you can define your own pattern based dependency finders using the Sokrates String Transformation Language (SSTL). The key to this approach is defining a string transformation that maps a path or content of a file to a name of a component. For instance, lets assume that we have the project with following source code folders:</p>
 
 <pre>
 src/
@@ -109,24 +155,22 @@ src/
       worker/
 </pre>
 
-<p>Componentization based on the folder depth 3 (src/projects/*):</p>
-
-<p>Example of VS Code</p>
+<p>Let’s also assume that we have componentized this projects based on the folder depth at levelt 3 (src/vs/base/*). This componentization created the following five components:</p>
 
 <p><img src="assets/images/sokrates/dependecies-patterns-components.png" alt="" /></p>
 
+<p>The files in this folder are TypeScript files, and they import other TypesScript file vai import statement that user path based referencing. I have identify the following convention that we can use to connect files from one component to files in another components:</p>
 <ul>
-  <li>Analyzed system has 6 links (arrows) between components.</li>
-  <li>The number on the arrow represents the number of files from referring component that depend on files in referred component.</li>
-  <li>These 6 links contain 105 dependencies.</li>
-  <li>The following explicit meta-rules for finding dependencies are defined:
-    <ul>
-      <li>path like “.<em>[.]ts” AND content like “import .</em>from ‘vs/base.*”</li>
-      <li>extract “base(/[a-zA-Z0-9_]+|)”</li>
-      <li>replace “base(/)?”, “”</li>
-    </ul>
-  </li>
+  <li>look for all files with path like “.<em>[.]ts” AND content like “import .</em>from ‘vs/base.*”</li>
+  <li>for each file matching the previous criteria, extract, from the mathec content lines, the following regex pattern “base(/[a-zA-Z0-9_]+|)”</li>
+  <li>in the extracted string replace “base(/)?” with “” (empty string)</li>
 </ul>
+
+<p>When applied on the files, this leads to the following dependency diagram:</p>
+
+<p><img src="assets/images/sokrates/dependencies-patterns-path.png" alt="" /></p>
+
+<p>These are the details of the browser – common dependencies:</p>
 
 <pre>
 from: browser
@@ -163,44 +207,13 @@ evidence:
 
 </pre>
 
-<p><img src="assets/images/sokrates/dependencies-patterns-path.png" alt="" /></p>
+<h3 id="custom-dependency-finders">Custom Dependency Finders</h3>
 
-<h3 id="build-in-dependency-finder-heuristics">Build-in Dependency Finder Heuristics</h3>
+<p>You can use a configuration object within the logical decomposition section of the configuration file to define a custom dependency finder. This custom dependency finder section enables you to set a string transformation scripts that takes as an input a path or a line of file content and transforms the input string into a name. If this name matches the name of any component, then Sokraets creates a link between the file and the component. If the name does not match any component names, Sokrates treats the name as the name of an external component. Sokrates displays the names of external components with grey color, to distinguish them from internal components.</p>
 
-<p>With the Sokrates configuration file, you can define your own pattern based dependency finders using the Sokrates String Transformation Language (SSTL). For several common languages, Sokrates includes the build in pattern based dependency finders. You can use this build-in finders alon, or switch tem off and use your own configured finders. Here, I’ll describe few heuristics used to define patter dependencies in Sokrates build-in dependency finders.</p>
+<h3 id="custom-dependency-finders-linking-namespace-componentization-to-namespace-import-statements">Custom Dependency Finders: Linking Namespace Componentization to Namespace Import Statements</h3>
 
-<p>Build-in dependency finders use two types of heuristics:</p>
-<ul>
-  <li>namespaces based dependency finders</li>
-  <li>path based includes</li>
-</ul>
-
-<p>The following heuristic is used in languages where files are organized in explicitly defined packages, modules or namespaces (e.g. Java, C#, Go, Scala, PHP, Groovy, Kotlin, Perl, Ruby, D):</p>
-
-<ul>
-  <li>Heuristic: the analysis assumes that the names of packages, modules or namespaces are present in source files, and are unique components (e.g. two components do not have files in the same package, module or namespace)</li>
-  <li>Limitation: not reliable if the same package, module or namespace is defined in two or more components</li>
-  <li>Logic:
-    <ul>
-      <li>Finding component patterns: looking for package, modules or namespaces definitions, normally at the beginning of the file. Extract full package, module or namespace.</li>
-      <li>Find dependencies:
-        <ul>
-          <li>look for import statement to packages, modules or namespaces</li>
-          <li>extract full package, module or namespace name from the import statement</li>
-          <li>if the full name in the import statement can be found in package statements on the other component, then add the dependency to that component</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<p>Patterns that are likely to be unique for files in a components (e.g. java package heuristic)</p>
-
-<p><img src="assets/images/sokrates/dependencies-built-in-java-details.png" alt="" /></p>
-
-<p><img src="assets/images/sokrates/dependencies-built-in-aggregated.png" alt="" /></p>
-
-<h3 id="dynamic-links">Dynamic Links</h3>
+<h3 id="custom-dependency-finders-identifying-external-links">Custom Dependency Finders: Identifying External Links</h3>
 
 <p>Using Pattern-Based Dependency Finder to Look For Dynamic Links</p>
 

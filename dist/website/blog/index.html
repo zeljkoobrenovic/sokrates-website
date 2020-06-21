@@ -106,6 +106,14 @@
             <i>When analyzing source code, you need to be strict in what you want to analyze and reject the rest. Otherwise, you will also end up publishing big, complex, and useless reports. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions. While there are exceptions, another code and files are usually irrelevant for understanding the system's unique aspects. Sokrates performs the scoping in two steps. First, it conducts a broad relevance scoping, based on the source code file extensions and a set of configurable ignore patterns. Then it zooms in the filtered files and classifies it into main ones and secondary ones.</i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
+                <a class="post-link" href="/book/cleaning">
+                    Analysis: Cleaning the Code
+                </a>
+            </h3>
+            <i><p>“Storms don’t come to teach us painful lessons, rather they were meant to wash us clean.” - Socrates</p>
+</i>
+        </li><li><span class="post-meta">May 25, 2020</span>
+            <h3>
                 <a class="post-link" href="/book/logical-decomposition">
                     Analysis: Logical Decomposition
                 </a>
@@ -146,15 +154,15 @@
                     Analysis: Finding Dependencies based on Text Patterns
                 </a>
             </h3>
-            <i><p>Looking anchors and targets</p>
+            <i><p><em>“And a thing is not seen because it is visible, but conversely, visible because it is seen”</em> ― Socrates</p>
 </i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
                 <a class="post-link" href="/book/dependencies-alt">
-                    Analysis: Finding Dependencies
+                    Analysis: Finding Dependencies through Duplication and Change History
                 </a>
             </h3>
-            <i><p>Two alternative ways to find dependencies:</p>
+            <i><p>In the previous section, we discussed a typical way to find dependencies among source code components. There, developers, through import or include statements, explicitly declare that some file depends on some other piece of code. To find dependencies, we then need to locate these statements and process them to identify a referenced component.</p>
 </i>
         </li><li><span class="post-meta">May 25, 2020</span>
             <h3>
