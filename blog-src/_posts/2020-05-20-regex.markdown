@@ -43,7 +43,7 @@ Regular expressions are patterns. Or, more precisely, the way to define patterns
 
 Regular expressions are cross-platform, working at any text representation. This cross-platform aspect is also what makes them useful for software architecture. Software architecture patterns are not limited to any technology.
 
-### Resources for Learning Regular Expressions
+### To Probe Further
 
 #### Online resources:
 

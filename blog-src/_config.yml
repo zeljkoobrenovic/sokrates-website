@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Sokrates Book
+title: "Examined Line: The Art of Source Code Analysis with Sokrates"
 email: zeljko.obren@gmail.com
 image: https://www.zeljkoobrenovic.com/images/zeljko_homepage.jpg
 description: >- # this means to ignore newlines until "baseurl:"
   A collection of articles on source code analysis with Sokrates.
-baseurl: "/book" # the subpath of your site, e.g. /blog
+baseurl: "/concepts" # the subpath of your site, e.g. /blog
 url: ""
 twitter_username: zeljko_obren
 github_username:  zeljkoobrenovic
