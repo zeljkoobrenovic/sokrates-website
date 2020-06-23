@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Usage: Installation | Sokrates: Usage Guidelines</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Usage: Installation" />
+<meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Installation" />
+<meta property="og:description" content="Installation" />
+<link rel="canonical" href="http://localhost:4000/guidelines/usage" />
+<meta property="og:url" content="http://localhost:4000/guidelines/usage" />
+<meta property="og:site_name" content="Sokrates: Usage Guidelines" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
+<script type="application/ld+json">
+{"description":"Installation","@type":"BlogPosting","url":"http://localhost:4000/guidelines/usage","headline":"Usage: Installation","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/guidelines/usage"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/guidelines/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/guidelines/feed.xml" title="Sokrates: Usage Guidelines" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/guidelines/">Sokrates: Usage Guidelines</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129891352-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-129891352-1');
+</script>
+
+
+<style>
+
+    #markdown-toc::before {
+        content: "Contents";
+        font-weight: bold;
+        font-size: 110%;
+        margin-left: 176px;
+        padding-bottom: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    #markdown-toc ul {
+        list-style: decimal;
+    }
+
+    #markdown-toc {
+        border: 1px solid #aaa;
+        padding: 1.5em;
+        padding-left: 2.5em;
+        list-style: decimal;
+        display: inline-block;
+        margin: 0;
+    }
+</style>
+
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">Usage: Installation</h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="2020-05-25T20:12:01+02:00" itemprop="datePublished">May 25, 2020
+            </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+                                                                                          itemprop="name">by Željko Obrenović (zeljkoobrenovic.com)</span></span></p>
+    </header>
+
+    <div class="post-content e-content" itemprop="articleBody">
+        <h3 id="installation">Installation</h3>
+
+<h4 id="command-line-interface">Command Line Interface</h4>
+
+<p>COMMAND LINE JAR
+DOWNLOAD: sokrates-0.9.jar (38 MB)</p>
+
+<p>Simple usage example (to analyze Junit4):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/junit-team/junit4
+<span class="nb">cd </span>junit4
+
+java <span class="nt">-jar</span> sokrates-0.9.jar init
+java <span class="nt">-jar</span> sokrates-0.9.jar generateReports
+
+open _sokrates/reports/html/index.html</code></pre></figure>
+
+<p>Illustrate previous example</p>
+
+<h4 id="explorer">Explorer</h4>
+
+<p>DOWNLOAD: sokrates-explorer-0.9.jar (78 MB)</p>
+
+<p>NOTE: require JavaFX (download it and install it from openjfx.io)</p>
+
+<p>java –module-path $JAVAFX_HOME/lib –add-modules=javafx.controls,javafx.web -jar sokrates-explorer-0.9.jar</p>
+
+<h3 id="source-code">Source Code</h3>
+
+<p><a href="https://github.com/zeljkoobrenovic/sokrates">github.com/zeljkoobrenovic/sokrates</a></p>
+
+<h4 id="prerequirements">Prerequirements</h4>
+<ul>
+  <li>Java 8+</li>
+  <li>Maven</li>
+</ul>
+
+<h4 id="build">Build</h4>
+
+<blockquote>
+  <p>mvn clean install</p>
+</blockquote>
+
+<p>The build will create two jar files:</p>
+<ul>
+  <li>the command line interface in the cli/target folder</li>
+  <li>the interactive explorer in the codeexplorer/target folder</li>
+</ul>
+
+
+    </div><a class="u-url" href="/guidelines/usage" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/guidelines/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Sokrates: Usage Guidelines</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Sokrates: Usage Guidelines</li><li><a class="u-email" href="mailto:zeljko.obren@gmail.com">zeljko.obren@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zeljkoobrenovic"><svg class="svg-icon"><use xlink:href="/guidelines/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zeljkoobrenovic</span></a></li><li><a href="https://www.linkedin.com/in/zeljkoobrenovic"><svg class="svg-icon"><use xlink:href="/guidelines/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">zeljkoobrenovic</span></a></li><li><a href="https://www.twitter.com/zeljko_obren"><svg class="svg-icon"><use xlink:href="/guidelines/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">zeljko_obren</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A collection of articles on source code analysis with Sokrates.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

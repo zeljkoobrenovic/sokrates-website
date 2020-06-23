@@ -1,7 +1,7 @@
 ng build --prod
 
 mkdir dist/website/usage
-cp -r blog-src/_site/* dist/website/usage
+cp -r blog-usage-src/_site/* dist/website/usage
 
 mkdir dist/website/concepts
 cp -r blog-src/_site/* dist/website/concepts
