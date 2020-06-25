@@ -11,12 +11,17 @@ layout: default
     {{ content }}
 
     {%- if site.posts.size > 0 -%}
-    <h1>{{ page.list_title | default: "Articles" }}</h1>
+    <h1 style="margin-top:60px; margin-bottom: 0">Intro</h1>
     <ul class="post-list">
         {%- for post in site.posts -%}
         <li>
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
+          {%- if post.title == "Appendix: Regular Expressions" -%}
+          <h1 style="margin-top:60px; margin-bottom: 0">Appendixes</h1>
+          {%- endif -%}
+          {%- if post.title == "Understanding Sokrates Analytics" -%}
+          <h1 style="margin-top:60px; margin-bottom: 0">Understanding Sokrates</h1>
+          {%- endif -%}
+            <span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="{{ post.url | relative_url }}">
                     {{ post.title | escape }}

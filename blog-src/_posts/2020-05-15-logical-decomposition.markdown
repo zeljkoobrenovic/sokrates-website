@@ -4,7 +4,7 @@ title:  "Understanding Logical Decomposition"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: logical-decomposition
-excerpt:
+excerpt: Logical decomposition is a representation of, or a view on the organization of the main source code. In such a view every and each file is put in exactly one logical component.
 ---
 > * Logical decomposition is a representation of, or a view on the organization of the main source code. In such a view every and each file is put in exactly one logical component.
 * A Sokrates enables defining multiple logical decompositions for each system.

@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Understanding Metrics | Examined Line: The Art of Source Code Analysis with Sokrates</title>
+<title>Appendix: Installation | Examined Line: The Art of Source Code Analysis with Sokrates</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Understanding Metrics" />
+<meta property="og:title" content="Appendix: Installation" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions." />
-<meta property="og:description" content="Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions." />
-<link rel="canonical" href="http://localhost:4000/book/metrics" />
-<meta property="og:url" content="http://localhost:4000/book/metrics" />
+<meta name="description" content="Installation" />
+<meta property="og:description" content="Installation" />
+<link rel="canonical" href="http://localhost:4000/book/install" />
+<meta property="og:url" content="http://localhost:4000/book/install" />
 <meta property="og:site_name" content="Examined Line: The Art of Source Code Analysis with Sokrates" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions.","@type":"BlogPosting","url":"http://localhost:4000/book/metrics","headline":"Understanding Metrics","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/metrics"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Installation","@type":"BlogPosting","url":"http://localhost:4000/book/install","headline":"Appendix: Installation","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/install"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -81,7 +81,7 @@
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
-        <h1 class="post-title p-name" itemprop="name headline">Understanding Metrics</h1>
+        <h1 class="post-title p-name" itemprop="name headline">Appendix: Installation</h1>
         <p class="post-meta">
             <time class="dt-published" datetime="2020-05-25T20:12:01+02:00" itemprop="datePublished">May 25, 2020
             </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
@@ -89,10 +89,57 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <p>Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions.</p>
+        <h3 id="installation">Installation</h3>
+
+<h4 id="command-line-interface">Command Line Interface</h4>
+
+<p>COMMAND LINE JAR
+DOWNLOAD: sokrates-0.9.jar (38 MB)</p>
+
+<p>Simple usage example (to analyze Junit4):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/junit-team/junit4
+<span class="nb">cd </span>junit4
+
+java <span class="nt">-jar</span> sokrates-0.9.jar init
+java <span class="nt">-jar</span> sokrates-0.9.jar generateReports
+
+open _sokrates/reports/html/index.html</code></pre></figure>
+
+<p>Illustrate previous example</p>
+
+<h4 id="explorer">Explorer</h4>
+
+<p>DOWNLOAD: sokrates-explorer-0.9.jar (78 MB)</p>
+
+<p>NOTE: require JavaFX (download it and install it from openjfx.io)</p>
+
+<p>java –module-path $JAVAFX_HOME/lib –add-modules=javafx.controls,javafx.web -jar sokrates-explorer-0.9.jar</p>
+
+<h3 id="source-code">Source Code</h3>
+
+<p><a href="https://github.com/zeljkoobrenovic/sokrates">github.com/zeljkoobrenovic/sokrates</a></p>
+
+<h4 id="prerequirements">Prerequirements</h4>
+<ul>
+  <li>Java 8+</li>
+  <li>Maven</li>
+</ul>
+
+<h4 id="build">Build</h4>
+
+<blockquote>
+  <p>mvn clean install</p>
+</blockquote>
+
+<p>The build will create two jar files:</p>
+<ul>
+  <li>the command line interface in the cli/target folder</li>
+  <li>the interactive explorer in the codeexplorer/target folder</li>
+</ul>
 
 
-    </div><a class="u-url" href="/book/metrics" hidden></a>
+    </div><a class="u-url" href="/book/install" hidden></a>
 </article>
 
       </div>

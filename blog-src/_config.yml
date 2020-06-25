@@ -23,7 +23,7 @@ email: zeljko.obren@gmail.com
 image: https://www.zeljkoobrenovic.com/images/zeljko_homepage.jpg
 description: >- # this means to ignore newlines until "baseurl:"
   A collection of articles on source code analysis with Sokrates.
-baseurl: "/concepts" # the subpath of your site, e.g. /blog
+baseurl: "/book" # the subpath of your site, e.g. /blog
 url: ""
 twitter_username: zeljko_obren
 github_username:  zeljkoobrenovic
