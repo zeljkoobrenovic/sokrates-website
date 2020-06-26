@@ -1,28 +1,11 @@
 ---
 layout: post
-title:  "Understanding Sokrates Analytics"
+title:  "Sokrates Analysis Overview"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
-permalink: analytics
+permalink: processing
 excerpt:
 ---
-
-In a nutshell, Sokrates is a feedback giving tool, that can help you to understand you code, reflect and discuss its findings, and take actions based on the findings.
-
-### Basic Analytics Usage Pattern
-
-After you have configured Sokrates, you can use it ad-hoc or in daily / weekly rythm to see trends and take actions.
-
-![](assets/images/sokrates/analytics-big-picture.png)
-
-### Interactive Explorations
-
-After you have configured Sokrates, you can use it ad-hoc or in daily / weekly rythm to see trends and take actions.
-
-![](assets/images/sokrates/analytics-explorations.png)
-
-
-### Details of Sokrates Analyses
 
 Sokrates analysis approach consists of the following mechanisms:
 

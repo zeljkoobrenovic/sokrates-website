@@ -57,21 +57,25 @@
                 </a>
             </h3>
             <i>Sokrates is an experimental tool that I have build both as a way to deal with issues in my daily practice, as well as to explore how far a person can go by following a simple approach to building code analysis tools.</i>
-        </li><li><h1 style="margin-top:60px; margin-bottom: 0">Understanding Sokrates</h1><span class="post-meta">&nbsp;</span>
+        </li><li><span class="post-meta">&nbsp;</span>
             <h3>
-                <a class="post-link" href="/book/analytics">
-                    Understanding Sokrates Analytics
+                <a class="post-link" href="/book/usage">
+                    Using Sokrates
                 </a>
             </h3>
-            <i><p>In a nutshell, Sokrates is a feedback giving tool, that can help you to understand you code, reflect and discuss its findings, and take actions based on the findings.</p>
+            <i><p>In a nutshell, Sokrates is a exploration and feedback giving tool, that can help you to understand you code, reflect and discuss its findings, and take actions based on the findings.</p>
 </i>
-        </li><li><span class="post-meta">&nbsp;</span>
+        </li><li><h1 style="margin-top:60px; margin-bottom: 0">Configuring and Scoping</h1><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/configuring">
                     Understanding Sokrates Configuration File
                 </a>
             </h3>
-            <i><p>Sokrates configuration file is a JSON file.</p>
+            <i><p>Sokrates analyses take two inputs:</p>
+<ul>
+  <li>the actual source code, including all folders and files, and</li>
+  <li>a configuration file, which describes how Sokrates should view and analyze the source code.</li>
+</ul>
 </i>
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
@@ -94,15 +98,13 @@
                 </a>
             </h3>
             <i>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.</i>
-        </li><li><span class="post-meta">&nbsp;</span>
+        </li><li><h1 style="margin-top:60px; margin-bottom: 0">Understanding Sokrates' Analyses</h1><span class="post-meta">&nbsp;</span>
             <h3>
-                <a class="post-link" href="/book/history">
-                    Understanding File Change History Analysis
+                <a class="post-link" href="/book/processing">
+                    Sokrates Analysis Overview
                 </a>
             </h3>
-            <i><p>File change analysis takes as an input the list of dates on
- which source code files changes, and analyses
- these dates to understand how frequently developers have changed the files, how old are the files they, and how recently developers have updated them.</p>
+            <i><p>Sokrates analysis approach consists of the following mechanisms:</p>
 </i>
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
@@ -119,6 +121,16 @@
                 </a>
             </h3>
             <i><h3 id="project-based-measurements">Project-Based Measurements</h3>
+</i>
+        </li><li><span class="post-meta">&nbsp;</span>
+            <h3>
+                <a class="post-link" href="/book/history">
+                    Understanding File Change History Analysis
+                </a>
+            </h3>
+            <i><p>File change analysis takes as an input the list of dates on
+ which source code files changes, and analyses
+ these dates to understand how frequently developers have changed the files, how old are the files they, and how recently developers have updated them.</p>
 </i>
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
@@ -155,10 +167,23 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/metrics">
-                    Understanding Metrics
+                    Understanding Metrics Table
                 </a>
             </h3>
             <i><p>Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions.</p>
+</i>
+        </li><li><span class="post-meta">&nbsp;</span>
+            <h3>
+                <a class="post-link" href="/book/controls">
+                    Understanding Controls
+                </a>
+            </h3>
+            <i><p>IN Sokrates you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states:</p>
+<ul>
+  <li>OK (green) the measured value is below the threshold</li>
+  <li>tolerant (yellow) the measured value is above the threshold but within the tolerance range</li>
+  <li>failed (red), the measured value is above the threshold and the tolerance level.</li>
+</ul>
 </i>
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>

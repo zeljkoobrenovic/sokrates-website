@@ -8,15 +8,15 @@
 <meta property="og:title" content="Understanding Sokrates Configuration File" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Sokrates configuration file is a JSON file." />
-<meta property="og:description" content="Sokrates configuration file is a JSON file." />
+<meta name="description" content="Sokrates analyses take two inputs: the actual source code, including all folders and files, and a configuration file, which describes how Sokrates should view and analyze the source code." />
+<meta property="og:description" content="Sokrates analyses take two inputs: the actual source code, including all folders and files, and a configuration file, which describes how Sokrates should view and analyze the source code." />
 <link rel="canonical" href="http://localhost:4000/book/configuring" />
 <meta property="og:url" content="http://localhost:4000/book/configuring" />
 <meta property="og:site_name" content="Examined Line: The Art of Source Code Analysis with Sokrates" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Sokrates configuration file is a JSON file.","@type":"BlogPosting","url":"http://localhost:4000/book/configuring","headline":"Understanding Sokrates Configuration File","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/configuring"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Sokrates analyses take two inputs: the actual source code, including all folders and files, and a configuration file, which describes how Sokrates should view and analyze the source code.","@type":"BlogPosting","url":"http://localhost:4000/book/configuring","headline":"Understanding Sokrates Configuration File","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/configuring"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -89,19 +89,47 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <p>Sokrates configuration file is a JSON file.</p>
+        <p>Sokrates analyses take two inputs:</p>
+<ul>
+  <li>the actual source code, including all folders and files, and</li>
+  <li>a configuration file, which describes how Sokrates should view and analyze the source code.</li>
+</ul>
+
+<p>Based on these two inputs, Sokrates produces analysis reports and data files with analysis details.</p>
+
+<p>Sokrates configuration file is a JSON file. The default location of the configuration file is  &lt;your-project&gt;/_sokrates/config.json. The example of a configuration file, you can <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit5/config.json">see here</a> .</p>
 
 <p><img src="assets/images/sokrates/config-overview.png" alt="" /></p>
 
+<p>The file has several sections, you can use to:</p>
+<ul>
+  <li>describe your project with a name, logo, summary text, and to add external links</li>
+  <li><a href="scoping">define the scope</a>, including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build &amp; deployment code, or other code…</li>
+  <li>define <a href="logical-decomposition">logical decompositions</a>: one or more ways to looks at components in the system</li>
+  <li>define <a href="cross-cutting-concerns">cross-cutting concerns</a>: aspects of a software system that cannot be cleanly decomposed from the rest of the system</li>
+  <li>set goals and controls: define measurements and alarms to keep your system within the desired values</li>
+  <li>provide analysis reference points: for comparison and trend analysis</li>
+  <li>add summary findings: manually added one-line insights and notes</li>
+  <li>perform advanced configuration: meta-rules for components, concerns and dependencies</li>
+</ul>
+
+<p>You can find more details about the Sokrates configuration file in <a href="configuration/">Appendix: Sokrates Configuration File</a>.</p>
+
 <h3 id="automatically-generating-a-configuration-file">Automatically Generating a Configuration File</h3>
 
-<p>You can use init command to generate default file for your project.</p>
-
-<p>The default location of the configuration file is  <your-project>/_sokrates/config.json</your-project></p>
+<p>While you can always start from scratch and write a configuration file in any text editor, the most natural way to bootstrap configuration process is by using the <a href="cli/">Sokrates’ init command</a>. This command traverses the source code folders looking for standard conventions and populates the configuration file with all found conventions. For instance, the init command excludes binary files based on their extensions, adds ignoring rules for known third-party libraries, adds rules for the location of test code, or rules for identifying generated code.</p>
 
 <p><img src="assets/images/sokrates/cmd-init.png" alt="" /></p>
 
 <h3 id="configuration-as-a-software-architecture-documentation">Configuration as a Software Architecture Documentation</h3>
+
+<p>On the one hand, you can look at the Sokrates configuration file as a mere input for analysis. On the other hand, this configuration file encodes the patterns used in source code to classify files, define components, and cross-cutting concerns.</p>
+
+<p>Sokrates provides a pragmatic way to describe critical elements of software architectures and connect them explicitly to the source code. Based on a formal description of different software architecture aspects, Sokrates generates reports and visualization to help you reason, understand, and communicate about the software system.</p>
+
+<p>You configure Sokrates primarily with regular expressions. And regular expressions are patterns. Or, more precisely, the way to define patterns. And software architecture is closely related to establishing and identifying patterns in source code. Regular expressions are also cross-platform, working at any text representation. This cross-platform aspect is also what makes them useful for software architecture.</p>
+
+<p>In the end, you get a live, concise, platform-independent, and up-to-date documentation that is always connected to and validated against your source code.</p>
 
 
     </div><a class="u-url" href="/book/configuring" hidden></a>
