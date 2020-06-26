@@ -4,7 +4,11 @@ title:  "Sokrates Configuration File"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: configuring
-excerpt:
+icon: configuring
+excerpt: "Sokrates analyses take two inputs:
+          the actual source code, including all folders and files, and
+          a configuration file, which describes how Sokrates should view and analyze the source code."
+
 ---
 
 Sokrates analyses take two inputs:

@@ -4,14 +4,15 @@ title:  "Finding Dependencies through Duplication and Change History"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: dependencies-alt
-excerpt:
+icon: dependencies-duplication
+excerpt: "Sokrates introduces two additional dependency measurements: dependency based on duplication between files and dependencies based on the history of file changes."
 ---
 
 In the previous section, we discussed a typical way to find dependencies among source code components. There, developers, through import or include statements, explicitly declare that some file depends on some other piece of code. To find dependencies, we then need to locate these statements and process them to identify a referenced component.
 
 In this section, we look at two additional ways to find implicitly find dependencies among components. Both of these dependency approaches build on a more general view of dependencies or coupling in code. Martin Fowler noted that while there are many definitions of coupling, they all boil down to one thing: if you need to change one piece of code, you may need to change another piece of code. Fowler suggested that duplication is coupling because if you change one piece of duplicated code, you usually need to change another copied piece of code.
 
-Building on Martin Fowler's more general view on coupling, Sokrates introduces two additional dependency crews, dependency based on duplication between files and dependencies based on the history of file changes.
+Building on Martin Fowler's more general view on coupling, Sokrates introduces two additional dependency measurements, dependency based on duplication between files and dependencies based on the history of file changes.
 
 
 ### Duplication Dependencies

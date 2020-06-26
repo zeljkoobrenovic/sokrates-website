@@ -4,7 +4,8 @@ title:  "Landscape Analysis"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: landscape
-excerpt: Landscape analysis aggregates and indexes the results from multiple Sokrates projects.
+icon: landscape
+excerpt: "The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place."
 ---
 
 The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place.

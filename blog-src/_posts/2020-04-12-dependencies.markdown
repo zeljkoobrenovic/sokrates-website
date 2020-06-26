@@ -4,7 +4,8 @@ title:  "Finding Dependencies based on Text Patterns"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: dependencies
-excerpt:
+icon: dependecies-pattern
+excerpt: "Sokrates analyses dependencies through simple text patterns searches."
 ---
 
 *"And a thing is not seen because it is visible, but conversely, visible because it is seen"* ― Socrates

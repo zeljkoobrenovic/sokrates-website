@@ -4,7 +4,8 @@ title:  "Unit-Level Measurements"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: units
-excerpt:
+icon: units
+excerpt: "Depending on a language, a unit can be a method, function procedure. Sokrates measures two things about each unit: a unit's size and a units' conditional complexity."
 ---
 
 Most of Sokrates' analyses are at the level of a whole file. Sokrates also goes a level deeper, at a so-called unit level.
@@ -36,7 +37,7 @@ For concrete details, again, take a look at the Sokrates' GitHub repository.
 ### Unit Measurements
 
 Sokrates measures two things about each unit:
- - a unit's site
+ - a unit's size
  - a units' conditional complexity
 
 #### Unit Size

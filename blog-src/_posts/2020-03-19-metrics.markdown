@@ -4,23 +4,42 @@ title:  "Metrics Table"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: metrics
+icon: metrics-table
 excerpt:
 ---
+The metrics table is a list of name-value pairs, a linearized list of all Sokrates aggregated measurements.
 
-Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions.
+Sokrates exports two types of metrics:
+ - the static, project-level metrics. These static metrics have the same name in every Sokrates protect.
+ - derived metrics, where names of a metric are defined based on the names of logical decompositions, components, cross-cutting
+ concerns, or file extensions.
 
 ### Static Metrics
+
+Static metrics describe the overal system values, such as lines of code in main or test code, or number of files in the main code. The following table shows some of these metrics:
 
 ![](assets/images/sokrates/metrics-table.png)
 
 
 ### Derived Metrics
 
-Patterns:
+Derived metrics are dynamic, their number and names depend on number anf names of components, cross-cutting concerns and file extensions. The following table shows several of these derived metrics.
+
+![](assets/images/sokrates/metrics-table-derived.png)
+
+These metrics are logical decomposition specific, and Sokrates derives the names of these metrics using these patterns:
+
 * NUMBER_OF_FILES_DECOMPOSITION_&lt;LOGICAL_DECOMPOSITION&gt;_&lt;COMPONENT&gt;
 * LINES_OF_CODE_DECOMPOSITION_&lt;LOGICAL_DECOMPOSITION&gt;_&lt;COMPONENT&gt;
 * NUMBER_OF_FILES_DECOMPOSITION_&lt;LOGICAL_DECOMPOSITION&gt;_&lt;COMPONENT&gt;_EXT_&lt;EXTENSION&gt;
 * LINES_OF_CODE_DECOMPOSITION_&lt;LOGICAL_DECOMPOSITION&gt;_&lt;COMPONENT&gt;_EXT_&lt;EXTENSION&gt;
 
-![](assets/images/sokrates/metrics-table-derived.png)
+
+### Using Metrics
+
+Sokrates exports all metrics as text, JSON and HTML files. You can then use these lists for your own processing.
+
+In addition to exporting the list of metrics, Sokrates employs these metrics at two other places:
+* to define goals and controls. For any metric, you can define the desired range and tolerance and let Sokrates signal if the metric values are in the desired range.
+* in trend analyses, where you can compare the values of a metric in time
 

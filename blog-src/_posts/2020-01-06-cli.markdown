@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Appendix: Command Line Interface"
+title:  "Appendix: Command Line Interface (CLI)"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: cli
-excerpt:
+icon: cli
+excerpt: "Sokrates command line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape."
 ---
 
 ### ***init*** command

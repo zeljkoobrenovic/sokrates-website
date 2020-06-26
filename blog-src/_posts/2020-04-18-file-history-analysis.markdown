@@ -4,14 +4,13 @@ title:  "File-Level Measurements: History"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: history
-excerpt:
+icon: file-history
+excerpt: "File history analysis takes as an input the list of dates on which source code files changes, and analyses these dates to understand how frequently developers have changed the files, how old are the files, and how recently developers have updated them."
 ---
 
-File change analysis takes as an input the list of dates on
- which source code files changes, and analyses
- these dates to understand how frequently developers have changed the files, how old are the files they, and how recently developers have updated them.
+File change analysis takes as an input the list of dates on which source code files changes, and analyses these dates to understand how frequently developers have changed the files, how old are the files, and how recently developers have updated them.
 
- Soknotes cannot itself get the dates of file changes from the source code files and folders. You need to provide a data changes list as a textual file and configure the link to this file in the Sokrates configuration file (you need to enter the path to this file in the field "filesAgeImportPath" in the analysis section of the configuration file).
+Sokrates cannot itself get the dates of file changes from the source code files and folders. You need to provide a data changes list as a textual file and configure the link to this file in the Sokrates configuration file (you need to enter the path to this file in the field "filesAgeImportPath" in the analysis section of the configuration file).
 
 Sokrates uses as a convention the output that you can generate using git command-line tools. The following command is
  recommended for creating the list of changes for Sokrates analysis:

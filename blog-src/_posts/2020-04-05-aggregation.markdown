@@ -4,7 +4,8 @@ title:  "Aggregating Measurements"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: aggregation
-excerpt:
+icon: aggregate
+excerpt: "Sokrates performs aggregation at three levels: the overall project level, the file type level (based on file extension), and the logical decomposition level."
 ---
 
 Through aggregation, Sokrates generates new summary views on data.

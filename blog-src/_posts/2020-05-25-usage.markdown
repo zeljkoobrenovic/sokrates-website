@@ -4,7 +4,8 @@ title:  "Using Sokrates"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: usage
-excerpt:
+icon: usage
+excerpt: "You can use Sokrates in three different modes: the basic analyze and reflect mode, the interactive explorations mode, and the traffic lights target and goals mode."
 ---
 
 In a nutshell, Sokrates is a exploration and feedback giving tool, that can help you to understand you code, reflect and discuss its findings, and take actions based on the findings.
@@ -54,6 +55,20 @@ In the end, you can also use Sokrates in a more simplified analyze-and-reflect m
 
 ![](assets/images/sokrates/usage-goals.png)
 
-For instance, let's assume that we have defined a control for duplication, setting the threshold to 5% and the tolerance level to 2%. If the measured duplication level is 4%, Sokrotes will label the control as OK (green). For the measured duplication level of 8%, Sokrates will label the control as failed (red). If the measured duplication is 6% Soknetes will mark the controls as tolerant (yellow).
+For instance, let's assume that we have defined a control for duplication, setting the threshold to 5% and the tolerance level to 2%. If the measured duplication level is 4%, Sokrotes will label the control as OK (green). For the measured duplication level of 8%, Sokrates will label the control as failed (red). If the measured duplication is 6% Sokrates will mark the controls as tolerant (yellow).
 
 The example of a Sokrates controls report you can [find here](https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/html/Controls.html).
+
+
+### Software Architecture Documentation Tool
+
+While the main power of Sokrates lies in pragmatic source code analyses, your can also use Sokrates as a software documentation tool. On the one hand you can look at the Sokrates configuration file as a mere input for analysis. On the other hand, this configuration file encodes the patterns used in source code to classifiy files, define components and cross-cutting concerns.
+
+As a documentation tool, Sokrates follows several premises (borrowing last two from Grady Booch):
+
+* Any software architecture documentation disconnected from source code is doomed to become outdated and useless quickly.
+* The best formal and unambiguous specification of a software-intensive system is its executable code.
+* However, executable code as a specification is insufficient for visualizing, reasoning about, understanding, and communicating about that system.
+
+Sokrates provides a pragmatic way to describe critical elements of software architectures and connect them explicitly to the source code. Based on a formal description of different software architecture aspects, Sokrates generates reports and visualization to help you reason, understand, and communicate about the software system.
+

@@ -4,7 +4,8 @@ title:  "Trend Analysis"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: trends
-excerpt:
+icon: trends
+excerpt: "Trend analysis shows the difference between values measured at different times, comparing the results of the current analysis with previous reports."
 ---
 
 Trend analysis shows the difference between values measured at different times, comparing the results of the current analysis with previous reports.

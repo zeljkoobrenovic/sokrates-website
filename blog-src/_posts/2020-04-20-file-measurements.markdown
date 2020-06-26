@@ -4,7 +4,8 @@ title:  "File-Level Measurements: File Size"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: measurments
-excerpt:
+icon: file-size
+excerpt: "Sokrates measures the files size in lines of code, ignoring empty lines and comments."
 ---
 
 ### Project-Based Measurements

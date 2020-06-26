@@ -8,15 +8,15 @@
 <meta property="og:title" content="Sokrates Analysis Overview" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Sokrates analysis approach consists of the following mechanisms:" />
-<meta property="og:description" content="Sokrates analysis approach consists of the following mechanisms:" />
+<meta name="description" content="Sokrates processes source code in multiple stages, from scoping, to analysis of individual files, units and aggregation of results." />
+<meta property="og:description" content="Sokrates processes source code in multiple stages, from scoping, to analysis of individual files, units and aggregation of results." />
 <link rel="canonical" href="http://localhost:4000/book/processing" />
 <meta property="og:url" content="http://localhost:4000/book/processing" />
 <meta property="og:site_name" content="Examined Line: The Art of Source Code Analysis with Sokrates" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Sokrates analysis approach consists of the following mechanisms:","@type":"BlogPosting","url":"http://localhost:4000/book/processing","headline":"Sokrates Analysis Overview","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/processing"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Sokrates processes source code in multiple stages, from scoping, to analysis of individual files, units and aggregation of results.","@type":"BlogPosting","url":"http://localhost:4000/book/processing","headline":"Sokrates Analysis Overview","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/processing"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -89,7 +89,11 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <p>Sokrates analysis approach consists of the following mechanisms:</p>
+        <p><em>“Sir Francis Bacon told a story, perhaps apocryphal, that illustrated just how empiricism was lost during the Middle Ages. The story was that a meeting of monks was taking place and the monks were <strong>hotly debating the issue of how many teeth were in the mouth of a horse.</strong> The problem was that they could not find the answer anywhere in Aristotle’s work. Then, a young monk, perhaps at his first such meeting, timidly suggested that, because they had all come to the meeting on horseback, that <strong>one way to get the answer would be simply to go outside and count.</strong> Bacon went on to say that the young monk was expelled from the meeting!”</em></p>
+
+<h3 id="phases">Phases</h3>
+
+<p>Sokrates analysis approach consists of the following mechanisms:</p>
 
 <ul>
   <li>configuring</li>
@@ -105,37 +109,49 @@
 
 <p><img src="assets/images/sokrates/analytics-processing-details.png" alt="" /></p>
 
-<h3 id="scoping">Scoping</h3>
+<h4 id="scoping">Scoping</h4>
 
 <p>Firstly Sokrates scopes the project files ignoring irrelevant files and classifying the relevant files into primary and secondary ones.</p>
 
-<h3 id="creating-views-on-the-source-code">Creating Views on the Source Code</h3>
+<h4 id="creating-views-on-the-source-code">Creating Views on the Source Code</h4>
 
 <p>Second, Sokrates creates multiples views on the source code: logical decompositions and cross-cutting concerns.  Each view is a list of files, with a name and with potential relations to other views. Sokrates creates these views to structure analysis, reporting, and exploration of source code.</p>
 
-<h3 id="basic-file-level-analyses">Basic File-Level Analyses</h3>
+<h4 id="basic-file-level-analyses">Basic File-Level Analyses</h4>
 
 <p>Third, Sokrates performs basic analysis of individual files. Basic analyses include removing comments, counting the lines of code, and extracting units. Optionally, you can import data about file change histories (dates at which developers have updated each file), and associated them with each file.</p>
 
-<h3 id="categorization-of-basic-measurements">Categorization of Basic Measurements</h3>
+<h4 id="categorization-of-basic-measurements">Categorization of Basic Measurements</h4>
 
 <p>After collecting all the measurements, Sokrates classify them into categories. For example, Sokrates classifies files into five categories based on their size (lines of code): 1-100 (very small files), 100-200 (small files), 200-500 (medium size files), 501-1000 (long files), 1001+ (very long files).</p>
 
-<h3 id="advanced-measurements">Advanced Measurements</h3>
+<h4 id="advanced-measurements">Advanced Measurements</h4>
 
 <p>Four, Sokrates performs a set of more complex and computationally intensive cross-file analyses to identify dependencies and duplication among files and components.</p>
 
-<h3 id="aggregating-results">Aggregating Results</h3>
+<h4 id="aggregating-results">Aggregating Results</h4>
 
 <p>After Sokrates has all the data at the file level and lists of duplicates and dependencies, it then proceeds with aggregating results. Sokrates aggregates data at the overall project level as well as at the level of components and cross-cutting concerns. For dependencies, duplication, and file change history, Sokrates also identifies links between components. These links show couplings between components, duplication between them, as well as their temporal coupling (the number of days when developers have changed two components simultaneously).</p>
 
-<h3 id="using-the-data">Using the Data</h3>
+<h4 id="using-the-data">Using the Data</h4>
 <p>With basic and aggregated data ready, Sokrates then</p>
 <ul>
   <li>generates standard reports, providing a templates based story about measured data, enriched with visuals combining basic chart, Graphviz diagrams,  SVG images, and few 3D visualizations.</li>
   <li>provides an interactive explorer to browse quickly, search and visualize all the data, and</li>
   <li>store all the data into simple text and JSON files  if you want to analyze them further using your tools.</li>
 </ul>
+
+<h3 id="sokrates-pragmatic-approach">Sokrates Pragmatic Approach</h3>
+
+<p>Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.</p>
+
+<p>The first thing I have learned pretty fast when building Sokrates is that it is extremely tough to build a proper fully-featured parser for any programming language.  Any software analysis tool needs a handful of such parsers. Contemporary software projects frequently include a dozen or more of different programming languages and dialects.</p>
+
+<p>So how have I solved this problem? By not building fully-featured parsers.</p>
+
+<p>I’ve also learned when building Sokrates that you can go a long way with using a few simple, heuristic parsing techniques. You may lose details in the process, but if you focus on the essence, such simple heuristic techniques can offer you incredible value for money. In many instances, you may get the same details as more complex and expensive tools. And performance-wise, simple heuristic techniques often work order or magnitude faster.</p>
+
+<p>In the following chapters, we outline a few of these techniques. The following is useful for those who want to contribute or use Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.</p>
 
     </div><a class="u-url" href="/book/processing" hidden></a>
 </article>

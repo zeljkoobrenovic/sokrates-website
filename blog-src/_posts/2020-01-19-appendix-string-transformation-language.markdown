@@ -4,7 +4,8 @@ title:  "Appendix: Sokrates String Transformation Language (SSTL)"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: sstl
-excerpt:
+icon: transformation
+excerpt: "The Sokrates String Transformation Language (SSTL) is a simple embedded programming language enabling you to transform a phrase extracted from a file path or file content into another string. You can use SSTL to define the names of components and identify dependencies among the components."
 ---
 
 

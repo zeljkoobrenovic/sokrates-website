@@ -1,11 +1,14 @@
 ---
 layout: post
-title:  "Appendix: Sokrates' Reports"
+title:  "Begin With the End in Mind: Sokrates Reports"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: reports
-excerpt: Sokrates generates HTML reports and exports data files with analysis details.
+icon: reports
+excerpt: "Sokrates generates several HTML reports and exports data files with analysis details."
 ---
+
+*"Story tells the dacts. Facts do not tell the story."*
 
 ## Overview
 

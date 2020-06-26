@@ -4,12 +4,13 @@ title:  "Duplication Analysis"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: duplication
-excerpt:
+icon: duplication
+excerpt: "For duplication, Sokrates look at places in code where there are six or more lines of code that are exactly the same."
 ---
 
 ### Analyzing Duplication
 
-For duplication, we look at places in code where there are six or more lines of code that are exactly the same. I reuse the treshold of siz lines as it is used in tools that measure duplication (e.g. see [Simian](https://www.harukizaemon.com/simian/features.html)).
+For duplication, Sokrates look at places in code where there are six or more lines of code that are exactly the same. I reuse the treshold of siz lines as it is used in tools that measure duplication (e.g. see [Simian](https://www.harukizaemon.com/simian/features.html)).
 
 code ==> cleaned code ==> list of duplications ==> aggregation
 
