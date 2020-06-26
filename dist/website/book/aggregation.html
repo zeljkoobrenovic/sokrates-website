@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Metrics Table | Examined Line: The Art of Source Code Analysis with Sokrates</title>
+<title>Aggregating Measurements | Examined Line: The Art of Source Code Analysis with Sokrates</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Metrics Table" />
+<meta property="og:title" content="Aggregating Measurements" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions." />
-<meta property="og:description" content="Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions." />
-<link rel="canonical" href="http://localhost:4000/book/metrics" />
-<meta property="og:url" content="http://localhost:4000/book/metrics" />
+<meta name="description" content="Through aggregation, Sokrates generates new summary views on data." />
+<meta property="og:description" content="Through aggregation, Sokrates generates new summary views on data." />
+<link rel="canonical" href="http://localhost:4000/book/aggregation" />
+<meta property="og:url" content="http://localhost:4000/book/aggregation" />
 <meta property="og:site_name" content="Examined Line: The Art of Source Code Analysis with Sokrates" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions.","@type":"BlogPosting","url":"http://localhost:4000/book/metrics","headline":"Metrics Table","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/metrics"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Through aggregation, Sokrates generates new summary views on data.","@type":"BlogPosting","url":"http://localhost:4000/book/aggregation","headline":"Aggregating Measurements","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/aggregation"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -81,7 +81,7 @@
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
-        <h1 class="post-title p-name" itemprop="name headline">Metrics Table</h1>
+        <h1 class="post-title p-name" itemprop="name headline">Aggregating Measurements</h1>
         <p class="post-meta">
             <time class="dt-published" datetime="2020-05-25T20:12:01+02:00" itemprop="datePublished">May 25, 2020
             </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
@@ -89,26 +89,42 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <p>Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions.</p>
+        <p>Through aggregation, Sokrates generates new summary views on data.</p>
 
-<h3 id="static-metrics">Static Metrics</h3>
-
-<p><img src="assets/images/sokrates/metrics-table.png" alt="" /></p>
-
-<h3 id="derived-metrics">Derived Metrics</h3>
-
-<p>Patterns:</p>
+<p>The input for aggregations and are:</p>
 <ul>
-  <li>NUMBER_OF_FILES_DECOMPOSITION_&lt;LOGICAL_DECOMPOSITION&gt;_&lt;COMPONENT&gt;</li>
-  <li>LINES_OF_CODE_DECOMPOSITION_&lt;LOGICAL_DECOMPOSITION&gt;_&lt;COMPONENT&gt;</li>
-  <li>NUMBER_OF_FILES_DECOMPOSITION_&lt;LOGICAL_DECOMPOSITION&gt;<em>&lt;COMPONENT&gt;_EXT</em>&lt;EXTENSION&gt;</li>
-  <li>LINES_OF_CODE_DECOMPOSITION_&lt;LOGICAL_DECOMPOSITION&gt;<em>&lt;COMPONENT&gt;_EXT</em>&lt;EXTENSION&gt;</li>
+  <li>the file-level measurements (lines of code, history of charges, file age)</li>
+  <li>unit-level measurements (lines of code, conditional complexity)</li>
+  <li>a list of duplicates within and among the files</li>
+  <li>the logical decompositions (each logical decomposition consists of components, and each component of lasts of files in that component)</li>
+  <li>cross-cutting concerns (each concern contains the list of files)</li>
+  <li>a list of dependencies among components (per logical decompo­sition)</li>
 </ul>
 
-<p><img src="assets/images/sokrates/metrics-table-derived.png" alt="" /></p>
+<p>Sokrates performs aggregation at three levels:</p>
+<ul>
+  <li>the overall project level</li>
+  <li>the file type level (based on file extension)</li>
+  <li>the logical decomposition level</li>
+</ul>
 
+<p>Aggregation at lines of code level, rather then count</p>
 
-    </div><a class="u-url" href="/book/metrics" hidden></a>
+<h3 id="project-level-aggregation">Project-Level Aggregation</h3>
+
+<p><img src="assets/images/sokrates/aggregation-system-level.png" alt="" /></p>
+
+<h3 id="file-type-aggregation">File-Type Aggregation</h3>
+
+<p><img src="assets/images/sokrates/aggregation-extension.png" alt="" /></p>
+
+<h3 id="logical-decomposition-aggregations">Logical-Decomposition Aggregations</h3>
+
+<p><img src="assets/images/sokrates/aggregation-components-1.png" alt="" /></p>
+
+<p><img src="assets/images/sokrates/aggregation-components-2.png" alt="" /></p>
+
+    </div><a class="u-url" href="/book/aggregation" hidden></a>
 </article>
 
       </div>

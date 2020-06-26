@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Understanding Sokrates Basic Measurements and Categorization"
+title:  "File-Level Measurements: File Size"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: measurments

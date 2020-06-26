@@ -68,7 +68,7 @@
         </li><li><h1 style="margin-top:60px; margin-bottom: 0">Configuring and Scoping</h1><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/configuring">
-                    Understanding Sokrates Configuration File
+                    Sokrates Configuration File
                 </a>
             </h3>
             <i><p>Sokrates analyses take two inputs:</p>
@@ -80,25 +80,25 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/scoping">
-                    Understanding Scoping
+                    Scoping
                 </a>
             </h3>
             <i>When analyzing source code, you need to be strict in what you want to analyze and reject the rest. Otherwise, you will also end up publishing big, complex, and useless reports. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions.</i>
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/logical-decomposition">
-                    Understanding Logical Decomposition
+                    Logical Decompositions
                 </a>
             </h3>
             <i>Logical decomposition is a representation of, or a view on the organization of the main source code. In such a view every and each file is put in exactly one logical component.</i>
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/cross-cutting-concerns">
-                    Understanding Cross-Cutting Concerns
+                    Cross-Cutting Concerns
                 </a>
             </h3>
             <i>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.</i>
-        </li><li><h1 style="margin-top:60px; margin-bottom: 0">Understanding Sokrates' Analyses</h1><span class="post-meta">&nbsp;</span>
+        </li><li><h1 style="margin-top:60px; margin-bottom: 0">Sokrates' Analyses</h1><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/processing">
                     Sokrates Analysis Overview
@@ -109,7 +109,7 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/cleaning">
-                    Understanding Code Cleaning
+                    Code Cleaning
                 </a>
             </h3>
             <i><p>“Storms don’t come to teach us painful lessons, rather they were meant to wash us clean.” - Socrates</p>
@@ -117,7 +117,7 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/measurments">
-                    Understanding Sokrates Basic Measurements and Categorization
+                    File-Level Measurements: File Size
                 </a>
             </h3>
             <i><h3 id="project-based-measurements">Project-Based Measurements</h3>
@@ -125,7 +125,7 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/history">
-                    Understanding File Change History Analysis
+                    File-Level Measurements: History
                 </a>
             </h3>
             <i><p>File change analysis takes as an input the list of dates on
@@ -135,7 +135,7 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/units">
-                    Understanding Units
+                    Unit-Level Measurements
                 </a>
             </h3>
             <i><p>Most of Sokrates’ analyses are at the level of a whole file. Sokrates also goes a level deeper, at a so-called unit level.</p>
@@ -143,7 +143,7 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/dependencies">
-                    Understanding Finding Dependencies based on Text Patterns
+                    Finding Dependencies based on Text Patterns
                 </a>
             </h3>
             <i><p><em>“And a thing is not seen because it is visible, but conversely, visible because it is seen”</em> ― Socrates</p>
@@ -151,7 +151,7 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/dependencies-alt">
-                    Understanding Finding Dependencies through Duplication and Change History
+                    Finding Dependencies through Duplication and Change History
                 </a>
             </h3>
             <i><p>In the previous section, we discussed a typical way to find dependencies among source code components. There, developers, through import or include statements, explicitly declare that some file depends on some other piece of code. To find dependencies, we then need to locate these statements and process them to identify a referenced component.</p>
@@ -159,15 +159,23 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/duplication">
-                    Understanding Duplication Analysis
+                    Duplication Analysis
                 </a>
             </h3>
             <i><h3 id="analyzing-duplication">Analyzing Duplication</h3>
 </i>
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
+                <a class="post-link" href="/book/aggregation">
+                    Aggregating Measurements
+                </a>
+            </h3>
+            <i><p>Through aggregation, Sokrates generates new summary views on data.</p>
+</i>
+        </li><li><span class="post-meta">&nbsp;</span>
+            <h3>
                 <a class="post-link" href="/book/metrics">
-                    Understanding Metrics Table
+                    Metrics Table
                 </a>
             </h3>
             <i><p>Sokrates metrics is a one-dimensional list of key value pairs. Severla conventions.</p>
@@ -175,7 +183,7 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/controls">
-                    Understanding Controls
+                    Controls
                 </a>
             </h3>
             <i><p>IN Sokrates you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states:</p>
@@ -188,7 +196,7 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/trends">
-                    Understanding Trend Analysis
+                    Trend Analysis
                 </a>
             </h3>
             <i><p>Trend analysis shows the difference between values measured at different times, comparing the results of the current analysis with previous reports.</p>
@@ -196,7 +204,7 @@
         </li><li><span class="post-meta">&nbsp;</span>
             <h3>
                 <a class="post-link" href="/book/landscape">
-                    Understanding Landscape Analysis
+                    Landscape Analysis
                 </a>
             </h3>
             <i>Landscape analysis aggregates and indexes the results from multiple Sokrates projects.</i>

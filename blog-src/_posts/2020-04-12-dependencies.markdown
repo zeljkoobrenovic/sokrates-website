@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Understanding Finding Dependencies based on Text Patterns"
+title:  "Finding Dependencies based on Text Patterns"
 date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: dependencies
