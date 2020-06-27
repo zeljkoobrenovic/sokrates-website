@@ -8,21 +8,22 @@ icon: file-size
 excerpt: "Sokrates measures the files size in lines of code, ignoring empty lines and comments."
 ---
 
-### Project-Based Measurements
+File size measurment is the basic measure in Sokrates. Sokrates measures the files size in lines of code, ignoring empty lines and comments.
 
-Size in lines of code
-
-Comparison among aspects
-
-### File-Based Measurements
-
-File Size
-
-File size categories
+Sokrates classifies the files in file categories based on their size:
+* very small files (0-100 lines of code)
+* small files (101-200 lines of code)
+* medium size files (201-500 lines of code)
+* long files (501-1000 lines of code)
+* very long files (1001+ lines of code)
 
 
-### Unit-Based Measurements
+As an example, take a look at the [JUnit5 file size report](https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/html/FileSize.html). Figure 1 an 2 show two elements from this report.
 
-Unit size
+![](assets/images/sokrates/file-size-overview.png)
 
-Conditional Complexity
+**Figure 1:** *A fragment from the Junit5 Sokrates file size report. Junit5 has 666 files, most of which are very small.*
+
+![](assets/images/sokrates/file-size-3d.png)
+
+**Figure 2:** *A 3D view on JUnit5 files and their size. Each block is one file. The height of the block represents the file relative size in lines of code. The color of the file represents its unit size category: green=0-200, yellow=201-500, orange=501-1000, red=1001+.*

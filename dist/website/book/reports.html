@@ -89,7 +89,18 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <p><em>“Story tells the dacts. Facts do not tell the story.”</em></p>
+        <p><em>“Story tells the facts. Facts do not tell the story.”</em></p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">    git clone https://github.com/junit-team/junit5
+    <span class="nb">cd </span>junit5
+    git ls-files <span class="nt">-z</span> | xargs <span class="nt">-0</span> <span class="nt">-n1</span> <span class="nt">-I</span><span class="o">{}</span> <span class="nt">--</span> git log <span class="nt">--format</span><span class="o">=</span><span class="s2">"%ai {}"</span> <span class="o">{}</span> <span class="o">&gt;</span> git-history.txt
+
+    java <span class="nt">-jar</span> sokrates-0.9.jar init
+    java <span class="nt">-jar</span> sokrates-0.9.jar generateReports
+
+    open _sokrates/reports/html/index.html</code></pre></figure>
 
 <h2 id="overview">Overview</h2>
 

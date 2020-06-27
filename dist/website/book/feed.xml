@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-06-26T23:08:33+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;Sokrates helps you to understand your code by makes visible the size, complexity and coupling of software. With Sokrates, my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small is their project and what other tools they use.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-06-27T00:07:28+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;Sokrates helps you to understand your code by makes visible the size, complexity and coupling of software. With Sokrates, my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small is their project and what other tools they use.&lt;/p&gt;
 
 &lt;p&gt;Sokrates is primary about being able to get quick answers to basic, simple questions about your source code:&lt;/p&gt;
 
@@ -54,6 +54,14 @@
   &lt;li&gt;Playable / Art&lt;/li&gt;
   &lt;li&gt;Use Metrics to Start a Discussion, Not to Kill It&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;sources-of-inspiration&quot;&gt;Sources of Inspiration&lt;/h2&gt;
+
+&lt;p&gt;Explorative User Interfaces&lt;/p&gt;
+
+&lt;p&gt;Code Spulenking Tools&lt;/p&gt;
+
+&lt;p&gt;Static Code Analysis Tools&lt;/p&gt;
 
 &lt;h2 id=&quot;about-the-name&quot;&gt;About the Name&lt;/h2&gt;
 

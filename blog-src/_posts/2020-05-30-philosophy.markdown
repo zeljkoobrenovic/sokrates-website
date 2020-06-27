@@ -63,6 +63,14 @@ Sokrates follows the following design principles:
 * Playable / Art
 * Use Metrics to Start a Discussion, Not to Kill It
 
+## Sources of Inspiration
+
+Explorative User Interfaces
+
+Code Spulenking Tools
+
+Static Code Analysis Tools
+
 
 ## About the Name
 

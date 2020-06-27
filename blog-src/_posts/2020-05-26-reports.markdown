@@ -8,7 +8,20 @@ icon: reports
 excerpt: "Sokrates generates several HTML reports and exports data files with analysis details."
 ---
 
-*"Story tells the dacts. Facts do not tell the story."*
+*"Story tells the facts. Facts do not tell the story."*
+
+## Getting Started
+
+{% highlight sh %}
+    git clone https://github.com/junit-team/junit5
+    cd junit5
+    git ls-files -z | xargs -0 -n1 -I{} -- git log --format="%ai {}" {} > git-history.txt
+
+    java -jar sokrates-0.9.jar init
+    java -jar sokrates-0.9.jar generateReports
+
+    open _sokrates/reports/html/index.html
+{% endhighlight %}
 
 ## Overview
 
