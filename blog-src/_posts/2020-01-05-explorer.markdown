@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: explorer
 icon: explorer
-excerpt: "Sokrates Explorer a tool with a graphical user interface that consists of a configuration editor, code preview panels, and several additional features that facilitate free explorations fo code. Explorer centralizes configuration, running of commands, and preview of analysis results in one tool. With Explorer, you can almost instantly see how a change in a setting, e.g., adding a new rule for detecting test files, impacts the analysis results."
+excerpt: "Sokrates Explorer centralizes configuration, running of commands, and preview of analysis results in one tool. Explorer has a graphical user interface with a configuration editor, code preview panels, and several additional features that facilitate free exploration of code. With Explorer, you can almost instantly see how a change in a setting, e.g., adding a new rule for detecting test files, impacts the analysis results."
 ---
 
 To support explorative mode, I have built as a part of Sokrates tools the [Explorer](explorer) a tool with a graphical user interface that consists of a configuration editor, code preview panels, and several additional features that facilitate free explorations fo code. Explorer centralizes configuration, running of commands, and preview of analysis results in one tool. With Explorer, you can almost instantly see how a change in a setting, e.g., adding a new rule for detecting test files, impacts the analysis results.

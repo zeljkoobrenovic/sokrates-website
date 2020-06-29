@@ -62,7 +62,7 @@
                     Background: Sokrates Philosophy
                 </a>
             </h3>
-            <i>"Konw your code! The unexamined code is not worth maintaining." Sokrates helps you to understand your code by makes visible the size, complexity and coupling of software.</i>
+            <i>"Know your code! The unexamined code is not worth maintaining." Sokrates helps you to understand your code by makes visible the size, complexity and coupling of software.</i>
               </td>
             </tr>
           </table>
@@ -78,7 +78,7 @@
                     Begin With the End in Mind: Sokrates Reports
                 </a>
             </h3>
-            <i>Sokrates generates several HTML reports and exports data files with analysis details.</i>
+            <i>Before we zoom into the details of Sokrates, let's first see what insights Sokrates can give you. Sokrates generates several reports, covering system overview, duplication, components, conditional complexity, etc.</i>
               </td>
             </tr>
           </table>
@@ -94,7 +94,7 @@
                     Using Sokrates
                 </a>
             </h3>
-            <i>You can use Sokrates in three different modes: the basic analyze and reflect mode, the interactive explorations mode, and the traffic lights target and goals mode.</i>
+            <i>You can use Sokrates in three modes: the analyze-and-reflect mode, the interactive-exploration mode, and the traffic-lights mode.</i>
               </td>
             </tr>
           </table>
@@ -110,7 +110,7 @@
                     Learning by Example: The Sokrates&#39; Gallery
                 </a>
             </h3>
-            <i></i>
+            <i>In this book, you will find many details about Sokrates and the way it processes source code. However, if you find this discussion too abstract, the Sokrates website provides a gallery with the detailed results of analyses of 66 open-source projects in 24 programming languages.</i>
               </td>
             </tr>
           </table>
@@ -142,7 +142,7 @@
                     Scoping
                 </a>
             </h3>
-            <i>Scoping defines which code needs to be analyzed in details and which code can be ignored. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions.</i>
+            <i>Scoping defines which parts of source code you want to analyze in detail and which parts to ignore. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions.</i>
               </td>
             </tr>
           </table>
@@ -158,7 +158,7 @@
                     Logical Decompositions
                 </a>
             </h3>
-            <i>Logical decomposition is a view on the organization of the main source code. In a logical decomposition, you define components and rules to include files in the components so that each file is put in exactly one logical component.</i>
+            <i>Logical decomposition is a view on the organization of the main source code. In a logical decomposition, you define components and rules to include files in the components so that each file ends in exactly one component.</i>
               </td>
             </tr>
           </table>
@@ -174,7 +174,7 @@
                     Cross-Cutting Concerns
                 </a>
             </h3>
-            <i>Cross-cutting concerns are aspects of a software system, such as logging or security, that cannot be cleanly decomposed from the rest of the system.</i>
+            <i>Cross-cutting concerns are aspects of a software system, such as logging or security, that you cannot cleanly decompose from the rest of the system.</i>
               </td>
             </tr>
           </table>
@@ -190,7 +190,7 @@
                     Sokrates Analysis Overview
                 </a>
             </h3>
-            <i>Sokrates processes source code in multiple stages, from scoping, to analysis of individual files, units and aggregation of results.</i>
+            <i>Sokrates processes source code in multiple stages, some of which are optional. The analysis starts with scoping, continuing through an examination of individual files and units, ending with an aggregation of results and export of reports.</i>
               </td>
             </tr>
           </table>
@@ -206,7 +206,7 @@
                     Code Cleaning
                 </a>
             </h3>
-            <i>As a first step in its analysis, Sokrates cleans the code to simplify analyses and to improve their reliability. Cleaning includes removal of comments, empty lines and long string constants.</i>
+            <i>As the first step in its analysis, Sokrates cleans the code to simplify analyses and to improve their reliability. Cleaning includes removal of comments, empty lines, and long string constants.</i>
               </td>
             </tr>
           </table>
@@ -222,7 +222,7 @@
                     File-Level Measurements: File Size
                 </a>
             </h3>
-            <i>Sokrates measures the files size in lines of code, ignoring empty lines and comments.</i>
+            <i>Sokrates measures the size of the file in lines of code, ignoring empty lines and comments.</i>
               </td>
             </tr>
           </table>
@@ -238,7 +238,7 @@
                     File-Level Measurements: History
                 </a>
             </h3>
-            <i>File history analysis takes as an input the list of dates on which source code files changes, and analyses these dates to understand how frequently developers have changed the files, how old are the files, and how recently developers have updated them.</i>
+            <i>File history analysis takes as an input the list of dates on which source code files changes and studies these dates to understand how frequently developers have changed the files, how old the files are, and how recently developers have updated them.</i>
               </td>
             </tr>
           </table>
@@ -270,7 +270,7 @@
                     Duplication Analysis
                 </a>
             </h3>
-            <i>For duplication, Sokrates look at places in code where there are six or more lines of code that are exactly the same.</i>
+            <i>For duplication, Sokrates look at places in code where there are six or more lines of code that are the same.</i>
               </td>
             </tr>
           </table>
@@ -334,8 +334,7 @@
                     Metrics Table
                 </a>
             </h3>
-            <i><p>The metrics table is a list of name-value pairs, a linearized list of all Sokrates aggregated measurements.</p>
-</i>
+            <i>The metrics table is a list of name-value pairs, a linearized list of all Sokrates aggregated measurements. Sokrates employs the metrics table to define goals and controls and in trend analyses.</i>
               </td>
             </tr>
           </table>
@@ -351,7 +350,7 @@
                     Controls
                 </a>
             </h3>
-            <i>In Sokrates you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states: OK (green) the measured value is below the threshold, tolerant (yellow) the measured value is above the threshold but within the tolerance range, and failed (red), the measured value is above the threshold and the tolerance level.</i>
+            <i>In Sokrates, you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a monitor with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states. OK (green) means that the measured value is below the threshold. Tolerant (yellow) means that the measured value is above the threshold but within the tolerance range. Failed (red) means that the measured value is above the threshold and the tolerance level.</i>
               </td>
             </tr>
           </table>
@@ -383,7 +382,7 @@
                     Landscape Analysis
                 </a>
             </h3>
-            <i>The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place.</i>
+            <i>The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects.</i>
               </td>
             </tr>
           </table>
@@ -399,7 +398,7 @@
                     Appendix: Regular Expressions
                 </a>
             </h3>
-            <i>You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two main purposes: to filter and classify files, and to extract and manipulate text to name components, or identify dependencies.</i>
+            <i> You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, and to extract and manipulate text to name components, or identify dependencies.</i>
               </td>
             </tr>
           </table>
@@ -431,7 +430,7 @@
                     Appendix: Installation
                 </a>
             </h3>
-            <i>You can install and run Sokrates from three ways: by downloading the Sokrates command line interface JAR file, by downloading the Sokrates Explorer JAR file, or build it from scratch from the Sokrates' GitHub repository.</i>
+            <i>You can install and run Sokrates in three ways. First, you can download the Sokrates command-line interface JAR file. Second, you can download the Sokrates Explorer JAR file. Lastly, you can build it from scratch from the Sokrates' GitHub repository.</i>
               </td>
             </tr>
           </table>
@@ -447,7 +446,7 @@
                     Appendix: Sokrates Configuration File
                 </a>
             </h3>
-            <i>Sokrates configuration is defined in a JSON file. You can use init command to generate default file for your project.</i>
+            <i>Sokrates configuration is a JSON file. You can use create this file manually from scratch, or use the init command to generate a default file for your project.</i>
               </td>
             </tr>
           </table>
@@ -463,7 +462,7 @@
                     Appendix: Command Line Interface (CLI)
                 </a>
             </h3>
-            <i>Sokrates command line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape.</i>
+            <i>Sokrates command-line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape.</i>
               </td>
             </tr>
           </table>
@@ -479,7 +478,7 @@
                     Appendix: Sokrates Explorer
                 </a>
             </h3>
-            <i>Sokrates Explorer a tool with a graphical user interface that consists of a configuration editor, code preview panels, and several additional features that facilitate free explorations fo code. Explorer centralizes configuration, running of commands, and preview of analysis results in one tool. With Explorer, you can almost instantly see how a change in a setting, e.g., adding a new rule for detecting test files, impacts the analysis results.</i>
+            <i>Sokrates Explorer centralizes configuration, running of commands, and preview of analysis results in one tool. Explorer has a graphical user interface with a configuration editor, code preview panels, and several additional features that facilitate free exploration of code. With Explorer, you can almost instantly see how a change in a setting, e.g., adding a new rule for detecting test files, impacts the analysis results.</i>
               </td>
             </tr>
           </table>

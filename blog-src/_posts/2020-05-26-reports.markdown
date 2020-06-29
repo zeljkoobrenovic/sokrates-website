@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: reports
 icon: reports
-excerpt: "Sokrates generates several HTML reports and exports data files with analysis details."
+excerpt: "Before we zoom into the details of Sokrates, let's first see what insights Sokrates can give you. Sokrates generates several reports, covering system overview, duplication, components, conditional complexity, etc."
 ---
 
 *"Story tells the facts. Facts do not tell the story."*

@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: scoping
 icon: scoping
-excerpt: "Scoping defines which code needs to be analyzed in details and which code can be ignored. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions."
+excerpt: "Scoping defines which parts of source code you want to analyze in detail and which parts to ignore. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions."
 ---
 
 > **Summary**: When analyzing source code, you need to be strict in what you want to analyze and reject the rest. Otherwise, you will also end up publishing big, complex, and useless reports. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions. While there are exceptions, another code and files are usually irrelevant for understanding the system's unique aspects. Sokrates performs the scoping in two steps. First, it conducts a broad relevance scoping, based on the source code file extensions and a set of configurable ignore patterns. Then it zooms in the filtered files and classifies it into main ones and secondary ones.

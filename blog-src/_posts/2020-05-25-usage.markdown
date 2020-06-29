@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: usage
 icon: usage
-excerpt: "You can use Sokrates in three different modes: the basic analyze and reflect mode, the interactive explorations mode, and the traffic lights target and goals mode."
+excerpt: "You can use Sokrates in three modes: the analyze-and-reflect mode, the interactive-exploration mode, and the traffic-lights mode."
 ---
 
 In a nutshell, Sokrates is a exploration and feedback giving tool, that can help you to understand you code, reflect and discuss its findings, and take actions based on the findings.

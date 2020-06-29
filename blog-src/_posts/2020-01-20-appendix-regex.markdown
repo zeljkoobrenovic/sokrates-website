@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: regex
 icon: regex
-excerpt: "You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two main purposes: to filter and classify files, and to extract and manipulate text to name components, or identify dependencies."
+excerpt: " You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, and to extract and manipulate text to name components, or identify dependencies."
 ---
 
 Jeff Atwood, the co-founder of StackOverflow.com, is a big fan of regular expressions. On a shortlist of his mandatory readings for software engineering is the [Regular Expression Cookbook](https://www.amazon.com/dp/1449319432/), and this is what he says:

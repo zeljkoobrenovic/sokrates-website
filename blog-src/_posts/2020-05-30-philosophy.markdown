@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: philosophy
 icon: sokrates
-excerpt: "\"Konw your code! The unexamined code is not worth maintaining.\" Sokrates helps you to understand your code by makes visible the size, complexity and coupling of software."
+excerpt: "\"Know your code! The unexamined code is not worth maintaining.\" Sokrates helps you to understand your code by makes visible the size, complexity and coupling of software."
 ---
 
 Sokrates helps you to understand your code by makes visible the size, complexity and coupling of software. With Sokrates, my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small is their project and what other tools they use.

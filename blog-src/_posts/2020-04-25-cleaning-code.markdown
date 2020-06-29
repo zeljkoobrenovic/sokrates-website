@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: cleaning
 icon: cleaning
-excerpt: "As a first step in its analysis, Sokrates cleans the code to simplify analyses and to improve their reliability. Cleaning includes removal of comments, empty lines and long string constants."
+excerpt: "As the first step in its analysis, Sokrates cleans the code to simplify analyses and to improve their reliability. Cleaning includes removal of comments, empty lines, and long string constants."
 ---
 
 “Storms don't come to teach us painful lessons, rather they were meant to wash us clean.” - Socrates

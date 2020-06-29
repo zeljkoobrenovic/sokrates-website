@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: configuration
 icon: configuration-file
-excerpt: "Sokrates configuration is defined in a JSON file. You can use init command to generate default file for your project."
+excerpt: "Sokrates configuration is a JSON file. You can use create this file manually from scratch, or use the init command to generate a default file for your project."
 ---
 
 ### Configuration File for Individual Projects

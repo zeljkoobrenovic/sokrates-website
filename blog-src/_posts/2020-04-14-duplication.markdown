@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: duplication
 icon: duplication
-excerpt: "For duplication, Sokrates look at places in code where there are six or more lines of code that are exactly the same."
+excerpt: "For duplication, Sokrates look at places in code where there are six or more lines of code that are the same."
 ---
 
 ### Analyzing Duplication

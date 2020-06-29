@@ -5,7 +5,7 @@ date:   2020-05-25 19:12:01 +0100
 author: by Željko Obrenović (zeljkoobrenovic.com)
 permalink: cross-cutting-concerns
 icon: concerns
-excerpt: "Cross-cutting concerns are aspects of a software system, such as logging or security, that cannot be cleanly decomposed from the rest of the system."
+excerpt: "Cross-cutting concerns are aspects of a software system, such as logging or security, that you cannot cleanly decompose from the rest of the system."
 ---
 > * Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.
 * A single concern may be present in multiple files. One source code file may contain multiple concerns.
