@@ -22,8 +22,8 @@ As an example, take a look at the [JUnit5 file size report](https://d3axxy9bcycp
 
 ![](assets/images/sokrates/file-size-overview.png)
 
-**Figure 1:** *A fragment from the Junit5 Sokrates file size report. Junit5 has 666 files, most of which are very small.*
+**Figure 1:** *A fragment from the Sokrates file size report. The project has 666 files, most of which are very small.*
 
 ![](assets/images/sokrates/file-size-3d.png)
 
-**Figure 2:** *A 3D view on JUnit5 files and their size. Each block is one file. The height of the block represents the file relative size in lines of code. The color of the file represents its unit size category: green=0-200, yellow=201-500, orange=501-1000, red=1001+.*
+**Figure 2:** *A 3D view on files and their size. Each block is one file. The height of the block represents the file relative size in lines of code. The color of the file represents its unit size category: green=0-200, yellow=201-500, orange=501-1000, red=1001+.*

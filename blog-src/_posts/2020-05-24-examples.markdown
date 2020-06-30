@@ -13,3 +13,4 @@ In this book you will find many details about Sokrates and the way it processes 
 
 
 ![](assets/images/sokrates/sokrates-gallery.png)
+**Figure 1:** The screenshot of the Sokrates' gallery. The gallery is a collection of Sokrates' projects, with the analysis of popular open-source projects.**

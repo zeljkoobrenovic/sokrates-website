@@ -10,14 +10,20 @@ excerpt: "Depending on a language, a unit can be a method, function procedure. S
 
 Most of Sokrates' analyses are at the level of a whole file. Sokrates also goes a level deeper, at a so-called unit level.
 
-Depending on a language, a unit can be a method, function procedure. I normally define a unit as the smallest reusable piece of code. These pieces of code are frequently associated with unit tests. The following figure shows four units, two in a fragemtn from Java file and two int a fragemtn from a C# languages:
+Depending on a language, a unit can be a method, function procedure. I normally define a unit as the smallest reusable piece of code. These pieces of code are frequently associated with unit tests. The following figure shows four units, two in writtent in Java, and two C#:
 
 ![](assets/images/sokrates/unit-examples.png)
+
+***Figure 1:** Examples of four units, two in a fragment from Java file and two in a fragement from a C# file.*
+
 
 Sokrates extracts units from files in several steps. Firstly, Sokrates cleans each file's content to eliminate comments, and other elements, such as long string constants, simplifying a follow-up parsing of code. After that, Sokrates applies a set of language-specific heuristics to identify start and end lines for each unit. You can look in Sokrates code at GitHub the exact details of unit extraction heuristics.
 
 
 ![](assets/images/sokrates/units-processing.png)
+
+***Figure 2:** An overview of Sokrates' unit processing. To simplify processing, Sokrates first cleans the code. Then Sokrates extract units and measures their size and conditional complexity. Sokrates further aggregates the duplicates, and presents the data in reports or in Sokrates Explorer.*
+
 
 ### Heuristics for Units Extraction
 

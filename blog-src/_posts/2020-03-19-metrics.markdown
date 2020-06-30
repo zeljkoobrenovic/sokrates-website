@@ -20,12 +20,16 @@ Static metrics describe the overal system values, such as lines of code in main 
 
 ![](assets/images/sokrates/metrics-table.png)
 
+***Figure 1:** The screenshot from the Sokrates metrics report, showing some of the static metrics.*
+
 
 ### Derived Metrics
 
 Derived metrics are dynamic, their number and names depend on number anf names of components, cross-cutting concerns and file extensions. The following table shows several of these derived metrics.
 
 ![](assets/images/sokrates/metrics-table-derived.png)
+
+***Figure 2:** The screenshot from the Sokrates metrics report, showing some of the dynamic metrics, where names of metrics depend on component names and file extensions.*
 
 These metrics are logical decomposition specific, and Sokrates derives the names of these metrics using these patterns:
 

@@ -29,12 +29,19 @@ Aggregation at lines of code level, rather then count
 
 ![](assets/images/sokrates/aggregation-system-level.png)
 
+***Figure 1:** An example of system level aggregations.*
+
 ### File-Type Aggregation
 
 ![](assets/images/sokrates/aggregation-extension.png)
 
+***Figure 2:** Examples of file extension level aggregations.*
+
 ### Logical-Decomposition Aggregations
 
 ![](assets/images/sokrates/aggregation-components-1.png)
-
 ![](assets/images/sokrates/aggregation-components-2.png)
+
+***Figure 3:** Examples of logical decomposition level aggregations.*
+
+

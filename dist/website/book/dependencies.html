@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Sokrates analyses dependencies through simple text patterns searches.","@type":"BlogPosting","url":"http://localhost:4000/book/dependencies","headline":"Finding Dependencies based on Text Patterns","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/dependencies"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Sokrates analyses dependencies through simple text patterns searches.","headline":"Finding Dependencies based on Text Patterns","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/dependencies"},"url":"http://localhost:4000/book/dependencies","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -136,9 +136,10 @@
 
 <p>Patterns that are likely to be unique for files in a components (e.g. java package heuristic)</p>
 
-<p><img src="assets/images/sokrates/dependencies-built-in-java-details.png" alt="" /></p>
+<p><img src="assets/images/sokrates/dependencies-built-in-java-details.png" alt="" />
+<img src="assets/images/sokrates/dependencies-built-in-aggregated.png" alt="" /></p>
 
-<p><img src="assets/images/sokrates/dependencies-built-in-aggregated.png" alt="" /></p>
+<p><em><strong>Figure 1:</strong> An overview of the build-in Java pattern-based dependency extractor. Sokrates uses Java package definitions as patterns to connect components.</em></p>
 
 <h3 id="custom-dependency-finders-linking-path-based-componentization-to-path-based-include-statements">Custom Dependency Finders: Linking Path Based Componentization to Path-Based Include Statements</h3>
 
@@ -155,9 +156,13 @@ src/
       worker/
 </pre>
 
+<p><em><strong>Figure 2:</strong> An example folder structure taken from the VS Code project.</em></p>
+
 <p>Let’s also assume that we have componentized this projects based on the folder depth at levelt 3 (src/vs/base/*). This componentization created the following five components:</p>
 
 <p><img src="assets/images/sokrates/dependecies-patterns-components.png" alt="" /></p>
+
+<p><em><strong>Figure 3:</strong> The fragment of Sokrates reposrt displaying the result of the folder-depth based componentization (level 3) of the source code structure described in Figure 2.</em></p>
 
 <p>The files in this folder are TypeScript files, and they import other TypesScript file vai import statement that user path based referencing. I have identify the following convention that we can use to connect files from one component to files in another components:</p>
 <ul>
@@ -169,6 +174,8 @@ src/
 <p>When applied on the files, this leads to the following dependency diagram:</p>
 
 <p><img src="assets/images/sokrates/dependencies-patterns-path.png" alt="" /></p>
+
+<p><em><strong>Figure 4:</strong> A visualization of measured dependencies.</em></p>
 
 <p>These are the details of the browser – common dependencies:</p>
 
@@ -207,6 +214,8 @@ evidence:
 
 </pre>
 
+<p><em><strong>Figure 5:</strong> A fragemnt of a Sokrates’ details file for dependecies from Figure 4. The file lists each dependency, as well as the content due to which Sokrates has decided to create a dependency.</em></p>
+
 <h3 id="custom-dependency-finders">Custom Dependency Finders</h3>
 
 <p>You can use a configuration object within the logical decomposition section of the configuration file to define a custom dependency finder. This custom dependency finder section enables you to set a string transformation scripts that takes as an input a path or a line of file content and transforms the input string into a name. If this name matches the name of any component, then Sokraets creates a link between the file and the component. If the name does not match any component names, Sokrates treats the name as the name of an external component. Sokrates displays the names of external components with grey color, to distinguish them from internal components.</p>
@@ -225,6 +234,8 @@ extract (“github[.]com/[a-zA-Z0-9-_]+/[a-zA-Z0-9-_]+”)</p>
 
 <p><img src="assets/images/sokrates/dependencies-patterns-dynamic-dependencies.png" alt="" /></p>
 
+<p><em><strong>Figure 6:</strong> A visualization of the measured GitHub project dependencies in the VS Code project. The measurements extract links from VS Code comments.</em></p>
+
 <p><a href="https://d3axxy9bcycpv7.cloudfront.net/ts/vscode/reports/html/Components.html">VS Code Components and Dependecies</a></p>
 
 <pre>
@@ -240,6 +251,9 @@ evidence:
  - file: "extensions/html-language-features/schemas/package.schema.json"
    contains "					"markdownDescription": "A list of relative file paths pointing to JSON files following the [custom data format](https://github.com/Microsoft/vscode-html-languageservice/blob/master/docs/customData.md).\n\nVS Code loads custom data on startup to enhance its HTML support for the custom HTML tags, attributes and attribute values you specify in the JSON files.\n\nThe file paths are relative to workspace and only workspace folder settings are considered.","
 </pre>
+
+<p><em><strong>Figure 7:</strong> A fragment of a Sokrates’ details file for dependencies from Figure 6. The file lists each dependency, as well as the content due to which Sokrates has decided to create a dependency.</em></p>
+
 
     </div><a class="u-url" href="/book/dependencies" hidden></a>
 </article>

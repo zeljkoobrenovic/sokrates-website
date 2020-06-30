@@ -12,6 +12,8 @@ Trend analysis shows the difference between values measured at different times, 
 
 ![](assets/images/sokrates/trends-metrics.png)
 
+**Figure 1:** *A screenshot from a Sokrates trend report detailing trends per metric.*
+
 
 Trend analysis gives the meaning to measurements through comparison. While it may be difficult to tell if some measured value is good or bad, it may still be possible to say if this value is becoming better or worse. For instance, you always have some level of duplication in code. You may not have the time and resources to refactor the system to remove all duplication. But you usually want to have a trend of reduced duplication. You can at least monitor the duplication level so that your new code does not increase overall code repetition.
 
@@ -35,6 +37,9 @@ Sokrates supports trend analysis by saving the snapshots of analysis results and
 }
 {% endhighlight %}
 
+**Figure 2:** *A fragment of Sokrates configuration file, describing parameters of trend analysis and saving of history snapshots.*
+
+
 Each snapshot is an archived file named **analysisResults.zip**. It contains two JSON files: **analysisResults.json**, with all measurements, and **config.json**, with a copy of the Sokrates configuration at the time of the measurement.
 
 Sokrates stores snapshots files in the **_sokrates/history/snapshots** folder. Each snapshot file has its own subfolder folder with the following naming conventions:
@@ -47,6 +52,9 @@ snapshots (e.g. **_sokrates/history/snapshots/2020-01**)
 
 ![](assets/images/sokrates/trend-code-change-overview.png)
 
+**Figure 2:** *A screenshot from a Sokrates trend report detailing volume and duplication change.*
+
+
 
 ### Analyzing Trends Retrospectivelly
 
@@ -55,6 +63,8 @@ If you have just started using Sokrates, you can still get the trend analysis by
 {% highlight sh %}
 git checkout `git rev-list -n 1 --first-parent --before="2020-01-01 00:00" master`
 {% endhighlight %}
+
+**Figure 3:** *Git commands to get a code on a specified date.*
 
 The following code fragment illustrates a more complex example, where you can get the analysis snapshot of any git repository at any date:
 
@@ -100,6 +110,8 @@ zip analysisResults.zip *.json
 rm *.json
 {% endhighlight %}
 
+***Figure 3:** A bash script to get the analysis snapshot of a git repository at a specified date.*
+
 You can then call this batch file as illustrated in the following example of JUnit4 repository:
 {% highlight sh %}
 #!/bin/bash
@@ -117,3 +129,4 @@ bash run-analysis-history.sh 'java/junit4' 'https://github.com/junit-team/junit4
 bash run-analysis-history.sh 'java/junit4' 'https://github.com/junit-team/junit4' '2015-01-01'
 {% endhighlight %}
 
+**Figure 5:** *A bash script describing the full process of checking our source code on different dates, by calling the script defined in Figure 4.*

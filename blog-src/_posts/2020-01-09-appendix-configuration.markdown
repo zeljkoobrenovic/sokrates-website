@@ -22,6 +22,8 @@ Based on this configuration Sokrates will generate a number of reports. The defa
 
 ![](assets/images/sokrates/config-overview.png)
 
+***Figure 1**: The Sokrates' configuration file describes how Sokrates should view and analyze the source code.*.
+
 See an example of a Sokrates report ⤇
 
 

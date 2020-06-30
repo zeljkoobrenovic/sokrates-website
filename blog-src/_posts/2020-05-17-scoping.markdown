@@ -39,7 +39,7 @@ Sokrates performs such scoping based on two input parameters:
 The following image illustrates the process of broad relevance scoping:
 
 ![](assets/images/sokrates/scoping-broad.png)
-*A broad relevance scoping in Sokrates is performed in two steps. First, Sokrates filters out filers with irrelevant extensions, based on 'whitelisted' relevant extensions. Then, Sokrates performs additional filtering based on a set of ignoring rules."*
+***Figure 1**: Sokrates performs a broad relevance scoping in two steps. First, Sokrates filters out files with irrelevant extensions, based on 'whitelisted' relevant extensions. Then, Sokrates performs additional filtering based on a set of ignoring rules."*
 
 The following fragment illustrates a configuration of Sokrates broad scoping rules:
 
@@ -81,7 +81,7 @@ Sokrates is a type of instrument for inspecting source code, a sort of "codoscop
 For analysis purposes, Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other. The main scope is primary. It is analyzed in detail. Other scopes are secondary, included in the overview reports context, but not analyzed in depth.
 
 ![](assets/images/sokrates/scoping-classification.png)
-***Figure #:** For analysis purposes, Sokrates separate files in scope into several categories: primary or main code and secondary code (test, generated, deployment and build, and other)."*
+***Figure 2:** For analysis purposes, Sokrates separate files in scope into several categories: primary or main code and secondary code (test, generated, deployment and build, and other)."*
 
 The main category contains all manually created source code files that define the logic and structure of the system running in production. Sokrates uses the main files as input for other analyses: logical decomposition, cross-cutting concerns, duplication, file size, unit size, and cyclomatic complexity.
 

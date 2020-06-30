@@ -27,11 +27,13 @@ excerpt: "Before we zoom into the details of Sokrates, let's first see what insi
 
 Image of report generation process
 
-
+Tempalated stories
+In a format you can use to make your own story.
 
 ## HTML Reports
 
 ![](assets/images/sokrates/reports-index.png)
+***Figure 1:** The screenshot of [the index page of the Sokrates reports](https://d3axxy9bcycpv7.cloudfront.net/java/tomcat/reports/html/index.html) for the Tomcat project.*
 
 ### Source Code Overview Report
 
@@ -173,3 +175,5 @@ See an example of a Sokrates Controls report ⤇
 ## Landscape Report
 
 ![](assets/images/sokrates/reports-landscape.png)
+
+***Figure 2:** The screenshot of [the landscape report](https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html)  for [the Sokrates example projects](https://sokrates.dev). The page summarizes the projects and provides links to them to see the detailed analyses.*

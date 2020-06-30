@@ -16,9 +16,12 @@ excerpt: "Cross-cutting concerns are aspects of a software system, such as loggi
 
 ![](assets/images/sokrates/cross-cutting-concerns-static.png)
 
-![](assets/images/sokrates/cross-cutting-concerns-dynamic-1.png)
+***Figure 1**: Classification of files based on the static list of cross-cutting concern rules. For each such rule, you need to specify a name of the concern and a list of regular expressions for including the files in the concern.*.
 
+![](assets/images/sokrates/cross-cutting-concerns-dynamic-1.png)
 ![](assets/images/sokrates/cross-cutting-concerns-dynamic-2.png)
+
+***Figure 2**: Classification based on the dynamic cross-cutting concern rules. Sokrates derives names of concerns dynamically based on the string transformations of file paths or content.*.
 
 ### Examples
 

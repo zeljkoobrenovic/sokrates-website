@@ -12,8 +12,6 @@ excerpt: "Sokrates command-line interface (CLI) includes five commands: init, ge
 
 generate a Sokrates configuration file for the codebase.
 
-![](assets/images/sokrates/cmd-init.png)
-
 {% highlight bash %}
 java -jar sokrates-0.9.jar init [options]
    -srcRoot  <arg>   [OPTIONAL] the path to source code root folder (default is <currentFolder>)
@@ -21,11 +19,15 @@ java -jar sokrates-0.9.jar init [options]
 {% endhighlight %}
 
 
+![](assets/images/sokrates/cmd-init.png)
+
+***Figure 1:** The **init** command generates a new Sokrates configuration file based on standard source code conventions.*
+
+
+<br/>
 ### ***generateReports*** command
 
 generates Sokrates reports based on the configuration
-
-![](assets/images/sokrates/cmd-generate-reports.png)
 
 {% highlight bash %}
   java -jar sokrates-0.9.jar generateReports [options]
@@ -47,24 +49,30 @@ generates Sokrates reports based on the configuration
                                        the external dot path via the system variable GRAPHVIZ_DOT)
 {% endhighlight %}
 
+![](assets/images/sokrates/cmd-generate-reports.png)
 
+***Figure 2:** The **generatesReports** command generates HTML reports and exports data files.*
+
+
+<br/>
 ### ***configComplete*** command
 
 completes missing fields in the configuration file
-
-![](assets/images/sokrates/cmd-config-complete.png)
 
 {% highlight bash %}
 java -jar sokrates.jar configComplete [options]
      -confFile <arg>       [OPTIONAL] the path to configuration file (default is "<currentFolder>/_sokrates/config.json"
 {% endhighlight %}
 
+![](assets/images/sokrates/cmd-config-complete.png)
 
+***Figure 3:** The **configComplete** completes missing fields in the configuration file. You can also use the configComplete command to upgrade your configuration file to the latest version.*
+
+
+<br/>
 ### ***initLandscape*** command
 
 create the configuration file for Sokrates landscape analysis (aggregated report of multiple Sokrates analysis results)
-
-![](assets/images/sokrates/cmd-init-landscape.png)
 
 {% highlight bash %}
 java -jar sokrates.jar initLandscape [options]
@@ -73,11 +81,15 @@ java -jar sokrates.jar initLandscape [options]
 {% endhighlight %}
 
 
+![](assets/images/sokrates/cmd-init-landscape.png)
+
+***Figure 4:** The **initLandscape** creates a Sokrates Landscape report, and initial landscape configuration file for landscape analyses.*
+
+
+<br/>
 ### ***updateLandscape*** command
 
 updates the configuration file for Sokrates Landscape analysis
-
-![](assets/images/sokrates/cmd-update-landscape.png)
 
 {% highlight bash %}
 java -jar sokrates.jar updateLandscape [options]
@@ -86,7 +98,12 @@ java -jar sokrates.jar updateLandscape [options]
 {% endhighlight %}
 
 
+![](assets/images/sokrates/cmd-update-landscape.png)
 
+***Figure 5:** The **updateLandscape** updates a Sokrates Landscape report, adding new and removing non-existent projects, but without chaning other settings in the landscape configuration file.*
+
+
+<br/>
 ### Running Sokrates as a Batch Process
 
 {% highlight bash %}
@@ -126,3 +143,4 @@ cd ..
 rm -rf analysis
 {% endhighlight %}
 
+***Figure 5:** A bash script illustrating a more complex scenario of the Sokrates command line interface.*

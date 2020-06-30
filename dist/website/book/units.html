@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Depending on a language, a unit can be a method, function procedure. Sokrates measures two things about each unit: a unit’s size and a units’ conditional complexity.","@type":"BlogPosting","url":"http://localhost:4000/book/units","headline":"Unit-Level Measurements","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/units"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Depending on a language, a unit can be a method, function procedure. Sokrates measures two things about each unit: a unit’s size and a units’ conditional complexity.","headline":"Unit-Level Measurements","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/units"},"url":"http://localhost:4000/book/units","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -91,13 +91,17 @@
     <div class="post-content e-content" itemprop="articleBody">
         <p>Most of Sokrates’ analyses are at the level of a whole file. Sokrates also goes a level deeper, at a so-called unit level.</p>
 
-<p>Depending on a language, a unit can be a method, function procedure. I normally define a unit as the smallest reusable piece of code. These pieces of code are frequently associated with unit tests. The following figure shows four units, two in a fragemtn from Java file and two int a fragemtn from a C# languages:</p>
+<p>Depending on a language, a unit can be a method, function procedure. I normally define a unit as the smallest reusable piece of code. These pieces of code are frequently associated with unit tests. The following figure shows four units, two in writtent in Java, and two C#:</p>
 
 <p><img src="assets/images/sokrates/unit-examples.png" alt="" /></p>
+
+<p><em><strong>Figure 1:</strong> Examples of four units, two in a fragment from Java file and two in a fragement from a C# file.</em></p>
 
 <p>Sokrates extracts units from files in several steps. Firstly, Sokrates cleans each file’s content to eliminate comments, and other elements, such as long string constants, simplifying a follow-up parsing of code. After that, Sokrates applies a set of language-specific heuristics to identify start and end lines for each unit. You can look in Sokrates code at GitHub the exact details of unit extraction heuristics.</p>
 
 <p><img src="assets/images/sokrates/units-processing.png" alt="" /></p>
+
+<p><em><strong>Figure 2:</strong> An overview of Sokrates’ unit processing. To simplify processing, Sokrates first cleans the code. Then Sokrates extract units and measures their size and conditional complexity. Sokrates further aggregates the duplicates, and presents the data in reports or in Sokrates Explorer.</em></p>
 
 <h3 id="heuristics-for-units-extraction">Heuristics for Units Extraction</h3>
 

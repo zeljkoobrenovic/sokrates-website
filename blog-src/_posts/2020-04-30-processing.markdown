@@ -27,6 +27,8 @@ Sokrates analysis approach consists of the following mechanisms:
 
 ![](assets/images/sokrates/analytics-processing-details.png)
 
+**Figure 1:** The overview of Sokrates processing. Sokrates processes source code in multiple stages, some of which are optional. The analysis starts with scoping, continuing through an examination of individual files and units, ending with an aggregation of results and export of reports.*
+
 #### Scoping
 
 Firstly Sokrates scopes the project files ignoring irrelevant files and classifying the relevant files into primary and secondary ones.

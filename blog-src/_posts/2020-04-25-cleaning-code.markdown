@@ -150,6 +150,8 @@ return input.toLowerCase();
 
 ### Preview the Cleaning in Sokrates Explorer
 
-Sokrates values transparancy, so to better understand Sokrates cleaning process, you can use [Sokrates Explorer](/book/explorer) file preview panel to see how content of each file looks after cleaning:
+Sokrates values transparency, so to better understand Sokrates cleaning process, you can use [Sokrates Explorer](/book/explorer) file preview panel to see how content of each file looks after cleaning:
 
 ![](assets/images/sokrates/cleaning-explorer-preview.png)
+
+**Figure 1:** You can use [Sokrates Explorer](/book/explorer) file preview panel to see how content of each file looks after cleaning.*

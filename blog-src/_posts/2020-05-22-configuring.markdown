@@ -19,6 +19,8 @@ Sokrates configuration file is a JSON file. The default location of the configur
 
 ![](assets/images/sokrates/config-overview.png)
 
+***Figure 1**: The Sokrates' configuration file describes how Sokrates should view and analyze the source code.*.
+
 The file has several sections, you can use to:
 * describe your project with a name, logo, summary text, and to add external links
 * [define the scope](scoping), including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build & deployment code, or other code…
@@ -38,14 +40,8 @@ While you can always start from scratch and write a configuration file in any te
 
 ![](assets/images/sokrates/cmd-init.png)
 
+***Figure 2: *The init command generates a new configuration based on a set of standard conventions.*
 
-### Configuration as a Software Architecture Documentation
 
-On the one hand, you can look at the Sokrates configuration file as a mere input for analysis. On the other hand, this configuration file encodes the patterns used in source code to classify files, define components, and cross-cutting concerns.
 
-Sokrates provides a pragmatic way to describe critical elements of software architectures and connect them explicitly to the source code. Based on a formal description of different software architecture aspects, Sokrates generates reports and visualization to help you reason, understand, and communicate about the software system.
-
-You configure Sokrates primarily with regular expressions. And regular expressions are patterns. Or, more precisely, the way to define patterns. And software architecture is closely related to establishing and identifying patterns in source code. Regular expressions are also cross-platform, working at any text representation. This cross-platform aspect is also what makes them useful for software architecture.
-
-In the end, you get a live, concise, platform-independent, and up-to-date documentation that is always connected to and validated against your source code.
 

@@ -16,6 +16,8 @@ To run a Sokrates landscape analysis, you need to get to the root folder, under 
 
 ![](assets/images/sokrates/cmd-init-landscape.png)
 
+***Figure 1:** The **initLandscape** command goes through all folders to find Sokrates projects, adding them to the index list.*
+
 An alternative to the landscape analysis is to scope a whole codebase one Sokrate project, scoping each sub-project as a component. However, for code bases of dozens of millions of lines of code, such an approach may not be practical enough due to length of analysis. Instead, you can define many smaller projects, and use the landscape analysis to provide a bigger picture.
 
 You can find [an example Sokrates landscape report at the sokrates.dev site](https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html). In this report, I have aggregated and indexed all 65 Sokrates example projects, with more than 11 millions lines of code.
@@ -24,5 +26,5 @@ The following screen shot shows this report as well:
 
 ![](assets/images/sokrates/reports-landscape.png)
 
-
+***Figure 2:** A screenshot of a Sokrates Landscape report.*
 

@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"File history analysis takes as an input the list of dates on which source code files changes and studies these dates to understand how frequently developers have changed the files, how old the files are, and how recently developers have updated them.","@type":"BlogPosting","url":"http://localhost:4000/book/history","headline":"File-Level Measurements: History","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/history"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"File history analysis takes as an input the list of dates on which source code files changes and studies these dates to understand how frequently developers have changed the files, how old the files are, and how recently developers have updated them.","headline":"File-Level Measurements: History","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/history"},"url":"http://localhost:4000/book/history","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -98,9 +98,11 @@
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">git ls-files <span class="nt">-z</span> | xargs <span class="nt">-0</span> <span class="nt">-n1</span> <span class="nt">-I</span><span class="o">{}</span> <span class="nt">--</span> git log <span class="nt">--format</span><span class="o">=</span><span class="s2">"%ai {}"</span> <span class="o">{}</span> <span class="o">&gt;</span> git-history.txt</code></pre></figure>
 
-<p>The previous command assumes that you are running it in the root of your source code project and that your source code project is a proper git repository (i.e., there should be a .git subfolder in the root folder of your project).</p>
-
 <p><img src="assets/images/sokrates/history-git-ls-files.png" alt="" /></p>
+
+<p><em><strong>Figure 1:</strong> Extracting the history of file changes with git commands.</em></p>
+
+<p>The previous command assumes that you are running it in the root of your source code project and that your source code project is a proper git repository (i.e., there should be a .git subfolder in the root folder of your project).</p>
 
 <p>The command generates a textual file named <strong>git-history.txt</strong>. The following fragment illustrates the format of this file:</p>
 
@@ -122,6 +124,8 @@
 2019-11-13 20:06:16 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
 2019-11-09 21:21:11 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java</code></pre></figure>
 
+<p><em><strong>Figure 2:</strong> The example content from a file with history of file changes. First 26 characters describe date and time of a change. After that follows the file path relative to the source code root.</em></p>
+
 <p>Each line in the file represents one change of one file. The first 26 characters of each line represent the date and time of a file update (e.g., a git commit). Sokrates currently uses only the date part of this string and ignores the time. The rest of the line contains the relative path to the file.</p>
 
 <p>While the command we used to generate a history file is a git specific command, Sokretes itself does not have any git dependencies. If you create this file using another tool, respecting the described format of each line, Sokrates will work with it.</p>
@@ -130,6 +134,8 @@
   you can create reports on file changes. The example of this report you can see here.</p>
 
 <p><img src="assets/images/sokrates/history-report-generation.png" alt="" /></p>
+
+<p><em><strong>Figure 3:</strong> Based on the history file, Sokrates generates special reports, data files, and additional configurations for further zooming into the details of file changes.</em></p>
 
 <p>Sokrates provides three types of analyses on file changes:</p>
 <ul>
@@ -142,13 +148,19 @@
 
 <p><img src="assets/images/sokrates/history-report-example-1.png" alt="" /></p>
 
+<p><em><strong>Figure 4:</strong> A fragment of a Sokrates file change history report, displaying the distribution of recorded file updates (in days in which an upate has been made, multipple updates on one day count as only one).</em></p>
+
 <p><strong>The Sokrates’ file age analysis</strong> looks when the file creation date, assuming that the oldest date of the file update is its creation date. Sokrates groups files in the following five categories according to their age: files less than a month old, files one to three months old, files three to six months old, files six to 12 months old, and files more than a year old.</p>
 
 <p><img src="assets/images/sokrates/history-report-example-2.png" alt="" /></p>
 
+<p><em><strong>Figure 5:</strong> A fragment of a Sokrates file change history report, displaying the distribution of file ages (based on the dates of first update).</em></p>
+
 <p><strong>The Sokrates’ file changes frequency analysis</strong> looks at the latest date at which the file has been changed. Sokrates groups files in the following five categories according to the recency of their changes: files changes in the past month, files changes one to three months ago, files changed three to six months ago, files changed six to 12 months ago, and files changed more than a year ago.</p>
 
 <p><img src="assets/images/sokrates/history-report-example-3.png" alt="" /></p>
+
+<p><em><strong>Figure 6:</strong> A fragment of a Sokrates file change history report, displaying the distribution of file update recency (based on the dates of last update).</em></p>
 
 <p>Once you have an overview of files in their age, freshness, or update frequency categories, it may be interesting to compare the quality of code in these categories. Sokrates facilitates this process, creating the configuration files that you can use to automatically analyze source code so that each of the discussed categories is visible as a logical component. You can see if there are differences in code quality between files that are more or less frequently charged, older and new code, and so on. Sokrates creates three such configuration files in the <strong>_sokrates/reports/data/extra_analysis</strong> folder:</p>
 

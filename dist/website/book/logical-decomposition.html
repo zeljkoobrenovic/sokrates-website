@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Logical decomposition is a view on the organization of the main source code. In a logical decomposition, you define components and rules to include files in the components so that each file ends in exactly one component.","@type":"BlogPosting","url":"http://localhost:4000/book/logical-decomposition","headline":"Logical Decompositions","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/logical-decomposition"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Logical decomposition is a view on the organization of the main source code. In a logical decomposition, you define components and rules to include files in the components so that each file ends in exactly one component.","headline":"Logical Decompositions","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/logical-decomposition"},"url":"http://localhost:4000/book/logical-decomposition","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -118,6 +118,8 @@
 
 <p><img src="assets/images/sokrates/logical-decomposition-folder-depth.png" alt="" /></p>
 
+<p><em><strong>Figure 1:</strong> A logical decomposition based on the file structure. Based on the folder depth (relative to the source coe root), you get different componentizations.</em>.</p>
+
 <h3 id="static-components">Static Components</h3>
 
 <p>Defining logical decomposition with regular expressions is a more complex but much more flexible and powerful approach.</p>
@@ -126,13 +128,16 @@
 
 <p><img src="assets/images/sokrates/logical-decomposition-static.png" alt="" /></p>
 
+<p><em><strong>Figure 2</strong>: Componentisation based on the static list of component rules. For each such rule, you need to specify a name of the component and a list of regular expressions for including the files in the component.</em>.</p>
+
 <h3 id="dynamic-components">Dynamic Components</h3>
 
 <p>An even more flexible approach is to name components dynamically based on the string transformations of file paths or content. For instance, in one of the projects I worked on, we defined each component with a “lib-“ prefix. Instead of listing all components manually, we can define a simple rule that will add components dynamically. This rule will work perfectly as long as we use the “lib-“ convention in naming components.</p>
 
-<p><img src="assets/images/sokrates/logical-decomposition-dynamic-1.png" alt="" /></p>
+<p><img src="assets/images/sokrates/logical-decomposition-dynamic-1.png" alt="" />
+<img src="assets/images/sokrates/logical-decomposition-dynamic-2.png" alt="" /></p>
 
-<p><img src="assets/images/sokrates/logical-decomposition-dynamic-2.png" alt="" /></p>
+<p><em><strong>Figure 3</strong>: Componentisation based on the dynamic component rules. Sokrates derives names of components dynamically based on the string transformations of file paths or content.</em>.</p>
 
 <h3 id="examples">Examples</h3>
 

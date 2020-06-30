@@ -16,6 +16,8 @@ code ==> cleaned code ==> list of duplications ==> aggregation
 
 ![](assets/images/sokrates/duplication-processing.png)
 
+***Figure 1:** An overview of Sokrates' duplication processing. To simplify processing, Sokrates first cleans the code. Then Sokrates extracts duplicates. Sokrates further aggregates the duplicates, and presents the data in reports or in Sokrates Explorer.*
+
 You should aim at having as little as possible (<5%) of duplicated code as high-level of duplication can lead to maintenance difficulties, poor factoring, and logical contradictions.
 
 ### Aggregating Duplication Analysis Results

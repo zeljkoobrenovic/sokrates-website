@@ -45,10 +45,12 @@ The following heuristic is used in languages where files are organized in explic
 
 Patterns that are likely to be unique for files in a components (e.g. java package heuristic)
 
+
 ![](assets/images/sokrates/dependencies-built-in-java-details.png)
-
-
 ![](assets/images/sokrates/dependencies-built-in-aggregated.png)
+
+***Figure 1:** An overview of the build-in Java pattern-based dependency extractor. Sokrates uses Java package definitions as patterns to connect components.*
+
 
 ### Custom Dependency Finders: Linking Path Based Componentization to Path-Based Include Statements
 
@@ -65,9 +67,15 @@ src/
       worker/
 </pre>
 
+***Figure 2:** An example folder structure taken from the VS Code project.*
+
+
 Let's also assume that we have componentized this projects based on the folder depth at levelt 3 (src/vs/base/*). This componentization created the following five components:
 
 ![](assets/images/sokrates/dependecies-patterns-components.png)
+
+***Figure 3:** The fragment of Sokrates reposrt displaying the result of the folder-depth based componentization (level 3) of the source code structure described in Figure 2.*
+
 
 The files in this folder are TypeScript files, and they import other TypesScript file vai import statement that user path based referencing. I have identify the following convention that we can use to connect files from one component to files in another components:
 * look for all files with path like ".*[.]ts" AND content like "import .*from 'vs/base.*"
@@ -77,6 +85,9 @@ The files in this folder are TypeScript files, and they import other TypesScript
 When applied on the files, this leads to the following dependency diagram:
 
 ![](assets/images/sokrates/dependencies-patterns-path.png)
+
+***Figure 4:** A visualization of measured dependencies.*
+
 
 These are the details of the browser -- common dependencies:
 
@@ -115,6 +126,8 @@ evidence:
 
 </pre>
 
+***Figure 5:** A fragemnt of a Sokrates' details file for dependecies from Figure 4. The file lists each dependency, as well as the content due to which Sokrates has decided to create a dependency.*
+
 
 ### Custom Dependency Finders
 
@@ -136,6 +149,8 @@ extract ("github[.]com/[a-zA-Z0-9\-_]+/[a-zA-Z0-9\-_]+")
 
 ![](assets/images/sokrates/dependencies-patterns-dynamic-dependencies.png)
 
+***Figure 6:** A visualization of the measured GitHub project dependencies in the VS Code project. The measurements extract links from VS Code comments.*
+
 [VS Code Components and Dependecies](https://d3axxy9bcycpv7.cloudfront.net/ts/vscode/reports/html/Components.html)
 
 <pre>
@@ -151,3 +166,6 @@ evidence:
  - file: "extensions/html-language-features/schemas/package.schema.json"
    contains "					"markdownDescription": "A list of relative file paths pointing to JSON files following the [custom data format](https://github.com/Microsoft/vscode-html-languageservice/blob/master/docs/customData.md).\n\nVS Code loads custom data on startup to enhance its HTML support for the custom HTML tags, attributes and attribute values you specify in the JSON files.\n\nThe file paths are relative to workspace and only workspace folder settings are considered.","
 </pre>
+
+***Figure 7:** A fragment of a Sokrates' details file for dependencies from Figure 6. The file lists each dependency, as well as the content due to which Sokrates has decided to create a dependency.*
+

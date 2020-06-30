@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"In Sokrates, you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a monitor with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states. OK (green) means that the measured value is below the threshold. Tolerant (yellow) means that the measured value is above the threshold but within the tolerance range. Failed (red) means that the measured value is above the threshold and the tolerance level.","@type":"BlogPosting","url":"http://localhost:4000/book/controls","headline":"Controls","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/controls"},"author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"In Sokrates, you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a monitor with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states. OK (green) means that the measured value is below the threshold. Tolerant (yellow) means that the measured value is above the threshold but within the tolerance range. Failed (red) means that the measured value is above the threshold and the tolerance level.","headline":"Controls","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/controls"},"url":"http://localhost:4000/book/controls","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -98,6 +98,8 @@
 
 <p><img src="assets/images/sokrates/usage-goals.png" alt="" /></p>
 
+<p><strong>Figure 1:</strong> <em>The goals-and-controls mode, a simplified analyze-and-reflect mode, where you can replace the reflect part with a set of clearly defined traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. And then react when the measurements are out of safe range.</em></p>
+
 <p>For instance, let’s assume that we have defined a control for duplication, setting the threshold to 5% and the tolerance level to 2%. If the measured duplication level is 4%, Sokrotes will label the control as OK (green). For the measured duplication level of 8%, Sokrates will label the control as failed (red). If the measured duplication is 6% Soknetes will mark the controls as tolerant (yellow).</p>
 
 <h3 id="configuring-controls">Configuring Controls</h3>
@@ -153,6 +155,8 @@
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
+<p><strong>Figure 2:</strong> <em>A fragment of a Sokrates configuration file describing the controls.</em></p>
+
 <h3 id="controls-report">Controls Report</h3>
 
 <p>Based on the configured values, the Sokrates will generate an HTML report, as well as the text file with the analysis results (by default stored in “_sokrates/reports/data/text/controls.txt”).</p>
@@ -160,6 +164,8 @@
 <p>The example of a Sokrates controls HTML report you can <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/html/Controls.html">find here</a>.</p>
 
 <p><img src="assets/images/sokrates/ceontrol-report.png" alt="" /></p>
+
+<p><strong>Figure 3:</strong> <em>A screenshot from a Sokrates controls report. For each control metric, the measured value is compared with a defined range and tolerance.</em></p>
 
 <p>The equvalvent text data file you can <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/data/text/controls.txt">find here</a>.</p>
 
@@ -190,6 +196,8 @@ status: OK
 desired range: [0 - 0] ±1
 value: 0
 description: Number of very complex units</code></pre></figure>
+
+<p><strong>Figure 4:</strong> <em>A content of a textual data file about controls that Sokrates export.</em></p>
 
 
     </div><a class="u-url" href="/book/controls" hidden></a>
