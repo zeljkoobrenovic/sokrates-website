@@ -11,12 +11,10 @@ excerpt: "Sokrates Explorer centralizes configuration, running of commands, and 
 To support explorative mode, I have built as a part of Sokrates tools the [Explorer](explorer) a tool with a graphical user interface that consists of a configuration editor, code preview panels, and several additional features that facilitate free explorations fo code. Explorer centralizes configuration, running of commands, and preview of analysis results in one tool. With Explorer, you can almost instantly see how a change in a setting, e.g., adding a new rule for detecting test files, impacts the analysis results.
 
 
-### Interactive Source Code Explorations
+See a 5 minutes video on using [Sokrates Explorer](explorer) to analyze source code of JUnit4:
 
 
-### Interactive Configuration with Instant Preview of Results
-
-Sorted by size by default
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/kdLcUEqGXl0" style="max-width: 1024px" width="100%"></iframe>
 
 ![](assets/images/sokrates/explorer.png)
 

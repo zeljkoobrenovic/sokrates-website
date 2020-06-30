@@ -25,14 +25,14 @@ To learn how to use Sokrates, like with any software tools or programming langua
 <br/>
 See a 5 minutes video on using [Sokrates CLI](cli) to analyze source code of Sokrates:
 
-<iframe _ngcontent-vte-c4="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="480" src="https://www.youtube.com/embed/ZybfJQ8Ob7g" style="max-width: 1024px" width="100%"></iframe>
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="480" src="https://www.youtube.com/embed/ZybfJQ8Ob7g" style="max-width: 1024px" width="100%"></iframe>
 
 <br/>
 <br/>
 See a 5 minutes video on using [Sokrates Explorer](explorer) to analyze source code of JUnit4:
 
 
-<iframe _ngcontent-vte-c4="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/kdLcUEqGXl0" style="max-width: 1024px" width="100%"></iframe>
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/kdLcUEqGXl0" style="max-width: 1024px" width="100%"></iframe>
 
 <br/>
 <br/>
