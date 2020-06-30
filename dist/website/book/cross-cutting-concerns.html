@@ -89,27 +89,19 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <blockquote>
-  <ul>
-    <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.</li>
-    <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
-    <li>A Sokrates enables defining multiple groups of cross-cutting concerns for each system.</li>
-    <li>A cross-cutting concerns can be defined in two ways in Sokrates.</li>
-    <li>The first approach is based on explicit definition of each concern. In such explicit definitions, concerns are explicitly named and their files are selected based on explicitly defined path and content filters.</li>
-    <li>The second approach is based on dynamic definition of concerns and their names. In such dynamic definitions, concerns are not explicitly named, but their names are derived based on script with string transformations of file path or content.</li>
-  </ul>
-</blockquote>
+        <p>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.</p>
+
+<p>A single concern may be present in multiple files. One source code file may contain multiple concerns.</p>
+
+<p>A Sokrates enables defining multiple groups of cross-cutting concerns for each system.</p>
+
+<p>A cross-cutting concerns can be defined in two ways in Sokrates.</p>
+
+<p>The first approach is based on explicit definition of each concern. In such explicit definitions, concerns are explicitly named and their files are selected based on explicitly defined path and content filters.</p>
 
 <p><img src="assets/images/sokrates/cross-cutting-concerns-static.png" alt="" /></p>
 
 <p><em><strong>Figure 1</strong>: Classification of files based on the static list of cross-cutting concern rules. For each such rule, you need to specify a name of the concern and a list of regular expressions for including the files in the concern.</em>.</p>
-
-<p><img src="assets/images/sokrates/cross-cutting-concerns-dynamic-1.png" alt="" />
-<img src="assets/images/sokrates/cross-cutting-concerns-dynamic-2.png" alt="" /></p>
-
-<p><em><strong>Figure 2</strong>: Classification based on the dynamic cross-cutting concern rules. Sokrates derives names of concerns dynamically based on the string transformations of file paths or content.</em>.</p>
-
-<h3 id="examples">Examples</h3>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"general"</span><span class="p">,</span><span class="w">
@@ -150,6 +142,37 @@
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
+<p><em><strong>Figure 2</strong>: A fragment of the Sokrates configuration file for expectedly defining cross-cutting concerns.</em></p>
+
+<p>The second approach is based on dynamic definition of concerns and their names. In such dynamic definitions, concerns are not explicitly named, but their names are derived based on script with string transformations of file path or content.</p>
+
+<p><img src="assets/images/sokrates/cross-cutting-concerns-dynamic-1.png" alt="" />
+<img src="assets/images/sokrates/cross-cutting-concerns-dynamic-2.png" alt="" /></p>
+
+<p><em><strong>Figure 3</strong>: Classification based on the dynamic cross-cutting concern rules. Sokrates derives names of concerns dynamically based on the string transformations of file paths or content.</em></p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"general"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"concerns"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"metaConcerns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"import (com|org)[.][a-z0-9_]+[.].*"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"ignoreComments"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nameOperations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"extract"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"(com|org)[.][a-z0-9_]+"</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p><em><strong>Figure 4</strong>: A fragment of the Sokrates configuration file for dynamically defining cross-cutting concerns.</em></p>
 
     </div><a class="u-url" href="/book/cross-cutting-concerns" hidden></a>
 </article>

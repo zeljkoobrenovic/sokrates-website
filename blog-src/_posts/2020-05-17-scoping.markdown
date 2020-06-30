@@ -8,12 +8,9 @@ icon: scoping
 excerpt: "Scoping defines which parts of source code you want to analyze in detail and which parts to ignore. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions."
 ---
 
-> **Summary**: When analyzing source code, you need to be strict in what you want to analyze and reject the rest. Otherwise, you will also end up publishing big, complex, and useless reports. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions. While there are exceptions, another code and files are usually irrelevant for understanding the system's unique aspects. Sokrates performs the scoping in two steps. First, it conducts a broad relevance scoping, based on the source code file extensions and a set of configurable ignore patterns. Then it zooms in the filtered files and classifies it into main ones and secondary ones.
+*“How many things can I do without!”* ― Socrates, Momentos
 
-*“How many things can I do without!”*
-― Socrates, Momentos
-
-Scoping is a critical concept in Sokrates' analyses. A "scope," in general, is the extent of the area or subject matter that something deals with or to which it is relevant. You may hear that frequently used phrases "within the scope" or "out of the scope." Have you ever tried to publish an article in a journal? Then it is likely that a journal editor has occasionally rejected your essay as being out the scope of the publication venue. Most of the publication venues are specialized, aimed at a specific audience. Even if you write a brilliant article, it will not be published if it does not cover a topic relevant to that audience. Otherwise, a journal ends up publishing issues where most of the articles are irrelevant for most of its audience.
+When analyzing source code, you need to be strict in what you want to analyze and reject the rest. Otherwise, you will also end up publishing big, complex, and useless reports. The code that developers wrote manually is the most important. It contains critical content for understanding the system's unique structure, logic, and team's design decisions. While there are exceptions, another code and files are usually irrelevant for understanding the system's unique aspects. Sokrates performs the scoping in two steps. First, it conducts a broad relevance scoping, based on the source code file extensions and a set of configurable ignore patterns. Then it zooms in the filtered files and classifies it into main ones and secondary ones.
 
 Like a journal editor, when analyzing source code, you need to be strict in what you want to analyze and reject the rest. Otherwise, you will also end up publishing big, complex, and useless reports.
 
@@ -194,12 +191,3 @@ But scoping can sometimes offer a surprisingly deep level of insights about a co
 * Why do you have so much of style (CSS) code, compared to HTML and Javascript code?
 
 When it comes to knowing your code, understanding the scope of your codebase is crucial.
-
-### Summary
-
->
-* When analyzing source code, you need to be **strict in what you want to analyze** and reject the rest. Otherwise, you will also end up publishing big, complex, and useless reports.
-* **The code that developers wrote manually is the most important.** It contains critical content for understanding the system's unique structure, logic, and team's design decisions. While there are exceptions, another code and files are usually irrelevant for understanding the system's unique aspects.
-* Sokrates performs the scoping in two steps:
-  * First, it conducts **a broad relevance scoping**, based on the source code file extensions and a set of configurable ignore patterns.
-  * Then it zooms in the filtered files and **classifies it into main ones and secondary ones**.

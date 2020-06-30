@@ -31,4 +31,13 @@ See a 5 minutes video on using [Sokrates CLI](cli) to analyze source code of Sok
 <br/>
 See a 5 minutes video on using [Sokrates Explorer](explorer) to analyze source code of JUnit4:
 
+
 <iframe _ngcontent-vte-c4="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/kdLcUEqGXl0" style="max-width: 1024px" width="100%"></iframe>
+
+<br/>
+<br/>
+
+The [Sokrates website](https://www.sokrates.dev/) provides a gallery with the results of analyses of 66 open-source projects in 24 programming languages. Each project includes both the results of Sokrates analyses as well as a configuration file used to configure the analysis.
+
+![](assets/images/sokrates/sokrates-gallery.png)
+**Figure 1:** The screenshot of the Sokrates' gallery. The gallery is a collection of Sokrates' projects, with the analysis of popular open-source projects.**
