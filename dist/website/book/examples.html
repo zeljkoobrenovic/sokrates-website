@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Learning by Example: The Sokrates’ Gallery | Examined Line: The Art of Source Code Analysis with Sokrates</title>
+<title>Begin With the End in Mind: Sokrates Reports | Examined Line: The Art of Source Code Analysis with Sokrates</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Learning by Example: The Sokrates’ Gallery" />
+<meta property="og:title" content="Begin With the End in Mind: Sokrates Reports" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="In this book, you will find many details about Sokrates and the way it processes source code. However, if you find this discussion too abstract, the Sokrates website provides a gallery with the detailed results of analyses of 66 open-source projects in 24 programming languages." />
-<meta property="og:description" content="In this book, you will find many details about Sokrates and the way it processes source code. However, if you find this discussion too abstract, the Sokrates website provides a gallery with the detailed results of analyses of 66 open-source projects in 24 programming languages." />
+<meta name="description" content="Before we zoom into the details of Sokrates, let’s first see what insights Sokrates can give you. Sokrates makes visible the size, complexity, and coupling of software. More specifically, Sokrates generates several views on your source code, describing the overall source code characteristics, duplication, components, dependencies, conditional complexity, etc." />
+<meta property="og:description" content="Before we zoom into the details of Sokrates, let’s first see what insights Sokrates can give you. Sokrates makes visible the size, complexity, and coupling of software. More specifically, Sokrates generates several views on your source code, describing the overall source code characteristics, duplication, components, dependencies, conditional complexity, etc." />
 <link rel="canonical" href="http://localhost:4000/book/examples" />
 <meta property="og:url" content="http://localhost:4000/book/examples" />
 <meta property="og:site_name" content="Examined Line: The Art of Source Code Analysis with Sokrates" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"In this book, you will find many details about Sokrates and the way it processes source code. However, if you find this discussion too abstract, the Sokrates website provides a gallery with the detailed results of analyses of 66 open-source projects in 24 programming languages.","headline":"Learning by Example: The Sokrates’ Gallery","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/examples"},"url":"http://localhost:4000/book/examples","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"description":"Before we zoom into the details of Sokrates, let’s first see what insights Sokrates can give you. Sokrates makes visible the size, complexity, and coupling of software. More specifically, Sokrates generates several views on your source code, describing the overall source code characteristics, duplication, components, dependencies, conditional complexity, etc.","headline":"Begin With the End in Mind: Sokrates Reports","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/examples"},"url":"http://localhost:4000/book/examples","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -81,7 +81,7 @@
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
-        <h1 class="post-title p-name" itemprop="name headline">Learning by Example: The Sokrates&#39; Gallery</h1>
+        <h1 class="post-title p-name" itemprop="name headline">Begin With the End in Mind: Sokrates Reports</h1>
         <p class="post-meta">
             <time class="dt-published" datetime="2020-05-25T20:12:01+02:00" itemprop="datePublished">May 25, 2020
             </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
@@ -89,10 +89,213 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <p>In this book you will find many details about Sokrates and the way it processes source code. However, if you find this discussion too abstract, <a href="https://www.sokrates.dev/">Sokrates website</a> provides a gallery with the results of analyses of 66 open-source projects in 24 programming languages. Each of the projects in the gallery both the all results of Sokrates analyses as well as a configuration file used to configure the analysis.</p>
+        <p>Before we zoom into the details of Sokrates, let’s first see what insights Sokrates can give you. Sokrates makes visible the size, complexity, and coupling of software. More specifically, Sokrates generates several views on your source code, describing the overall source code characteristics, duplication, components, dependencies, conditional complexity, etc.</p>
+
+<p><br /></p>
+<h2 id="explore-sokrates-gallery">Explore Sokrates Gallery</h2>
+
+<p>In this book, you will find many details about Sokrates and the way it processes source code. However, if you find this discussion too abstract, <a href="https://www.sokrates.dev/">Sokrates website</a> provides a gallery with the results of analyses of 66 open-source projects in 24 programming languages. Each project includes both the results of Sokrates analyses as well as a configuration file used to configure the analysis.</p>
 
 <p><img src="assets/images/sokrates/sokrates-gallery.png" alt="" />
 <strong>Figure 1:</strong> The screenshot of the Sokrates’ gallery. The gallery is a collection of Sokrates’ projects, with the analysis of popular open-source projects.**</p>
+
+<p><br />
+<br /></p>
+<h2 id="sokrates-reports">Sokrates Reports</h2>
+
+<p><em>“Story tells the facts. Facts do not tell the story.”</em> <a href="https://unesdoc.unesco.org/ark:/48223/pf0000193078">Story-based inquiry: a manual for investigative journalists</a></p>
+
+<p>Sokrates’ reports are the result of Sokrates’ analyses.  The reports shedding light on your source code from different angles.</p>
+
+<p><img src="assets/images/sokrates/reports-index.png" alt="" />
+<em><strong>Figure 1:</strong> The screenshot of <a href="https://d3axxy9bcycpv7.cloudfront.net/java/tomcat/reports/html/index.html">the index page of the Sokrates reports</a> for the Tomcat project.</em></p>
+
+<p><br /></p>
+<h3 id="source-code-overview-report">Source Code Overview Report</h3>
+
+<p><img src="assets/images/icons/overview.svg" alt="" /></p>
+
+<p>The Sokrates’ Overview report presents the basic facts about your source code and Sokrates analysis, answering the following two questions:</p>
+
+<ul>
+  <li>Which files are includes in and excluded from the analysis?</li>
+  <li>How are files classified (main, test, build, generated…)?</li>
+</ul>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit4/reports/html/SourceCodeOverview.html">example of a Sokrates Overview Report</a>.</li>
+  <li>Learn more about <a href="scoping">how Sokrates scopes the files</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="duplication-report">Duplication Report</h3>
+
+<p><img src="assets/images/icons/duplication.svg" alt="" /></p>
+
+<p>The Sokrates duplication report presents the duplicates in your code, answering the following questions:</p>
+<ul>
+  <li>How much duplication is there overall?</li>
+  <li>How is duplication distributed per file type?</li>
+  <li>How is duplication distributed per logical decomposition (i.e., per component)?</li>
+  <li>How much of duplication is there between the components?</li>
+  <li>What are the biggest duplicates?</li>
+  <li>What are the most frequently duplicated pieces of code?</li>
+</ul>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit4/reports/html/Duplication.html">example of a Sokrates Duplication Report</a>.</li>
+  <li>Learn more about <a href="duplication">how Sokrates calculates duplication</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="components-and-dependencies-report">Components and Dependencies Report</h3>
+
+<p><img src="assets/images/icons/code_organization.svg" alt="" /></p>
+
+<p>Logical decomposition is a representation of the source code organization, where each file needs to end up in only one logical component. The Sokrates visualizes the components and dependencies among them, answering the following questions:</p>
+
+<ul>
+  <li>What logical decompositions have you defined?</li>
+  <li>How many components are they in each logical decomposition?</li>
+  <li>How big are the components? What are the most prominent or smallest components?</li>
+  <li>What are the dependencies among the components? Where are they?</li>
+</ul>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an example of a <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit4/reports/html/Components.html">Sokrates Components and Dependencies Report</a>.</li>
+  <li>Learn more about <a href="logical-decomposition">how Sokrates analyzes logical decompositions</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="cross-cutting-concerns-report">Cross-Cutting Concerns Report</h3>
+
+<p><img src="assets/images/icons/concerns.svg" alt="" /></p>
+
+<p>Cross-cutting concerns are aspects of a software system that you cannot cleanly decompose from the rest of the system. Typical examples include security and logging.</p>
+
+<p>Sokrates analyses cross-cutting concerns, answering the following questions:</p>
+<ul>
+  <li>How many cross-cutting concerns have you defined?</li>
+  <li>How many files are in each concern? How many lines of code?</li>
+  <li>Is there an overlap between concerns (the same file being in multiple concerns)? How much of the overlay is there (number of files, lines of code)?</li>
+</ul>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an example of a <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/CrossCuttingConcerns.html">Sokrates Cross-Cutting Report</a>.</li>
+  <li>Learn more about <a href="cross-cutting-concerns">how Sokrates analyzes cross-cutting concerns</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="file-size-report">File Size Report</h3>
+
+<p><img src="assets/images/icons/file_size.svg" alt="" /></p>
+
+<p>File size measurements show the distribution of size of files.</p>
+
+<p>Files are classified in four categories based on their size (lines of code): 1-200 (small files), 200-500 (medium size files), 501-1000 (long files), 1001+ (very long files).</p>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an example of a <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit4/reports/html/FileSize.html">Sokrates File Size report</a>.</li>
+  <li>Learn more about <a href="file-size">how Sokrates analyzes file size</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="file-history-report">File History Report</h3>
+
+<p><img src="assets/images/icons/file_history.svg" alt="" /></p>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an example of a <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit4/reports/html/FileHistory.html">Sokrates File History report</a>.</li>
+  <li>Learn more about <a href="file-history">how Sokrates analyzes file history</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="unit-size-report">Unit Size Report</h3>
+
+<p><img src="assets/images/icons/units.svg" alt="" /></p>
+
+<p>Unit size measurements show the distribution of size of units of code (methods, functions…).</p>
+
+<p>Units are classified in four categories based on their size (lines of code): 1-20 (small units), 20-50 (medium size units), 51-100 (long units), 101+ (very long units).</p>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an example of a <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit4/reports/html/UnitSize.html">Sokrates Unit Size report</a>.</li>
+  <li>Learn more about <a href="units">how Sokrates analyzes units</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="conditional-complexity-report">Conditional Complexity Report</h3>
+
+<p><img src="assets/images/icons/conditional.svg" alt="" /></p>
+
+<p>Conditional complexity (also known as cyclomatic complexity) is a software metric (measurement), used to indicate the complexity of a program. It is a quantitative measure of the number of linearly independent paths through a program’s source code.</p>
+
+<p>Conditional complexity is measured at the unit level (methods, functions…).</p>
+
+<p>Units are classified in four categories based on the measured McCabe index: 1-5 (simple units), 6-10 (medium complex units), 11-25 (complex units), 26+ (very complex units).</p>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an example of a <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit4/reports/html/ConditionalComplexity.html">Sokrates Conditional Complexity report</a>.</li>
+  <li>Learn more about <a href="units">how Sokrates analyzes units</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="detailed-metrics-report">Detailed Metrics Report</h3>
+
+<p><img src="assets/images/icons/metrics.svg" alt="" /></p>
+
+<p>A list of all measurements.</p>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an example of a <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit4/reports/html/Metrics.html">Sokrates Metrics report</a>.</li>
+  <li>Learn more about <a href="metrics">how Sokrates works with metrics</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="trend-report">Trend Report</h3>
+
+<p><img src="assets/images/icons/trend.svg" alt="" /></p>
+
+<p>The trend report shows the difference in metrics between the latest measurements and previous reference measurements.</p>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit4/reports/html/Trend.html">example of a Sokrates Trend report</a>.</li>
+  <li>Learn more about <a href="units">how Sokrates analyzes trends</a>.</li>
+</ul>
+
+<p><br /></p>
+<h3 id="goals--controls-report">Goals &amp; Controls Report</h3>
+
+<p><img src="assets/images/icons/goal.svg" alt="" /></p>
+
+<p>Semaphore-like controls, to get warnings based on the range or metric values.</p>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an example of a <a href="https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/html/Controls.html">Sokrates Controls report</a>.</li>
+  <li>Learn more about <a href="controls">how Sokrates analyzes goals and controls</a>.</li>
+</ul>
+
+<p><br /></p>
+<h2 id="landscape-report">Landscape Report</h2>
+
+<p>The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses, providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place.</p>
+
+<p>To learn more:</p>
+<ul>
+  <li>See an example of a <a href="https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html">Sokrates Landscape report</a>.</li>
+  <li>Learn more about <a href="landscape">how Sokrates creates the lanscape report</a>.</li>
+</ul>
 
     </div><a class="u-url" href="/book/examples" hidden></a>
 </article>
