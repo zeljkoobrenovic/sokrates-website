@@ -8,11 +8,13 @@ icon: cleaning
 excerpt: "As the first step in its analysis, Sokrates cleans the code to simplify analyses and to improve their reliability. Cleaning includes removal of comments, empty lines, and long string constants."
 ---
 
-“Storms don't come to teach us painful lessons, rather they were meant to wash us clean.” - Socrates
+*“Storms don't come to teach us painful lessons, rather they were meant to wash us clean.”* - Socrates
+
+As the first step in its analysis, Sokrates cleans the code to simplify analyses and to improve their reliability. Cleaning includes removal of comments, empty lines, and long string constants.
 
 ### Cleaning for Lines of Code Calculations
 
-To calculate size of code in files Sokrates analyses clean the code to remove all comments and empty lines. Sokrates expresses the size of files and other objects, such as components and concerns in lines of code that do not include empty lines and comments.
+The central unit of measurement in Sokrates analyses is a line of code. When counting lines fo code, however, Sokrates removes comments and empty lines. Sokrates expresses the size of files and other objects, such as components and concerns in lines of code that do not include blank lines and comments.
 
 For example, the following fragment of code has **35 lines of uncleaned code**:
 
@@ -24,34 +26,34 @@ package junit.framework;
  */
 
 public class Assert {
-	/**
-	 * Protect constructor since it is a static only class
-	 */
-	protected Assert() {
-	}
+   /**
+    * Protect constructor since it is a static only class
+    */
+   protected Assert() {
+   }
 
-	/**
-	 * Asserts that a condition is true. If it isn't it throws
-	 * an AssertionFailedError with the given message.
-	 */
-	static public void assertTrue(String message, boolean condition) {
-		if (!condition)
-			fail(message);
-	}
-	/**
-	 * Asserts that a condition is true. If it isn't it throws
-	 * an AssertionFailedError.
-	 */
-	static public void assertTrue(boolean condition) {
-		assertTrue(null, condition);
-	}
-	/**
-	 * Asserts that a condition is false. If it isn't it throws
-	 * an AssertionFailedError with the given message.
-	 */
-	static public void assertFalse(String message, boolean condition) {
-		assertTrue(message, !condition);
-	}
+   /**
+    * Asserts that a condition is true. If it isn't it throws
+    * an AssertionFailedError with the given message.
+    */
+   static public void assertTrue(String message, boolean condition) {
+      if (!condition)
+         fail(message);
+   }
+   /**
+    * Asserts that a condition is true. If it isn't it throws
+    * an AssertionFailedError.
+    */
+   static public void assertTrue(boolean condition) {
+      assertTrue(null, condition);
+   }
+   /**
+    * Asserts that a condition is false. If it isn't it throws
+    * an AssertionFailedError with the given message.
+    */
+   static public void assertFalse(String message, boolean condition) {
+      assertTrue(message, !condition);
+   }
 {% endhighlight %}
 
 After cleaning the code to remove comment and empty lines, **only 17 lines ode code** are left, and these lines are counted for size calculations:
@@ -78,9 +80,9 @@ public class Assert {
 
 ### Cleaning for Duplication Calculations
 
-Before duplication is calculated, Sokrates cleanes the code to remove not only empty lines, comments, b fut also frequently requently duplicated constructs such as import statements.
+Before duplication measurements, Sokrates cleanes the code to remove empty lines, comments, and frequently duplicated constructs such as import statements.
 
-Here is an example of code cleaning:
+Here is an example of code cleaning for duplication calculations:
 
 Before the cleaning, the code has **25 lines**:
 
@@ -150,8 +152,8 @@ return input.toLowerCase();
 
 ### Preview the Cleaning in Sokrates Explorer
 
-Sokrates values transparency, so to better understand Sokrates cleaning process, you can use [Sokrates Explorer](/book/explorer) file preview panel to see how content of each file looks after cleaning:
+Sokrates values transparency, so to better understand Sokrates cleaning process, you can use [Sokrates Explorer](/book/explorer) file preview panel to see how the content of each file looks after cleaning:
 
 ![](assets/images/sokrates/cleaning-explorer-preview.png)
 
-**Figure 1:** You can use [Sokrates Explorer](/book/explorer) file preview panel to see how content of each file looks after cleaning.*
+***Figure 1:** You can use [Sokrates Explorer](/book/explorer) file preview panel to see how the content of each file looks after cleaning.*

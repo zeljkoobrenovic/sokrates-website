@@ -8,6 +8,8 @@ icon: cli
 excerpt: "Sokrates command-line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape."
 ---
 
+Sokrates command-line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape.
+
 See a 5 minutes video on using [Sokrates CLI](cli) to analyze source code of Sokrates:
 
 <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="480" src="https://www.youtube.com/embed/ZybfJQ8Ob7g" style="max-width: 1024px" width="100%"></iframe>

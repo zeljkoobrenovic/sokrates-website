@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"Sokrates processes source code in multiple stages, some of which are optional. The analysis starts with scoping, continuing through an examination of individual files and units, ending with an aggregation of results and export of reports.","headline":"Sokrates Analysis Overview","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/processing"},"url":"http://localhost:4000/book/processing","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"dateModified":"2020-05-25T20:12:01+02:00","description":"Sokrates processes source code in multiple stages, some of which are optional. The analysis starts with scoping, continuing through an examination of individual files and units, ending with an aggregation of results and export of reports.","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/processing"},"url":"http://localhost:4000/book/processing","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"headline":"Sokrates Analysis Overview","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -91,69 +91,126 @@
     <div class="post-content e-content" itemprop="articleBody">
         <p><em>“Sir Francis Bacon told a story, perhaps apocryphal, that illustrated just how empiricism was lost during the Middle Ages. The story was that a meeting of monks was taking place and the monks were <strong>hotly debating the issue of how many teeth were in the mouth of a horse.</strong> The problem was that they could not find the answer anywhere in Aristotle’s work. Then, a young monk, perhaps at his first such meeting, timidly suggested that, because they had all come to the meeting on horseback, that <strong>one way to get the answer would be simply to go outside and count.</strong> Bacon went on to say that the young monk was expelled from the meeting!”</em></p>
 
-<h3 id="phases">Phases</h3>
+<p>In my career as a developer, architect, and analyst, I was frequently thinking about the anecdote from Sir Francis Bacon. Many discussions on software engineering are opinion-driven; while often answers are there in source code or other data, just someone has to look at the facts. And frequently, you only need to count things, without sophisticated statistical or machine-learning processing.</p>
 
-<p>Sokrates analysis approach consists of the following mechanisms:</p>
+<p>Sokrates aims at helping you reliably and efficiently get the basic data about your source code. Sokrates analyses are not extremely complex. In essence, Sokrates splits your code in small-block and counts and aggregates and connects constructs found in the code. In this section, I present the overview of Sokrates analysis, and in the follow-up sections, I describe each of these stages in more detail.</p>
+
+<h3 id="analysis-stages">Analysis Stages</h3>
+
+<p>Sokrates analysis approach consists of the following stages:</p>
 
 <ul>
-  <li>configuring</li>
-  <li>scoping</li>
-  <li>creating views on source code (logical decomposition, and cross-cutting concerns)</li>
-  <li>basic sources code analyses at the file level</li>
-  <li>optional enrichment of file measurements from update dates from a version control system</li>
-  <li>categorization of measurements</li>
-  <li>advanced cross-file analyses (dependencies and duplication)</li>
-  <li>aggregation of data
-*</li>
+  <li>Scoping,</li>
+  <li>Classifying files (logical decomposition, and cross-cutting concerns),</li>
+  <li>Enriching the file data with history information (optional)</li>
+  <li>Code cleaning,</li>
+  <li>File-level measurements,</li>
+  <li>Unit-level measurements,</li>
+  <li>Complex measurements (duplication and dependencies),</li>
+  <li>Aggregation of measurements,</li>
+  <li>Trend analysis (optional), and</li>
+  <li>Export of data to reports, explorers, and data files.</li>
 </ul>
 
 <p><img src="assets/images/sokrates/analytics-processing-details.png" alt="" /></p>
 
-<p><strong>Figure 1:</strong> The overview of Sokrates processing. Sokrates processes source code in multiple stages, some of which are optional. The analysis starts with scoping, continuing through an examination of individual files and units, ending with an aggregation of results and export of reports.*</p>
+<p><em><strong>Figure 1:</strong> The overview of Sokrates processing. Sokrates processes source code in multiple stages, some of which are optional. The analysis starts with scoping, continuing through an examination of individual files and units, ending with an aggregation of results and export of reports.</em></p>
 
-<h4 id="scoping">Scoping</h4>
+<h3 id="scoping">Scoping</h3>
 
 <p>Firstly Sokrates scopes the project files ignoring irrelevant files and classifying the relevant files into primary and secondary ones.</p>
 
-<h4 id="creating-views-on-the-source-code">Creating Views on the Source Code</h4>
+<p>To learn more:</p>
+<ul>
+  <li><a href="scoping">Scoping</a></li>
+</ul>
 
-<p>Second, Sokrates creates multiples views on the source code: logical decompositions and cross-cutting concerns.  Each view is a list of files, with a name and with potential relations to other views. Sokrates creates these views to structure analysis, reporting, and exploration of source code.</p>
+<h3 id="classifying-files">Classifying Files</h3>
 
-<h4 id="basic-file-level-analyses">Basic File-Level Analyses</h4>
+<p>To structure analysis, reporting, and explorations, Sokrates creates multiples views on the source code: logical decompositions and cross-cutting concerns. Each view is a list of files, with a name and with potential relations to other views.</p>
 
-<p>Third, Sokrates performs basic analysis of individual files. Basic analyses include removing comments, counting the lines of code, and extracting units. Optionally, you can import data about file change histories (dates at which developers have updated each file), and associated them with each file.</p>
+<p>To learn more:</p>
+<ul>
+  <li><a href="logical-decomposition">Logical Decompositions</a></li>
+  <li><a href="cross-cutting-concerns">Cross-Cutting Concerns</a></li>
+</ul>
 
-<h4 id="categorization-of-basic-measurements">Categorization of Basic Measurements</h4>
+<h3 id="optionally-enriching-the-file-data-with-history-information">Optionally Enriching the File Data with History Information</h3>
 
-<p>After collecting all the measurements, Sokrates classify them into categories. For example, Sokrates classifies files into five categories based on their size (lines of code): 1-100 (very small files), 100-200 (small files), 200-500 (medium size files), 501-1000 (long files), 1001+ (very long files).</p>
+<p>Optionally, you can import data about file change histories (dates at which developers have updated each file), and associated them with each file.</p>
 
-<h4 id="advanced-measurements">Advanced Measurements</h4>
+<p>To learn more:</p>
+<ul>
+  <li><a href="history">File-Level Measurements: History</a></li>
+</ul>
 
-<p>Four, Sokrates performs a set of more complex and computationally intensive cross-file analyses to identify dependencies and duplication among files and components.</p>
+<h3 id="code-cleaning">Code Cleaning</h3>
 
-<h4 id="aggregating-results">Aggregating Results</h4>
+<p>To simplify analyses and improve their reliability Sokrates, remove some pieces of code prior to measurements. Such code cleaning includes removing comments, empty lines, and long string constants.</p>
+
+<p>To learn more:</p>
+<ul>
+  <li><a href="cleaning">Code Cleaning</a></li>
+</ul>
+
+<h3 id="file-level-analyses">File-Level Analyses</h3>
+
+<p>For each file, Sokrates measurements their size and analyses their change history.</p>
+
+<p>To learn more:</p>
+<ul>
+  <li><a href="file-size">File-Level Measurements: File Size</a></li>
+  <li><a href="history">File-Level Measurements: History</a></li>
+</ul>
+
+<h3 id="unit-level-analyses">Unit-Level Analyses</h3>
+
+<p>Most of Sokrates’ analyses are at the level of a whole file. Sokrates also goes a level deeper, at a so-called unit level. Depending on a language, a unit can be a method, function, or procedure. For each unit, Sokrates measurements their size and conditional complexity.</p>
+
+<p>To learn more:</p>
+<ul>
+  <li><a href="units">Unit-Level Measurements</a></li>
+</ul>
+
+<h3 id="advanced-measurements">Advanced Measurements</h3>
+
+<p>After getting the basic measurements, Sokrates performs a set of more complex and computationally intensive cross-file analyses to identify dependencies and duplication among files and components.</p>
+
+<p>To learn more:</p>
+<ul>
+  <li><a href="duplication">Duplication Analysis</a></li>
+  <li><a href="dependencies">Finding Dependencies based on Text Patterns</a></li>
+  <li><a href="dependencies-alt">Finding Dependencies through Duplication and Change History</a></li>
+</ul>
+
+<h3 id="aggregating-results--trend-analysis">Aggregating Results &amp; Trend Analysis</h3>
 
 <p>After Sokrates has all the data at the file level and lists of duplicates and dependencies, it then proceeds with aggregating results. Sokrates aggregates data at the overall project level as well as at the level of components and cross-cutting concerns. For dependencies, duplication, and file change history, Sokrates also identifies links between components. These links show couplings between components, duplication between them, as well as their temporal coupling (the number of days when developers have changed two components simultaneously).</p>
 
-<h4 id="using-the-data">Using the Data</h4>
+<p>Optionally Sokrates compares the current results with the previous ones to get the trends.</p>
+
+<p>To learn more:</p>
+<ul>
+  <li><a href="aggregation">Aggregating Measurements</a></li>
+  <li><a href="metrics">Metrics</a></li>
+  <li><a href="controls">Goals &amp; Controls</a></li>
+  <li><a href="trends">Trends</a></li>
+</ul>
+
+<h3 id="exporting-the-data">Exporting the Data</h3>
+
 <p>With basic and aggregated data ready, Sokrates then</p>
 <ul>
   <li>generates standard reports, providing a templates based story about measured data, enriched with visuals combining basic chart, Graphviz diagrams,  SVG images, and few 3D visualizations.</li>
   <li>provides an interactive explorer to browse quickly, search and visualize all the data, and</li>
-  <li>store all the data into simple text and JSON files  if you want to analyze them further using your tools.</li>
+  <li>store all the data into simple text and JSON files if you want to analyze them further using your tools.</li>
 </ul>
 
-<h3 id="sokrates-pragmatic-approach">Sokrates Pragmatic Approach</h3>
-
-<p>Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.</p>
-
-<p>The first thing I have learned pretty fast when building Sokrates is that it is extremely tough to build a proper fully-featured parser for any programming language.  Any software analysis tool needs a handful of such parsers. Contemporary software projects frequently include a dozen or more of different programming languages and dialects.</p>
-
-<p>So how have I solved this problem? By not building fully-featured parsers.</p>
-
-<p>I’ve also learned when building Sokrates that you can go a long way with using a few simple, heuristic parsing techniques. You may lose details in the process, but if you focus on the essence, such simple heuristic techniques can offer you incredible value for money. In many instances, you may get the same details as more complex and expensive tools. And performance-wise, simple heuristic techniques often work order or magnitude faster.</p>
-
-<p>In the following chapters, we outline a few of these techniques. The following is useful for those who want to contribute or use Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.</p>
+<p>To learn more:</p>
+<ul>
+  <li><a href="reports">Sokrates Reports</a></li>
+  <li><a href="explorer">Sokrates Explorer</a></li>
+</ul>
 
     </div><a class="u-url" href="/book/processing" hidden></a>
 </article>

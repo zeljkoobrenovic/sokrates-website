@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"The Sokrates String Transformation Language (SSTL) is a simple embedded programming language enabling you to transform a phrase extracted from a file path or file content into another string. You can use SSTL to define the names of components and identify dependencies among the components.","headline":"Appendix: Sokrates String Transformation Language (SSTL)","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/sstl"},"url":"http://localhost:4000/book/sstl","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"dateModified":"2020-05-25T20:12:01+02:00","description":"The Sokrates String Transformation Language (SSTL) is a simple embedded programming language enabling you to transform a phrase extracted from a file path or file content into another string. You can use SSTL to define the names of components and identify dependencies among the components.","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/sstl"},"url":"http://localhost:4000/book/sstl","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"headline":"Appendix: Sokrates String Transformation Language (SSTL)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -106,59 +106,56 @@
 
 <p>Sokrates uses SSTL in several places:</p>
 <ul>
-  <li>to define dynamic names of components in
- logical decompositions</li>
-  <li>to define dynamic names of cross-cutting concerns</li>
-  <li>to find components names for dependencies</li>
+  <li>to define dynamic names of components in <a href="logical-decomposition">logical decompositions</a> (the meta components section)</li>
+  <li>to define dynamic names of <a href="cross-cutting-concerns">cross-cutting concerns</a> (the meta concerns section)</li>
+  <li>to find components names for <a href="dependencies">dependencies</a> (the meta rules section)</li>
 </ul>
 
 <h3 id="examples">Examples</h3>
 
+<p>The following fragment of a Sokrates configuration files uses SSTL to find dependencies of files to org.apache modules:</p>
+
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">".*[.]java"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"package nl[.]obren[.]sokrates[.].*"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"import org[.]apache[.].*"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ignoreComments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="nl">"nameOperations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"extract"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+"</span><span class="w">
+                </span><span class="s2">"import org[.]apache[.][a-zA-Z0-9_]+"</span><span class="w">
             </span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"nl[.]obren[.]sokrates[.]"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"import org[.]apache[.]"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">""</span><span class="w">
             </span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
+
+<p>This script does the following:</p>
+<ul>
+  <li>looks for any Java file that contains at least one line starting with “import org.apache.” (matches the regex expression “import org[.]apache[.].*”)</li>
+  <li>it then uses as an input for pressing the found line (the parameter use is set to “content”)</li>
+  <li>for each such line Sokrates performs two chained SSTL trafsormations:
+    <ul>
+      <li>extract the regex pattern “import org[.]apache[.][a-zA-Z0-9_]+”</li>
+      <li>remove “import org[.]apache[.]” (replace it with an empty string)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Figure 2 illustrates this processing on two examples.</p>
+
+<p><em><strong>Figure 1:</strong> A fragment of a Sokrates configuration files uses SSTL to find dependencies of files to org.apache modules.</em></p>
 
 <p><img src="assets/images/sokrates/sstl-example-1.png" alt="" /></p>
 
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nl">"pathPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">".*[.]java"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"contentPattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"import nl[.]obren[.]sokrates[.].*"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"ignoreComments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"nameOperations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"extract"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+"</span><span class="w">
-            </span><span class="p">]</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"nl[.]obren[.]sokrates[.]"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">""</span><span class="w">
-            </span><span class="p">]</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span></code></pre></figure>
+<p><em><strong>Figure 2:</strong> The steps of SSTL processing for two import statements for a script defined in Figure 1.</em></p>
 
 
     </div><a class="u-url" href="/book/sstl" hidden></a>

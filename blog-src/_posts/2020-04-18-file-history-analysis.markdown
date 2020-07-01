@@ -47,14 +47,22 @@ date & time of change     path (from 27th character onwards)
 2019-11-09 21:21:11 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
 {% endhighlight %}
 
-***Figure 2:** The example content from a file with history of file changes. First 26 characters describe date and time of a change. After that follows the file path relative to the source code root.*
+***Figure 2:** The example content from a file with a history of file changes. The first 26 characters describe the date and time of a change. After that follows the file path relative to the source code root.*
 
 Each line in the file represents one change of one file. The first 26 characters of each line represent the date and time of a file update (e.g., a git commit). Sokrates currently uses only the date part of this string and ignores the time. The rest of the line contains the relative path to the file.
 
- While the command we used to generate a history file is a git specific command, Sokretes itself does not have any git dependencies. If you create this file using another tool, respecting the described format of each line, Sokrates will work with it.
+ While the command we used to generate a history file is a git specific command, Sokrates itself does not have any git dependencies. If you create this file using another tool, respecting the described format of each line, Sokrates will work with it.
 
-  After you have generated the input file and configured Sokrates,
-  you can create reports on file changes. The example of this report you can see here.
+After you have generated the input file and configured Sokrates, you can create reports on file changes. A Sokrates file history report answers the following questions:
+  * What is the overall distribution of frequency of changes, file age, and recent updates?
+  * What is the distribution of frequency of changes, file age, and recent updates per file type?
+  * What is the distribution of frequency of changes, file age, and recent updates per component?
+  * What are the most frequently changed files?
+  * What are the oldest files?
+  * What are the most recent changed files?
+  * What files have not been changed files?
+
+The example of this report you can [find here](https://d3axxy9bcycpv7.cloudfront.net/java/tomcat/reports/html/FileHistory.html).
 
 ![](assets/images/sokrates/history-report-generation.png)
 
@@ -70,18 +78,18 @@ Each line in the file represents one change of one file. The first 26 characters
 
 ![](assets/images/sokrates/history-report-example-1.png)
 
-***Figure 4:** A fragment of a Sokrates file change history report, displaying the distribution of recorded file updates (in days in which an upate has been made, multipple updates on one day count as only one).*
+***Figure 4:** A fragment of a Sokrates file change history report, displaying the distribution of recorded file updates (in days with at least one update, multiple updates on one day count as one).*
 
 
-**The Sokrates' file age analysis** looks when the file creation date, assuming that the oldest date of the file update is its creation date. Sokrates groups files in the following five categories according to their age: files less than a month old, files one to three months old, files three to six months old, files six to 12 months old, and files more than a year old.
+**The Sokrates' file age analysis** looks when the file creation date, assuming that the oldest date of the file update is its creation date. Sokrates groups files in the following five categories according to their age: less than a month old, one to three months old, three to six months old, six to 12 months old, and more than a year old.
 
 ![](assets/images/sokrates/history-report-example-2.png)
 
-***Figure 5:** A fragment of a Sokrates file change history report, displaying the distribution of file ages (based on the dates of first update).*
+***Figure 5:** A fragment of a Sokrates file change history report, displaying the distribution of file ages (based on the dates of the first update).*
 
 
 
-**The Sokrates' file changes frequency analysis** looks at the latest date at which the file has been changed. Sokrates groups files in the following five categories according to the recency of their changes: files changes in the past month, files changes one to three months ago, files changed three to six months ago, files changed six to 12 months ago, and files changed more than a year ago.
+**The Sokrates' file changes frequency analysis** looks at the latest date fo file change. Sokrates groups files in the following five categories according to the recency of their changes: files changes in the past month, files changes one to three months ago, files changed three to six months ago, files changed six to 12 months ago, and files changed more than a year ago.
 
 ![](assets/images/sokrates/history-report-example-3.png)
 

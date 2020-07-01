@@ -50,8 +50,6 @@ The journey to this book was through building Sokrates software. But the book an
 
 *"Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime."*
 
-Sokrates explores several areas, all centered around the idea of obtaining and maintaining intellectual control over your software projects.
-
 Sokrates follows the following design principles:
 
 * **Teach you how to fish.** With the Sokrates project, I do not want only to promote a software tool. I want to teach you how to build similar tools yourself. Whether you decided to use Sokrates or only its ideas, I believe that understanding how the tool work will help you to understand the analysis results better and to use them better to make decisions.
@@ -62,5 +60,18 @@ Sokrates follows the following design principles:
 
 * **Using Metrics to Start a Discussion, Not to Kill It.** Sokrates gives you insights into your code, and some pointer to probe further, but not advice that you can follow blindly.
 
+
+
+### Sokrates Pragmatic Approach
+
+Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.
+
+The first thing I have learned pretty fast when building Sokrates is that it is extremely tough to build a proper fully-featured parser for any programming language.  Any software analysis tool needs a handful of such parsers. Contemporary software projects frequently include a dozen or more of different programming languages and dialects.
+
+So how have I solved this problem? By not building fully-featured parsers.
+
+ I've also learned when building Sokrates that you can go a long way with using a few simple, heuristic parsing techniques. You may lose details in the process, but if you focus on the essence, such simple heuristic techniques can offer you incredible value for money. In many instances, you may get the same details as more complex and expensive tools. And performance-wise, simple heuristic techniques often work order of magnitude faster.
+
+In the following chapters, we outline a few of these techniques. The following is useful for those who want to contribute or use the Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.
 
 

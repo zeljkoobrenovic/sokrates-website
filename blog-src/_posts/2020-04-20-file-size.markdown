@@ -8,7 +8,7 @@ icon: file-size
 excerpt: "Sokrates measures the size of the file in lines of code, ignoring empty lines and comments."
 ---
 
-File size measurment is the basic measure in Sokrates. Sokrates measures the files size in lines of code, ignoring empty lines and comments.
+The file size is the essential measure in Sokrates. Sokrates measures the size of the files in lines of code [ignoring empty lines and comments](cleaning).
 
 Sokrates classifies the files in file categories based on their size:
 * very small files (0-100 lines of code)
@@ -17,8 +17,13 @@ Sokrates classifies the files in file categories based on their size:
 * long files (501-1000 lines of code)
 * very long files (1001+ lines of code)
 
+A Sokrates file size report then answers the following questions:
+* What is the overall file size distributions?
+* What is the file size distributions per file type?
+* What is the file size distributions per component?
+* What are the longest files?
 
-As an example, take a look at the [JUnit5 file size report](https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/html/FileSize.html). Figure 1 an 2 show two elements from this report.
+As an example, take a look at the [JUnit5 file size report](https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/html/FileSize.html). Figure 1 and 2 show two elements from this report.
 
 ![](assets/images/sokrates/file-size-overview.png)
 

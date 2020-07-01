@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"You can install and run Sokrates in three ways. First, you can download the Sokrates command-line interface JAR file. Second, you can download the Sokrates Explorer JAR file. Lastly, you can build it from scratch from the Sokrates’ GitHub repository.","headline":"Appendix: Installation","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/install"},"url":"http://localhost:4000/book/install","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"dateModified":"2020-05-25T20:12:01+02:00","description":"You can install and run Sokrates in three ways. First, you can download the Sokrates command-line interface JAR file. Second, you can download the Sokrates Explorer JAR file. Lastly, you can build it from scratch from the Sokrates’ GitHub repository.","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/install"},"url":"http://localhost:4000/book/install","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"headline":"Appendix: Installation","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -89,12 +89,12 @@
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
-        <h3 id="installation">Installation</h3>
+        <h2 id="installation-jar-files">Installation: JAR files</h2>
 
-<h4 id="command-line-interface">Command Line Interface</h4>
+<h3 id="command-line-interface">Command Line Interface</h3>
 
 <p>COMMAND LINE JAR
-DOWNLOAD: sokrates-0.9.jar (38 MB)</p>
+DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar">sokrates-0.9.jar</a> (38 MB)</p>
 
 <p>Simple usage example (to analyze Junit4):</p>
 
@@ -106,36 +106,34 @@ java <span class="nt">-jar</span> sokrates-0.9.jar generateReports
 
 open _sokrates/reports/html/index.html</code></pre></figure>
 
-<p>Illustrate previous example</p>
+<h3 id="explorer">Explorer</h3>
 
-<h4 id="explorer">Explorer</h4>
-
-<p>DOWNLOAD: sokrates-explorer-0.9.jar (78 MB)</p>
+<p>DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">sokrates-explorer-0.9.jar</a> (78 MB)</p>
 
 <p>NOTE: require JavaFX (download it and install it from openjfx.io)</p>
 
 <p>java –module-path $JAVAFX_HOME/lib –add-modules=javafx.controls,javafx.web -jar sokrates-explorer-0.9.jar</p>
 
-<h3 id="source-code">Source Code</h3>
+<h2 id="source-code">Source Code</h2>
 
-<p><a href="https://github.com/zeljkoobrenovic/sokrates">github.com/zeljkoobrenovic/sokrates</a></p>
+<p>Sokrates is an open-source project, released under the <a href="https://github.com/zeljkoobrenovic/sokrates/blob/master/LICENSE">GNU Affero General Public License v3.0</a>.</p>
 
-<h4 id="prerequirements">Prerequirements</h4>
+<p>To build a project from source code, go to the root of the project, and run the following command:</p>
+<pre>
+mvn clean install
+</pre>
+
+<p>The build will create two jar files:</p>
+
+<ul>
+  <li>the <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar">command line interface JAR</a> in the <strong>cli/target</strong> folder</li>
+  <li>the <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">interactive explorer JAR</a> in the <strong>codeexplorer/target</strong> folder</li>
+</ul>
+
+<p>Prerequirements:</p>
 <ul>
   <li>Java 8+</li>
   <li>Maven</li>
-</ul>
-
-<h4 id="build">Build</h4>
-
-<blockquote>
-  <p>mvn clean install</p>
-</blockquote>
-
-<p>The build will create two jar files:</p>
-<ul>
-  <li>the command line interface in the cli/target folder</li>
-  <li>the interactive explorer in the codeexplorer/target folder</li>
 </ul>
 
 

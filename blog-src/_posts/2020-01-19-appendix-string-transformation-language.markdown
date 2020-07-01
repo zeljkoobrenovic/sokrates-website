@@ -23,30 +23,31 @@ SSTL supports the following commands:
 * uppercase
 
  Sokrates uses SSTL in several places:
- - to define dynamic names of components in
- logical decompositions
- - to define dynamic names of cross-cutting concerns
- - to find components names for dependencies
+ - to define dynamic names of components in [logical decompositions](logical-decomposition) (the meta components section)
+ - to define dynamic names of [cross-cutting concerns](cross-cutting-concerns) (the meta concerns section)
+ - to find components names for [dependencies](dependencies) (the meta rules section)
 
 ### Examples
 
+The following fragment of a Sokrates configuration files uses SSTL to find dependencies of files to org.apache modules:
+
 {% highlight json %}
 {
     "pathPattern": ".*[.]java",
-    "contentPattern": "package nl[.]obren[.]sokrates[.].*",
+    "contentPattern": "import org[.]apache[.].*",
     "use": "content",
     "ignoreComments": true,
     "nameOperations": [
         {
             "op": "extract",
             "params": [
-                "nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+"
+                "import org[.]apache[.][a-zA-Z0-9_]+"
             ]
         },
         {
             "op": "replace",
             "params": [
-                "nl[.]obren[.]sokrates[.]",
+                "import org[.]apache[.]",
                 ""
             ]
         }
@@ -54,29 +55,25 @@ SSTL supports the following commands:
 }
 {% endhighlight %}
 
+
+This script does the following:
+* looks for any Java file that contains at least one line starting with "import org.apache." (matches the regex expression "import org[.]apache[.].*")
+* it then uses as an input for pressing the found line (the parameter use is set to "content")
+* for each such line Sokrates performs two chained SSTL trafsormations:
+  * extract the regex pattern "import org[.]apache[.][a-zA-Z0-9_]+"
+  * remove "import org[.]apache[.]" (replace it with an empty string)
+
+Figure 2 illustrates this processing on two examples.
+
+
+***Figure 1:** A fragment of a Sokrates configuration files uses SSTL to find dependencies of files to org.apache modules.*
 
 ![](assets/images/sokrates/sstl-example-1.png)
 
-{% highlight json %}
-{
-    "pathPattern": ".*[.]java",
-    "contentPattern": "import nl[.]obren[.]sokrates[.].*",
-    "use": "content",
-    "ignoreComments": true,
-    "nameOperations": [
-        {
-            "op": "extract",
-            "params": [
-                "nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+"
-            ]
-        },
-        {
-            "op": "replace",
-            "params": [
-                "nl[.]obren[.]sokrates[.]",
-                ""
-            ]
-        }
-    ]
-}
-{% endhighlight %}
+***Figure 2:** The steps of SSTL processing for two import statements for a script defined in Figure 1.*
+
+
+
+
+
+

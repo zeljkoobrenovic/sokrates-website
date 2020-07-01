@@ -40,4 +40,4 @@ See a 5 minutes video on using [Sokrates Explorer](explorer) to analyze source c
 The [Sokrates website](https://www.sokrates.dev/) provides a gallery with the results of analyses of 66 open-source projects in 24 programming languages. Each project includes both the results of Sokrates analyses as well as a configuration file used to configure the analysis.
 
 ![](assets/images/sokrates/sokrates-gallery.png)
-**Figure 1:** The screenshot of the Sokrates' gallery. The gallery is a collection of Sokrates' projects, with the analysis of popular open-source projects.**
+***Figure 1:** The screenshot of the Sokrates' gallery. The gallery is a collection of Sokrates' projects, with the analysis of popular open-source projects.*

@@ -17,7 +17,7 @@ Trend analysis shows the difference between values measured at different times, 
 
 Trend analysis gives the meaning to measurements through comparison. While it may be difficult to tell if some measured value is good or bad, it may still be possible to say if this value is becoming better or worse. For instance, you always have some level of duplication in code. You may not have the time and resources to refactor the system to remove all duplication. But you usually want to have a trend of reduced duplication. You can at least monitor the duplication level so that your new code does not increase overall code repetition.
 
-For more insights into the value of trend analysis, Sokrates recommends reading the section "Favor tracking trends over absolute numbers" in the article An Appropriate Use of Metrics, (MartinFowler.com):
+For more insights into the value of trend analysis, Sokrates recommends reading the section "Favor tracking trends over absolute numbers" in the article [An Appropriate Use of Metrics](https://martinfowler.com/articles/useOfMetrics.html), (MartinFowler.com):
 
 > *"Looking at trends provides more interesting information than whether or not a target is met. Working out if a goal is met is easy. The difficult work, and one that management must work with people with the skills to complete is looking at trends to see if they are moving in the desired direction and a fast enough rate. Trends provide leading indicators into the performance that emerges from organizational complexity. It is clearly pointless focusing on the gap in a number when a trend moves further and further away from a desired state."*
 
@@ -56,7 +56,7 @@ snapshots (e.g. **_sokrates/history/snapshots/2020-01**)
 
 
 
-### Analyzing Trends Retrospectivelly
+### Analyzing Trends Retroactively
 
 If you have just started using Sokrates, you can still get the trend analysis by checking out the code at different moments in the past and running the Sokrates analysis against them to get the snapshots of source code from the past. The following line is the Git command to get your source code as it was on January 1, 2020:
 
@@ -93,7 +93,7 @@ cd ..
 # run Sokrates analysis
 java -jar -Xmx10g sokrates.jar generateReports -reportData -confFile temp/_sokrates/config.json -outputFolder temp/_sokrates/reports -reportAll
 
-# make history folders with apprpriate date in name
+# make history folders with appropriate date in the name
 mkdir history/$1
 mkdir history/$1/$3
 

@@ -14,6 +14,7 @@ You can use Sokrates in three different modes:
 * the basic analyze and reflect mode
 * the interactive explorations mode
 * the traffic lights target and goals mode
+* a software architecture documentation tool
 
 
 ### Analyze and Reflect
@@ -46,7 +47,7 @@ To support explorative mode, I have built as a part of Sokrates tools the [Explo
 
 **Figure 2:** *Explorer centralizes configuration, running of commands, and preview of analysis results in one tool. With Explorer, feedback loops are short as you can almost instantly see how a change in a setting, e.g., adding a new rule for detecting test files, impacts the analysis results.*
 
-Explorer also includes many features for manual, free form explorations, for instance, efficient regex code searches. If you find some interesting piece of code, you can also highlight it and add it to your manual findings. A more detailed description of Explorer you can find in [Appendix: Sokrates Explorer](explorer)
+Explorer also includes many features for manual, free form explorations, for instance, efficient regex code searches. If you find some interesting piece of code, you can also highlight it and add it to your manual findings. A more detailed description of Explorer you can find in [Appendix: Sokrates Explorer](explorer).
 
 Explorer is the most useful in initial phases of analysis, when you are discovering the patterns in your source code, as well as during the reconfiguration of the project.
 

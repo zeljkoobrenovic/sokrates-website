@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-06-30T22:13:43+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-07-02T00:17:09+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
 
 &lt;p&gt;Sokrates is a tool that can help you to understand your code by making visible the size, complexity, and coupling of software. With Sokrates, my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small their project is, irrespective of technology.&lt;/p&gt;
 
@@ -41,8 +41,6 @@
 
 &lt;p&gt;&lt;em&gt;“Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime.”&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Sokrates explores several areas, all centered around the idea of obtaining and maintaining intellectual control over your software projects.&lt;/p&gt;
-
 &lt;p&gt;Sokrates follows the following design principles:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -58,7 +56,21 @@
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Using Metrics to Start a Discussion, Not to Kill It.&lt;/strong&gt; Sokrates gives you insights into your code, and some pointer to probe further, but not advice that you can follow blindly.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">&quot;Know your code! The unexamined code is not worth maintaining.&quot; Sokrates helps you understand your code by making visible the size, complexity, and coupling of software.</summary></entry><entry><title type="html">Appendix: Command Line Interface (CLI)</title><link href="http://localhost:4000/book/cli" rel="alternate" type="text/html" title="Appendix: Command Line Interface (CLI)" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/cli</id><content type="html" xml:base="http://localhost:4000/book/cli">&lt;p&gt;See a 5 minutes video on using &lt;a href=&quot;cli&quot;&gt;Sokrates CLI&lt;/a&gt; to analyze source code of Sokrates:&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sokrates-pragmatic-approach&quot;&gt;Sokrates Pragmatic Approach&lt;/h3&gt;
+
+&lt;p&gt;Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.&lt;/p&gt;
+
+&lt;p&gt;The first thing I have learned pretty fast when building Sokrates is that it is extremely tough to build a proper fully-featured parser for any programming language.  Any software analysis tool needs a handful of such parsers. Contemporary software projects frequently include a dozen or more of different programming languages and dialects.&lt;/p&gt;
+
+&lt;p&gt;So how have I solved this problem? By not building fully-featured parsers.&lt;/p&gt;
+
+&lt;p&gt;I’ve also learned when building Sokrates that you can go a long way with using a few simple, heuristic parsing techniques. You may lose details in the process, but if you focus on the essence, such simple heuristic techniques can offer you incredible value for money. In many instances, you may get the same details as more complex and expensive tools. And performance-wise, simple heuristic techniques often work order of magnitude faster.&lt;/p&gt;
+
+&lt;p&gt;In the following chapters, we outline a few of these techniques. The following is useful for those who want to contribute or use the Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">&quot;Know your code! The unexamined code is not worth maintaining.&quot; Sokrates helps you understand your code by making visible the size, complexity, and coupling of software.</summary></entry><entry><title type="html">Appendix: Command Line Interface (CLI)</title><link href="http://localhost:4000/book/cli" rel="alternate" type="text/html" title="Appendix: Command Line Interface (CLI)" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/cli</id><content type="html" xml:base="http://localhost:4000/book/cli">&lt;p&gt;Sokrates command-line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape.&lt;/p&gt;
+
+&lt;p&gt;See a 5 minutes video on using &lt;a href=&quot;cli&quot;&gt;Sokrates CLI&lt;/a&gt; to analyze source code of Sokrates:&lt;/p&gt;
 
 &lt;iframe allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/ZybfJQ8Ob7g&quot; style=&quot;max-width: 1024px&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;
 
@@ -616,12 +628,12 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates configuration is a JSON file. You can use create this file manually from scratch, or use the init command to generate a default file for your project.</summary></entry><entry><title type="html">Appendix: Installation</title><link href="http://localhost:4000/book/install" rel="alternate" type="text/html" title="Appendix: Installation" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/install</id><content type="html" xml:base="http://localhost:4000/book/install">&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates configuration is a JSON file. You can use create this file manually from scratch, or use the init command to generate a default file for your project.</summary></entry><entry><title type="html">Appendix: Installation</title><link href="http://localhost:4000/book/install" rel="alternate" type="text/html" title="Appendix: Installation" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/install</id><content type="html" xml:base="http://localhost:4000/book/install">&lt;h2 id=&quot;installation-jar-files&quot;&gt;Installation: JAR files&lt;/h2&gt;
 
-&lt;h4 id=&quot;command-line-interface&quot;&gt;Command Line Interface&lt;/h4&gt;
+&lt;h3 id=&quot;command-line-interface&quot;&gt;Command Line Interface&lt;/h3&gt;
 
 &lt;p&gt;COMMAND LINE JAR
-DOWNLOAD: sokrates-0.9.jar (38 MB)&lt;/p&gt;
+DOWNLOAD: &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar&quot;&gt;sokrates-0.9.jar&lt;/a&gt; (38 MB)&lt;/p&gt;
 
 &lt;p&gt;Simple usage example (to analyze Junit4):&lt;/p&gt;
 
@@ -633,36 +645,34 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar generat
 
 open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Illustrate previous example&lt;/p&gt;
+&lt;h3 id=&quot;explorer&quot;&gt;Explorer&lt;/h3&gt;
 
-&lt;h4 id=&quot;explorer&quot;&gt;Explorer&lt;/h4&gt;
-
-&lt;p&gt;DOWNLOAD: sokrates-explorer-0.9.jar (78 MB)&lt;/p&gt;
+&lt;p&gt;DOWNLOAD: &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar&quot;&gt;sokrates-explorer-0.9.jar&lt;/a&gt; (78 MB)&lt;/p&gt;
 
 &lt;p&gt;NOTE: require JavaFX (download it and install it from openjfx.io)&lt;/p&gt;
 
 &lt;p&gt;java –module-path $JAVAFX_HOME/lib –add-modules=javafx.controls,javafx.web -jar sokrates-explorer-0.9.jar&lt;/p&gt;
 
-&lt;h3 id=&quot;source-code&quot;&gt;Source Code&lt;/h3&gt;
+&lt;h2 id=&quot;source-code&quot;&gt;Source Code&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/zeljkoobrenovic/sokrates&quot;&gt;github.com/zeljkoobrenovic/sokrates&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sokrates is an open-source project, released under the &lt;a href=&quot;https://github.com/zeljkoobrenovic/sokrates/blob/master/LICENSE&quot;&gt;GNU Affero General Public License v3.0&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h4 id=&quot;prerequirements&quot;&gt;Prerequirements&lt;/h4&gt;
+&lt;p&gt;To build a project from source code, go to the root of the project, and run the following command:&lt;/p&gt;
+&lt;pre&gt;
+mvn clean install
+&lt;/pre&gt;
+
+&lt;p&gt;The build will create two jar files:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar&quot;&gt;command line interface JAR&lt;/a&gt; in the &lt;strong&gt;cli/target&lt;/strong&gt; folder&lt;/li&gt;
+  &lt;li&gt;the &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar&quot;&gt;interactive explorer JAR&lt;/a&gt; in the &lt;strong&gt;codeexplorer/target&lt;/strong&gt; folder&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Prerequirements:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Java 8+&lt;/li&gt;
   &lt;li&gt;Maven&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;build&quot;&gt;Build&lt;/h4&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;mvn clean install&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The build will create two jar files:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;the command line interface in the cli/target folder&lt;/li&gt;
-  &lt;li&gt;the interactive explorer in the codeexplorer/target folder&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">You can install and run Sokrates in three ways. First, you can download the Sokrates command-line interface JAR file. Second, you can download the Sokrates Explorer JAR file. Lastly, you can build it from scratch from the Sokrates' GitHub repository.</summary></entry><entry><title type="html">Appendix: Sokrates String Transformation Language (SSTL)</title><link href="http://localhost:4000/book/sstl" rel="alternate" type="text/html" title="Appendix: Sokrates String Transformation Language (SSTL)" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/appendix-string-transformation-language</id><content type="html" xml:base="http://localhost:4000/book/sstl">&lt;p&gt;The Sokrates String Transformation Language (SSTL) is a simple embedded programming language enabling you to transform a phrase extracted from a file path or file content into another string.&lt;/p&gt;
 
 &lt;p&gt;You define SSTL scripts as a simple list of commands with parameters, a processing pipeline. Each next command takes as an input the result of the previous command.&lt;/p&gt;
@@ -680,59 +690,56 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Sokrates uses SSTL in several places:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;to define dynamic names of components in
- logical decompositions&lt;/li&gt;
-  &lt;li&gt;to define dynamic names of cross-cutting concerns&lt;/li&gt;
-  &lt;li&gt;to find components names for dependencies&lt;/li&gt;
+  &lt;li&gt;to define dynamic names of components in &lt;a href=&quot;logical-decomposition&quot;&gt;logical decompositions&lt;/a&gt; (the meta components section)&lt;/li&gt;
+  &lt;li&gt;to define dynamic names of &lt;a href=&quot;cross-cutting-concerns&quot;&gt;cross-cutting concerns&lt;/a&gt; (the meta concerns section)&lt;/li&gt;
+  &lt;li&gt;to find components names for &lt;a href=&quot;dependencies&quot;&gt;dependencies&lt;/a&gt; (the meta rules section)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
 
+&lt;p&gt;The following fragment of a Sokrates configuration files uses SSTL to find dependencies of files to org.apache modules:&lt;/p&gt;
+
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.*[.]java&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;package nl[.]obren[.]sokrates[.].*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;import org[.]apache[.].*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;use&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;ignoreComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;nameOperations&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;op&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;extract&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;params&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;import org[.]apache[.][a-zA-Z0-9_]+&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;op&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;replace&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;params&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nl[.]obren[.]sokrates[.]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;import org[.]apache[.]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                 &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;This script does the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;looks for any Java file that contains at least one line starting with “import org.apache.” (matches the regex expression “import org[.]apache[.].*”)&lt;/li&gt;
+  &lt;li&gt;it then uses as an input for pressing the found line (the parameter use is set to “content”)&lt;/li&gt;
+  &lt;li&gt;for each such line Sokrates performs two chained SSTL trafsormations:
+    &lt;ul&gt;
+      &lt;li&gt;extract the regex pattern “import org[.]apache[.][a-zA-Z0-9_]+”&lt;/li&gt;
+      &lt;li&gt;remove “import org[.]apache[.]” (replace it with an empty string)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Figure 2 illustrates this processing on two examples.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; A fragment of a Sokrates configuration files uses SSTL to find dependencies of files to org.apache modules.&lt;/em&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/sstl-example-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;pathPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.*[.]java&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;contentPattern&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;import nl[.]obren[.]sokrates[.].*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;use&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;ignoreComments&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;nameOperations&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;op&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;extract&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;params&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nl[.]obren[.]sokrates[.][a-zA-Z0-9_]+[.][a-zA-Z0-9_]+&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;op&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;replace&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;params&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nl[.]obren[.]sokrates[.]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">The Sokrates String Transformation Language (SSTL) is a simple embedded programming language enabling you to transform a phrase extracted from a file path or file content into another string. You can use SSTL to define the names of components and identify dependencies among the components.</summary></entry><entry><title type="html">Appendix: Regular Expressions</title><link href="http://localhost:4000/book/regex" rel="alternate" type="text/html" title="Appendix: Regular Expressions" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/appendix-regex</id><content type="html" xml:base="http://localhost:4000/book/regex">&lt;p&gt;Jeff Atwood, the co-founder of StackOverflow.com, is a big fan of regular expressions. On a shortlist of his mandatory readings for software engineering is the &lt;a href=&quot;https://www.amazon.com/dp/1449319432/&quot;&gt;Regular Expression Cookbook&lt;/a&gt;, and this is what he says:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; The steps of SSTL processing for two import statements for a script defined in Figure 1.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">The Sokrates String Transformation Language (SSTL) is a simple embedded programming language enabling you to transform a phrase extracted from a file path or file content into another string. You can use SSTL to define the names of components and identify dependencies among the components.</summary></entry><entry><title type="html">Appendix: Regular Expressions</title><link href="http://localhost:4000/book/regex" rel="alternate" type="text/html" title="Appendix: Regular Expressions" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/appendix-regex</id><content type="html" xml:base="http://localhost:4000/book/regex">&lt;p&gt;Jeff Atwood, the co-founder of StackOverflow.com, is a big fan of regular expressions. On a shortlist of his mandatory readings for software engineering is the &lt;a href=&quot;https://www.amazon.com/dp/1449319432/&quot;&gt;Regular Expression Cookbook&lt;/a&gt;, and this is what he says:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;I may be a card carrying member of the “Keep It Simple Stupid” club, but I’m making a meteor sized exception for regular expressions. Written properly, they will save you a tremendous amount of time in string manipulation, and I’ve never run across a project where they didn’t come in handy somewhere.&lt;/p&gt;
@@ -740,41 +747,17 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
   &lt;p&gt;Once you delve into the world of regular expressions, you may become drunk with the amazing power and potential they have, which results in things like Perl. Remember, absolute power corrupts absolutely. But it also rocks absolutely.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Thus spoke Jeff Atwood. Regular expressions have corrupted me, and in Sokrates, I am exploiting their power  shamelessly.&lt;/p&gt;
+&lt;p&gt;You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, extract and manipulate text, name components, or identify dependencies.&lt;/p&gt;
+
+&lt;h3 id=&quot;regular-expressions-in-sokrates&quot;&gt;Regular Expressions in Sokrates&lt;/h3&gt;
 
 &lt;p&gt;Sokrates is all about regular expressions. Sokrates is inspired by &lt;a href=&quot;https://en.wikipedia.org/wiki/Grep&quot;&gt;&lt;strong&gt;grep&lt;/strong&gt;&lt;/a&gt;, a command-line tool for searching text data sets for lines that match a regular expression. Its name comes from the ed command g/re/p (globally search for a regular expression and print matching lines). grep was originally developed for the Unix operating system, but later available for all Unix-like systems and some others.&lt;/p&gt;
 
 &lt;p&gt;Sokrates uses regular expressions for two main purposes:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;to filter and classify files, and&lt;/li&gt;
-  &lt;li&gt;to extract and manipulate text to name components, or identify dependencies.&lt;/li&gt;
+  &lt;li&gt;Filter and classify files (see the &lt;a href=&quot;scoping&quot;&gt;Scoping section&lt;/a&gt; for details), and&lt;/li&gt;
+  &lt;li&gt;Regular expressions as a part of &lt;a href=&quot;sstl&quot;&gt;Sokrates String Transformation Language (SSTL)&lt;/a&gt;. You can use SSTL to define the names of components and identify dependencies among the components.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Sokrates has two main use cases for regular expressions:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Regular expressions as a filtering mechanism for files’ scoping.&lt;/li&gt;
-  &lt;li&gt;Regular expressions as a part of Sokrates string transformation language (SSTL). You can use SSTL to define the names of components and identify dependencies among the components.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;file-filtering-and-classification&quot;&gt;File filtering and classification&lt;/h3&gt;
-
-&lt;p&gt;As a file filtering mechanism, Sokrates uses a lot of regular expressions. Such a list has items with three values:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;a file path regex expression, defining when a file path is recognized. If left empty,
- Sokrates will include all files.&lt;/li&gt;
-  &lt;li&gt;a content regular expression, defining a string pattern that at least one line in a file needs to match. If left empty, Sokrates will include all files with matching paths regardless of their content.&lt;/li&gt;
-  &lt;li&gt;an inclusion flag. This flag describes if the item adds or removes files from the filtered lifter (if false, the rule defines an exception).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;string-manipulation&quot;&gt;String manipulation&lt;/h3&gt;
-
-&lt;h3 id=&quot;and-combined&quot;&gt;And Combined&lt;/h3&gt;
-
-&lt;h3 id=&quot;regular-expressions-and-software-architecture&quot;&gt;Regular Expressions and Software Architecture&lt;/h3&gt;
-
-&lt;p&gt;Regular expressions are patterns. Or, more precisely, the way to define patterns. And software architecture is closely related to defining and identifying patterns in code.&lt;/p&gt;
-
-&lt;p&gt;Regular expressions are cross-platform, working at any text representation. This cross-platform aspect is also what makes them useful for software architecture. Software architecture patterns are not limited to any technology.&lt;/p&gt;
 
 &lt;h3 id=&quot;to-probe-further&quot;&gt;To Probe Further&lt;/h3&gt;
 
@@ -797,7 +780,7 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
     &lt;p&gt;&lt;a href=&quot;https://regex101.com/&quot;&gt;Regex 101&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.python-course.eu/re.php&quot;&gt;Python Cource on Regular Expressions&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.python-course.eu/re.php&quot;&gt;Python Course on Regular Expressions&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -813,11 +796,11 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.oreilly.com/library/view/introducing-regular-expressions/9781449338879/&quot; target=&quot;_blank&quot;&gt;
   &lt;img src=&quot;assets/images/sokrates/book-regex-intro.png&quot; width=&quot;300&quot; style=&quot;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, and to extract and manipulate text to name components, or identify dependencies.</summary></entry><entry><title type="html">Landscape Analysis</title><link href="http://localhost:4000/book/landscape" rel="alternate" type="text/html" title="Landscape Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/landscape-analysis</id><content type="html" xml:base="http://localhost:4000/book/landscape">&lt;p&gt;The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place.&lt;/p&gt;
+&lt;/a&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, extract and manipulate text, name components, or identify dependencies.</summary></entry><entry><title type="html">Landscape Analysis</title><link href="http://localhost:4000/book/landscape" rel="alternate" type="text/html" title="Landscape Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/landscape-analysis</id><content type="html" xml:base="http://localhost:4000/book/landscape">&lt;p&gt;The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place.&lt;/p&gt;
 
-&lt;p&gt;The landscape analyses provide a helicopter view on huge code bases. The uniform centralized index page providing an easy way to find and get access to details of individual Sokrates projects. On the other hand, the landscape analysis, in an efficient way, also aggregates and compares basic basing findings from dozens or hundreds of such projects.&lt;/p&gt;
+&lt;p&gt;The landscape analyses provide a helicopter view on huge code bases. The uniform centralized index page provides an easy way to find and get access to details of individual Sokrates projects. On the other hand, the landscape analysis, in an efficient way, also aggregates and compares basic basing findings from dozens or hundreds of such projects.&lt;/p&gt;
 
-&lt;p&gt;To run a Sokrates landscape analysis, you need to get to the root folder, under which are other Sokrates projects. Sokrates landscape analysis assumes that your projects are somewhere in deep folders. Sokrates will recursively go through all folders, looking for all configuration and analysis result files. For details on Sokrates landscape commands, visit &lt;a href=&quot;cli/&quot;&gt;the command line interface page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To run a Sokrates landscape analysis, you need to get to the root folder, under which are other Sokrates projects. Sokrates landscape analysis assumes that your projects are somewhere in deep folders. Sokrates will recursively go through all folders, looking for all configuration and analysis result files. For details on Sokrates landscape commands, visit &lt;a href=&quot;cli&quot;&gt;the command line interface page&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-init-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -825,9 +808,9 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;An alternative to the landscape analysis is to scope a whole codebase one Sokrate project, scoping each sub-project as a component. However, for code bases of dozens of millions of lines of code, such an approach may not be practical enough due to length of analysis. Instead, you can define many smaller projects, and use the landscape analysis to provide a bigger picture.&lt;/p&gt;
 
-&lt;p&gt;You can find &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html&quot;&gt;an example Sokrates landscape report at the sokrates.dev site&lt;/a&gt;. In this report, I have aggregated and indexed all 65 Sokrates example projects, with more than 11 millions lines of code.&lt;/p&gt;
+&lt;p&gt;You can find &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html&quot;&gt;an example Sokrates landscape report at the sokrates.dev site&lt;/a&gt;. In this report, I have aggregated and indexed all 65 Sokrates example projects, with more than 11 million lines of code.&lt;/p&gt;
 
-&lt;p&gt;The following screen shot shows this report as well:&lt;/p&gt;
+&lt;p&gt;The following screenshot shows this report as well:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/reports-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -839,7 +822,7 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Trend analysis gives the meaning to measurements through comparison. While it may be difficult to tell if some measured value is good or bad, it may still be possible to say if this value is becoming better or worse. For instance, you always have some level of duplication in code. You may not have the time and resources to refactor the system to remove all duplication. But you usually want to have a trend of reduced duplication. You can at least monitor the duplication level so that your new code does not increase overall code repetition.&lt;/p&gt;
 
-&lt;p&gt;For more insights into the value of trend analysis, Sokrates recommends reading the section “Favor tracking trends over absolute numbers” in the article An Appropriate Use of Metrics, (MartinFowler.com):&lt;/p&gt;
+&lt;p&gt;For more insights into the value of trend analysis, Sokrates recommends reading the section “Favor tracking trends over absolute numbers” in the article &lt;a href=&quot;https://martinfowler.com/articles/useOfMetrics.html&quot;&gt;An Appropriate Use of Metrics&lt;/a&gt;, (MartinFowler.com):&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;“Looking at trends provides more interesting information than whether or not a target is met. Working out if a goal is met is easy. The difficult work, and one that management must work with people with the skills to complete is looking at trends to see if they are moving in the desired direction and a fast enough rate. Trends provide leading indicators into the performance that emerges from organizational complexity. It is clearly pointless focusing on the gap in a number when a trend moves further and further away from a desired state.”&lt;/em&gt;&lt;/p&gt;
@@ -876,7 +859,7 @@ snapshots (e.g. &lt;strong&gt;_sokrates/history/snapshots/2020-01&lt;/strong&gt;
 
 &lt;p&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; &lt;em&gt;A screenshot from a Sokrates trend report detailing volume and duplication change.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;analyzing-trends-retrospectivelly&quot;&gt;Analyzing Trends Retrospectivelly&lt;/h3&gt;
+&lt;h3 id=&quot;analyzing-trends-retroactively&quot;&gt;Analyzing Trends Retroactively&lt;/h3&gt;
 
 &lt;p&gt;If you have just started using Sokrates, you can still get the trend analysis by checking out the code at different moments in the past and running the Sokrates analysis against them to get the snapshots of source code from the past. The following line is the Git command to get your source code as it was on January 1, 2020:&lt;/p&gt;
 
@@ -910,7 +893,7 @@ git checkout &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;git rev-list &lt;spa
 &lt;span class=&quot;c&quot;&gt;# run Sokrates analysis&lt;/span&gt;
 java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Xmx10g&lt;/span&gt; sokrates.jar generateReports &lt;span class=&quot;nt&quot;&gt;-reportData&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt; temp/_sokrates/config.json &lt;span class=&quot;nt&quot;&gt;-outputFolder&lt;/span&gt; temp/_sokrates/reports &lt;span class=&quot;nt&quot;&gt;-reportAll&lt;/span&gt;
 
-&lt;span class=&quot;c&quot;&gt;# make history folders with apprpriate date in name&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# make history folders with appropriate date in the name&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;mkdir history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;mkdir history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;
 
@@ -944,7 +927,7 @@ bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/
 bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2016-01-01'&lt;/span&gt;
 bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2015-01-01'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; &lt;em&gt;A bash script describing the full process of checking our source code on different dates, by calling the script defined in Figure 4.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Trend analysis shows the difference between values measured at different times, comparing the results of the current analysis with previous reports.</summary></entry><entry><title type="html">Controls</title><link href="http://localhost:4000/book/controls" rel="alternate" type="text/html" title="Controls" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/controls-analysis</id><content type="html" xml:base="http://localhost:4000/book/controls">&lt;p&gt;In Sokrates you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; &lt;em&gt;A bash script describing the full process of checking our source code on different dates, by calling the script defined in Figure 4.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Trend analysis shows the difference between values measured at different times, comparing the results of the current analysis with previous reports.</summary></entry><entry><title type="html">Controls</title><link href="http://localhost:4000/book/controls" rel="alternate" type="text/html" title="Controls" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/controls-analysis</id><content type="html" xml:base="http://localhost:4000/book/controls">&lt;p&gt;In Sokrates, you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;OK (green) the measured value is below the threshold&lt;/li&gt;
   &lt;li&gt;tolerant (yellow) the measured value is above the threshold but within the tolerance range&lt;/li&gt;
@@ -955,11 +938,11 @@ bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/
 
 &lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; &lt;em&gt;The goals-and-controls mode, a simplified analyze-and-reflect mode, where you can replace the reflect part with a set of clearly defined traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. And then react when the measurements are out of safe range.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;For instance, let’s assume that we have defined a control for duplication, setting the threshold to 5% and the tolerance level to 2%. If the measured duplication level is 4%, Sokrotes will label the control as OK (green). For the measured duplication level of 8%, Sokrates will label the control as failed (red). If the measured duplication is 6% Soknetes will mark the controls as tolerant (yellow).&lt;/p&gt;
+&lt;p&gt;For instance, let’s assume that we have defined a control for duplication, setting the threshold to 5% and the tolerance level to 2%. If the measured duplication level is 4%, Sokrotes will label the control as OK (green). For the measured duplication level of 8%, Sokrates will label the control as failed (red). If the measured duplication is 6%, Sokrates will mark the controls as tolerant (yellow).&lt;/p&gt;
 
 &lt;h3 id=&quot;configuring-controls&quot;&gt;Configuring Controls&lt;/h3&gt;
 
-&lt;p&gt;You configure controls as a part of a Sokrates &lt;a href=&quot;configuration&quot;&gt;JSON configuration file&lt;/a&gt;, as a part of the goalsAnd Controls section. You can define multiple goals, each associated with one or more controls.&lt;/p&gt;
+&lt;p&gt;You configure controls as a part of a Sokrates &lt;a href=&quot;configuration&quot;&gt;JSON configuration file&lt;/a&gt;, as a part of the goalsAndControls section. You can define multiple goals, each associated with one or more controls.&lt;/p&gt;
 
 &lt;p&gt;The following example code fragment is taken from the &lt;a href=&quot;&quot;&gt;JUnit5 Sokrates configuration file&lt;/a&gt;:&lt;/p&gt;
 
@@ -1022,7 +1005,7 @@ bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/
 
 &lt;p&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; &lt;em&gt;A screenshot from a Sokrates controls report. For each control metric, the measured value is compared with a defined range and tolerance.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;The equvalvent text data file you can &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/data/text/controls.txt&quot;&gt;find here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The equivalent text data file you can &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/data/text/controls.txt&quot;&gt;find here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;goal: Keep the system simple and easy to change
 control metric: LINES_OF_CODE_MAIN
@@ -1061,17 +1044,17 @@ description: Number of very complex units&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt
  concerns, or file extensions.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;static-metrics&quot;&gt;Static Metrics&lt;/h3&gt;
+&lt;h2 id=&quot;static-metrics&quot;&gt;Static Metrics&lt;/h2&gt;
 
-&lt;p&gt;Static metrics describe the overal system values, such as lines of code in main or test code, or number of files in the main code. The following table shows some of these metrics:&lt;/p&gt;
+&lt;p&gt;Static metrics describe the overall system values, such as lines of code in main or test code, or a number of files in the main code. The following table shows some of these metrics:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/metrics-table.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; The screenshot from the Sokrates metrics report, showing some of the static metrics.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;derived-metrics&quot;&gt;Derived Metrics&lt;/h3&gt;
+&lt;h2 id=&quot;derived-metrics&quot;&gt;Derived Metrics&lt;/h2&gt;
 
-&lt;p&gt;Derived metrics are dynamic, their number and names depend on number anf names of components, cross-cutting concerns and file extensions. The following table shows several of these derived metrics.&lt;/p&gt;
+&lt;p&gt;Derived metrics are dynamic. Their number and names depend on the number and names of components, cross-cutting concerns, and file extensions. The following table shows several of these derived metrics.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/metrics-table-derived.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1086,9 +1069,9 @@ description: Number of very complex units&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt
   &lt;li&gt;LINES_OF_CODE_DECOMPOSITION_&amp;lt;LOGICAL_DECOMPOSITION&amp;gt;&lt;em&gt;&amp;lt;COMPONENT&amp;gt;_EXT&lt;/em&gt;&amp;lt;EXTENSION&amp;gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;using-metrics&quot;&gt;Using Metrics&lt;/h3&gt;
+&lt;h2 id=&quot;using-metrics&quot;&gt;Using Metrics&lt;/h2&gt;
 
-&lt;p&gt;Sokrates exports all metrics as text, JSON and HTML files. You can then use these lists for your own processing.&lt;/p&gt;
+&lt;p&gt;Sokrates exports all metrics as text, JSON, and HTML files. You can then use these lists for your own processing.&lt;/p&gt;
 
 &lt;p&gt;In addition to exporting the list of metrics, Sokrates employs these metrics at two other places:&lt;/p&gt;
 &lt;ul&gt;

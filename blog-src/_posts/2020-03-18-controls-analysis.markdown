@@ -8,7 +8,7 @@ icon: controls
 excerpt: "In Sokrates, you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a monitor with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states. OK (green) means that the measured value is below the threshold. Tolerant (yellow) means that the measured value is above the threshold but within the tolerance range. Failed (red) means that the measured value is above the threshold and the tolerance level."
 ---
 
-In Sokrates you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states:
+In Sokrates, you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states:
 * OK (green) the measured value is below the threshold
 * tolerant (yellow) the measured value is above the threshold but within the tolerance range
 * failed (red), the measured value is above the threshold and the tolerance level.
@@ -17,11 +17,11 @@ In Sokrates you can define traffic lights like controls. For each of the metrics
 
 **Figure 1:** *The goals-and-controls mode, a simplified analyze-and-reflect mode, where you can replace the reflect part with a set of clearly defined traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. And then react when the measurements are out of safe range.*
 
-For instance, let's assume that we have defined a control for duplication, setting the threshold to 5% and the tolerance level to 2%. If the measured duplication level is 4%, Sokrotes will label the control as OK (green). For the measured duplication level of 8%, Sokrates will label the control as failed (red). If the measured duplication is 6% Soknetes will mark the controls as tolerant (yellow).
+For instance, let's assume that we have defined a control for duplication, setting the threshold to 5% and the tolerance level to 2%. If the measured duplication level is 4%, Sokrotes will label the control as OK (green). For the measured duplication level of 8%, Sokrates will label the control as failed (red). If the measured duplication is 6%, Sokrates will mark the controls as tolerant (yellow).
 
 ### Configuring Controls
 
-You configure controls as a part of a Sokrates [JSON configuration file](configuration), as a part of the goalsAnd Controls section. You can define multiple goals, each associated with one or more controls.
+You configure controls as a part of a Sokrates [JSON configuration file](configuration), as a part of the goalsAndControls section. You can define multiple goals, each associated with one or more controls.
 
 The following example code fragment is taken from the [JUnit5 Sokrates configuration file]():
 
@@ -86,7 +86,7 @@ The example of a Sokrates controls HTML report you can [find here](https://d3axx
 
 **Figure 3:** *A screenshot from a Sokrates controls report. For each control metric, the measured value is compared with a defined range and tolerance.*
 
-The equvalvent text data file you can [find here](https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/data/text/controls.txt).
+The equivalent text data file you can [find here](https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/data/text/controls.txt).
 
 {% highlight txt %}
 goal: Keep the system simple and easy to change

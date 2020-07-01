@@ -8,15 +8,15 @@
 <meta property="og:title" content="Appendix: Regular Expressions" />
 <meta name="author" content="by Željko Obrenović (zeljkoobrenovic.com)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, and to extract and manipulate text to name components, or identify dependencies." />
-<meta property="og:description" content="You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, and to extract and manipulate text to name components, or identify dependencies." />
+<meta name="description" content="You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, extract and manipulate text, name components, or identify dependencies." />
+<meta property="og:description" content="You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, extract and manipulate text, name components, or identify dependencies." />
 <link rel="canonical" href="http://localhost:4000/book/regex" />
 <meta property="og:url" content="http://localhost:4000/book/regex" />
 <meta property="og:site_name" content="Examined Line: The Art of Source Code Analysis with Sokrates" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"description":"You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, and to extract and manipulate text to name components, or identify dependencies.","headline":"Appendix: Regular Expressions","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/regex"},"url":"http://localhost:4000/book/regex","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
+{"dateModified":"2020-05-25T20:12:01+02:00","description":"You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, extract and manipulate text, name components, or identify dependencies.","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/regex"},"url":"http://localhost:4000/book/regex","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"headline":"Appendix: Regular Expressions","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -97,41 +97,17 @@
   <p>Once you delve into the world of regular expressions, you may become drunk with the amazing power and potential they have, which results in things like Perl. Remember, absolute power corrupts absolutely. But it also rocks absolutely.</p>
 </blockquote>
 
-<p>Thus spoke Jeff Atwood. Regular expressions have corrupted me, and in Sokrates, I am exploiting their power  shamelessly.</p>
+<p>You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, extract and manipulate text, name components, or identify dependencies.</p>
+
+<h3 id="regular-expressions-in-sokrates">Regular Expressions in Sokrates</h3>
 
 <p>Sokrates is all about regular expressions. Sokrates is inspired by <a href="https://en.wikipedia.org/wiki/Grep"><strong>grep</strong></a>, a command-line tool for searching text data sets for lines that match a regular expression. Its name comes from the ed command g/re/p (globally search for a regular expression and print matching lines). grep was originally developed for the Unix operating system, but later available for all Unix-like systems and some others.</p>
 
 <p>Sokrates uses regular expressions for two main purposes:</p>
 <ul>
-  <li>to filter and classify files, and</li>
-  <li>to extract and manipulate text to name components, or identify dependencies.</li>
+  <li>Filter and classify files (see the <a href="scoping">Scoping section</a> for details), and</li>
+  <li>Regular expressions as a part of <a href="sstl">Sokrates String Transformation Language (SSTL)</a>. You can use SSTL to define the names of components and identify dependencies among the components.</li>
 </ul>
-
-<p>Sokrates has two main use cases for regular expressions:</p>
-<ul>
-  <li>Regular expressions as a filtering mechanism for files’ scoping.</li>
-  <li>Regular expressions as a part of Sokrates string transformation language (SSTL). You can use SSTL to define the names of components and identify dependencies among the components.</li>
-</ul>
-
-<h3 id="file-filtering-and-classification">File filtering and classification</h3>
-
-<p>As a file filtering mechanism, Sokrates uses a lot of regular expressions. Such a list has items with three values:</p>
-<ul>
-  <li>a file path regex expression, defining when a file path is recognized. If left empty,
- Sokrates will include all files.</li>
-  <li>a content regular expression, defining a string pattern that at least one line in a file needs to match. If left empty, Sokrates will include all files with matching paths regardless of their content.</li>
-  <li>an inclusion flag. This flag describes if the item adds or removes files from the filtered lifter (if false, the rule defines an exception).</li>
-</ul>
-
-<h3 id="string-manipulation">String manipulation</h3>
-
-<h3 id="and-combined">And Combined</h3>
-
-<h3 id="regular-expressions-and-software-architecture">Regular Expressions and Software Architecture</h3>
-
-<p>Regular expressions are patterns. Or, more precisely, the way to define patterns. And software architecture is closely related to defining and identifying patterns in code.</p>
-
-<p>Regular expressions are cross-platform, working at any text representation. This cross-platform aspect is also what makes them useful for software architecture. Software architecture patterns are not limited to any technology.</p>
 
 <h3 id="to-probe-further">To Probe Further</h3>
 
@@ -154,7 +130,7 @@
     <p><a href="https://regex101.com/">Regex 101</a></p>
   </li>
   <li>
-    <p><a href="https://www.python-course.eu/re.php">Python Cource on Regular Expressions</a></p>
+    <p><a href="https://www.python-course.eu/re.php">Python Course on Regular Expressions</a></p>
   </li>
 </ul>
 
