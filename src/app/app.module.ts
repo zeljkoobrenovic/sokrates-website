@@ -18,6 +18,7 @@ import {HowtoComponent} from './howto/howto.component';
 import {ConfigLandscapeComponent} from './config-landscape/config-landscape.component';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
+import { BookComponent } from './book/book.component';
 
 const languages = () => {
   return {
@@ -36,7 +37,8 @@ const languages = () => {
     InstallComponent,
     ConfigurationPageComponent,
     HowtoComponent,
-    ConfigLandscapeComponent
+    ConfigLandscapeComponent,
+    BookComponent
   ],
   imports: [
     HighlightModule,

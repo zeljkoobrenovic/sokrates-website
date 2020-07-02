@@ -29,7 +29,7 @@ My primary motivation for building Sokrates was dealing with issues in my daily 
 
 To answer these and many other questions, Sokrates offers tools, which we will discuss later in the book.
 
-### Sokrates: A Practical Tool vs. An Experiment
+## Sokrates: A Practical Tool vs. An Experiment
 
 Sokrates implements my vision on how to document and analyze software architectures of software systems. Sokrates is an experimental tool that also explores how far following a simple approach to building code analysis tools can get you. In creating Sokrates, I also wanted to prove that it is possible to develop a practical tool but without all complexity frequently associated with static code analysis tools.
 
@@ -62,7 +62,7 @@ Sokrates follows the following design principles:
 
 
 
-### Sokrates Pragmatic Approach
+## Sokrates Pragmatic Approach
 
 Sokrates is a practical source code analysis tool. Sokrates does not aim at replicating the level of details of many other tools, such as SonarQube. Instead, it leans on a few basic principles and techniques to get insights about your code without building a massive and complex tool.
 
@@ -75,3 +75,15 @@ So how have I solved this problem? By not building fully-featured parsers.
 In the following chapters, we outline a few of these techniques. The following is useful for those who want to contribute or use the Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.
 
 
+### Background
+
+Sokrates looks on the source code from a perspective of maintenance, making visible the size, complexity and coupling of software.
+
+For more details see my O'Reilly Video Training (from my time at Software Improvement Group): [Building Maintainable Software](https://player.oreilly.com/videos/9781491950791) (4 hours), and O'Reilly Webcast: [Building Maintainable Software](https://www.oreilly.com/pub/e/3535) (1 hour, together with [Rob van der Leek](https://www.linkedin.com/in/rob-van-der-leek-66596962/)).
+
+The fragment of my training video on building maintainable software is freely avaliable at Youtube:
+<br/><br/>
+<iframe style="max-width: 560px" width="100%" height="315"
+        src="https://www.youtube.com/embed/8k14k3q5zDs?start=334" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
