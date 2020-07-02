@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-07-02T00:17:09+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-07-02T10:41:01+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
 
 &lt;p&gt;Sokrates is a tool that can help you to understand your code by making visible the size, complexity, and coupling of software. With Sokrates, my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small their project is, irrespective of technology.&lt;/p&gt;
 
@@ -68,15 +68,19 @@
 
 &lt;p&gt;I’ve also learned when building Sokrates that you can go a long way with using a few simple, heuristic parsing techniques. You may lose details in the process, but if you focus on the essence, such simple heuristic techniques can offer you incredible value for money. In many instances, you may get the same details as more complex and expensive tools. And performance-wise, simple heuristic techniques often work order of magnitude faster.&lt;/p&gt;
 
-&lt;p&gt;In the following chapters, we outline a few of these techniques. The following is useful for those who want to contribute or use the Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">&quot;Know your code! The unexamined code is not worth maintaining.&quot; Sokrates helps you understand your code by making visible the size, complexity, and coupling of software.</summary></entry><entry><title type="html">Appendix: Command Line Interface (CLI)</title><link href="http://localhost:4000/book/cli" rel="alternate" type="text/html" title="Appendix: Command Line Interface (CLI)" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/cli</id><content type="html" xml:base="http://localhost:4000/book/cli">&lt;p&gt;Sokrates command-line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape.&lt;/p&gt;
+&lt;p&gt;In the following chapters, we outline a few of these techniques. The following is useful for those who want to contribute or use the Sokrates source code. But it may also offer few insights into power and limitation of Sokrates analyses.&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">&quot;Know your code! The unexamined code is not worth maintaining.&quot; Sokrates helps you understand your code by making visible the size, complexity, and coupling of software.</summary></entry><entry><title type="html">Appendix: Command Line Interface (CLI)</title><link href="http://localhost:4000/book/cli" rel="alternate" type="text/html" title="Appendix: Command Line Interface (CLI)" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/cli</id><content type="html" xml:base="http://localhost:4000/book/cli">&lt;p&gt;Sokrates command-line interface (CLI) includes five commands:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;init,&lt;/li&gt;
+  &lt;li&gt;generateReports,&lt;/li&gt;
+  &lt;li&gt;configComplete,&lt;/li&gt;
+  &lt;li&gt;initLandscape, and&lt;/li&gt;
+  &lt;li&gt;updateLandscape.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;See a 5 minutes video on using &lt;a href=&quot;cli&quot;&gt;Sokrates CLI&lt;/a&gt; to analyze source code of Sokrates:&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;init-command&quot;&gt;&lt;strong&gt;&lt;em&gt;init&lt;/em&gt;&lt;/strong&gt; command&lt;/h2&gt;
 
-&lt;iframe allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/ZybfJQ8Ob7g&quot; style=&quot;max-width: 1024px&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&quot;init-command&quot;&gt;&lt;strong&gt;&lt;em&gt;init&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
-
-&lt;p&gt;generate a Sokrates configuration file for the codebase.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;init&lt;/strong&gt; command generates a new Sokrates configuration file based on standard source code conventions.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar init &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
    &lt;span class=&quot;nt&quot;&gt;-srcRoot&lt;/span&gt;  &amp;lt;arg&amp;gt;   &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;code root folder &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &amp;lt;currentFolder&amp;gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -86,10 +90,11 @@
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; The &lt;strong&gt;init&lt;/strong&gt; command generates a new Sokrates configuration file based on standard source code conventions.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;generatereports-command&quot;&gt;&lt;strong&gt;&lt;em&gt;generateReports&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;generatereports-command&quot;&gt;&lt;strong&gt;&lt;em&gt;generateReports&lt;/em&gt;&lt;/strong&gt; command&lt;/h2&gt;
 
-&lt;p&gt;generates Sokrates reports based on the configuration&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;generatesReports&lt;/strong&gt; command generates HTML reports and exports data files.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar generateReports &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
          &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt;     &amp;lt;arg&amp;gt;           &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/config.json&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -113,22 +118,24 @@
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; The &lt;strong&gt;generatesReports&lt;/strong&gt; command generates HTML reports and exports data files.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;configcomplete-command&quot;&gt;&lt;strong&gt;&lt;em&gt;configComplete&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;configcomplete-command&quot;&gt;&lt;strong&gt;&lt;em&gt;configComplete&lt;/em&gt;&lt;/strong&gt; command&lt;/h2&gt;
 
-&lt;p&gt;completes missing fields in the configuration file&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;configComplete&lt;/strong&gt; completes missing fields in the configuration file. You can also use the configComplete command to upgrade your configuration file to the latest version.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates.jar configComplete &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
      &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt; &amp;lt;arg&amp;gt;       &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/config.json&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-config-complete.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; The &lt;strong&gt;configComplete&lt;/strong&gt; completes missing fields in the configuration file. You can also use the configComplete command to upgrade your configuration file to the latest version.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; The &lt;strong&gt;configComplete&lt;/strong&gt; completes missing fields in the configuration file.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;initlandscape-command&quot;&gt;&lt;strong&gt;&lt;em&gt;initLandscape&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;initlandscape-command&quot;&gt;&lt;strong&gt;&lt;em&gt;initLandscape&lt;/em&gt;&lt;/strong&gt; command&lt;/h2&gt;
 
-&lt;p&gt;create the configuration file for Sokrates landscape analysis (aggregated report of multiple Sokrates analysis results)&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;initLandscape&lt;/strong&gt; creates a Sokrates Landscape report and an initial landscape configuration file for landscape analyses.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates.jar initLandscape &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
      &lt;span class=&quot;nt&quot;&gt;-analysisRoot&lt;/span&gt; &amp;lt;arg&amp;gt;    the path to the root folder of multiple Sokrates projects, scans all subfolders &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;Sokrates reports and configurations.  The folder where landscape reports will be stored &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates_landscape/reports/&quot;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
@@ -136,12 +143,13 @@
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-init-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 4:&lt;/strong&gt; The &lt;strong&gt;initLandscape&lt;/strong&gt; creates a Sokrates Landscape report, and initial landscape configuration file for landscape analyses.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 4:&lt;/strong&gt; The &lt;strong&gt;initLandscape&lt;/strong&gt; creates a Sokrates Landscape report and an initial landscape configuration file for landscape analyses.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;updatelandscape-command&quot;&gt;&lt;strong&gt;&lt;em&gt;updateLandscape&lt;/em&gt;&lt;/strong&gt; command&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;updatelandscape-command&quot;&gt;&lt;strong&gt;&lt;em&gt;updateLandscape&lt;/em&gt;&lt;/strong&gt; command&lt;/h2&gt;
 
-&lt;p&gt;updates the configuration file for Sokrates Landscape analysis&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;updateLandscape&lt;/strong&gt; updates a Sokrates Landscape report, adding new and removing non-existent projects without changing other settings in the landscape configuration file.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates.jar updateLandscape &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
      &lt;span class=&quot;nt&quot;&gt;-analysisRoot&lt;/span&gt; &amp;lt;arg&amp;gt;   the path to the root folder of multiple Sokrates projects, scans all subfolders &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;Sokrates reports and configurations. The folder where landscape reports will be stored &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates_landscape/reports/&quot;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
@@ -149,10 +157,21 @@
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-update-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; The &lt;strong&gt;updateLandscape&lt;/strong&gt; updates a Sokrates Landscape report, adding new and removing non-existent projects, but without chaning other settings in the landscape configuration file.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; The &lt;strong&gt;updateLandscape&lt;/strong&gt; updates a Sokrates Landscape report, adding new and removing non-existent projects without changing other settings in the landscape configuration file.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;running-sokrates-as-a-batch-process&quot;&gt;Running Sokrates as a Batch Process&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;example-a-getting-started-video&quot;&gt;Example: A Getting Started Video&lt;/h2&gt;
+
+&lt;p&gt;See a 5 minutes video on using &lt;a href=&quot;cli&quot;&gt;Sokrates CLI&lt;/a&gt; to analyze source code of Sokrates:&lt;/p&gt;
+
+&lt;iframe allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/ZybfJQ8Ob7g&quot; style=&quot;max-width: 1024px&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;example-running-sokrates-as-a-batch-process&quot;&gt;Example: Running Sokrates as a Batch Process&lt;/h2&gt;
+
+&lt;p&gt;The following bash script illustrates a more complex scenario of using multiple commands of the Sokrates CLI.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# remove the temporary analysis folder&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; analysis
@@ -166,12 +185,12 @@
 &lt;span class=&quot;c&quot;&gt;#create the reports folder&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;reports
 
-&lt;span class=&quot;c&quot;&gt;# copy Sokrates cofiguration file to the temporary folder&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# copy Sokrates configuration file to the temporary folder&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;config.json analysis/_sokrates
 
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;analysis
 
-&lt;span class=&quot;c&quot;&gt;# install latest version of Sokrates&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# install the latest version of Sokrates&lt;/span&gt;
 curl &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar
 
 &lt;span class=&quot;c&quot;&gt;# checkout the code&lt;/span&gt;
@@ -189,27 +208,35 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 &lt;span class=&quot;c&quot;&gt;# remove the temporary analysis folder&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; analysis&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; A bash script illustrating a more complex scenario of the Sokrates command line interface.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates command-line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape.</summary></entry><entry><title type="html">Appendix: Sokrates Configuration File</title><link href="http://localhost:4000/book/configuration" rel="alternate" type="text/html" title="Appendix: Sokrates Configuration File" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/appendix-configuration</id><content type="html" xml:base="http://localhost:4000/book/configuration">&lt;h3 id=&quot;configuration-file-for-individual-projects&quot;&gt;Configuration File for Individual Projects&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; A bash script illustrating a more complex scenario of the Sokrates command-line interface.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates command-line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape.</summary></entry><entry><title type="html">Appendix: Sokrates Configuration File</title><link href="http://localhost:4000/book/configuration" rel="alternate" type="text/html" title="Appendix: Sokrates Configuration File" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/configuration-file</id><content type="html" xml:base="http://localhost:4000/book/configuration">&lt;h3 id=&quot;configuration-file-for-individual-projects&quot;&gt;Configuration File for Individual Projects&lt;/h3&gt;
 
-&lt;p&gt;Sokrates configuration is defined in a JSON file.&lt;/p&gt;
+&lt;p&gt;Sokrates configuration is defined in a JSON file (&lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/java/tomcat/config.json&quot;&gt;see an example here&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;You can use init command to generate default file for your project (see Download tab for details).&lt;/p&gt;
+&lt;p&gt;You can use the &lt;strong&gt;init&lt;/strong&gt; command to generate default file for your project.&lt;/p&gt;
 
 &lt;p&gt;The default location of the configuration file is  &lt;your-project&gt;/_sokrates/config.json&lt;/your-project&gt;&lt;/p&gt;
 
-&lt;p&gt;See an example of a Sokrates configuration file ⤇&lt;/p&gt;
-
-&lt;p&gt;Based on this configuration Sokrates will generate a number of reports. The default reports folders is  &lt;your-project&gt;/_sokrates/reports/&lt;/your-project&gt;&lt;/p&gt;
+&lt;p&gt;Based on this configuration Sokrates will generate a number of &lt;a href=&quot;reports&quot;&gt;reports&lt;/a&gt;. The default reports folders is  &lt;your-project&gt;/_sokrates/reports/&lt;/your-project&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/config-overview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;: The Sokrates’ configuration file describes how Sokrates should view and analyze the source code.&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;See an example of a Sokrates report ⤇&lt;/p&gt;
+&lt;p&gt;The configuration file has several sections, you can use to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;describe your project with a name, logo, summary text, and to add external links&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;scoping&quot;&gt;define the scope&lt;/a&gt;, including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build &amp;amp; deployment code, or other code…&lt;/li&gt;
+  &lt;li&gt;identify &lt;a href=&quot;logical-decomposition&quot;&gt;logical decompositions&lt;/a&gt;: one or more ways to looks at components in the system&lt;/li&gt;
+  &lt;li&gt;define &lt;a href=&quot;cross-cutting-concerns&quot;&gt;cross-cutting concerns&lt;/a&gt;: aspects of a software system that cannot be cleanly decomposed from the rest of the system&lt;/li&gt;
+  &lt;li&gt;set goals and controls: define measurements and alarms to keep your system within the desired values&lt;/li&gt;
+  &lt;li&gt;provide analysis reference points: for comparison and trend analysis&lt;/li&gt;
+  &lt;li&gt;add summary findings: manually added one-line insights and notes&lt;/li&gt;
+  &lt;li&gt;perform advanced configuration: meta-rules for components, concerns and dependencies&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;description-of-the-project&quot;&gt;Description of the project&lt;/h3&gt;
 
-&lt;p&gt;name, logo, descritpion, external links&lt;/p&gt;
+&lt;p&gt;Describes your project with a name, logo, summary text, and to add external links.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;nl&quot;&gt;&quot;metadata&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Sokrates&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -223,9 +250,9 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h3 id=&quot;define-the-scope-source-code-root-included-and-ignored-files&quot;&gt;Define the scope: source code root, included and ignored files&lt;/h3&gt;
+&lt;h2 id=&quot;define-the-scope&quot;&gt;Define the scope&lt;/h2&gt;
 
-&lt;p&gt;which extensions and files to analyze, and which to ignore&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;scoping&quot;&gt;Defines the scope&lt;/a&gt;, including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build &amp;amp; deployment code, or other code.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;srcRoot&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;..&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -251,8 +278,6 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;files-classification-what-is-main-code-test-code-generated-code-build--deployment-code-3rd-party-code&quot;&gt;Files classification: What is main code, test code, generated code, build &amp;amp; deployment code, 3rd party code…&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;For analysis purposes Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other.&lt;/li&gt;
@@ -309,17 +334,7 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 
 &lt;h3 id=&quot;define-logical-decompositions-one-or-more-ways-to-looks-at-components-in-the-system&quot;&gt;Define logical decompositions: one or more ways to looks at components in the system&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Logical decomposition is a representation of the organization of the main source code, where every and each file is put in exactly one logical component.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A software system can have one or more logical decompositions.&lt;/li&gt;
-  &lt;li&gt;A logical decomposition can be defined in two ways.&lt;/li&gt;
-  &lt;li&gt;First approach is based on the folders structure. Components are mapped to folders at defined folder depth relative to the source code root.&lt;/li&gt;
-  &lt;li&gt;Second approach is based on explicit definition of each component. In such explicit definitions, components are explicitly named and their files are selected based on explicitly defined path and content filters.&lt;/li&gt;
-  &lt;li&gt;A logical decomposition is considered invalid if a file is selected into two or more components.This constraint is introduced in order to facilitate measuring of dependencies among components.&lt;/li&gt;
-  &lt;li&gt;Files not assigned to any component are put into a special “Unclassified” component.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Identifies &lt;a href=&quot;logical-decomposition&quot;&gt;logical decompositions&lt;/a&gt;: one or more ways to looks at components in the system.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;logicalDecompositions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -382,10 +397,7 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 
 &lt;h3 id=&quot;define-cross-cutting-concerns-aspects-of-a-software-system-that-cannot-be-cleanly-decomposed-from-the-rest-of-the-system&quot;&gt;Define cross-cutting concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.&lt;/li&gt;
-  &lt;li&gt;A single concern may be present in multiple files. One source code file may contain multiple concerns.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Defines &lt;a href=&quot;cross-cutting-concerns&quot;&gt;cross-cutting concerns&lt;/a&gt;: aspects of a software system that cannot be cleanly decomposed from the rest of the system.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;crossCuttingConcerns&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -443,7 +455,7 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 
 &lt;h3 id=&quot;set-goals-and-controls-define-measurements-and-alarms-to-keep-your-system-within-the-desired-values&quot;&gt;Set goals and controls: define measurements and alarms to keep your system within the desired values&lt;/h3&gt;
 
-&lt;p&gt;Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and tolerance.&lt;/p&gt;
+&lt;p&gt;Sets goals and controls: define measurements and alarms to keep your system within the desired values.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;goalsAndControls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -518,21 +530,22 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 
 &lt;h3 id=&quot;perform-advanced-configuration-meta-rules-for-components-concerns-and-dependencies&quot;&gt;Perform advanced configuration: meta-rules for components, concerns and dependencies&lt;/h3&gt;
 
+&lt;p&gt;One of the most powerful features of Sokrates is the possibility to use &lt;a href=&quot;sstl&quot;&gt;Sokrates String Transformation Language&lt;/a&gt; to define meta rules to define components, concerns and dependencies.&lt;/p&gt;
+
+&lt;p&gt;A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.&lt;/p&gt;
+
+&lt;p&gt;Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)&lt;/p&gt;
+
+&lt;p&gt;The following &lt;a href=&quot;sstl&quot;&gt;SSTL&lt;/a&gt; operations are supported:&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;One of the most powerful features of Sokrates is the possibility to use meta rules to define components, concerns and dependencies.&lt;/li&gt;
-  &lt;li&gt;A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.&lt;/li&gt;
-  &lt;li&gt;Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)&lt;/li&gt;
-  &lt;li&gt;The Following operations are supported:
-    &lt;ul&gt;
-      &lt;li&gt;extract (regex1, regex2,…)&lt;/li&gt;
-      &lt;li&gt;replace (regex, replaceString)&lt;/li&gt;
-      &lt;li&gt;append (text)&lt;/li&gt;
-      &lt;li&gt;prepend (text)&lt;/li&gt;
-      &lt;li&gt;trim&lt;/li&gt;
-      &lt;li&gt;tolowercase&lt;/li&gt;
-      &lt;li&gt;touppercase&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;extract (regex1, regex2,…)&lt;/li&gt;
+  &lt;li&gt;replace (regex, replaceString)&lt;/li&gt;
+  &lt;li&gt;append (text)&lt;/li&gt;
+  &lt;li&gt;prepend (text)&lt;/li&gt;
+  &lt;li&gt;trim&lt;/li&gt;
+  &lt;li&gt;tolowercase&lt;/li&gt;
+  &lt;li&gt;touppercase&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Example (components and dependencies finder with meta rules):&lt;/p&gt;

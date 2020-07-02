@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-25T20:12:01+02:00" />
 <script type="application/ld+json">
-{"dateModified":"2020-05-25T20:12:01+02:00","description":"Sokrates configuration is a JSON file. You can use create this file manually from scratch, or use the init command to generate a default file for your project.","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/configuration"},"url":"http://localhost:4000/book/configuration","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"headline":"Appendix: Sokrates Configuration File","@context":"https://schema.org"}</script>
+{"description":"Sokrates configuration is a JSON file. You can use create this file manually from scratch, or use the init command to generate a default file for your project.","headline":"Appendix: Sokrates Configuration File","dateModified":"2020-05-25T20:12:01+02:00","datePublished":"2020-05-25T20:12:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/book/configuration"},"url":"http://localhost:4000/book/configuration","author":{"@type":"Person","name":"by Željko Obrenović (zeljkoobrenovic.com)"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/book/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/book/feed.xml" title="Examined Line: The Art of Source Code Analysis with Sokrates" /></head>
 <body><header class="site-header" role="banner">
@@ -79,7 +79,6 @@
 
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
     <header class="post-header">
         <h1 class="post-title p-name" itemprop="name headline">Appendix: Sokrates Configuration File</h1>
         <p class="post-meta">
@@ -91,25 +90,33 @@
     <div class="post-content e-content" itemprop="articleBody">
         <h3 id="configuration-file-for-individual-projects">Configuration File for Individual Projects</h3>
 
-<p>Sokrates configuration is defined in a JSON file.</p>
+<p>Sokrates configuration is defined in a JSON file (<a href="https://d3axxy9bcycpv7.cloudfront.net/java/tomcat/config.json">see an example here</a>).</p>
 
-<p>You can use init command to generate default file for your project (see Download tab for details).</p>
+<p>You can use the <strong>init</strong> command to generate default file for your project.</p>
 
 <p>The default location of the configuration file is  <your-project>/_sokrates/config.json</your-project></p>
 
-<p>See an example of a Sokrates configuration file ⤇</p>
-
-<p>Based on this configuration Sokrates will generate a number of reports. The default reports folders is  <your-project>/_sokrates/reports/</your-project></p>
+<p>Based on this configuration Sokrates will generate a number of <a href="reports">reports</a>. The default reports folders is  <your-project>/_sokrates/reports/</your-project></p>
 
 <p><img src="assets/images/sokrates/config-overview.png" alt="" /></p>
 
 <p><em><strong>Figure 1</strong>: The Sokrates’ configuration file describes how Sokrates should view and analyze the source code.</em>.</p>
 
-<p>See an example of a Sokrates report ⤇</p>
+<p>The configuration file has several sections, you can use to:</p>
+<ul>
+  <li>describe your project with a name, logo, summary text, and to add external links</li>
+  <li><a href="scoping">define the scope</a>, including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build &amp; deployment code, or other code…</li>
+  <li>identify <a href="logical-decomposition">logical decompositions</a>: one or more ways to looks at components in the system</li>
+  <li>define <a href="cross-cutting-concerns">cross-cutting concerns</a>: aspects of a software system that cannot be cleanly decomposed from the rest of the system</li>
+  <li>set goals and controls: define measurements and alarms to keep your system within the desired values</li>
+  <li>provide analysis reference points: for comparison and trend analysis</li>
+  <li>add summary findings: manually added one-line insights and notes</li>
+  <li>perform advanced configuration: meta-rules for components, concerns and dependencies</li>
+</ul>
 
 <h3 id="description-of-the-project">Description of the project</h3>
 
-<p>name, logo, descritpion, external links</p>
+<p>Describes your project with a name, logo, summary text, and to add external links.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="nl">"metadata"</span><span class="p">:{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"Sokrates"</span><span class="p">,</span><span class="w">
@@ -123,9 +130,9 @@
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="define-the-scope-source-code-root-included-and-ignored-files">Define the scope: source code root, included and ignored files</h3>
+<h2 id="define-the-scope">Define the scope</h2>
 
-<p>which extensions and files to analyze, and which to ignore</p>
+<p><a href="scoping">Defines the scope</a>, including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build &amp; deployment code, or other code.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
 </span><span class="nl">"srcRoot"</span><span class="p">:</span><span class="s2">".."</span><span class="p">,</span><span class="w">
@@ -151,8 +158,6 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
-
-<h3 id="files-classification-what-is-main-code-test-code-generated-code-build--deployment-code-3rd-party-code">Files classification: What is main code, test code, generated code, build &amp; deployment code, 3rd party code…</h3>
 
 <ul>
   <li>For analysis purposes Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other.</li>
@@ -209,17 +214,7 @@
 
 <h3 id="define-logical-decompositions-one-or-more-ways-to-looks-at-components-in-the-system">Define logical decompositions: one or more ways to looks at components in the system</h3>
 
-<ul>
-  <li>
-    <p>Logical decomposition is a representation of the organization of the main source code, where every and each file is put in exactly one logical component.</p>
-  </li>
-  <li>A software system can have one or more logical decompositions.</li>
-  <li>A logical decomposition can be defined in two ways.</li>
-  <li>First approach is based on the folders structure. Components are mapped to folders at defined folder depth relative to the source code root.</li>
-  <li>Second approach is based on explicit definition of each component. In such explicit definitions, components are explicitly named and their files are selected based on explicitly defined path and content filters.</li>
-  <li>A logical decomposition is considered invalid if a file is selected into two or more components.This constraint is introduced in order to facilitate measuring of dependencies among components.</li>
-  <li>Files not assigned to any component are put into a special “Unclassified” component.</li>
-</ul>
+<p>Identifies <a href="logical-decomposition">logical decompositions</a>: one or more ways to looks at components in the system.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
    </span><span class="nl">"logicalDecompositions"</span><span class="p">:[</span><span class="w">
@@ -282,10 +277,7 @@
 
 <h3 id="define-cross-cutting-concerns-aspects-of-a-software-system-that-cannot-be-cleanly-decomposed-from-the-rest-of-the-system">Define cross-cutting concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system</h3>
 
-<ul>
-  <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.</li>
-  <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
-</ul>
+<p>Defines <a href="cross-cutting-concerns">cross-cutting concerns</a>: aspects of a software system that cannot be cleanly decomposed from the rest of the system.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
    </span><span class="nl">"crossCuttingConcerns"</span><span class="p">:[</span><span class="w">
@@ -343,7 +335,7 @@
 
 <h3 id="set-goals-and-controls-define-measurements-and-alarms-to-keep-your-system-within-the-desired-values">Set goals and controls: define measurements and alarms to keep your system within the desired values</h3>
 
-<p>Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and tolerance.</p>
+<p>Sets goals and controls: define measurements and alarms to keep your system within the desired values.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="nl">"goalsAndControls"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -418,21 +410,22 @@
 
 <h3 id="perform-advanced-configuration-meta-rules-for-components-concerns-and-dependencies">Perform advanced configuration: meta-rules for components, concerns and dependencies</h3>
 
+<p>One of the most powerful features of Sokrates is the possibility to use <a href="sstl">Sokrates String Transformation Language</a> to define meta rules to define components, concerns and dependencies.</p>
+
+<p>A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.</p>
+
+<p>Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)</p>
+
+<p>The following <a href="sstl">SSTL</a> operations are supported:</p>
+
 <ul>
-  <li>One of the most powerful features of Sokrates is the possibility to use meta rules to define components, concerns and dependencies.</li>
-  <li>A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.</li>
-  <li>Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)</li>
-  <li>The Following operations are supported:
-    <ul>
-      <li>extract (regex1, regex2,…)</li>
-      <li>replace (regex, replaceString)</li>
-      <li>append (text)</li>
-      <li>prepend (text)</li>
-      <li>trim</li>
-      <li>tolowercase</li>
-      <li>touppercase</li>
-    </ul>
-  </li>
+  <li>extract (regex1, regex2,…)</li>
+  <li>replace (regex, replaceString)</li>
+  <li>append (text)</li>
+  <li>prepend (text)</li>
+  <li>trim</li>
+  <li>tolowercase</li>
+  <li>touppercase</li>
 </ul>
 
 <p>Example (components and dependencies finder with meta rules):</p>

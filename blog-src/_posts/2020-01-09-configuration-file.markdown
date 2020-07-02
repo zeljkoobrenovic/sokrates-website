@@ -10,26 +10,32 @@ excerpt: "Sokrates configuration is a JSON file. You can use create this file ma
 
 ### Configuration File for Individual Projects
 
-Sokrates configuration is defined in a JSON file.
+Sokrates configuration is defined in a JSON file ([see an example here](https://d3axxy9bcycpv7.cloudfront.net/java/tomcat/config.json)).
 
-You can use init command to generate default file for your project (see Download tab for details).
+You can use the **init** command to generate default file for your project.
 
 The default location of the configuration file is  <your-project>/_sokrates/config.json
 
-See an example of a Sokrates configuration file ⤇
-
-Based on this configuration Sokrates will generate a number of reports. The default reports folders is  <your-project>/_sokrates/reports/
+Based on this configuration Sokrates will generate a number of [reports](reports). The default reports folders is  <your-project>/_sokrates/reports/
 
 ![](assets/images/sokrates/config-overview.png)
 
 ***Figure 1**: The Sokrates' configuration file describes how Sokrates should view and analyze the source code.*.
 
-See an example of a Sokrates report ⤇
+The configuration file has several sections, you can use to:
+* describe your project with a name, logo, summary text, and to add external links
+* [define the scope](scoping), including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build & deployment code, or other code…
+* identify [logical decompositions](logical-decomposition): one or more ways to looks at components in the system
+* define [cross-cutting concerns](cross-cutting-concerns): aspects of a software system that cannot be cleanly decomposed from the rest of the system
+* set goals and controls: define measurements and alarms to keep your system within the desired values
+* provide analysis reference points: for comparison and trend analysis
+* add summary findings: manually added one-line insights and notes
+* perform advanced configuration: meta-rules for components, concerns and dependencies
 
 
 ### Description of the project
 
-name, logo, descritpion, external links
+Describes your project with a name, logo, summary text, and to add external links.
 
 {% highlight json %}
 "metadata":{
@@ -45,9 +51,9 @@ name, logo, descritpion, external links
 }
 {% endhighlight %}
 
-### Define the scope: source code root, included and ignored files
+## Define the scope
 
-which extensions and files to analyze, and which to ignore
+[Defines the scope](scoping), including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build & deployment code, or other code.
 
 {% highlight json %}
 {
@@ -76,8 +82,6 @@ which extensions and files to analyze, and which to ignore
 }
 {% endhighlight %}
 
-
-### Files classification: What is main code, test code, generated code, build & deployment code, 3rd party code...
 
 * For analysis purposes Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other.
 * The main category contains all manually created source code files that are being used in the production.
@@ -135,14 +139,7 @@ which extensions and files to analyze, and which to ignore
 
 ### Define logical decompositions: one or more ways to looks at components in the system
 
-* Logical decomposition is a representation of the organization of the main source code, where every and each file is put in exactly one logical component.
-
-* A software system can have one or more logical decompositions.
-* A logical decomposition can be defined in two ways.
-* First approach is based on the folders structure. Components are mapped to folders at defined folder depth relative to the source code root.
-* Second approach is based on explicit definition of each component. In such explicit definitions, components are explicitly named and their files are selected based on explicitly defined path and content filters.
-* A logical decomposition is considered invalid if a file is selected into two or more components.This constraint is introduced in order to facilitate measuring of dependencies among components.
-* Files not assigned to any component are put into a special "Unclassified" component.
+Identifies [logical decompositions](logical-decomposition): one or more ways to looks at components in the system.
 
 {% highlight json %}
 {
@@ -208,8 +205,7 @@ which extensions and files to analyze, and which to ignore
 
 ### Define cross-cutting concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system
 
-* Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the system.
-* A single concern may be present in multiple files. One source code file may contain multiple concerns.
+Defines [cross-cutting concerns](cross-cutting-concerns): aspects of a software system that cannot be cleanly decomposed from the rest of the system.
 
 {% highlight json %}
 {
@@ -270,7 +266,7 @@ which extensions and files to analyze, and which to ignore
 
 ### Set goals and controls: define measurements and alarms to keep your system within the desired values
 
-Controls enable you to set alarms for any of the Sokrates metrics. An alarm is defined with a desired range and tolerance.
+Sets goals and controls: define measurements and alarms to keep your system within the desired values.
 
 {% highlight json %}
 {
@@ -355,17 +351,21 @@ Optional few bullets to summarize the systems.
 ### Perform advanced configuration: meta-rules for components, concerns and dependencies
 
 
-* One of the most powerful features of Sokrates is the possibility to use meta rules to define components, concerns and dependencies.
-* A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.
-* Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)
-* The Following operations are supported:
-    * extract (regex1, regex2,...)
-    * replace (regex, replaceString)
-    * append (text)
-    * prepend (text)
-    * trim
-    * tolowercase
-    * touppercase
+One of the most powerful features of Sokrates is the possibility to use [Sokrates String Transformation Language](sstl) to define meta rules to define components, concerns and dependencies.
+
+A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.
+
+Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)
+
+The following [SSTL](sstl) operations are supported:
+
+* extract (regex1, regex2,...)
+* replace (regex, replaceString)
+* append (text)
+* prepend (text)
+* trim
+* tolowercase
+* touppercase
 
 Example (components and dependencies finder with meta rules):
 

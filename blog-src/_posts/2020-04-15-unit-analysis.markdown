@@ -44,21 +44,6 @@ A Sokrates unit size report then answers the following questions:
 An example of a [conditional complexity report you can find here](https://d3axxy9bcycpv7.cloudfront.net/java/tomcat/reports/html/ConditionalComplexity.html).
 
 
-## Heuristics for Units Extraction
-
-Sokrates does not implement full feature lexers and parsers for language analyses. Instead, Sokrates applies simple, heuristic string manipulation techniques to identify and extract interesting code pieces, including units.
-
-While each language has its specifics, we can group Sokrates heuristic techniques into two categories:
- - a balanced brackets heuristic
- - a proper formatting heuristic
-
-Sokrates applies a balanced brackets heuristic for C- style languages, such as Java, C#, or JavaScript. In such languages, it is possible to identify the end line of a unit by only looking for a closing bracket, e.g.,"}". Of course, you first need to identify the start marker of a unit. Sokrates identifies the stars of a unit by using language-specific regex-based rules. Sokrates then looks for the end bracket, taking onto account internal code blocks of code, e.g., loops, which may use the same start and end brackets as a unit. I call the method "balanced" as we need to find the closing bracket of a unit so that the total number of opening and closing brackets within the unit are equal, e.g., in balance. To simplify processing following the balanced brackets method, Sokrates also do additional preparations and code clearings, e.g., remove the content of string constants, as such content my contain closing brackets and opening brackets.
-
-The unit extraction based on proper formatting heuristic assumes that developers or their IDEs have formatted the code according to usual coding standards. In particular, Sokrates assumes that lines of code in embedded blocks have more white spaces at the beginning of each line than the blocks in which they reside. For instance, in Visual Basic, if a file is formatted correctly, the start and end lines of functions and procedures (VB units) have the same whitespaces at the beginning of lines. The code within these functions and procedures, excluding empty lines and comments, should have more white spaces as the beginning of their lines. Once we know the unit's start line, we can find the end line by merely looking for the first non-empty line with the same amount of leading whitespaces.
-
-For concrete details, again, take a look at the Sokrates' GitHub repository.
-
-
 ## Unit Measurements
 
 Sokrates measures two things about each unit:
@@ -90,7 +75,13 @@ Sokrates measures the conditional complexity following the [cyclomatic complexit
 
 For example, a unit with only one IF statement has a conditional complexity of two.
 
-After measuring card trend complexity, Sokrates then classifies units into five categories (see Figure 4 for an example):
+Figure 4 shows a more complex example, with conditional complexity value of six (one by **default** + one **for** statement + four **if** statements).
+
+![](assets/images/sokrates/unit-example-1.png)
+
+***Figure 4:** An example unit from the [JUnit5 project](https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/html/index.html).*
+
+After measuring card trend complexity, Sokrates then classifies units into five categories (see Figure 5 for an example):
  - very simple units (1-5)
  - simple units (6-10)
  - medium couples units (11-25)
@@ -99,7 +90,23 @@ After measuring card trend complexity, Sokrates then classifies units into five 
 
 ![](assets/images/sokrates/unit-complexity-3d.png)
 
-***Figure 4:** A 3D view of all units color-coded by conditional complexity (from the [Apache Commons-Lang conditional complexity report](https://d3axxy9bcycpv7.cloudfront.net/java/commons-lang/reports/html/ConditionalComplexity.html)). Each block is one unit. The height of the block represents the file unit size in lines of code. The color of the unit represents its conditional complexity category (green=0-5, yellow=6-10, orange=11-25, red=26+).*
+***Figure 5:** A 3D view of all units color-coded by conditional complexity (from the [Apache Commons-Lang conditional complexity report](https://d3axxy9bcycpv7.cloudfront.net/java/commons-lang/reports/html/ConditionalComplexity.html)). Each block is one unit. The height of the block represents the file unit size in lines of code. The color of the unit represents its conditional complexity category (green=0-5, yellow=6-10, orange=11-25, red=26+).*
+
+
+
+## Heuristics for Units Extraction
+
+Sokrates does not implement full feature lexers and parsers for language analyses. Instead, Sokrates applies simple, heuristic string manipulation techniques to identify and extract interesting code pieces, including units.
+
+While each language has its specifics, we can group Sokrates heuristic techniques into two categories:
+ - a balanced brackets heuristic
+ - a proper formatting heuristic
+
+Sokrates applies a balanced brackets heuristic for C- style languages, such as Java, C#, or JavaScript. In such languages, it is possible to identify the end line of a unit by only looking for a closing bracket, e.g.,"}". Of course, you first need to identify the start marker of a unit. Sokrates identifies the stars of a unit by using language-specific regex-based rules. Sokrates then looks for the end bracket, taking onto account internal code blocks of code, e.g., loops, which may use the same start and end brackets as a unit. I call the method "balanced" as we need to find the closing bracket of a unit so that the total number of opening and closing brackets within the unit are equal, e.g., in balance. To simplify processing following the balanced brackets method, Sokrates also do additional preparations and code clearings, e.g., remove the content of string constants, as such content my contain closing brackets and opening brackets.
+
+The unit extraction based on proper formatting heuristic assumes that developers or their IDEs have formatted the code according to usual coding standards. In particular, Sokrates assumes that lines of code in embedded blocks have more white spaces at the beginning of each line than the blocks in which they reside. For instance, in Visual Basic, if a file is formatted correctly, the start and end lines of functions and procedures (VB units) have the same whitespaces at the beginning of lines. The code within these functions and procedures, excluding empty lines and comments, should have more white spaces as the beginning of their lines. Once we know the unit's start line, we can find the end line by merely looking for the first non-empty line with the same amount of leading whitespaces.
+
+For concrete details, again, take a look at the Sokrates' GitHub repository.
 
 
 ## To Probe Further

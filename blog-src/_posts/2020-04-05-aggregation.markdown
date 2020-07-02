@@ -23,21 +23,25 @@ Sokrates performs aggregation at three levels:
 * the file type level (based on file extension)
 * the logical decomposition level
 
-Aggregation at lines of code level, rather then count
+## Project-Level Aggregation
 
-### Project-Level Aggregation
+Project level aggregations show how data look overall, for all files and units (Figure 1).
 
 ![](assets/images/sokrates/aggregation-system-level.png)
 
 ***Figure 1:** An example of system level aggregations.*
 
-### File-Type Aggregation
+## File-Type Aggregation
+
+File-type level aggregations show how data look for each file extension (Figure 2).
 
 ![](assets/images/sokrates/aggregation-extension.png)
 
 ***Figure 2:** Examples of file extension level aggregations.*
 
-### Logical-Decomposition Aggregations
+## Logical-Decomposition Aggregations
+
+Logical-decomposition level aggregations show how data look for each logical decomposition and each component in a logical decomposition (Figure 2).
 
 ![](assets/images/sokrates/aggregation-components-1.png)
 ![](assets/images/sokrates/aggregation-components-2.png)
