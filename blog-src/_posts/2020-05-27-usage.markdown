@@ -10,11 +10,11 @@ excerpt: "The analyze-and-reflect mode. In the initial configuration phase, we n
 
 In a nutshell, Sokrates is a exploration and feedback giving tool, that can help you to understand you code, reflect and discuss its findings, and take actions based on the findings.
 
-You can use Sokrates in three different modes:
-* the basic analyze and reflect mode
+You can use Sokrates in four modes:
+* the analyze and reflect mode
 * the interactive explorations mode
-* the traffic lights target and goals mode
-* a software architecture documentation tool
+* the traffic lights mode
+* the software architecture documentation mode
 
 
 ### Analyze and Reflect
