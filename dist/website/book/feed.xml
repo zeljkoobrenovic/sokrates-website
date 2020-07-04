@@ -132,14 +132,14 @@
 &lt;br /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;updateConfig-command&quot;&gt;&lt;strong&gt;&lt;em&gt;updateConfig&lt;/em&gt;&lt;/strong&gt; command&lt;/h2&gt;
 
-&lt;p&gt;The &lt;strong&gt;updateConfig&lt;/strong&gt; completes missing fields in the configuration file. You can also use the updateConfig command to upgrade your configuration file to the latest version.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;updateConfig&lt;/strong&gt; updates a configuration file completes missing fields. You can also use the updateConfig command to upgrade your configuration file to the latest version.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates.jar updateConfig &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
      &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt; &amp;lt;arg&amp;gt;       &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/config.json&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-config-complete.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; The &lt;strong&gt;updateConfig&lt;/strong&gt; completes missing fields in the configuration file.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; The &lt;strong&gt;updateConfig&lt;/strong&gt; updates a configuration file completes missing fields.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
