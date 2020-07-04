@@ -80,7 +80,7 @@ java -jar sokrates.jar updateConfig [options]
 
 ![](assets/images/sokrates/cmd-config-complete.png)
 
-***Figure 3:** The **updateConfig** updates a configuration file completes missing fields.*
+***Figure 3:** The **updateConfig** updates a configuration file and completes missing fields.*
 
 
 <br/>
