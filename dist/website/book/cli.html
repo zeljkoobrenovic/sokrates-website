@@ -140,12 +140,16 @@
 
 <p><br />
 <br /></p>
-<h2 id="updateConfig-command"><strong><em>updateConfig</em></strong> command</h2>
+<h2 id="updateconfig-command"><strong><em>updateConfig</em></strong> command</h2>
 
 <p>The <strong>updateConfig</strong> updates a configuration file and completes missing fields. You can also use the updateConfig command to upgrade your configuration file to the latest version.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">java <span class="nt">-jar</span> sokrates.jar updateConfig <span class="o">[</span>options]
-     <span class="nt">-confFile</span> &lt;arg&gt;       <span class="o">[</span>OPTIONAL] the path to configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates/config.json"</span></code></pre></figure>
+     <span class="nt">-confFile</span> &lt;arg&gt;         <span class="o">[</span>OPTIONAL] the path to configuration file <span class="o">(</span>default is <span class="s2">"&lt;currentFolder&gt;/_sokrates/config.json"</span>
+     <span class="nt">-setDescription</span> &lt;arg&gt;   <span class="o">[</span>OPTIONAL] sets a project description
+     <span class="nt">-setLogoLink</span> &lt;arg&gt;      <span class="o">[</span>OPTIONAL] sets a project logo <span class="nb">link</span>
+     <span class="nt">-setName</span> &lt;arg&gt;          <span class="o">[</span>OPTIONAL] sets a project name
+     <span class="nt">-skipComplexAnalyses</span>    <span class="o">[</span>OPTIONAL] skips complex analyses <span class="o">(</span>duplication, dependencies, file caching<span class="o">)</span></code></pre></figure>
 
 <p><img src="assets/images/sokrates/cmd-config-complete.png" alt="" /></p>
 
