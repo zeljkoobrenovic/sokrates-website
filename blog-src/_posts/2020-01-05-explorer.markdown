@@ -31,7 +31,7 @@ Explorer's main panel includes a configuration editor, scopes browsers, file pre
 The toolbar located above the configuration editor offers shortcuts to frequently used commands:
 * creating a new project
 * opening an existing project (you need to select a Sokrates configuration file)
-* the **configComplete** [command](cli)
+* the **updateConfig** [command](cli)
 * reload browsers and file preview panels after you change the configuration in the editor
 * the **generateReports** [command](cli)
 

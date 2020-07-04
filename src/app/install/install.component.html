@@ -20,7 +20,7 @@
     <mat-accordion>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-                  <mat-panel-title style="width: 210px; max-width: 210px">
+          <mat-panel-title style="width: 210px; max-width: 210px">
             <b class="commandTag">init</b>
           </mat-panel-title>
           <mat-panel-description *ngIf="!isSmallScreen">
@@ -39,7 +39,7 @@
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-                  <mat-panel-title style="width: 210px; max-width: 210px">
+          <mat-panel-title style="width: 210px; max-width: 210px">
             <b class="commandTag">generateReports</b>
           </mat-panel-title>
           <mat-panel-description *ngIf="!isSmallScreen">
@@ -70,8 +70,8 @@
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-                  <mat-panel-title style="width: 210px; max-width: 210px">
-            <b class="commandTag">configComplete</b>
+          <mat-panel-title style="width: 210px; max-width: 210px">
+            <b class="commandTag">updateConfig</b>
           </mat-panel-title>
           <mat-panel-description *ngIf="!isSmallScreen">
             completes missing fields in the configuration file
@@ -80,16 +80,20 @@
 
         <div>
           <div style="width: 100%; overflow-x: auto">
-    <pre>
-  java -jar sokrates.jar configComplete [options]
-         -confFile &lt;arg&gt;       [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
-  </pre>
+<pre>
+  java -jar sokrates.jar updateConfig [options]
+         -confFile &lt;arg>         [OPTIONAL] the path to configuration file (default is "&lt;currentFolder&gt;/_sokrates/config.json"
+         -setDescription &lt;arg>   [OPTIONAL] sets a project description
+         -setLogoLink &lt;arg>      [OPTIONAL] sets a project logo link
+         -setName &lt;arg>          [OPTIONAL] sets a project name
+         -skipComplexAnalyses    [OPTIONAL] skips complex analyses (duplication, dependencies, file caching)
+</pre>
           </div>
         </div>
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-                  <mat-panel-title style="width: 210px; max-width: 210px">
+          <mat-panel-title style="width: 210px; max-width: 210px">
             <p><b class="commandTag">initLandscape</b>
           </mat-panel-title>
           <mat-panel-description *ngIf="!isSmallScreen">
@@ -110,7 +114,7 @@
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-                  <mat-panel-title style="width: 210px; max-width: 210px">
+          <mat-panel-title style="width: 210px; max-width: 210px">
             <b class="commandTag">updateLandscape</b>
           </mat-panel-title>
           <mat-panel-description *ngIf="!isSmallScreen">

@@ -82,7 +82,7 @@
 &lt;ul&gt;
   &lt;li&gt;init,&lt;/li&gt;
   &lt;li&gt;generateReports,&lt;/li&gt;
-  &lt;li&gt;configComplete,&lt;/li&gt;
+  &lt;li&gt;updateConfig,&lt;/li&gt;
   &lt;li&gt;initLandscape, and&lt;/li&gt;
   &lt;li&gt;updateLandscape.&lt;/li&gt;
 &lt;/ul&gt;
@@ -130,16 +130,16 @@
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;configcomplete-command&quot;&gt;&lt;strong&gt;&lt;em&gt;configComplete&lt;/em&gt;&lt;/strong&gt; command&lt;/h2&gt;
+&lt;h2 id=&quot;updateConfig-command&quot;&gt;&lt;strong&gt;&lt;em&gt;updateConfig&lt;/em&gt;&lt;/strong&gt; command&lt;/h2&gt;
 
-&lt;p&gt;The &lt;strong&gt;configComplete&lt;/strong&gt; completes missing fields in the configuration file. You can also use the configComplete command to upgrade your configuration file to the latest version.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;updateConfig&lt;/strong&gt; completes missing fields in the configuration file. You can also use the updateConfig command to upgrade your configuration file to the latest version.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates.jar configComplete &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates.jar updateConfig &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
      &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt; &amp;lt;arg&amp;gt;       &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/config.json&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-config-complete.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; The &lt;strong&gt;configComplete&lt;/strong&gt; completes missing fields in the configuration file.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; The &lt;strong&gt;updateConfig&lt;/strong&gt; completes missing fields in the configuration file.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -218,7 +218,7 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 &lt;span class=&quot;c&quot;&gt;# remove the temporary analysis folder&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; analysis&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; A bash script illustrating a more complex scenario of the Sokrates command-line interface.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates command-line interface (CLI) includes five commands: init, generateReports, configComplete, initLandscape, and updateLandscape.</summary></entry><entry><title type="html">Appendix: Sokrates Configuration File</title><link href="http://localhost:4000/book/configuration" rel="alternate" type="text/html" title="Appendix: Sokrates Configuration File" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/configuration-file</id><content type="html" xml:base="http://localhost:4000/book/configuration">&lt;h3 id=&quot;configuration-file-for-individual-projects&quot;&gt;Configuration File for Individual Projects&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; A bash script illustrating a more complex scenario of the Sokrates command-line interface.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Sokrates command-line interface (CLI) includes five commands: init, generateReports, updateConfig, initLandscape, and updateLandscape.</summary></entry><entry><title type="html">Appendix: Sokrates Configuration File</title><link href="http://localhost:4000/book/configuration" rel="alternate" type="text/html" title="Appendix: Sokrates Configuration File" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/configuration-file</id><content type="html" xml:base="http://localhost:4000/book/configuration">&lt;h3 id=&quot;configuration-file-for-individual-projects&quot;&gt;Configuration File for Individual Projects&lt;/h3&gt;
 
 &lt;p&gt;Sokrates configuration is defined in a JSON file (&lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/java/tomcat/config.json&quot;&gt;see an example here&lt;/a&gt;).&lt;/p&gt;
 
