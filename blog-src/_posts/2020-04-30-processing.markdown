@@ -21,7 +21,7 @@ Sokrates aims at helping you reliably and efficiently get the basic data about y
 Sokrates analysis approach consists of the following stages:
 
 * Scoping,
-* Classifying files (logical decomposition, and cross-cutting concerns),
+* Classifying files (logical decomposition, and concerns),
 * Enriching the file data with history information (optional)
 * Code cleaning,
 * File-level measurements,
@@ -46,11 +46,11 @@ To learn more:
 
 ### Classifying Files
 
-To structure analysis, reporting, and explorations, Sokrates creates multiples views on the source code: logical decompositions and cross-cutting concerns. Each view is a list of files, with a name and with potential relations to other views.
+To structure analysis, reporting, and explorations, Sokrates creates multiples views on the source code: logical decompositions and concerns. Each view is a list of files, with a name and with potential relations to other views.
 
 To learn more:
 * [Logical Decompositions](logical-decomposition)
-* [Cross-Cutting Concerns](cross-cutting-concerns)
+* [concerns](concerns)
 
 
 ### Optionally Enriching the File Data with History Information
@@ -97,7 +97,7 @@ To learn more:
 
 ### Aggregating Results & Trend Analysis
 
-After Sokrates has all the data at the file level and lists of duplicates and dependencies, it then proceeds with aggregating results. Sokrates aggregates data at the overall project level as well as at the level of components and cross-cutting concerns. For dependencies, duplication, and file change history, Sokrates also identifies links between components. These links show couplings between components, duplication between them, as well as their temporal coupling (the number of days when developers have changed two components simultaneously).
+After Sokrates has all the data at the file level and lists of duplicates and dependencies, it then proceeds with aggregating results. Sokrates aggregates data at the overall project level as well as at the level of components and concerns. For dependencies, duplication, and file change history, Sokrates also identifies links between components. These links show couplings between components, duplication between them, as well as their temporal coupling (the number of days when developers have changed two components simultaneously).
 
 Optionally Sokrates compares the current results with the previous ones to get the trends.
 

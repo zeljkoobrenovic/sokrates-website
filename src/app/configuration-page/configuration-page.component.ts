@@ -201,8 +201,8 @@ export class ConfigurationPageComponent implements OnInit {
     `;
   }
 
-  getCrossCuttingConcernFragment() {
-    return '  "crossCuttingConcerns" : [ {\n' +
+  getConcernFragment() {
+    return '  "concernGroups" : [ {\n' +
       '    "name" : "general",\n' +
       '    "concerns" : [ {\n' +
       '      "name" : "exception handling",\n' +
@@ -270,7 +270,7 @@ export class ConfigurationPageComponent implements OnInit {
 
   getMetaConcernsFragment() {
     return `
-    "crossCuttingConcerns": [
+    "concernGroups": [
         {
             "name": "java technology",
             "concerns": [ ],

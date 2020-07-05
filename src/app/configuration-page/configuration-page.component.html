@@ -89,7 +89,6 @@
               <b>production</b>.
             </li>
             <li>Files in the <b>main</b> category are used as input for other analyses: logical decomposition,
-              cross-cutting
               concerns, duplication, file size, unit size, and conditional complexity.
             </li>
             <li><b>Test</b> source code files are used only for testing of the product. These files are normally not
@@ -154,7 +153,7 @@
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title style="width: 300px; max-width: 300px">
-            <b class="sectionTag">Define cross-cutting concerns</b>
+            <b class="sectionTag">Define concerns</b>
           </mat-panel-title>
           <mat-panel-description *ngIf="!isSmallScreen" style="white-space: nowrap; overflow: hidden">
             aspects of a software system that cannot be cleanly decomposed from the rest of
@@ -163,16 +162,13 @@
         </mat-expansion-panel-header>
 
         <div class="card">
-          <h2 class="title">Cross-Cutting Concerns</h2>
+          <h2 class="title">Concerns</h2>
           <ul>
-            <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest
-              of
-              the system.
-            </li>
+            <li>Concerns are any aspects of a software system that can be identified thourgh patterns in code.</li>
             <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.
             </li>
           </ul>
-          <pre><code [highlight]="getCrossCuttingConcernFragment()"></code></pre>
+          <pre><code [highlight]="getConcernFragment()"></code></pre>
         </div>
       </mat-expansion-panel>
       <mat-expansion-panel>
@@ -259,7 +255,7 @@
             </li>
             <li>Meta rules can be used in logical decompositions (the <span class="inline-code">metaComponents</span>
               field),
-              dependency finders (the <span class="inline-code">metaRules</span> field), and in cross-cutting concerns
+              dependency finders (the <span class="inline-code">metaRules</span> field), and in concerns
               (the
               <span class="inline-code">metaConcerns</span> field)
             </li>
@@ -277,7 +273,7 @@
 
           <h3>Example (components and dependencies finder with meta rules):</h3>
           <pre><code [highlight]="getLogicalDecompositionMetaDependenciesFragment()"></code></pre>
-          <h3>Example (cross-cutting concerns with meta rules):</h3>
+          <h3>Example (concerns with meta rules):</h3>
           <pre><code [highlight]="getMetaConcernsFragment()"></code></pre>
         </div>
       </mat-expansion-panel>

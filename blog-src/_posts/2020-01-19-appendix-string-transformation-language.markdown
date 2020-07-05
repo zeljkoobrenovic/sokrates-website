@@ -24,7 +24,7 @@ SSTL supports the following commands:
 
  Sokrates uses SSTL in several places:
  - to define dynamic names of components in [logical decompositions](logical-decomposition) (the meta components section)
- - to define dynamic names of [cross-cutting concerns](cross-cutting-concerns) (the meta concerns section)
+ - to define dynamic names of [concerns](concerns) (the meta concerns section)
  - to find components names for [dependencies](dependencies) (the meta rules section)
 
 ### Examples

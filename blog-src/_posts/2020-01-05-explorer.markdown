@@ -50,11 +50,11 @@ With scope browsers, you can select a scope of interest, get a sorted list of al
 ***Figure 3:** With scope browsers, you can select a scope of interest, get a sorted list of all files in the scope, and preview the content of files.*
 
 
-Scope browsers offer three types of scopes: extensions, logical components, or cross-cutting concern.
+Scope browsers offer three types of scopes: extensions, logical components, and concerns.
 
 ![](assets/images/sokrates/explorer-browsing-scopes.png)
 
-***Figure 4:** Scope browsers offer three types of scopes: extensions, logical components, or cross-cutting concern.*
+***Figure 4:** Scope browsers offer three types of scopes: extensions, logical components, and concerns.*
 
 
 <br/>

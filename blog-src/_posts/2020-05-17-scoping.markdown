@@ -80,7 +80,7 @@ For analysis purposes, Sokrates separate files in scope into several categories:
 ![](assets/images/sokrates/scoping-classification.png)
 ***Figure 2:** For analysis purposes, Sokrates separate files in scope into several categories: primary or main code and secondary code (test, generated, deployment and build, and other)."*
 
-The main category contains all manually created source code files that define the logic and structure of the system running in production. Sokrates uses the main files as input for other analyses: logical decomposition, cross-cutting concerns, duplication, file size, unit size, and cyclomatic complexity.
+The main category contains all manually created source code files that define the logic and structure of the system running in production. Sokrates uses the main files as input for other analyses: logical decomposition, concerns, duplication, file size, unit size, and cyclomatic complexity.
 
 Test source code files are used only for testing of the product. You usually do not deploy these files to production.
 

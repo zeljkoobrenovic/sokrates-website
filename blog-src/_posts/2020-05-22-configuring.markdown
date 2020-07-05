@@ -25,7 +25,7 @@ The configuration file has several sections, you can use to:
 * describe your project with a name, logo, summary text, and to add external links
 * [define the scope](scoping), including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build & deployment code, or other code…
 * identify [logical decompositions](logical-decomposition): one or more ways to looks at components in the system
-* define [cross-cutting concerns](cross-cutting-concerns): aspects of a software system that cannot be cleanly decomposed from the rest of the system
+* define [concerns](concerns): aspects of a software system that cannot be cleanly decomposed from the rest of the system
 * set goals and controls: define measurements and alarms to keep your system within the desired values
 * provide analysis reference points: for comparison and trend analysis
 * add summary findings: manually added one-line insights and notes

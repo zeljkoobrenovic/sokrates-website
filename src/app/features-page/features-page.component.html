@@ -2,7 +2,7 @@
   <div class="card">
     <h2 class="title">Supported Languages</h2>
     <p>Any textual file can be analyzed in Sokrates with standard analyses (empty lines cleaning, source
-      code overview, duplication, file size, cross-cutting concerns, findings, metrics, controls).</p>
+      code overview, duplication, file size, concerns, findings, metrics, controls).</p>
     <p>For several popular languages Sokrates provides more in-depth analyses:</p>
     <div style="width: 100%; overflow-x: auto">
       <table>
@@ -40,7 +40,7 @@
       </li>
       <li>The <b>main</b> category contains all <b>manually</b> created source code files that are being used in the <b>production</b>.
       </li>
-      <li>Files in the <b>main</b> category are used as input for other analyses: logical decomposition, cross-cutting
+      <li>Files in the <b>main</b> category are used as input for other analyses: logical decomposition,
         concerns, duplication, file size, unit size, and cyclomatic complexity.
       </li>
       <li><b>Test</b> source code files are used only for testing of the product. These files are normally not deployed
@@ -121,18 +121,16 @@
   <div class='card'>
     <h2 class="title">
       <img src="/assets/icons/concerns.svg" style="width: 58px; vertical-align: middle">
-      Cross-Cutting Concerns</h2>
+      Concerns</h2>
     <ul>
-      <li>Cross-cutting concerns are aspects of a software system that cannot be cleanly decomposed from the rest of the
-        system.
-      </li>
+      <li>Concerns are any aspects of a software system that can be identified thourgh patterns in code.</li>
       <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/CrossCuttingConcerns.html"
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/Concerns.html"
            target="_blank">
-          See an example of a Sokrates Cross-Cutting Concerns report ⤇
+          See an example of a Sokrates Concerns report ⤇
         </a>
       </li>
     </ul>

@@ -11,8 +11,7 @@ The metrics table is a list of name-value pairs, a linearized list of all Sokrat
 
 Sokrates exports two types of metrics:
  - the static, project-level metrics. These static metrics have the same name in every Sokrates protect.
- - derived metrics, where names of a metric are defined based on the names of logical decompositions, components, cross-cutting
- concerns, or file extensions.
+ - derived metrics, where names of a metric are defined based on the names of logical decompositions, components, concerns, or file extensions.
 
 ## Static Metrics
 
@@ -25,7 +24,7 @@ Static metrics describe the overall system values, such as lines of code in main
 
 ## Derived Metrics
 
-Derived metrics are dynamic. Their number and names depend on the number and names of components, cross-cutting concerns, and file extensions. The following table shows several of these derived metrics.
+Derived metrics are dynamic. Their number and names depend on the number and names of components, concerns, and file extensions. The following table shows several of these derived metrics.
 
 ![](assets/images/sokrates/metrics-table-derived.png)
 

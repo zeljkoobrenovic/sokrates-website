@@ -26,7 +26,7 @@ The configuration file has several sections, you can use to:
 * describe your project with a name, logo, summary text, and to add external links
 * [define the scope](scoping), including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build & deployment code, or other code…
 * identify [logical decompositions](logical-decomposition): one or more ways to looks at components in the system
-* define [cross-cutting concerns](cross-cutting-concerns): aspects of a software system that cannot be cleanly decomposed from the rest of the system
+* define [concerns](concerns): aspects of a software system that cannot be cleanly decomposed from the rest of the system
 * set goals and controls: define measurements and alarms to keep your system within the desired values
 * provide analysis reference points: for comparison and trend analysis
 * add summary findings: manually added one-line insights and notes
@@ -85,7 +85,7 @@ Describes your project with a name, logo, summary text, and to add external link
 
 * For analysis purposes Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other.
 * The main category contains all manually created source code files that are being used in the production.
-* Files in the main category are used as input for other analyses: logical decomposition, cross-cutting concerns, duplication, file size, unit size, and conditional complexity.
+* Files in the main category are used as input for other analyses: logical decomposition, concerns, duplication, file size, unit size, and conditional complexity.
 * Test source code files are used only for testing of the product. These files are normally not deployed to production.
 * Build and deployment source code files are used to configure or support build and deployment process.
 * Generated source code files are automatically generated files that have not been manually changed after generation.
@@ -203,13 +203,13 @@ Identifies [logical decompositions](logical-decomposition): one or more ways to 
 {% endhighlight %}
 
 
-### Define cross-cutting concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system
+### Define concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system
 
-Defines [cross-cutting concerns](cross-cutting-concerns): aspects of a software system that cannot be cleanly decomposed from the rest of the system.
+Defines [concerns](concerns): aspects of a software system that cannot be cleanly decomposed from the rest of the system.
 
 {% highlight json %}
 {
-   "crossCuttingConcerns":[
+   "concernGroups":[
       {
          "name":"general",
          "concerns":[
@@ -355,7 +355,7 @@ One of the most powerful features of Sokrates is the possibility to use [Sokrate
 
 A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.
 
-Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)
+Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in concerns (the metaConcerns field)
 
 The following [SSTL](sstl) operations are supported:
 
@@ -437,11 +437,11 @@ Example (components and dependencies finder with meta rules):
 }
 {% endhighlight %}
 
-Example (cross-cutting concerns with meta rules):
+Example (concerns with meta rules):
 
 {% highlight json %}
 {
-    "crossCuttingConcerns": [
+    "concernGroups": [
         {
             "name": "java technology",
             "concerns": [ ],

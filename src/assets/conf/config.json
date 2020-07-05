@@ -130,7 +130,7 @@
       "components": []
     }
   ],
-  "crossCuttingConcerns": [
+  "concernGroupss": [
     {
       "name": "general",
       "concerns": []

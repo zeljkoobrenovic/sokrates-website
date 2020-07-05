@@ -15,7 +15,7 @@ The input for aggregations and are:
 * unit-level measurements (lines of code, conditional complexity)
 * a list of duplicates within and among the files
 * the logical decompositions (each logical decomposition consists of components, and each component of lasts of files in that component)
-* cross-cutting concerns (each concern contains the list of files)
+* concerns (each concern contains the list of files)
 * a list of dependencies among components (per logical decompo­sition)
 
 Sokrates performs aggregation at three levels:

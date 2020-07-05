@@ -14,7 +14,7 @@ Sokrates' reports are the result of Sokrates' analyses.  The reports shed light 
 * source code overview report,
 * duplication report,
 * logical decomposition report,
-* cross-cutting concerns report
+* concerns report
 * file size report,
 * file change history report,
 * unit size report
@@ -74,20 +74,20 @@ To learn more:
 
 
 <br/>
-### Cross-Cutting Concerns Report
+### Concerns Report
 
 ![](assets/images/icons/concerns.svg)
 
-Cross-cutting concerns are aspects of a software system that you cannot cleanly decompose from the rest of the system. Typical examples include security and logging.
+Concerns are any aspects of a software system that can be identified thourgh patterns in code.
 
-Sokrates analyses cross-cutting concerns, answering the following questions:
-* How many cross-cutting concerns have you defined?
+Sokrates analyses concerns, answering the following questions:
+* How many concerns have you defined?
 * How many files are in each concern? How many lines of code?
 * Is there an overlap between concerns (the same file being in multiple concerns)? How much of the overlay is there (number of files, lines of code)?
 
 To learn more:
-* See an example of a [Sokrates Cross-Cutting Report](https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/CrossCuttingConcerns.html).
-* Learn more about [how Sokrates analyzes cross-cutting concerns](cross-cutting-concerns).
+* See an example of a [Sokrates Concerns Report](https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/Concerns.html).
+* Learn more about [how Sokrates analyzes concerns](concerns).
 
 
 
