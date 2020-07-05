@@ -107,7 +107,7 @@
   <li>describe your project with a name, logo, summary text, and to add external links</li>
   <li><a href="scoping">define the scope</a>, including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build &amp; deployment code, or other code…</li>
   <li>identify <a href="logical-decomposition">logical decompositions</a>: one or more ways to looks at components in the system</li>
-  <li>define <a href="concerns">cross-cutting concerns</a>: aspects of a software system that cannot be cleanly decomposed from the rest of the system</li>
+  <li>define <a href="concerns">concerns</a>: aspects of a software system that cannot be cleanly decomposed from the rest of the system</li>
   <li>set goals and controls: define measurements and alarms to keep your system within the desired values</li>
   <li>provide analysis reference points: for comparison and trend analysis</li>
   <li>add summary findings: manually added one-line insights and notes</li>
@@ -162,7 +162,7 @@
 <ul>
   <li>For analysis purposes Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other.</li>
   <li>The main category contains all manually created source code files that are being used in the production.</li>
-  <li>Files in the main category are used as input for other analyses: logical decomposition, cross-cutting concerns, duplication, file size, unit size, and conditional complexity.</li>
+  <li>Files in the main category are used as input for other analyses: logical decomposition, concerns, duplication, file size, unit size, and conditional complexity.</li>
   <li>Test source code files are used only for testing of the product. These files are normally not deployed to production.</li>
   <li>Build and deployment source code files are used to configure or support build and deployment process.</li>
   <li>Generated source code files are automatically generated files that have not been manually changed after generation.</li>
@@ -275,12 +275,12 @@
    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="define-cross-cutting-concerns-aspects-of-a-software-system-that-cannot-be-cleanly-decomposed-from-the-rest-of-the-system">Define cross-cutting concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system</h3>
+<h3 id="define-concerns-aspects-of-a-software-system-that-cannot-be-cleanly-decomposed-from-the-rest-of-the-system">Define concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system</h3>
 
-<p>Defines <a href="concerns">cross-cutting concerns</a>: aspects of a software system that cannot be cleanly decomposed from the rest of the system.</p>
+<p>Defines <a href="concerns">concerns</a>: aspects of a software system that cannot be cleanly decomposed from the rest of the system.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-   </span><span class="nl">"crossCuttingConcerns"</span><span class="p">:[</span><span class="w">
+   </span><span class="nl">"concernGroups"</span><span class="p">:[</span><span class="w">
       </span><span class="p">{</span><span class="w">
          </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"general"</span><span class="p">,</span><span class="w">
          </span><span class="nl">"concerns"</span><span class="p">:[</span><span class="w">
@@ -414,7 +414,7 @@
 
 <p>A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.</p>
 
-<p>Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)</p>
+<p>Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in concerns (the metaConcerns field)</p>
 
 <p>The following <a href="sstl">SSTL</a> operations are supported:</p>
 
@@ -496,10 +496,10 @@
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p>Example (cross-cutting concerns with meta rules):</p>
+<p>Example (concerns with meta rules):</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nl">"crossCuttingConcerns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="nl">"concernGroups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"java technology"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"concerns"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">

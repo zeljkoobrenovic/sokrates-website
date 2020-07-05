@@ -50,7 +50,7 @@ The **generatesReports** command generates HTML reports and exports data files.
          -reportFileSize               generate only the file size report (stored in <outputFolder>/html/FileSize.html)
          -reportUnitSize               generate only the unit size report (stored in <outputFolder>/html/UnitSize.html)
          -reportConditionalComplexity  generate only the conditional complexity report (stored in <outputFolder>/html/ConditionalComplexity.html)
-         -reportConcerns               generate only the concerns report (stored in <outputFolder>/html/CrossCuttingConcerns.html)
+         -reportConcerns               generate only the concerns report (stored in <outputFolder>/html/Concerns.html)
          -reportMetrics                generate only the metrics overview report (stored in <outputFolder>/html/Metrics.html)
          -reportControls               generate only the controls report (stored in <outputFolder>/html/Controls.html)
          -reportFindings               generate only the findings report (stored in <outputFolder>/html/Findings.html)

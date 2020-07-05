@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-07-04T11:52:33+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2020-07-05T13:30:28+02:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
 
 &lt;p&gt;Sokrates is a tool that can help you to understand your code by making visible the size, complexity, and coupling of software. With Sokrates, my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small their project is, irrespective of technology.&lt;/p&gt;
 
@@ -117,7 +117,7 @@
          &lt;span class=&quot;nt&quot;&gt;-reportFileSize&lt;/span&gt;               generate only the file size report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/FileSize.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
          &lt;span class=&quot;nt&quot;&gt;-reportUnitSize&lt;/span&gt;               generate only the unit size report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/UnitSize.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
          &lt;span class=&quot;nt&quot;&gt;-reportConditionalComplexity&lt;/span&gt;  generate only the conditional complexity report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/ConditionalComplexity.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-         &lt;span class=&quot;nt&quot;&gt;-reportCrossCuttingConcerns&lt;/span&gt;   generate only the cross cutting concerns report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/CrossCuttingConcerns.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;-reportConcerns&lt;/span&gt;               generate only the concerns report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/Concerns.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
          &lt;span class=&quot;nt&quot;&gt;-reportMetrics&lt;/span&gt;                generate only the metrics overview report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/Metrics.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
          &lt;span class=&quot;nt&quot;&gt;-reportControls&lt;/span&gt;               generate only the controls report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/Controls.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
          &lt;span class=&quot;nt&quot;&gt;-reportFindings&lt;/span&gt;               generate only the findings report &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stored &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;outputFolder&amp;gt;/html/Findings.html&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -241,7 +241,7 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
   &lt;li&gt;describe your project with a name, logo, summary text, and to add external links&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;scoping&quot;&gt;define the scope&lt;/a&gt;, including the location of the source code root, file extensions and files to analyze, ignored files, files classification, defining what is main code, test code, generated code, build &amp;amp; deployment code, or other code…&lt;/li&gt;
   &lt;li&gt;identify &lt;a href=&quot;logical-decomposition&quot;&gt;logical decompositions&lt;/a&gt;: one or more ways to looks at components in the system&lt;/li&gt;
-  &lt;li&gt;define &lt;a href=&quot;cross-cutting-concerns&quot;&gt;cross-cutting concerns&lt;/a&gt;: aspects of a software system that cannot be cleanly decomposed from the rest of the system&lt;/li&gt;
+  &lt;li&gt;define &lt;a href=&quot;concerns&quot;&gt;concerns&lt;/a&gt;: aspects of a software system that cannot be cleanly decomposed from the rest of the system&lt;/li&gt;
   &lt;li&gt;set goals and controls: define measurements and alarms to keep your system within the desired values&lt;/li&gt;
   &lt;li&gt;provide analysis reference points: for comparison and trend analysis&lt;/li&gt;
   &lt;li&gt;add summary findings: manually added one-line insights and notes&lt;/li&gt;
@@ -296,7 +296,7 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 &lt;ul&gt;
   &lt;li&gt;For analysis purposes Sokrates separate files in scope into several categories: main, test, generated, deployment and build, and other.&lt;/li&gt;
   &lt;li&gt;The main category contains all manually created source code files that are being used in the production.&lt;/li&gt;
-  &lt;li&gt;Files in the main category are used as input for other analyses: logical decomposition, cross-cutting concerns, duplication, file size, unit size, and conditional complexity.&lt;/li&gt;
+  &lt;li&gt;Files in the main category are used as input for other analyses: logical decomposition, concerns, duplication, file size, unit size, and conditional complexity.&lt;/li&gt;
   &lt;li&gt;Test source code files are used only for testing of the product. These files are normally not deployed to production.&lt;/li&gt;
   &lt;li&gt;Build and deployment source code files are used to configure or support build and deployment process.&lt;/li&gt;
   &lt;li&gt;Generated source code files are automatically generated files that have not been manually changed after generation.&lt;/li&gt;
@@ -409,12 +409,12 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h3 id=&quot;define-cross-cutting-concerns-aspects-of-a-software-system-that-cannot-be-cleanly-decomposed-from-the-rest-of-the-system&quot;&gt;Define cross-cutting concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system&lt;/h3&gt;
+&lt;h3 id=&quot;define-concerns-aspects-of-a-software-system-that-cannot-be-cleanly-decomposed-from-the-rest-of-the-system&quot;&gt;Define concerns: aspects of a software system that cannot be cleanly decomposed from the rest of the system&lt;/h3&gt;
 
-&lt;p&gt;Defines &lt;a href=&quot;cross-cutting-concerns&quot;&gt;cross-cutting concerns&lt;/a&gt;: aspects of a software system that cannot be cleanly decomposed from the rest of the system.&lt;/p&gt;
+&lt;p&gt;Defines &lt;a href=&quot;concerns&quot;&gt;concerns&lt;/a&gt;: aspects of a software system that cannot be cleanly decomposed from the rest of the system.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;crossCuttingConcerns&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;concernGroups&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
       &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;general&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;concerns&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -548,7 +548,7 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 
 &lt;p&gt;A meta rule is a search pattern (content and/or path) combined with the string operations to process found string to get the name that to define a component, concern or a dependency to a component.&lt;/p&gt;
 
-&lt;p&gt;Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in cross-cutting concerns (the metaConcerns field)&lt;/p&gt;
+&lt;p&gt;Meta rules can be used in logical decompositions (the metaComponents field), dependency finders (the metaRules field), and in concerns (the metaConcerns field)&lt;/p&gt;
 
 &lt;p&gt;The following &lt;a href=&quot;sstl&quot;&gt;SSTL&lt;/a&gt; operations are supported:&lt;/p&gt;
 
@@ -630,10 +630,10 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Example (cross-cutting concerns with meta rules):&lt;/p&gt;
+&lt;p&gt;Example (concerns with meta rules):&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;crossCuttingConcerns&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;concernGroups&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;java technology&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;concerns&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -718,7 +718,7 @@ mvn clean install
 &lt;p&gt;Sokrates uses SSTL in several places:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;to define dynamic names of components in &lt;a href=&quot;logical-decomposition&quot;&gt;logical decompositions&lt;/a&gt; (the meta components section)&lt;/li&gt;
-  &lt;li&gt;to define dynamic names of &lt;a href=&quot;cross-cutting-concerns&quot;&gt;cross-cutting concerns&lt;/a&gt; (the meta concerns section)&lt;/li&gt;
+  &lt;li&gt;to define dynamic names of &lt;a href=&quot;concerns&quot;&gt;concerns&lt;/a&gt; (the meta concerns section)&lt;/li&gt;
   &lt;li&gt;to find components names for &lt;a href=&quot;dependencies&quot;&gt;dependencies&lt;/a&gt; (the meta rules section)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1067,8 +1067,7 @@ description: Number of very complex units&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt
 &lt;p&gt;Sokrates exports two types of metrics:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;the static, project-level metrics. These static metrics have the same name in every Sokrates protect.&lt;/li&gt;
-  &lt;li&gt;derived metrics, where names of a metric are defined based on the names of logical decompositions, components, cross-cutting
- concerns, or file extensions.&lt;/li&gt;
+  &lt;li&gt;derived metrics, where names of a metric are defined based on the names of logical decompositions, components, concerns, or file extensions.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;static-metrics&quot;&gt;Static Metrics&lt;/h2&gt;
@@ -1081,7 +1080,7 @@ description: Number of very complex units&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt
 
 &lt;h2 id=&quot;derived-metrics&quot;&gt;Derived Metrics&lt;/h2&gt;
 
-&lt;p&gt;Derived metrics are dynamic. Their number and names depend on the number and names of components, cross-cutting concerns, and file extensions. The following table shows several of these derived metrics.&lt;/p&gt;
+&lt;p&gt;Derived metrics are dynamic. Their number and names depend on the number and names of components, concerns, and file extensions. The following table shows several of these derived metrics.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/metrics-table-derived.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
