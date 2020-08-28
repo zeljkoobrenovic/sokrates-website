@@ -16,7 +16,7 @@ Sokrates uses as a convention the output that you can generate using git command
  recommended for creating the list of changes for Sokrates analysis:
 
 {% highlight bash %}
-git ls-files -z | xargs -0 -n1 -I{} -- git log --format="%ai {}" {} > git-history.txt
+git ls-files -z | xargs -0 -n1 -I{} -- git log --date=short --format="%ad %ae %H {}" {} > git-history.txt
 {% endhighlight %}
 
 ![](assets/images/sokrates/history-git-ls-files.png)
@@ -28,23 +28,22 @@ The previous command assumes that you are running it in the root of your source 
 The command generates a textual file named **git-history.txt**. The following fragment illustrates the format of this file:
 
 {% highlight txt %}
-date & time of change     path (from 27th character onwards)
-2020-05-18 21:40:43 +0200 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2020-05-17 22:31:03 +0200 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2020-01-02 11:22:25 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-12-15 11:04:41 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-12-15 00:00:04 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-12-14 23:47:19 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-12-14 21:09:13 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-12-14 16:11:16 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-12-14 14:52:55 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-12-11 11:05:57 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-12-10 20:20:22 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-12-02 13:50:55 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-11-30 15:35:42 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-11-29 21:35:16 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-11-13 20:06:16 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
-2019-11-09 21:21:11 +0100 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+date       email          commit id                                path
+2020-08-18 user@email.com 41c4f5676a3645872d62541d301aca3a20ac6a4f cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-07-09 user@email.com d41b874bc3a29f20f6673a463cbdd9a324f74f67 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-07-09 user@email.com b1a2ccd041ae515ea432bcf3d327acc938d8c8e3 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-07-06 user@email.com f6c80d9ede62d6281a1fbacfc9118d33b74a4247 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-07-05 user@email.com ae1a0d2cb31470a983fbe8c30003317181b14f23 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-07-04 user@email.com f6754747d765df3e6b1a2af67923e396a0cc3aef cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-07-04 user@email.com 5bea89f5e87772944e836871eb0a988408e9c6c2 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-06-14 user@email.com fae3e2934fc0df5d779671f05e1f0685cf1adf7a cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-06-07 user@email.com b7c0e1cb48b03c22f9002b620389e8af40ea684f cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-06-06 user@email.com 68a6ec8df5e4b0dc4421930d2bd7c71f5f33f258 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-05-18 user@email.com cff81f4b4e05ce19c5ba81fe47c06fba83bb5cdf cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-05-17 user@email.com 8a79078a674c042b0b57cc3fd7179243fd3e82cc cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2020-01-02 user@email.com ec1922c44222244530db0dc8f6306368c5cd39d4 cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2019-12-15 user@email.com 14997b6634411b5f0b96410be49b8d901196d42e cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
+2019-12-15 user@email.com 7f4a5cd8ebc9c5aa7f0a6c9714c970cfa035b82c cli/src/main/java/nl/obren/sokrates/cli/CommandLineInterface.java
 {% endhighlight %}
 
 ***Figure 2:** The example content from a file with a history of file changes. The first 26 characters describe the date and time of a change. After that follows the file path relative to the source code root.*
