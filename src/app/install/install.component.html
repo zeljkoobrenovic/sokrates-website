@@ -8,7 +8,7 @@
     <pre>
     git clone https://github.com/junit-team/junit4
     cd junit4
-    git ls-files -z | xargs -0 -n1 -I{} -- git log --date=short --format="%ad %ae %H {}" {} > git-history.txt
+    git ls-files -z | xargs -0 -n1 -I{{ '{' }}} -- git log --date=short --format="%ad %ae %H {{ '{' }}}" {{ '{' }}} > git-history.txt
 
     java -jar sokrates-0.9.jar init
     java -jar sokrates-0.9.jar generateReports
