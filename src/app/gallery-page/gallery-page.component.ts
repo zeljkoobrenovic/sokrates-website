@@ -46,6 +46,6 @@ export class GalleryPageComponent implements OnInit {
 
   reportsLink(folder, projectId) {
     return 'https://d3axxy9bcycpv7.cloudfront.net/'
-      + folder + '/' + projectId + '/reports/html/index.html';
+      + folder + '/' + projectId + '/html/index.html';
   }
 }

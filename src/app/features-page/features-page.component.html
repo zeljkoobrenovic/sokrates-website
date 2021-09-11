@@ -1,36 +1,5 @@
 <div :style="isSmallScreen ? 'margin: 20px;' : 'margin: 0'">
   <div class="card">
-    <h2 class="title">Supported Languages</h2>
-    <p>Any textual file can be analyzed in Sokrates with standard analyses (empty lines cleaning, source
-      code overview, duplication, file size, concerns, findings, metrics, controls).</p>
-    <p>For several popular languages Sokrates provides more in-depth analyses:</p>
-    <div style="width: 100%; overflow-x: auto">
-      <table>
-        <th style="text-align: left">Language</th>
-        <th style="text-align: left">Extensions</th>
-        <th style="text-align: left" *ngIf="!isSmallScreen">Units Analysis</th>
-        <th style="text-align: left" *ngIf="!isSmallScreen">Dependencies</th>
-        <th style="text-align: left" *ngIf="!isSmallScreen">Details</th>
-        <tr *ngFor="let lang of languages">
-          <td style="padding-right: 36px; vertical-align: top">{{lang.name.replace("Analyzer", "")}}</td>
-          <td style="vertical-align: top">.{{lang.extensions.join("  .")}}</td>
-          <td style="text-align: center; vertical-align: top" *ngIf="!isSmallScreen">{{getUnits(lang)}}</td>
-          <td style="text-align: center; vertical-align: top" *ngIf="!isSmallScreen">{{getDependencies(lang)}}</td>
-          <td *ngIf="!isSmallScreen">
-            <a href="javascript:void(0)" (click)="toggleDisplay(lang)">Details...</a>
-            <div *ngIf="lang.show">
-              <span *ngFor="let feature of lang.featuresDescription">
-                <div *ngIf="isSpecificFeature(feature)">
-                  - {{ feature }}
-                </div>
-              </span>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="card">
     <h2 class="title">
       <img src="/assets/icons/overview.svg" style="width: 58px; vertical-align: middle">
       Source Code Overview</h2>
@@ -61,7 +30,7 @@
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/SourceCodeOverview.html"
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/Airflow/airflow/html/SourceCodeOverview.html"
            target="_blank">
           See an example of a Sokrates Source Code Overview report ⤇
         </a>
@@ -83,7 +52,7 @@
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/Duplication.html" target="_blank">
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/Airflow/airflow/html/Duplication.html" target="_blank">
           See an example of a Sokrates Duplication report ⤇
         </a>
       </li>
@@ -121,16 +90,16 @@
   <div class='card'>
     <h2 class="title">
       <img src="/assets/icons/concerns.svg" style="width: 58px; vertical-align: middle">
-      Concerns</h2>
+      Features of Interest</h2>
     <ul>
-      <li>Concerns are any aspects of a software system that can be identified thourgh patterns in code.</li>
-      <li>A single concern may be present in multiple files. One source code file may contain multiple concerns.</li>
+      <li>Features of interests are cross-curring concerns of a software system that can be identified thourgh patterns in code.</li>
+      <li>A single fetaure of interest may be present in multiple files. One source code file may contain multiple concerns.</li>
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/Concerns.html"
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/Airflow/airflow/html/FeaturesOfInterest.html"
            target="_blank">
-          See an example of a Sokrates Concerns report ⤇
+          See an example of a Sokrates Features of Interest report ⤇
         </a>
       </li>
     </ul>
@@ -147,7 +116,7 @@
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/FileSize.html" target="_blank">
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/Airflow/airflow/html/FileSize.html" target="_blank">
           See an example of a Sokrates File Size report ⤇
         </a>
       </li>
@@ -165,7 +134,7 @@
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/UnitSize.html" target="_blank">
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/Airflow/airflow/html/UnitSize.html" target="_blank">
           See an example of a Sokrates Unit Size report ⤇
         </a>
       </li>
@@ -188,7 +157,7 @@
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/CyclomaticComplexity.html"
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/Airflow/airflow/html/CyclomaticComplexity.html"
            target="_blank">
           See an example of a Sokrates Conditional Complexity report ⤇
         </a>
@@ -204,7 +173,7 @@
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/Metrics.html" target="_blank">
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/Airflow/airflow/html/Metrics.html" target="_blank">
           See an example of a Sokrates Metrics report ⤇
         </a>
       </li>
@@ -220,7 +189,7 @@
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/Trend.html" target="_blank">
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/Airflow/airflow/html/Trend.html" target="_blank">
           See an example of a Sokrates Trend report ⤇
         </a>
       </li>
@@ -235,11 +204,42 @@
     </ul>
     <ul>
       <li>
-        <a href="https://d3axxy9bcycpv7.cloudfront.net/java/sokrates/reports/html/Controls.html" target="_blank">
+        <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/Airflow/airflow/html/Controls.html" target="_blank">
           See an example of a Sokrates Controls report ⤇
         </a>
       </li>
     </ul>
+  </div>
+  <div class="card">
+    <h2 class="title">Supported Languages</h2>
+    <p>Any textual file can be analyzed in Sokrates with standard analyses (empty lines cleaning, source
+      code overview, duplication, file size, file age, file change frequency, temporal dependencies, committers &amp; contributions, features of interest, findings, metrics, controls).</p>
+    <p>For several popular languages Sokrates provides more in-depth analyses:</p>
+    <div style="width: 100%; overflow-x: auto">
+      <table>
+        <th style="text-align: left">Language</th>
+        <th style="text-align: left">Extensions</th>
+        <th style="text-align: left" *ngIf="!isSmallScreen">Units Analysis</th>
+        <th style="text-align: left" *ngIf="!isSmallScreen">Dependencies</th>
+        <th style="text-align: left" *ngIf="!isSmallScreen">Details</th>
+        <tr *ngFor="let lang of languages">
+          <td style="padding-right: 36px; vertical-align: top">{{lang.name.replace("Analyzer", "")}}</td>
+          <td style="vertical-align: top">.{{lang.extensions.join("  .")}}</td>
+          <td style="text-align: center; vertical-align: top" *ngIf="!isSmallScreen">{{getUnits(lang)}}</td>
+          <td style="text-align: center; vertical-align: top" *ngIf="!isSmallScreen">{{getDependencies(lang)}}</td>
+          <td *ngIf="!isSmallScreen">
+            <a href="javascript:void(0)" (click)="toggleDisplay(lang)">Details...</a>
+            <div *ngIf="lang.show">
+              <span *ngFor="let feature of lang.featuresDescription">
+                <div *ngIf="isSpecificFeature(feature)">
+                  - {{ feature }}
+                </div>
+              </span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 
 </div>

@@ -1,20 +1,18 @@
 <mat-card>
-  <p style="text-align: center">
-    <input matInput [(ngModel)]="filter" style="width: 300px; height: 32px; border: 1px solid #dedede" placeholder="search">
-  </p>
-  <p style="margin: 20px; text-align: center">Sokrates' analyses of <b>{{ projectsCount() }}</b> open-source
-    {{ projectsCount() === 1 ? 'project' : 'projects' }}
-    in <b>{{ projectsList().length}}</b> programming
-    {{ projectsCount() === 1 ? 'language' : 'languages' }}
-    (see the <a href="https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html" target="_blank"><b>Sokrates landscape report</b></a>).</p>
+  <h1>Analyses of Whole Landscapes</h1>
+  <div class="card" style="width: 600px; margin-bottom: 50px; ">
+    <a href="https://d3axxy9bcycpv7.cloudfront.net/asf/_sokrates_landscape/index.html" target="_blank" style="text-decoration: none">
+      <div><img src="https://d3axxy9bcycpv7.cloudfront.net/asf/_sokrates_landscape/logo.png" style="height: 90px"></div>
+      <div style="font-size: 140%; font-weight: bold">Apache Software Foundation (ASF) Projects</div>
+      <div style="font-size: 90%; color: black"><b>1100</b>+ repos, <b>100</b> MLOC, <b>24K</b> contributors, <b>2M</b> commits</div>
+    </a>
+  </div>
 
-  <div *ngFor="let group of projectsList()"  style="text-align: center; margin-bottom: 60px">
-    <h2 style="margin-top: 32px">
-      <img [src]="'https://d3axxy9bcycpv7.cloudfront.net/assets/logos/' + group.title.toLowerCase() + '.png'" style="height: 50px; vertical-align: middle">
-      <br/>{{ group.title }}
-    </h2>
+  <h1>Analyses of Individual Projects</h1>
+
+  <div *ngFor="let group of projectsList()"  style="text-align: left; margin-bottom: 60px">
     <div *ngIf="!filter">
-      <div *ngFor="let project of group.projects" class="card" >
+      <div *ngFor="let project of group.projects" class="card">
         <img [src]="project.logoLink" style="width: 48px; height: 48px; object-fit: contain">
         <div style="display: inline-block; vertical-align: top; margin-top: 0px; margin-left: 10px">
           <div style="font-size: 120%; font-weight: bold">{{ project.name }}</div>
