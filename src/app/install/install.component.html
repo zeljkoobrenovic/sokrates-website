@@ -1,53 +1,8 @@
 <div :style="isSmallScreen ? 'margin: 0' : 'margin: 22px'">
   <div class="card">
-    <h1>COMMAND LINE JAR</h1>
+    <h1>COMMAND LINE INTERFACE (CLI) JAR</h1>
     <p>DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar">sokrates-0.9.jar</a>
       (38 MB)</p>
-    <p><b>1. Analyze a single projects (Junit4): </b></p>
-    <div style="width: 100%; overflow-x: auto">
-    <pre>
-    git clone https://github.com/junit-team/junit4
-    cd junit4
-
-    java -jar sokrates-0.9.jar exportGitHistory
-    java -jar sokrates-0.9.jar init
-    java -jar sokrates-0.9.jar generateReports
-
-    open _sokrates/reports/html/index.html
-  </pre>
-      <p><b>2. Analyze multiple projects and create a landscape page that summarizes data from these two analyses:</b></p>
-      <div style="width: 100%; overflow-x: auto">
-    <pre>
-    git clone https://github.com/junit-team/junit4
-    cd junit4
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar extractGitHistory
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar init
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar generateReports
-
-    cd ..
-
-    git clone https://github.com/junit-team/junit5
-    cd junit5
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar extractGitHistory
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar init
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar generateReports
-
-    cd ..
-
-    mkdir landscape
-    mv junit4/_sokrates landscape/junit4
-    mv junit5/_sokrates landscape/junit5
-
-    rm -rf junit4
-    rm -rf junit5
-
-    cd landscape
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar updateLandscape
-
-    open _sokrates_landscape/index.html
-  </pre>
-      </div>
-    </div>
     <div class="card">
       <h3 style="background-color: #ededed; padding: 4px"><b>Command Line Usage:</b></h3>
       <mat-accordion>
@@ -63,9 +18,34 @@
           <div>
             <div style="width: 100%; overflow-x: auto">
         <pre>
-  java -jar sokrates-0.9.jar init [options]
-       -srcRoot  &lt;arg&gt;   [OPTIONAL] the path to source code root folder (default is &lt;currentFolder>)
-       -confFile &lt;arg&gt;   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
+usage: java -jar sokrates.jar init [options]
+ -addLink &lt;arg>           link label [OPTIONAL] adds a new link to an external document
+ -confFile &lt;arg>          [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
+ -conventionsFile &lt;arg>   the custom conventions JSON file path")
+ -description &lt;arg>       the project description")
+ -logoLink &lt;arg>          the project logo link")
+ -name &lt;arg>              the project name")
+ -srcRoot &lt;arg>           [OPTIONAL] the folder where reports will be stored (default is
+                          "&lt;currentFolder>/_sokrates/reports/")
+ -timeout &lt;arg>           [OPTIONAL] timeout in seconds
+        </pre>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title style="width: 210px; max-width: 210px">
+              <b class="commandTag">extractGitHistory</b>
+            </mat-panel-title>
+            <mat-panel-description *ngIf="!isSmallScreen">
+              generate a new Sokrates configuration file for the codebase
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <div style="width: 100%; overflow-x: auto">
+        <pre>
+usage: java -jar sokrates.jar extractGitHistory [options]
+ -analysisRoot &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
         </pre>
             </div>
           </div>
@@ -81,23 +61,15 @@
           </mat-expansion-panel-header>
           <div style="width: 100%; overflow-x: auto">
     <pre>
-  java -jar sokrates-0.9.jar generateReports [options]
-         -confFile     &lt;arg&gt;           [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json")
-         -outputFolder &lt;arg&gt;           [OPTIONAL] the folder where reports will be stored (default is "&lt;currentFolder>/_sokrates/reports/")
-         -reportAll                    [DEFAULT] generate all reports
-         -reportData                   save only data in JSON and text formats (stored in &lt;outputFolder>/data)
-         -reportOverview               generate only the report describing the overview of files in scope (stored in &lt;outputFolder>/html/SourceCodeOverview.html)
-         -reportDuplication            generate only the duplication report (stored in &lt;outputFolder>/html/Duplication.html)
-         -reportLogicalDecomposition   generate only the components logical decomposition report (stored in &lt;outputFolder>/LogicalDecomposition.html)
-         -reportFileSize               generate only the file size report (stored in &lt;outputFolder>/html/FileSize.html)
-         -reportUnitSize               generate only the unit size report (stored in &lt;outputFolder>/html/UnitSize.html)
-         -reportConditionalComplexity  generate only the conditional complexity report (stored in &lt;outputFolder>/html/ConditionalComplexity.html)
-         -reportConcerns               generate only the concerns report (stored in &lt;outputFolder>/html/Concerns.html)
-         -reportMetrics                generate only the metrics overview report (stored in &lt;outputFolder>/html/Metrics.html)
-         -reportControls               generate only the controls report (stored in &lt;outputFolder>/html/Controls.html)
-         -reportFindings               generate only the findings report (stored in &lt;outputFolder>/html/Findings.html)
-         -internalGraphviz             use internal Graphviz library (by default external dot program is used, you may specify
-                                       the external dot path via the system variable GRAPHVIZ_DOT)
+usage: java -jar sokrates.jar generateReports [options]
+ -confFile &lt;arg>       [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
+ -date &lt;arg>           [OPTIONAL] last date of source code update (default today), used for reports usning commit history to identify active
+                       contributors
+ -outputFolder &lt;arg>   [OPTIONAL] the folder where reports will be stored (default value is
+                       &lt;currentFolder/_sokrates/reports>)
+ -timeout &lt;arg>        [OPTIONAL] timeout in seconds
+ -internalGraphviz     [OPTIONAL] use internal Graphviz library (by default external dot program is used, you may specify the
+                       external dot path via the system variable GRAPHVIZ_DOT)
   </pre>
           </div>
         </mat-expansion-panel>
@@ -114,12 +86,15 @@
           <div>
             <div style="width: 100%; overflow-x: auto">
 <pre>
-  java -jar sokrates.jar updateConfig [options]
-         -confFile &lt;arg>         [OPTIONAL] the path to configuration file (default is "&lt;currentFolder&gt;/_sokrates/config.json"
-         -setDescription &lt;arg>   [OPTIONAL] sets a project description
-         -setLogoLink &lt;arg>      [OPTIONAL] sets a project logo link
-         -setName &lt;arg>          [OPTIONAL] sets a project name
-         -skipComplexAnalyses    [OPTIONAL] skips complex analyses (duplication, dependencies, file caching)
+usage: java -jar sokrates.jar updateConfig [options]
+ -addLink &lt;arg>          link label [OPTIONAL] adds a new link to an external document
+ -confFile &lt;arg>         [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
+ -setCacheFiles &lt;arg>    [OPTIONAL] sets a cahche file flag ('true' or 'false')
+ -setDescription &lt;arg>   [OPTIONAL] sets a project description
+ -setLogoLink &lt;arg>      [OPTIONAL] sets a project logo link
+ -setName &lt;arg>          [OPTIONAL] sets a project name
+ -skipComplexAnalyses    [OPTIONAL] skips complex analyses (duplication, dependencies, file caching)
+ -timeout &lt;arg>          [OPTIONAL] timeout in seconds
 </pre>
             </div>
           </div>
@@ -137,9 +112,12 @@
           <div>
             <div style="width: 100%; overflow-x: auto">
     <pre>
-  java -jar sokrates.jar updateLandscape [options]
-         -analysisRoot &lt;arg&gt;   the path to the root folder of multiple Sokrates projects, scans all subfolders for Sokrates reports and configurations". The folder where landscape reports will be stored (default is "&lt;currentFolder>/_sokrates_landscape/reports/".
-         -confFile     &lt;arg&gt;   [OPTIONAL] the path to landscape configuration file (default is "&lt;currentFolder>/_sokrates_landscape/config.json"
+usage: java -jar sokrates.jar updateLandscape [options]
+ -analysisRoot &lt;arg>   [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
+ -confFile &lt;arg>       [OPTIONAL] the path to configuration file (default is "&lt;currentFolder>/_sokrates/config.json"
+ -date &lt;arg>           [OPTIONAL] last date of source code update (default today), used for reports on active
+                       contributors
+ -timeout &lt;arg>        [OPTIONAL] timeout in seconds
   </pre>
             </div>
           </div>
@@ -147,25 +125,74 @@
       </mat-accordion>
     </div>
     <div class="card">
-      <h1>VISUAL EXPLORER</h1>
-      <p>DOWNLOAD: <a
-        href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">sokrates-explorer-0.9.jar</a>
-        (78 MB)</p>
-      <p><b>NOTE: require JavaFX (download it and install it from <a ref="https://openjfx.io/">openjfx.io</a>)</b></p>
+      <div><b>CLI Usage Example 1. Analyze a single projects (Junit4): </b></div>
       <div style="width: 100%; overflow-x: auto">
+    <pre style="background-color: #dedede; padding: 4px">
+    git clone https://github.com/junit-team/junit4
+    cd junit4
+
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">extractGitHistory</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">init</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">generateReports</span>
+
+    open _sokrates/reports/html/index.html
+  </pre>
+        <div><b>CLI Usage Example 2. Analyze multiple projects and create a landscape page that summarizes data from these
+          two analyses:</b></div>
+        <div style="width: 100%; overflow-x: auto">
+    <pre style="background-color: #dedede; padding: 4px">
+    git clone https://github.com/junit-team/junit4
+    cd junit4
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">extractGitHistory</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">init</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">generateReports</span>
+
+    cd ..
+
+    git clone https://github.com/junit-team/junit5
+    cd junit5
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">extractGitHistory</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">init</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">generateReports</span>
+
+    cd ..
+
+    mkdir landscape
+    mv junit4/_sokrates landscape/junit4
+    mv junit5/_sokrates landscape/junit5
+
+    rm -rf junit4
+    rm -rf junit5
+
+    cd landscape
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">updateLandscape</span>
+
+    open _sokrates_landscape/index.html
+  </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h1>VISUAL EXPLORER</h1>
+    <p>DOWNLOAD: <a
+      href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar">sokrates-explorer-0.9.jar</a>
+      (78 MB)</p>
+    <p><b>NOTE: require JavaFX (download it and install it from <a ref="https://openjfx.io/">openjfx.io</a>)</b></p>
+    <div style="width: 100%; overflow-x: auto">
     <pre>
    java --module-path $JAVAFX_HOME/lib --add-modules=javafx.controls,javafx.web -jar sokrates-explorer-0.9.jar
   </pre>
-      </div>
-      <br/>
-      <img src="/assets/explorer.png" style="width: 100%; max-width: 1024px">
     </div>
-    <div class="card">
-      <h1>SOURCE CODE</h1>
-      <ul style="font-size: 120%">
-        <li><p><a href="https://github.com/zeljkoobrenovic/sokrates"
-                  target="_blank">github.com/zeljkoobrenovic/sokrates</a>
-        </p></li>
-      </ul>
-    </div>
+    <br/>
+    <img src="/assets/explorer.png" style="width: 100%; max-width: 1024px">
   </div>
+</div>
+<div class="card">
+  <h1>SOURCE CODE</h1>
+  <ul style="font-size: 120%">
+    <li><p><a href="https://github.com/zeljkoobrenovic/sokrates"
+              target="_blank">github.com/zeljkoobrenovic/sokrates</a>
+    </p></li>
+  </ul>
+</div>
