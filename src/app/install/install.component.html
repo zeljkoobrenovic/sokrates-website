@@ -120,6 +120,23 @@ usage: java -jar sokrates.jar createConventionsFile
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title style="width: 210px; max-width: 210px">
+              <b class="commandTag">exportStandardConventions</b>
+            </mat-panel-title>
+            <mat-panel-description *ngIf="!isSmallScreen">
+              Export standard Sokrates analysis convention to &gt;current-folder>/standard_analysis_conventions.json.
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <div style="width: 100%; overflow-x: auto">
+<pre>
+usage: java -jar sokrates.jar exportStandardConventions
+</pre>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title style="width: 210px; max-width: 210px">
               <b class="commandTag">updateLandscape</b>
             </mat-panel-title>
             <mat-panel-description *ngIf="!isSmallScreen">

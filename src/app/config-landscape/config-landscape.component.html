@@ -39,7 +39,18 @@
   <h2 class="title">Configuring the Analysis Initialization</h2>
   <ul>
     <li>The Sokrates <b style="background-color: yellow">init</b> command creates a configuration file for analyses.
-      Without any parameters, this command uses the standard conventions to generate configuration.</li>
-    <li>You can also use your own custom conventions to initialize projects and create new configuration files.</li>
+      Without any parameters, this command uses the standard conventions to generate a project analysis configuration.</li>
+    <li>You can also use your own custom conventions to initialize projects and create new configuration files.
+        <pre style="background-color: #dedede; padding: 4px">
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">createConventionsFile</span>
+    # edit the 'analysis_conventions.json' file to define your custom conventions
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">init -conventionsFile analysis_conventions.json</span></pre>
+    </li>
+    <li>You can use the exportStandardConventions command to get standard Sokrates conventions as inspiration for your custom conventions:</li>
+    <ul>
+      <li><pre style="background-color: #dedede;">
+    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">exportStandardConventions</span></pre></li>
+      <li>See example of a <a target="_blank" href="assets/conf/standard_analysis_conventions.json">standard_analysis_conventions.json</a> file</li>
+    </ul>
   </ul>
 </div>
