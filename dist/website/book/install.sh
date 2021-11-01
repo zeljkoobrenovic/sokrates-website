@@ -1,1 +1,1 @@
-bundle install
+sudo bundle install

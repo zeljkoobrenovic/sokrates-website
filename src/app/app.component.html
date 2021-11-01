@@ -20,11 +20,14 @@
         <h1>INSTALL</h1>
         <app-install></app-install>
       </div>
-      <div class="card" style="background-color: #ededed">
-        <h1>CONFIGURATION</h1>
-        <app-configuration-page></app-configuration-page>
-        <app-config-landscape></app-config-landscape>
-      </div>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon style="margin-right: 8px" *ngIf="!isSmallScreen">settings</mat-icon>
+        <b style="color: black">CONFIGURATION</b>
+      </ng-template>
+      <app-configuration-page></app-configuration-page>
+      <app-config-landscape></app-config-landscape>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
