@@ -206,5 +206,5 @@ To learn more:
 The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses, providing a centralized and uniform on the results of multiple Sokrates projects. The report is a "landscape" because it draws a map of all projects that you want to view from one place.
 
 To learn more:
-* See an example of a [Sokrates Landscape report](https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html).
+* See an example of a [Sokrates Landscape report](https://d3axxy9bcycpv7.cloudfront.net/asf/_sokrates_landscape/index.html).
 * Learn more about [how Sokrates creates the landscape report](landscape).
