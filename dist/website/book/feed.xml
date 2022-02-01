@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2022-01-30T21:27:09+01:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/book/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/book/" rel="alternate" type="text/html" /><updated>2022-02-01T14:10:51+01:00</updated><id>http://localhost:4000/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="http://localhost:4000/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/philosophy</id><content type="html" xml:base="http://localhost:4000/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
 
 &lt;p&gt;Sokrates is a tool that can help you to understand your code by making visible the size, complexity, and coupling of software. With Sokrates, my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small their project is, irrespective of technology.&lt;/p&gt;
 
@@ -823,76 +823,287 @@ mvn clean install
 
 &lt;p&gt;&lt;a href=&quot;https://www.oreilly.com/library/view/introducing-regular-expressions/9781449338879/&quot; target=&quot;_blank&quot;&gt;
   &lt;img src=&quot;assets/images/sokrates/book-regex-intro.png&quot; width=&quot;300&quot; style=&quot;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, extract and manipulate text, name components, or identify dependencies.</summary></entry><entry><title type="html">Landscape Analysis: iFrames</title><link href="http://localhost:4000/book/landscape" rel="alternate" type="text/html" title="Landscape Analysis: iFrames" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/landscape-analysis-iframes</id><content type="html" xml:base="http://localhost:4000/book/landscape">&lt;p&gt;The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place.&lt;/p&gt;
+&lt;/a&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">You cannot efficiently use Sokrates if you do not know at least the basics of regular expressions. Sokrates uses regular expressions for two purposes: to filter and classify files, extract and manipulate text, name components, or identify dependencies.</summary></entry><entry><title type="html">Landscape Analysis Overview</title><link href="http://localhost:4000/book/landscape" rel="alternate" type="text/html" title="Landscape Analysis Overview" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/landscape-analysis</id><content type="html" xml:base="http://localhost:4000/book/landscape">&lt;p&gt;The Sokrates landscape analysis aggregates and indexes the Sokrates project analysis reports,  providing a centralized and uniform view on multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects you want to view from one place.&lt;/p&gt;
 
-&lt;p&gt;The landscape analyses provide a helicopter view on huge code bases. The uniform centralized index page provides an easy way to find and get access to details of individual Sokrates projects. On the other hand, the landscape analysis, in an efficient way, also aggregates and compares basic basing findings from dozens or hundreds of such projects.&lt;/p&gt;
+&lt;p&gt;The landscape analyses provide a helicopter view on huge code bases. The uniform centralized index page provides an easy way to find and access details of individual Sokrates projects. The landscape analysis also provides an efficient way to aggregate and compare findings from dozens or hundreds of such projects.&lt;/p&gt;
 
-&lt;p&gt;To run a Sokrates landscape analysis, you need to get to the root folder, under which are other Sokrates projects. Sokrates landscape analysis assumes that your projects are somewhere in deep folders. Sokrates will recursively go through all folders, looking for all configuration and analysis result files. For details on Sokrates landscape commands, visit &lt;a href=&quot;cli&quot;&gt;the command line interface page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-init-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; The &lt;strong&gt;initLandscape&lt;/strong&gt; command goes through all folders to find Sokrates projects, adding them to the index list.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;An alternative to the landscape analysis is to scope a whole codebase one Sokrate project, scoping each sub-project as a component. However, for code bases of dozens of millions of lines of code, such an approach may not be practical enough due to length of analysis. Instead, you can define many smaller projects, and use the landscape analysis to provide a bigger picture.&lt;/p&gt;
-
-&lt;p&gt;You can find &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html&quot;&gt;an example Sokrates landscape report at the sokrates.dev site&lt;/a&gt;. In this report, I have aggregated and indexed all 65 Sokrates example projects, with more than 11 million lines of code.&lt;/p&gt;
-
-&lt;p&gt;The following screenshot shows this report as well:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/reports-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; A screenshot of a Sokrates Landscape report.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses, providing a centralized and uniform on the results of multiple Sokrates projects.</summary></entry><entry><title type="html">Landscape Analysis: Contributors</title><link href="http://localhost:4000/book/landscape" rel="alternate" type="text/html" title="Landscape Analysis: Contributors" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/landscape-analysis-contributors</id><content type="html" xml:base="http://localhost:4000/book/landscape">&lt;p&gt;The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place.&lt;/p&gt;
-
-&lt;p&gt;The landscape analyses provide a helicopter view on huge code bases. The uniform centralized index page provides an easy way to find and get access to details of individual Sokrates projects. On the other hand, the landscape analysis, in an efficient way, also aggregates and compares basic basing findings from dozens or hundreds of such projects.&lt;/p&gt;
-
-&lt;p&gt;To run a Sokrates landscape analysis, you need to get to the root folder, under which are other Sokrates projects. Sokrates landscape analysis assumes that your projects are somewhere in deep folders. Sokrates will recursively go through all folders, looking for all configuration and analysis result files. For details on Sokrates landscape commands, visit &lt;a href=&quot;cli&quot;&gt;the command line interface page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To run a Sokrates landscape analysis, you need to get to the Sokrates project reports folder. Sokrates landscape analysis assumes that your projects are somewhere in deeper folders. Sokrates will recursively go through all folders, looking for all configuration and analysis result files. Sokrates will create a hierarchical view if other landscape analyses are on deeper levels.
+For details on Sokrates landscape commands, visit &lt;a href=&quot;cli&quot;&gt;the command line interface page&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-init-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; The &lt;strong&gt;initLandscape&lt;/strong&gt; command goes through all folders to find Sokrates projects, adding them to the index list.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; The &lt;strong&gt;updateLandscape&lt;/strong&gt; command goes through all folders to find Sokrates projects, adding them to the index list.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;An alternative to the landscape analysis is to scope a whole codebase one Sokrate project, scoping each sub-project as a component. However, for code bases of dozens of millions of lines of code, such an approach may not be practical enough due to length of analysis. Instead, you can define many smaller projects, and use the landscape analysis to provide a bigger picture.&lt;/p&gt;
+&lt;p&gt;Sokrates landscape analysis provides the following types of insights:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Overview of code volume and trends per programming languages&lt;/li&gt;
+  &lt;li&gt;Overview of projects and commit and contributor trends&lt;/li&gt;
+  &lt;li&gt;Overview of contributors and their recent and historical overview&lt;/li&gt;
+  &lt;li&gt;Team topologies overview, rendering dependencies between people working on the same projects&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;You can find &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html&quot;&gt;an example Sokrates landscape report at the sokrates.dev site&lt;/a&gt;. In this report, I have aggregated and indexed all 65 Sokrates example projects, with more than 11 million lines of code.&lt;/p&gt;
+&lt;p&gt;An alternative to the landscape analysis is to scope a whole codebase as one Sokrates project, defining each sub-project as a component. However, for code bases of dozens of millions of lines of code, such an approach may not be practical enough due to the length of analysis. Instead, you can define many smaller projects and use the landscape analysis to provide a bigger picture.&lt;/p&gt;
 
-&lt;p&gt;The following screenshot shows this report as well:&lt;/p&gt;
+&lt;p&gt;You can find &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/asf/index.html&quot;&gt;an example Sokrates landscape report at the sokrates.dev site&lt;/a&gt;. In this report, I have aggregated and indexed more that 1,000 Apache Software Foundation (ASF) open-source projects, with more than 100 millions of lines of code.&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">The Sokrates landscape analysis aggregates and indexes the Sokrates project analysis reports, providing a centralized and uniform view on multiple Sokrates projects.</summary></entry><entry><title type="html">Trend Analysis</title><link href="http://localhost:4000/book/trends" rel="alternate" type="text/html" title="Trend Analysis" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/trend-analysis</id><content type="html" xml:base="http://localhost:4000/book/trends">&lt;p&gt;Trend analysis shows the difference between values measured at different times, comparing the results of the current analysis with previous reports.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/reports-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/trends-metrics.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; A screenshot of a Sokrates Landscape report.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses, providing a centralized and uniform on the results of multiple Sokrates projects.</summary></entry><entry><title type="html">Landscape Analysis: Projects</title><link href="http://localhost:4000/book/landscape" rel="alternate" type="text/html" title="Landscape Analysis: Projects" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/landscape-analysis-projects</id><content type="html" xml:base="http://localhost:4000/book/landscape">&lt;p&gt;The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; &lt;em&gt;A screenshot from a Sokrates trend report detailing trends per metric.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;The landscape analyses provide a helicopter view on huge code bases. The uniform centralized index page provides an easy way to find and get access to details of individual Sokrates projects. On the other hand, the landscape analysis, in an efficient way, also aggregates and compares basic basing findings from dozens or hundreds of such projects.&lt;/p&gt;
+&lt;p&gt;Trend analysis gives the meaning to measurements through comparison. While it may be difficult to tell if some measured value is good or bad, it may still be possible to say if this value is becoming better or worse. For instance, you always have some level of duplication in code. You may not have the time and resources to refactor the system to remove all duplication. But you usually want to have a trend of reduced duplication. You can at least monitor the duplication level so that your new code does not increase overall code repetition.&lt;/p&gt;
 
-&lt;p&gt;To run a Sokrates landscape analysis, you need to get to the root folder, under which are other Sokrates projects. Sokrates landscape analysis assumes that your projects are somewhere in deep folders. Sokrates will recursively go through all folders, looking for all configuration and analysis result files. For details on Sokrates landscape commands, visit &lt;a href=&quot;cli&quot;&gt;the command line interface page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more insights into the value of trend analysis, Sokrates recommends reading the section “Favor tracking trends over absolute numbers” in the article &lt;a href=&quot;https://martinfowler.com/articles/useOfMetrics.html&quot;&gt;An Appropriate Use of Metrics&lt;/a&gt;, (MartinFowler.com):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-init-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“Looking at trends provides more interesting information than whether or not a target is met. Working out if a goal is met is easy. The difficult work, and one that management must work with people with the skills to complete is looking at trends to see if they are moving in the desired direction and a fast enough rate. Trends provide leading indicators into the performance that emerges from organizational complexity. It is clearly pointless focusing on the gap in a number when a trend moves further and further away from a desired state.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; The &lt;strong&gt;initLandscape&lt;/strong&gt; command goes through all folders to find Sokrates projects, adding them to the index list.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;sokrates-snapshots&quot;&gt;Sokrates Snapshots&lt;/h3&gt;
 
-&lt;p&gt;An alternative to the landscape analysis is to scope a whole codebase one Sokrate project, scoping each sub-project as a component. However, for code bases of dozens of millions of lines of code, such an approach may not be practical enough due to length of analysis. Instead, you can define many smaller projects, and use the landscape analysis to provide a bigger picture.&lt;/p&gt;
+&lt;p&gt;Sokrates supports trend analysis by saving the snapshots of analysis results and comparing these snapshots with current values. Keeping of snapshots is optional, but if you enable these features, you can choose the saving frequency at three levels: daily, weekly, or monthly.&lt;/p&gt;
 
-&lt;p&gt;You can find &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html&quot;&gt;an example Sokrates landscape report at the sokrates.dev site&lt;/a&gt;. In this report, I have aggregated and indexed all 65 Sokrates example projects, with more than 11 million lines of code.&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;trendAnalysis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;saveHistory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;frequency&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;weekly&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;maxReferencePointsForAnalysis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;historyFolder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;history&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The following screenshot shows this report as well:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; &lt;em&gt;A fragment of Sokrates configuration file, describing parameters of trend analysis and saving of history snapshots.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/reports-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Each snapshot is an archived file named &lt;strong&gt;analysisResults.zip&lt;/strong&gt;. It contains two JSON files: &lt;strong&gt;analysisResults.json&lt;/strong&gt;, with all measurements, and &lt;strong&gt;config.json&lt;/strong&gt;, with a copy of the Sokrates configuration at the time of the measurement.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; A screenshot of a Sokrates Landscape report.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses, providing a centralized and uniform on the results of multiple Sokrates projects.</summary></entry><entry><title type="html">Landscape Analysis Overview</title><link href="http://localhost:4000/book/landscape" rel="alternate" type="text/html" title="Landscape Analysis Overview" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/landscape-analysis</id><content type="html" xml:base="http://localhost:4000/book/landscape">&lt;p&gt;The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses,  providing a centralized and uniform on the results of multiple Sokrates projects. The analysis is called landscape because it draws a map of all projects that you want to view from one place.&lt;/p&gt;
+&lt;p&gt;Sokrates stores snapshots files in the &lt;strong&gt;_sokrates/history/snapshots&lt;/strong&gt; folder. Each snapshot file has its own subfolder folder with the following naming conventions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;…/history/snapshots/years-month-day&lt;/strong&gt;&lt;br /&gt;for daily
+snapshots (e.g., &lt;strong&gt;_sokrates/history/snapshots/2020-01-01&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;…/history/snapshots/years-weekInYear&lt;/strong&gt;&lt;br /&gt;for daily
+weekly (e.g., &lt;strong&gt;_sokrates/history/snapshots/2020-42&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;…/history/snapshots/years-month&lt;/strong&gt;&lt;br /&gt;for monthly
+snapshots (e.g. &lt;strong&gt;_sokrates/history/snapshots/2020-01&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;The landscape analyses provide a helicopter view on huge code bases. The uniform centralized index page provides an easy way to find and get access to details of individual Sokrates projects. On the other hand, the landscape analysis, in an efficient way, also aggregates and compares basic basing findings from dozens or hundreds of such projects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/trend-code-change-overview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;To run a Sokrates landscape analysis, you need to get to the root folder, under which are other Sokrates projects. Sokrates landscape analysis assumes that your projects are somewhere in deep folders. Sokrates will recursively go through all folders, looking for all configuration and analysis result files. For details on Sokrates landscape commands, visit &lt;a href=&quot;cli&quot;&gt;the command line interface page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; &lt;em&gt;A screenshot from a Sokrates trend report detailing volume and duplication change.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/cmd-init-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;analyzing-trends-retroactively&quot;&gt;Analyzing Trends Retroactively&lt;/h3&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; The &lt;strong&gt;initLandscape&lt;/strong&gt; command goes through all folders to find Sokrates projects, adding them to the index list.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;If you have just started using Sokrates, you can still get the trend analysis by checking out the code at different moments in the past and running the Sokrates analysis against them to get the snapshots of source code from the past. The following line is the Git command to get your source code as it was on January 1, 2020:&lt;/p&gt;
 
-&lt;p&gt;An alternative to the landscape analysis is to scope a whole codebase one Sokrate project, scoping each sub-project as a component. However, for code bases of dozens of millions of lines of code, such an approach may not be practical enough due to length of analysis. Instead, you can define many smaller projects, and use the landscape analysis to provide a bigger picture.&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;git checkout &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;git rev-list &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;--first-parent&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2020-01-01 00:00&quot;&lt;/span&gt; master&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;You can find &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/_sokrates_landscape/index.html&quot;&gt;an example Sokrates landscape report at the sokrates.dev site&lt;/a&gt;. In this report, I have aggregated and indexed all 65 Sokrates example projects, with more than 11 million lines of code.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; &lt;em&gt;Git commands to get a code on a specified date.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;The following screenshot shows this report as well:&lt;/p&gt;
+&lt;p&gt;The following code fragment illustrates a more complex example, where you can get the analysis snapshot of any git repository at any date:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/reports-landscape.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; A screenshot of a Sokrates Landscape report.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">The Socrates landscape analysis a utility that aggregates and indexes the results of Sokrates analyses, providing a centralized and uniform on the results of multiple Sokrates projects.</summary></entry></feed>
+&lt;span class=&quot;c&quot;&gt;# prepare a temporary folder for Sokrates analysis&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; temp
+&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;temp
+&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; sokrates-config/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; temp
+
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;temp
+
+&lt;span class=&quot;c&quot;&gt;# clone the repository&lt;/span&gt;
+git clone &lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt; temp-git-download
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;temp-git-download
+&lt;span class=&quot;c&quot;&gt;# go back in time (the $3 parameter needs to be provided)&lt;/span&gt;
+git checkout &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;git rev-list &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;--first-parent&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; 00:00&quot;&lt;/span&gt; master&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+&lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;temp-git-download/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; temp-git-download
+
+
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+
+&lt;span class=&quot;c&quot;&gt;# run Sokrates analysis&lt;/span&gt;
+java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Xmx10g&lt;/span&gt; sokrates.jar generateReports &lt;span class=&quot;nt&quot;&gt;-reportData&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt; temp/_sokrates/config.json &lt;span class=&quot;nt&quot;&gt;-outputFolder&lt;/span&gt; temp/_sokrates/reports &lt;span class=&quot;nt&quot;&gt;-reportAll&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# make history folders with appropriate date in the name&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mkdir history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mkdir history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# copy analysisResults.json and config.json&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;temp/_sokrates/reports/data/analysisResults.json &lt;span class=&quot;nb&quot;&gt;history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;temp/_sokrates/reports/data/config.json &lt;span class=&quot;nb&quot;&gt;history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; temp
+
+&lt;span class=&quot;c&quot;&gt;# zip snapshot files&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd history&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;
+zip analysisResults.zip &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.json
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.json&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; A bash script to get the analysis snapshot of a git repository at a specified date.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can then call this batch file as illustrated in the following example of JUnit4 repository:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;history
+
+mkdir history
+mkdir history&lt;/span&gt;/java
+
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2020-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2019-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2018-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2017-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2016-01-01'&lt;/span&gt;
+bash run-analysis-history.sh &lt;span class=&quot;s1&quot;&gt;'java/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://github.com/junit-team/junit4'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2015-01-01'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; &lt;em&gt;A bash script describing the full process of checking our source code on different dates, by calling the script defined in Figure 4.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">Trend analysis shows the difference between values measured at different times, comparing the results of the current analysis with previous reports.</summary></entry><entry><title type="html">Controls</title><link href="http://localhost:4000/book/controls" rel="alternate" type="text/html" title="Controls" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/controls-analysis</id><content type="html" xml:base="http://localhost:4000/book/controls">&lt;p&gt;In Sokrates, you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;OK (green) the measured value is below the threshold&lt;/li&gt;
+  &lt;li&gt;tolerant (yellow) the measured value is above the threshold but within the tolerance range&lt;/li&gt;
+  &lt;li&gt;failed (red), the measured value is above the threshold and the tolerance level.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/usage-goals.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; &lt;em&gt;The goals-and-controls mode, a simplified analyze-and-reflect mode, where you can replace the reflect part with a set of clearly defined traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a control with the threshold and tolerance. And then react when the measurements are out of safe range.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For instance, let’s assume that we have defined a control for duplication, setting the threshold to 5% and the tolerance level to 2%. If the measured duplication level is 4%, Sokrotes will label the control as OK (green). For the measured duplication level of 8%, Sokrates will label the control as failed (red). If the measured duplication is 6%, Sokrates will mark the controls as tolerant (yellow).&lt;/p&gt;
+
+&lt;h3 id=&quot;configuring-controls&quot;&gt;Configuring Controls&lt;/h3&gt;
+
+&lt;p&gt;You configure controls as a part of a Sokrates &lt;a href=&quot;configuration&quot;&gt;JSON configuration file&lt;/a&gt;, as a part of the goalsAndControls section. You can define multiple goals, each associated with one or more controls.&lt;/p&gt;
+
+&lt;p&gt;The following example code fragment is taken from the &lt;a href=&quot;&quot;&gt;JUnit5 Sokrates configuration file&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;goalsAndControls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;goal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Keep the system simple and easy to change&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Aim at keeping the system size modest (less than 200,000 LOC is good), duplication low (less than 5% is good), files small (no files longer than 1000 LOC is good), and units simple (no units with more than 25 decision points is good).&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;controls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;metric&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;LINES_OF_CODE_MAIN&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Total number of lines of main code&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;desiredRange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;min&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;max&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;200000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;tolerance&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;20000&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;metric&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DUPLICATION_PERCENTAGE&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;System duplication&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;desiredRange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;min&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;max&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;tolerance&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;metric&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;NUMBER_OF_FILES_1001_PLUS&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;The number of very large files&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;desiredRange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;min&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;max&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;tolerance&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;metric&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CONDITIONAL_COMPLEXITY_DISTRIBUTION_26_PLUS_COUNT&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Number of very complex units&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;desiredRange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;min&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;max&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;tolerance&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; &lt;em&gt;A fragment of a Sokrates configuration file describing the controls.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;controls-report&quot;&gt;Controls Report&lt;/h3&gt;
+
+&lt;p&gt;Based on the configured values, the Sokrates will generate an HTML report, as well as the text file with the analysis results (by default stored in “_sokrates/reports/data/text/controls.txt”).&lt;/p&gt;
+
+&lt;p&gt;The example of a Sokrates controls HTML report you can &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/html/Controls.html&quot;&gt;find here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/ceontrol-report.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; &lt;em&gt;A screenshot from a Sokrates controls report. For each control metric, the measured value is compared with a defined range and tolerance.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The equivalent text data file you can &lt;a href=&quot;https://d3axxy9bcycpv7.cloudfront.net/java/junit5/reports/data/text/controls.txt&quot;&gt;find here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-txt&quot; data-lang=&quot;txt&quot;&gt;goal: Keep the system simple and easy to change
+control metric: LINES_OF_CODE_MAIN
+status: OK
+desired range: [0 - 200000] ±20000
+value: 24088
+description: Total number of lines of main code
+
+goal: Keep the system simple and easy to change
+control metric: DUPLICATION_PERCENTAGE
+status: FAILED
+desired range: [0 - 5] ±1
+value: 10.077475219323231
+description: System duplication
+
+goal: Keep the system simple and easy to change
+control metric: NUMBER_OF_FILES_1001_PLUS
+status: OK
+desired range: [0 - 0] ±1
+value: 0
+description: The number of very large files
+
+goal: Keep the system simple and easy to change
+control metric: CONDITIONAL_COMPLEXITY_DISTRIBUTION_26_PLUS_COUNT
+status: OK
+desired range: [0 - 0] ±1
+value: 0
+description: Number of very complex units&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 4:&lt;/strong&gt; &lt;em&gt;A content of a textual data file about controls that Sokrates export.&lt;/em&gt;&lt;/p&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">In Sokrates, you can define traffic lights like controls. For each of the metrics that Sokrates measures, you can specify a monitor with the threshold and tolerance. Sokrates will then generate a report labeling each control with one of the following states. OK (green) means that the measured value is below the threshold. Tolerant (yellow) means that the measured value is above the threshold but within the tolerance range. Failed (red) means that the measured value is above the threshold and the tolerance level.</summary></entry><entry><title type="html">Metrics Table</title><link href="http://localhost:4000/book/metrics" rel="alternate" type="text/html" title="Metrics Table" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>http://localhost:4000/book/metrics</id><content type="html" xml:base="http://localhost:4000/book/metrics">&lt;p&gt;The metrics table is a list of name-value pairs, a linearized list of all Sokrates aggregated measurements.&lt;/p&gt;
+
+&lt;p&gt;Sokrates exports two types of metrics:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the static, project-level metrics. These static metrics have the same name in every Sokrates protect.&lt;/li&gt;
+  &lt;li&gt;derived metrics, where names of a metric are defined based on the names of logical decompositions, components, concerns, or file extensions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;static-metrics&quot;&gt;Static Metrics&lt;/h2&gt;
+
+&lt;p&gt;Static metrics describe the overall system values, such as lines of code in main or test code, or a number of files in the main code. The following table shows some of these metrics:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/metrics-table.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; The screenshot from the Sokrates metrics report, showing some of the static metrics.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;derived-metrics&quot;&gt;Derived Metrics&lt;/h2&gt;
+
+&lt;p&gt;Derived metrics are dynamic. Their number and names depend on the number and names of components, concerns, and file extensions. The following table shows several of these derived metrics.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sokrates/metrics-table-derived.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; The screenshot from the Sokrates metrics report, showing some of the dynamic metrics, where names of metrics depend on component names and file extensions.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;These metrics are logical decomposition specific, and Sokrates derives the names of these metrics using these patterns:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;NUMBER_OF_FILES_DECOMPOSITION_&amp;lt;LOGICAL_DECOMPOSITION&amp;gt;_&amp;lt;COMPONENT&amp;gt;&lt;/li&gt;
+  &lt;li&gt;LINES_OF_CODE_DECOMPOSITION_&amp;lt;LOGICAL_DECOMPOSITION&amp;gt;_&amp;lt;COMPONENT&amp;gt;&lt;/li&gt;
+  &lt;li&gt;NUMBER_OF_FILES_DECOMPOSITION_&amp;lt;LOGICAL_DECOMPOSITION&amp;gt;&lt;em&gt;&amp;lt;COMPONENT&amp;gt;_EXT&lt;/em&gt;&amp;lt;EXTENSION&amp;gt;&lt;/li&gt;
+  &lt;li&gt;LINES_OF_CODE_DECOMPOSITION_&amp;lt;LOGICAL_DECOMPOSITION&amp;gt;&lt;em&gt;&amp;lt;COMPONENT&amp;gt;_EXT&lt;/em&gt;&amp;lt;EXTENSION&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;using-metrics&quot;&gt;Using Metrics&lt;/h2&gt;
+
+&lt;p&gt;Sokrates exports all metrics as text, JSON, and HTML files. You can then use these lists for your own processing.&lt;/p&gt;
+
+&lt;p&gt;In addition to exporting the list of metrics, Sokrates employs these metrics at two other places:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;to define goals and controls. For any metric, you can define the desired range and tolerance and let Sokrates signal if the metric values are in the desired range.&lt;/li&gt;
+  &lt;li&gt;in trend analyses, where you can compare the values of a metric in time&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>by Željko Obrenović (zeljkoobrenovic.com)</name></author><summary type="html">The metrics table is a list of name-value pairs, a linearized list of all Sokrates aggregated measurements. Sokrates employs the metrics table to define goals and controls and in trend analyses.</summary></entry></feed>
