@@ -268,15 +268,15 @@
     <div style="width: 100%; overflow-x: auto">
       <table>
         <th style="text-align: left">Language</th>
-        <th style="text-align: left">Extensions</th>
         <th style="text-align: left" *ngIf="!isSmallScreen">Units Analysis</th>
         <th style="text-align: left" *ngIf="!isSmallScreen">Dependencies</th>
+        <th style="text-align: left">Extensions</th>
         <th style="text-align: left" *ngIf="!isSmallScreen">Details</th>
         <tr *ngFor="let lang of languages">
           <td style="padding-right: 36px; vertical-align: top">{{lang.name.replace("Analyzer", "")}}</td>
-          <td style="vertical-align: top">.{{lang.extensions.join("  .")}}</td>
           <td style="text-align: center; vertical-align: top" *ngIf="!isSmallScreen">{{getUnits(lang)}}</td>
           <td style="text-align: center; vertical-align: top" *ngIf="!isSmallScreen">{{getDependencies(lang)}}</td>
+          <td style="vertical-align: top">.{{lang.extensions.join("  .")}}</td>
           <td *ngIf="!isSmallScreen">
             <a href="javascript:void(0)" (click)="toggleDisplay(lang)">Details...</a>
             <div *ngIf="lang.show">

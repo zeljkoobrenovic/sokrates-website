@@ -1,8 +1,20 @@
 <div :style="isSmallScreen ? 'margin: 0' : 'margin: 22px'">
   <div class="card">
+    <h1>PRE-REQUIREMENTS</h1>
+    <ul>
+      <li>Java 11+ runtime</li>
+      <li><a href="https://graphviz.org/" target="_blank">Graphviz</a> (optional, but highly recommended as it significantly improves the performance of Sokrates graph rendering)</li>
+      <ul>
+        <li>Sokrates automatically looks for Graphviz dot program at the following locations: "/opt/local/bin/dot", "/usr/local/bin/dot", "/usr/bin/dot",
+          "c:\Program Files\Graphviz\dot.exe", "c:\Program Files (x86)\Graphviz\dot.exe"</li>
+        <li>If on your machine Graphviz dot is installed on another location, you can provide that location to Sokrates by defining the GRAPHVIZ_DOT system variable.</li>
+      </ul>
+    </ul>
+  </div>
+  <div class="card">
     <h1>COMMAND LINE INTERFACE (CLI) JAR</h1>
-    <p>DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar">sokrates-0.9.jar</a>
-      (38 MB)</p>
+    <p>DOWNLOAD: <a href="https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar">sokrates-LATEST.jar</a>
+      (40 MB)</p>
     <div class="card">
       <h3 style="background-color: #ededed; padding: 4px"><b>Command Line Usage:</b></h3>
       <mat-accordion>
@@ -166,28 +178,29 @@ usage: java -jar sokrates.jar updateLandscape [options]
     git clone https://github.com/junit-team/junit4
     cd junit4
 
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">extractGitHistory</span>
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">init</span>
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">generateReports</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">extractGitHistory</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">init</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">generateReports</span>
 
     open _sokrates/reports/html/index.html
   </pre>
-        <div><b>CLI Usage Example 2. Analyze multiple projects and create a landscape page that summarizes data from these
+        <div><b>CLI Usage Example 2. Analyze multiple projects and create a landscape page that summarizes data from
+          these
           two analyses:</b></div>
         <pre style="background-color: #dedede; padding: 4px">
     git clone https://github.com/junit-team/junit4
     cd junit4
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">extractGitHistory</span>
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">init</span>
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">generateReports</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">extractGitHistory</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">init</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">generateReports</span>
 
     cd ..
 
     git clone https://github.com/junit-team/junit5
     cd junit5
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">extractGitHistory</span>
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">init</span>
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">generateReports</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">extractGitHistory</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">init</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">generateReports</span>
 
     cd ..
 
@@ -199,7 +212,7 @@ usage: java -jar sokrates.jar updateLandscape [options]
     rm -rf junit5
 
     cd landscape
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">updateLandscape</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">updateLandscape</span>
 
     open _sokrates_landscape/index.html
   </pre>
@@ -208,15 +221,20 @@ usage: java -jar sokrates.jar updateLandscape [options]
     <pre style="background-color: #dedede; padding: 4px">
     git clone https://github.com/junit-team/junit5
     cd junit5
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">extractGitHistory</span>
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">createConventionsFile</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">extractGitHistory</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span
+      style="background-color: yellow">createConventionsFile</span>
     # edit the 'analysis_conventions.json' file to define your custom conventions
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">init -conventionsFile analysis_conventions.json</span>
-    java -jar &lt;sokrates-folder&gt;/sokrates-0.9.jar <span style="background-color: yellow">generateReports</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">init -conventionsFile analysis_conventions.json</span>
+    java -jar &lt;sokrates-folder&gt;/sokrates-LATEST.jar <span style="background-color: yellow">generateReports</span>
   </pre>
         </div>
       </div>
     </div>
+  </div>
+  <div class="card">
+    <h1>BIG SCALE ANALYSES: LANDSCAPE ANALYSIS OF ALL REPOSITORIES IN A GITHUB ORG</h1>
+    If you want to perform landscape analyses of all repositories in a GitHub organization, take a look at this project <a href="https://github.com/zeljkoobrenovic/sokrates-oss-landscape-analysis" target="_blank">github.com/zeljkoobrenovic/sokrates-oss-landscape-analysis</a>
   </div>
   <div class="card">
     <h1>VISUAL EXPLORER</h1>
