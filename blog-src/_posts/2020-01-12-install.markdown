@@ -13,7 +13,7 @@ excerpt: "You can install and run Sokrates in three ways. First, you can downloa
 ### Command Line Interface
 
 COMMAND LINE JAR
-DOWNLOAD: [sokrates-0.9.jar](https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar) (38 MB)
+DOWNLOAD: [sokrates-LATEST.jar](https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar) (38 MB)
 
 Simple usage example (to analyze Junit4):
 
@@ -21,8 +21,8 @@ Simple usage example (to analyze Junit4):
 git clone https://github.com/junit-team/junit4
 cd junit4
 
-java -jar sokrates-0.9.jar init
-java -jar sokrates-0.9.jar generateReports
+java -jar sokrates-LATEST.jar init
+java -jar sokrates-LATEST.jar generateReports
 
 open _sokrates/reports/html/index.html
 {% endhighlight %}
@@ -47,7 +47,7 @@ mvn clean install
 
 The build will create two jar files:
 
-* the [command line interface JAR](https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar) in the **cli/target** folder
+* the [command line interface JAR](https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar) in the **cli/target** folder
 * the [interactive explorer JAR](https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar) in the **codeexplorer/target** folder
 
 Prerequirements:

@@ -21,7 +21,7 @@ Sokrates command-line interface (CLI) includes five commands:
 The **init** command generates a new Sokrates configuration file based on standard source code conventions.
 
 {% highlight bash %}
-java -jar sokrates-0.9.jar init [options]
+java -jar sokrates-LATEST.jar init [options]
    -srcRoot  <arg>   [OPTIONAL] the path to source code root folder (default is <currentFolder>)
    -confFile <arg>   [OPTIONAL] the path to configuration file (default is "<currentFolder>/_sokrates/config.json")
 {% endhighlight %}
@@ -39,7 +39,7 @@ java -jar sokrates-0.9.jar init [options]
 The **generatesReports** command generates HTML reports and exports data files.
 
 {% highlight bash %}
-  java -jar sokrates-0.9.jar generateReports [options]
+  java -jar sokrates-LATEST.jar generateReports [options]
          -confFile     <arg>           [OPTIONAL] the path to configuration file (default is "<currentFolder>/_sokrates/config.json")
          -outputFolder <arg>           [OPTIONAL] the folder where reports will be stored (default is "<currentFolder>/_sokrates/reports/")
          -reportAll                    [DEFAULT] generate all reports
@@ -153,7 +153,7 @@ cp config.json analysis/_sokrates
 cd analysis
 
 # install the latest version of Sokrates
-curl -O https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar
+curl -O https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar
 
 # checkout the code
 git clone https://github.com/zeljkoobrenovic/sokrates.git
@@ -161,7 +161,7 @@ mv temp-git-dir/* .
 rm -rf temp-git-dir
 
 # run analysis
-java -jar -Xmx10g sokrates-0.9.jar generateReports -reportAll
+java -jar -Xmx10g sokrates-LATEST.jar generateReports -reportAll
 
 # copy generated reports to the reports folder
 cp -r _sokrates/reports/* ../reports

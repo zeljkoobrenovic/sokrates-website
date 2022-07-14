@@ -31,7 +31,7 @@ export class HowtoComponent implements OnInit {
       'cd analysis\n' +
       '\n' +
       '# install latest version of Sokrates\n' +
-      'curl -O https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar\n' +
+      'curl -O https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar\n' +
       '\n' +
       '# checkout the code\n' +
       'git clone https://github.com/zeljkoobrenovic/sokrates.git\n' +
@@ -39,7 +39,7 @@ export class HowtoComponent implements OnInit {
       'rm -rf temp-git-dir\n' +
       '\n' +
       '# run analysis\n' +
-      'java -jar -Xmx10g sokrates-0.9.jar generateReports -reportAll\n' +
+      'java -jar -Xmx10g sokrates-LATEST.jar generateReports -reportAll\n' +
       '\n' +
       '# copy generated reports to the reports folder\n' +
       'cp -r _sokrates/reports/* ../reports\n' +

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/book/feed.xml" rel="self" type="application/atom+xml" /><link href="/book/" rel="alternate" type="text/html" /><updated>2022-07-14T22:23:22+02:00</updated><id>/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>/book/philosophy</id><content type="html" xml:base="/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/book/feed.xml" rel="self" type="application/atom+xml" /><link href="/book/" rel="alternate" type="text/html" /><updated>2022-07-14T22:28:25+02:00</updated><id>/book/feed.xml</id><title type="html">Examined Line: The Art of Source Code Analysis with Sokrates</title><subtitle>A collection of articles on source code analysis with Sokrates.</subtitle><entry><title type="html">Background: Sokrates Philosophy</title><link href="/book/philosophy" rel="alternate" type="text/html" title="Background: Sokrates Philosophy" /><published>2020-05-25T20:12:01+02:00</published><updated>2020-05-25T20:12:01+02:00</updated><id>/book/philosophy</id><content type="html" xml:base="/book/philosophy">&lt;p&gt;“&lt;em&gt;Socrates believed that philosophy – the love of wisdom – was the most important pursuit above all else. For some, he exemplifies more than anyone else in history the pursuit of wisdom through questioning and logical argument, by examining and by thinking. &lt;strong&gt;His ‘examination’ of life in this way spilled out into the lives of others, such that they began their own ‘examination’ of life,&lt;/strong&gt; but he knew they would all die one day, as saying that a life without philosophy – an ‘unexamined’ life – was not worth living.&lt;/em&gt;”&lt;/p&gt;
 
 &lt;p&gt;Sokrates is a tool that can help you to understand your code by making visible the size, complexity, and coupling of software. With Sokrates, my goal was to create a tool that ordinary software developers and software architects could use in daily work, regardless of how big or small their project is, irrespective of technology.&lt;/p&gt;
 
@@ -92,7 +92,7 @@
 
 &lt;p&gt;The &lt;strong&gt;init&lt;/strong&gt; command generates a new Sokrates configuration file based on standard source code conventions.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar init &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-LATEST.jar init &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
    &lt;span class=&quot;nt&quot;&gt;-srcRoot&lt;/span&gt;  &amp;lt;arg&amp;gt;   &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;code root folder &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &amp;lt;currentFolder&amp;gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
    &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt; &amp;lt;arg&amp;gt;   &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/config.json&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -106,7 +106,7 @@
 
 &lt;p&gt;The &lt;strong&gt;generatesReports&lt;/strong&gt; command generates HTML reports and exports data files.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar generateReports &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-LATEST.jar generateReports &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
          &lt;span class=&quot;nt&quot;&gt;-confFile&lt;/span&gt;     &amp;lt;arg&amp;gt;           &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the path to configuration file &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/config.json&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
          &lt;span class=&quot;nt&quot;&gt;-outputFolder&lt;/span&gt; &amp;lt;arg&amp;gt;           &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OPTIONAL] the folder where reports will be stored &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default is &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;currentFolder&amp;gt;/_sokrates/reports/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
          &lt;span class=&quot;nt&quot;&gt;-reportAll&lt;/span&gt;                    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;DEFAULT] generate all reports
@@ -205,7 +205,7 @@
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;analysis
 
 &lt;span class=&quot;c&quot;&gt;# install the latest version of Sokrates&lt;/span&gt;
-curl &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar
+curl &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar
 
 &lt;span class=&quot;c&quot;&gt;# checkout the code&lt;/span&gt;
 git clone https://github.com/zeljkoobrenovic/sokrates.git
@@ -213,7 +213,7 @@ git clone https://github.com/zeljkoobrenovic/sokrates.git
 &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; temp-git-dir
 
 &lt;span class=&quot;c&quot;&gt;# run analysis&lt;/span&gt;
-java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Xmx10g&lt;/span&gt; sokrates-0.9.jar generateReports &lt;span class=&quot;nt&quot;&gt;-reportAll&lt;/span&gt;
+java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Xmx10g&lt;/span&gt; sokrates-LATEST.jar generateReports &lt;span class=&quot;nt&quot;&gt;-reportAll&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# copy generated reports to the reports folder&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; _sokrates/reports/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; ../reports
@@ -660,15 +660,15 @@ java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nt&
 &lt;h3 id=&quot;command-line-interface&quot;&gt;Command Line Interface&lt;/h3&gt;
 
 &lt;p&gt;COMMAND LINE JAR
-DOWNLOAD: &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar&quot;&gt;sokrates-0.9.jar&lt;/a&gt; (38 MB)&lt;/p&gt;
+DOWNLOAD: &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar&quot;&gt;sokrates-LATEST.jar&lt;/a&gt; (38 MB)&lt;/p&gt;
 
 &lt;p&gt;Simple usage example (to analyze Junit4):&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/junit-team/junit4
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;junit4
 
-java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar init
-java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-0.9.jar generateReports
+java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-LATEST.jar init
+java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; sokrates-LATEST.jar generateReports
 
 open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -692,7 +692,7 @@ mvn clean install
 &lt;p&gt;The build will create two jar files:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;the &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-0.9.jar&quot;&gt;command line interface JAR&lt;/a&gt; in the &lt;strong&gt;cli/target&lt;/strong&gt; folder&lt;/li&gt;
+  &lt;li&gt;the &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar&quot;&gt;command line interface JAR&lt;/a&gt; in the &lt;strong&gt;cli/target&lt;/strong&gt; folder&lt;/li&gt;
   &lt;li&gt;the &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar&quot;&gt;interactive explorer JAR&lt;/a&gt; in the &lt;strong&gt;codeexplorer/target&lt;/strong&gt; folder&lt;/li&gt;
 &lt;/ul&gt;
 

@@ -13,10 +13,10 @@ To learn how to use Sokrates, like with any software tools or programming langua
 {% highlight sh %}
     git clone https://github.com/junit-team/junit5
     cd junit5
-    git ls-files -z | xargs -0 -n1 -I{} -- git log --date=short --format="%ad %ae %H {}" {} > git-history.txt
+    java -jar sokrates-LATEST.jar extractGitHistory
 
-    java -jar sokrates-0.9.jar init
-    java -jar sokrates-0.9.jar generateReports
+    java -jar sokrates-LATEST.jar init
+    java -jar sokrates-LATEST.jar generateReports
 
     open _sokrates/reports/html/index.html
 {% endhighlight %}

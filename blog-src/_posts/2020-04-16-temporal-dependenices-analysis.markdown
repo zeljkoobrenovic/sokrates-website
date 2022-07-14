@@ -16,7 +16,7 @@ Sokrates uses as a convention the output that you can generate using git command
  recommended for creating the list of changes for Sokrates analysis:
 
 {% highlight bash %}
-git ls-files -z | xargs -0 -n1 -I{} -- git log --date=short --format="%ad %ae %H {}" {} > git-history.txt
+java -jar sokrates-LATEST.jar extractGitHistory
 {% endhighlight %}
 
 ![](assets/images/sokrates/history-git-ls-files.png)
