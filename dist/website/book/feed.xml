@@ -674,11 +674,11 @@ open _sokrates/reports/html/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;explorer&quot;&gt;Explorer&lt;/h3&gt;
 
-&lt;p&gt;DOWNLOAD: &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar&quot;&gt;sokrates-explorer-0.9.jar&lt;/a&gt; (78 MB)&lt;/p&gt;
+&lt;p&gt;DOWNLOAD: &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-LATEST.jar&quot;&gt;sokrates-explorer-LATEST.jar&lt;/a&gt; (78 MB)&lt;/p&gt;
 
 &lt;p&gt;NOTE: require JavaFX (download it and install it from openjfx.io)&lt;/p&gt;
 
-&lt;p&gt;java –module-path $JAVAFX_HOME/lib –add-modules=javafx.controls,javafx.web -jar sokrates-explorer-0.9.jar&lt;/p&gt;
+&lt;p&gt;java –module-path $JAVAFX_HOME/lib –add-modules=javafx.controls,javafx.web -jar sokrates-explorer-LATEST.jar&lt;/p&gt;
 
 &lt;h2 id=&quot;source-code&quot;&gt;Source Code&lt;/h2&gt;
 
@@ -693,7 +693,7 @@ mvn clean install
 
 &lt;ul&gt;
   &lt;li&gt;the &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar&quot;&gt;command line interface JAR&lt;/a&gt; in the &lt;strong&gt;cli/target&lt;/strong&gt; folder&lt;/li&gt;
-  &lt;li&gt;the &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-0.9.jar&quot;&gt;interactive explorer JAR&lt;/a&gt; in the &lt;strong&gt;codeexplorer/target&lt;/strong&gt; folder&lt;/li&gt;
+  &lt;li&gt;the &lt;a href=&quot;https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-explorer-LATEST.jar&quot;&gt;interactive explorer JAR&lt;/a&gt; in the &lt;strong&gt;codeexplorer/target&lt;/strong&gt; folder&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Prerequirements:&lt;/p&gt;
